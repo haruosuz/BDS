@@ -209,12 +209,12 @@ Google has [public style guides for many languages](https://github.com/google/st
 ### Project Documentation
 プロジェクトの記録  
 
-- Document your methods and workflows 全コマンドラインをコピー＆ペースト。デフォルト値も
-- Document the origin of all data in your project directory データの入手元。ウェブサイトのURL等
-- Document when you downloaded data データをダウンロードした日付。
-- Record data version information データのバーション。例：[TAIR10](https://www.arabidopsis.org/download_files/Genes/TAIR10_genome_release/README_TAIR10.txt)、[WS231](https://www.wormbase.org/about/wormbase_release_WS231)
-- Describe how you downloaded the data データのダウンロード方法。例：[MySQL](https://ja.wikipedia.org/wiki/MySQL)、[UCSC Genome Browser](https://genome.ucsc.edu)
-- Document the versions of the software that you ran ソフトウェアのバーション。なければ、日付やURL
+- 方法とワークフロー。全コマンドラインをコピー＆ペースト。デフォルト値も
+- データの入手元（ウェブサイトのURL等）
+- データをダウンロードした日付
+- データのバーション（例えば、[TAIR10](https://www.arabidopsis.org/download_files/Genes/TAIR10_genome_release/README_TAIR10.txt)、[WS231](https://www.wormbase.org/about/wormbase_release_WS231)）
+- データのダウンロード方法（例えば、[MySQL](https://ja.wikipedia.org/wiki/MySQL)、[UCSC Genome Browser](https://genome.ucsc.edu)を使用）
+- ソフトウェアのバーション（なければ、日付やURL）
 
 以上の情報を[プレーンテキスト](https://ja.wikipedia.org/wiki/プレーンテキスト)形式の[README](https://ja.wikipedia.org/wiki/リードミー)ファイルに保存する。プレーンテキストはコマンドラインから簡単に読み込み、検索、編集できる。  
 
@@ -1436,9 +1436,32 @@ Figure 8-9. GC含量でグループ分けされたシークエンシング深度
 > `ggplot(d) + geom_bar(aes(x=Pi), binwidth=1) + scale_x_continuous(limits=c(0.01, 80))`  
 > binwidthの値を 0.05, 0.5, 1, 5, 10 に変化させる。
 
-
-
 #### Merging and Combining Data: Matching Vectors and Merging Dataframes
+
+Rの[`%in%`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/match.html)演算子
+
+
+[RepeatMasker](http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=RepeatMasker)で発見されたヒトX染色体上のリピート領域のデータ（chrX_rmsk.txt）を読み込む:  
+
+
+列`repClass`は因子（factor）であることを確認:  
+
+
+複数のリピートのクラス（DNA、LTR、LINE、SINE、Simple_repeat）の行を選択するために、`common_repclass`ベクトルを作成し、`%in%`を用いる:  
+
+
+上位5つの最も多いリピートのクラスを計算する:  
+
+
+- [文字列 | Rを利用して文字列のマッチング,結合,分割,置換を行う関数](http://stat.biopapyrus.net/r/string.html)
+
+
+第1のデータセット（[motif_recombrates.txt](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-08-r/motif_recombrates.txt)）は、各モチーフの40kb内の全ウィンドウについて、組換え確率（recombination rate）推定値を含む。第2のデータセット（[motif_repeats.txt](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-08-r/motif_repeats.txt)）は、各モチーフが出現するリピートを含む。2つのデータセットをマージして、特定のリピートに及ぼす各モチーフの組換えの局所的な効果を見る。
+
+> ### Creating These Example Datasets  
+> 本データを発生させたコードは[*motif-example/*](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r/motif-example)ディレクトリを参照されたい。
+
+
 #### Using ggplot2 Facets
 #### More R Data Structures: Lists
 
@@ -1463,6 +1486,8 @@ Figure 8-9. GC含量でグループ分けされたシークエンシング深度
 #### Exporting Data
  
 ### Further R Directions and Resources
+
+
 
 ## Chapter 9. Working with Range Data
 範囲データの操作  
