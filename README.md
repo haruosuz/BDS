@@ -1355,23 +1355,47 @@ data.frame型では、ドル・マーク($)で変数を指定できる。
 - [ggplot2 の自分用メモ集を作ろう - Triad sou.](http://d.hatena.ne.jp/triadsou/20100528/1275042816)
 - [R でグラフ作成 ggplot2 入門](http://www.cwk.zaq.ne.jp/fkhud708/files/R-ggplot2.pdf)
 
-`ggplot2`パッケージ、base graphics、`lattice`パッケージ
+`ggplot2`パッケージ、base graphics、`lattice`パッケージ  
+
+[`ggplot2`のオンライン・ドキュメント](http://docs.ggplot2.org/current/)  
+
+Rの`library()`関数で`ggplot2`パッケージをロードする:  
 
 
+染色体の位置毎の塩基多様度の散布図（Figure 8-1）を作成する。まず、データフレーム`d`に列`position`（各ウィンドウの中間点）を追加する。次に、データフレーム`d`の列`position`と列`diversity`の散布図を`ggplot2`で作成する:  
 
 
-Axis Labels, Plot Titles, and Scales
+Figure 8-1. ggplot2の散布図：ヒト20番染色体の位置毎の塩基多様度
 
-Example 8-2. Including aes() in ggplot()
+例えば、`geom_point(), geom_line(), geom_bar(), geom_density(), geom_boxplot()`など。`aes()`関数
+
+> ### Axis Labels, Plot Titles, and Scales  
+> `xlab(), ylab(), ggtitle()`関数  
+> `scale_x_continuous(limits=c(start, end))`、関数`scale_x_log10()`と`scale_y_log10()`  
+
+Example 8-2は、`aes()`を`ggplot()`に含み、Figure 8-1と全く同じ散布図を作成する:  
 
 
-Example 8-3. A simple diversity scatterplot with ggplot2
+Example 8-3は、セントロメア領域か否か（列`cent`のTRUE/FALSE）で色分けして、Figure 8-2を作図:  
 
 
+透明度（alpha）を調整して、Figure 8-3を作図:
 
+
+`geom_density()`を用いて、多様度の密度を見る（Figure 8-4）:  
+
+
+多様度の密度を、セントロメア領域か否か（列`cent`のTRUE/FALSE）で分けて、透明度（alpha）を半分にして、Figure 8-5を作図:  
 
 
 #### Exploring Data Visually with ggplot2 II: Smoothing
+
+
+
+
+
+
+
 #### Binning Data with cut() and Bar Plots with ggplot2
 #### Merging and Combining Data: Matching Vectors and Merging Dataframes
 #### Using ggplot2 Facets
