@@ -1462,8 +1462,49 @@ Rの[`%in%`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/match.html)
 > 本データを発生させたコードは[*motif-example/*](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r/motif-example)ディレクトリを参照されたい。
 
 
+`rpts`データフレームの列名を`mtfs`にマージする。2つの列（`chr`と`motif_start`）を1つの文字列にマージするために、`paste()`関数を用いる:  
+
+列`pos`は、2つのデータセット間の共通の鍵として機能する。  
+マージする前に、`mtfs`のモチーフと`rpts`の対応するエントリの個数を確認する:  
+	table(mtfs$pos %in% rpts$pos)
+
+マージする前に、`match()`を用いて、`mtfs$pos`と`rpts$pos`のインデックス・ベクトル（`i`）を作成する:  
+
+
+`match()`の結果を（`i`への割り当てをスキップして）直接用いる:  
+
+
+
+
+- [43. データの結合（マージ）と整列（ソート）](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/43.html)
+
+
 #### Using ggplot2 Facets
+
+
+Figure 8-10. 配列モチーフとの距離と組換え確率
+
+
+
+`ggplot2`の`facet_wrap()`を用いて、これらのモチーフを分割する（Figure 8-11）:  
+
+
+ - [ggplotのfacet_grid(), facet_wrap()の使い方 | Memo on the Web](http://motw.mods.jp/R/ggplot_facet.html)
+ - [ggplot2で複数グラフ表示 - 盆栽日記](http://d.hatena.ne.jp/dichika/20110116/1295183973)
+ - [facet_wrap - 浅井拓也　研究室用ページ](http://qh73xe.jimdo.com/プロット/パッケージggplot/facet-wrap/)
+
+
+Figure 8-12は
+
+
+Figure 8-12. 
+
+`facet_grid()`と`facet_wrap()`の何れも引数`scales`を指定できる。例えば（Figure 8-13）:  
+	p <- ggplot(mtfs, aes(x=dist, y=recom)) + geom_point(size=1, color="grey")
+
 #### More R Data Structures: Lists
+
+
 
 
 #### Writing and Applying Functions to Lists with lapply() and sapply()
