@@ -1489,9 +1489,9 @@ Figure 8-10. 配列モチーフとの距離と組換え確率
 `ggplot2`の`facet_wrap()`を用いて、これらのモチーフを分割する（Figure 8-11）:  
 
 
- - [ggplotのfacet_grid(), facet_wrap()の使い方 | Memo on the Web](http://motw.mods.jp/R/ggplot_facet.html)
- - [ggplot2で複数グラフ表示 - 盆栽日記](http://d.hatena.ne.jp/dichika/20110116/1295183973)
- - [facet_wrap - 浅井拓也　研究室用ページ](http://qh73xe.jimdo.com/プロット/パッケージggplot/facet-wrap/)
+- [ggplotのfacet_grid(), facet_wrap()の使い方 | Memo on the Web](http://motw.mods.jp/R/ggplot_facet.html)
+- [ggplot2で複数グラフ表示 - 盆栽日記](http://d.hatena.ne.jp/dichika/20110116/1295183973)
+- [facet_wrap - 浅井拓也　研究室用ページ](http://qh73xe.jimdo.com/プロット/パッケージggplot/facet-wrap/)
 
 
 Figure 8-12は
@@ -1504,19 +1504,49 @@ Figure 8-12.
 
 #### More R Data Structures: Lists
 
+- [23. リスト](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/23.html)
+- [リスト | Rのリストはハッシュやマップのように利用できる](http://stat.biopapyrus.net/vector/list.html)
+- [リストにオブジェクトをしまう](http://takenaka-akio.org/doc/r_auto/list.html)
 
-
+> ### Peeking into R’s Structures with str()
 
 #### Writing and Applying Functions to Lists with lapply() and sapply()
 
+- [24. apply() ファミリー](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/24.html)
+- [applyファミリー | apply,sapply,lapplyの使い方とその例](http://stat.biopapyrus.net/r/apply.html)
+- [apply系関数の使い方](http://takenaka-akio.org/doc/r_auto/chapter_07_apply.html)
+
 
 ##### Using lapply()
+
+> ##### lapply() in Parallel
+
 ##### Writing functions
+
+> ##### Function Scope
+
 ##### Digression: Debugging R Code
+
+ - [デバッグ | Rのbrowser,debug,traceback関数の使い方](http://stat.biopapyrus.net/dev/debug.html)
+ - [35. デバッグについて](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/35.html)
+
+関数`browser()`
+
 ##### More list apply functions: sapply() and mapply()
 
+> ##### Other Apply Functions for Other R Data Structures
+
 #### Working with the Split-Apply-Combine Pattern
+
+> #### Understanding do.call()
+
 #### Exploring Dataframes with dplyr
+
+dplyr
+- [dplyrを使いこなす！基礎編 - Qiita](http://qiita.com/matsuou1/items/e995da273e3108e2338e)
+- [大規模データの高速処理 ーdata.table、dplyrー](http://kohske.github.io/ESTRELA/201410/index.html)
+- [plyr — データ分割-関数適用-再結合を効率的に — Watallica metallicus](http://meme.biology.tohoku.ac.jp/students/iwasaki/rstats/plyr.html)
+- [dplyrでデータ処理](http://www.pu-hiroshima.ac.jp/~ttetsuji/R/%5B64%5Ddplyr.html)
 
 #### Working with Strings
 
