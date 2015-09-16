@@ -1354,6 +1354,8 @@ data.frame型では、ドル・マーク($)で変数を指定できる。
 - [パッケージggplot - 浅井拓也　研究室用ページ](http://qh73xe.jimdo.com/プロット/パッケージggplot/)
 - [ggplot2 の自分用メモ集を作ろう - Triad sou.](http://d.hatena.ne.jp/triadsou/20100528/1275042816)
 - [R でグラフ作成 ggplot2 入門](http://www.cwk.zaq.ne.jp/fkhud708/files/R-ggplot2.pdf)
+- [Tutorial of ggplot2 by Hadley Wickham at ISM | Siguniang's Blog](https://siguniang.wordpress.com/2010/11/25/tutorial-of-ggplot2-by-hadley-wickham-at-ism/)
+
 
 `ggplot2`パッケージ、base graphics、`lattice`パッケージ  
 
@@ -1379,7 +1381,7 @@ Example 8-2は、`aes()`を`ggplot()`に含み、Figure 8-1と全く同じ散布
 Example 8-3は、セントロメア領域か否か（列`cent`のTRUE/FALSE）で色分けして、Figure 8-2を作図:  
 
 
-透明度（alpha）を調整して、Figure 8-3を作図:
+（同じ位置にプロットが重なっている）overplottingを回避するために、透明度（alpha）を調整して、Figure 8-3を作図:
 
 
 `geom_density()`を用いて、多様度の密度を見る（Figure 8-4）:  
@@ -1390,13 +1392,52 @@ Example 8-3は、セントロメア領域か否か（列`cent`のTRUE/FALSE）�
 
 #### Exploring Data Visually with ggplot2 II: Smoothing
 
+- sequencing depth
+ - [ultra deep sequence：バイオキーワード集｜実験医学online：羊土社](https://www.yodosha.co.jp/jikkenigaku/keyword/3175.html)
+ - [次世代シーケンサーにおけるcoverageの日本語訳 - #LSQA](http://qa.lifesciencedb.jp/questions/258/次世代シーケンサーにおけるcoverageの日本語訳)
+
+散布図と平滑化曲線を用いて、シークエンシング深度（列`depth`）とウィンドウのSNP合計数（列`total.SNPs`）の関係を見る（Figure 8-6）:  
 
 
+デフォルトでは、`ggplot2`は一般化加法モデル（generalized additive models; GAM）を用いて、平滑化曲線に合わせる。
+`help(stat_smooth)`、`geom_smooth(se=FALSE)`
 
-
-
+散布図と平滑曲線を用いて、シークエンシング深度に及ぼすGC含量の影響を見る（Figure 8-7）:  
+	ggplot(d, aes(x=percent.GC, y=depth)) + geom_point() + geom_smooth()
 
 #### Binning Data with cut() and Bar Plots with ggplot2
+
+Binning（離散化）
+
+- [秩序と情報とブロッコリー: R言語のcut関数の使い方](http://data-hacker.blogspot.jp/2013/05/rcut.html)
+- [R.4.42. 連続数のカテゴリ作成 | R Financial & Marketing Library](http://itbc-world.com/home/rfm/rの機能/連続数のカテゴリ作成/)
+- [R言語で数量データをカテゴリーデータに変換 - jnobuyukiのブログ](http://webbeginner.hatenablog.com/entry/2015/05/27/010805)
+- [Rでbinning - にちにちメモ](http://schngtm.hatenablog.com/entry/2014/12/03/003622)
+
+Rでは、`cut()`関数でデータを離散化する（Example 8-4は、GC含量）:  
+
+
+
+
+
+`ggplot2`の`geom_bar()`
+
+
+Figure 8-8.  
+`geom_bar()`の`x`が、
+因子（例えば、`d$binned.GC`）の場合には、`ggplot2`は計数値の棒グラフ（Figure 8-8の左）を作成する。
+連続の数値（例えば、`d$percent.GC`）の場合には、自動的にデータを離散化してヒストグラム（Figure 8-8の右）を作図する。
+
+
+Figure 8-9. GC含量でグループ分けされたシークエンシング深度（depth）の密度プロット
+
+
+> ### Finding the Right Bin Width  
+> `ggplot(d) + geom_bar(aes(x=Pi), binwidth=1) + scale_x_continuous(limits=c(0.01, 80))`  
+> binwidthの値を 0.05, 0.5, 1, 5, 10 に変化させる。
+
+
+
 #### Merging and Combining Data: Matching Vectors and Merging Dataframes
 #### Using ggplot2 Facets
 #### More R Data Structures: Lists
