@@ -1,8 +1,10 @@
 "Bioinformatics Data Skills by Vince Buffalo (O’Reilly). Copyright 2015 Vince Buffalo, 978-1-449-36737-4."
+
 ----------
 Haruo Suzuki <haruo@g-language.org>  
 Last Update: 2015-09-17  
 ----------
+
 ![](http://ecx.images-amazon.com/images/I/51gYdVvOoQL._SX379_BO1,204,203,200_.jpg)
 
 # Bioinformatics Data Skills: Reproducible and Robust Research With Open Source Tools
