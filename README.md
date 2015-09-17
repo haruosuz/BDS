@@ -1,6 +1,8 @@
 ----------
+
 Haruo Suzuki <haruo@g-language.org>  
 Last Update: 2015-09-17  
+
 ----------
 
 "Bioinformatics Data Skills by Vince Buffalo (O’Reilly). Copyright 2015 Vince Buffalo, 978-1-449-36737-4."
