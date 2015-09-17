@@ -34,22 +34,22 @@ Last Update: 2015-09-17
 # Table of Contents
 - [Preface](#preface)
 - I. Ideology: Data Skills for Robust and Reproducible Bioinformatics
- - [1. How to Learn Bioinformatics](#chapter-1-how-to-learn-bioinformatics)
+  - [1. How to Learn Bioinformatics](#chapter-1-how-to-learn-bioinformatics)
 - II. Prerequisites: Essential Skills for Getting Started with a Bioinformatics Project
- - [2. Setting Up and Managing a Bioinformatics Project](#chapter-2-setting-up-and-managing-a-bioinformatics-project)
- - [3. Remedial Unix Shell](#chapter-3-remedial-unix-shell)
- - [4. Working with Remote Machines](#chapter-4-working-with-remote-machines)
- - [5. Git for Scientists](#chapter-5-git-for-scientists)
- - [6. Bioinformatics Data](#chapter-6-bioinformatics-data)
+  - [2. Setting Up and Managing a Bioinformatics Project](#chapter-2-setting-up-and-managing-a-bioinformatics-project)
+  - [3. Remedial Unix Shell](#chapter-3-remedial-unix-shell)
+  - [4. Working with Remote Machines](#chapter-4-working-with-remote-machines)
+  - [5. Git for Scientists](#chapter-5-git-for-scientists)
+  - [6. Bioinformatics Data](#chapter-6-bioinformatics-data)
 - III. Practice: Bioinformatics Data Skills
- - [7. Unix Data Tools](#chapter-7-unix-data-tools)
- - [8. A Rapid Introduction to the R Language](#chapter-8-a-rapid-introduction-to-the-r-language)
- - [9. Working with Range Data](#chapter-9-working-with-range-data)
- - [10. Working with Sequence Data](#chapter-10-working-with-sequence-data)
- - [11. Working with Alignment Data](#chapter-11-working-with-alignment-data)
- - [12. Bioinformatics Shell Scripting, Writing Pipelines, and Parallelizing Tasks](#chapter-12-bioinformatics-shell-scripting-writing-pipelines-and-parallelizing-tasks)
- - [13. Out-of-Memory Approaches: Tabix and SQLite](#chapter-13-out-of-memory-approaches-tabix-and-sqlite)
- - [14. Conclusion](#chapter-14-conclusion)
+  - [7. Unix Data Tools](#chapter-7-unix-data-tools)
+  - [8. A Rapid Introduction to the R Language](#chapter-8-a-rapid-introduction-to-the-r-language)
+  - [9. Working with Range Data](#chapter-9-working-with-range-data)
+  - [10. Working with Sequence Data](#chapter-10-working-with-sequence-data)
+  - [11. Working with Alignment Data](#chapter-11-working-with-alignment-data)
+  - [12. Bioinformatics Shell Scripting, Writing Pipelines, and Parallelizing Tasks](#chapter-12-bioinformatics-shell-scripting-writing-pipelines-and-parallelizing-tasks)
+  - [13. Out-of-Memory Approaches: Tabix and SQLite](#chapter-13-out-of-memory-approaches-tabix-and-sqlite)
+  - [14. Conclusion](#chapter-14-conclusion)
 
 ----------
 
@@ -72,8 +72,8 @@ Last Update: 2015-09-17
 
 ### Assumptions This Book Makes
 前提知識は以下の通り。  
-- You know a scripting language スクリプト言語（[Python](https://ja.wikipedia.org/wiki/Python)や[R言語](https://ja.wikipedia.org/wiki/R言語)  
-- You know how to use a text editor テキストエディタ（[Emacs](https://ja.wikipedia.org/wiki/Emacs)やVim）
+- You know a scripting language スクリプト言語（[Python](https://ja.wikipedia.org/wiki/Python)や[R言語](https://ja.wikipedia.org/wiki/R言語)）  
+- You know how to use a text editor テキストエディタ（[Emacs](https://ja.wikipedia.org/wiki/Emacs)や[nano](https://ja.wikipedia.org/wiki/Nano_(テキストエディタ))）
 - You have basic Unix command-line skills 基本的なUnixコマンド（`cd, ls, pwd, mv, rm, rmdir, mkdir`）  
 - You have a basic understanding of biology 生物学の基礎（DNA、RNA、タンパク質、遺伝子、セントラルドグマ）  
 - You have a basic understanding of regular expressions [正規表現](https://ja.wikipedia.org/wiki/正規表現)  
@@ -747,7 +747,7 @@ Figure 5-5
 #### Creating and Working with Branches: git branch and git checkout
 
 
-*は現在のブランチ
+隣のアスタリスクは、現在いるブランチを示す。
 
 
 README.mdを編集:  
@@ -1050,6 +1050,8 @@ Example 7-1. Cleaning a set of gene names with Unix data tools
 
 `man ascii`
 
+
+- [Linuxコマンド集 - 【hexdump】16進数や8進数で出力する：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20140224/538591/)
 
 #### Sorting Plain-Text Data with [Sort](https://ja.wikipedia.org/wiki/Sort_(UNIX))
 
@@ -1504,7 +1506,6 @@ Figure 8-10. 配列モチーフとの距離と組換え確率
 `ggplot2`の`facet_wrap()`を用いて、これらのモチーフを分割する（Figure 8-11）:  
 
 
-
 - [ggplotのfacet_grid(), facet_wrap()の使い方 | Memo on the Web](http://motw.mods.jp/R/ggplot_facet.html)
 - [ggplot2で複数グラフ表示 - 盆栽日記](http://d.hatena.ne.jp/dichika/20110116/1295183973)
 - [facet_wrap - 浅井拓也　研究室用ページ](http://qh73xe.jimdo.com/プロット/パッケージggplot/facet-wrap/)
@@ -1524,7 +1525,19 @@ Figure 8-12.
 - [リスト | Rのリストはハッシュやマップのように利用できる](http://stat.biopapyrus.net/vector/list.html)
 - [リストにオブジェクトをしまう](http://takenaka-akio.org/doc/r_auto/list.html)
 
-> ### Peeking into R’s Structures with str()
+データフレームはリスト; `is.list(mtfs)`
+
+
+`[　]`はリストを取り出す。
+`[[ ]]`はリスト内の要素（ベクトル）を取り出す。
+
+
+
+
+
+
+
+> #### Peeking into R’s Structures with str()  
 
 #### Writing and Applying Functions to Lists with lapply() and sapply()
 
@@ -1532,16 +1545,40 @@ Figure 8-12.
 - [applyファミリー | apply,sapply,lapplyの使い方とその例](http://stat.biopapyrus.net/r/apply.html)
 - [apply系関数の使い方](http://takenaka-akio.org/doc/r_auto/chapter_07_apply.html)
 
-
 ##### Using lapply()
 
-> ##### lapply() in Parallel
+
+
+> ##### lapply() in Parallel  
+
+引数を渡す:  
+
 
 ##### Writing functions
 
-> ##### Function Scope
+
+- [31. 関数の定義](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/31.html)
+- [関数の作り方 | functionによりRの関数を定義する方法](http://stat.biopapyrus.net/r/user-function.html)
+- [Rの関数定義の基本 - RjpWiki](http://www.okadajp.org/RWiki/?Rの関数定義の基本)
+- [[連載]フリーソフトによるデータ解析・マイニング　第4回 Rでの関数オブジェクト](http://www1.doshisha.ac.jp/~mjin/R/04.html)
+
+[無名関数](https://ja.wikipedia.org/wiki/無名関数)(anonymous function)  
+
+
+`meanRemoveNAVerbose()`関数の定義:  
+	meanRemoveNAVerbose <- function(x, warn=TRUE) {
+
+
+> ##### Function Scope  
+> [スコープ](https://ja.wikipedia.org/wiki/スコープ)  
+
+- [32. ローカル変数と永続代入<<-](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/32.html)
+- [変数スコープ | R,レキシカルスコープ](http://stat.biopapyrus.net/dev/scope.html)
 
 ##### Digression: Debugging R Code
+
+
+
 
  - [デバッグ | Rのbrowser,debug,traceback関数の使い方](http://stat.biopapyrus.net/dev/debug.html)
  - [35. デバッグについて](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/35.html)
