@@ -1,11 +1,9 @@
 "Bioinformatics Data Skills by Vince Buffalo (O’Reilly). Copyright 2015 Vince Buffalo, 978-1-449-36737-4."
-
 ----------
-
 Haruo Suzuki <haruo@g-language.org>  
-Last Update: 2015-09-16  
-
+Last Update: 2015-09-17  
 ----------
+![](http://ecx.images-amazon.com/images/I/51gYdVvOoQL._SX379_BO1,204,203,200_.jpg)
 
 # Bioinformatics Data Skills: Reproducible and Robust Research With Open Source Tools
 バイオインフォマティクス・データスキル：オープンソースのツールによる再現可能で頑強な研究
@@ -14,16 +12,18 @@ Last Update: 2015-09-16
 # Print & Ebook
 - [Amazon.co.jp](http://www.amazon.co.jp/dp/1449367372) | [Amazon.com](http://www.amazon.com/dp/1449367372)
 - [O'Reilly Media](http://shop.oreilly.com/product/0636920030157.do) | [Free Sampler](http://cdn.oreillystatic.com/oreilly/booksamplers/9781449367374_sampler.pdf)（Chapter 1の全文閲覧可能）
-- [Safari Books Online] (https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/)（[Preface](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/preface01.html#preface)、[Chapter 1](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch01.html#chapter-01)、[Chapter 4](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch04.html#chapter-04) の全文閲覧可能）
+- [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/)（[Preface](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/preface01.html#preface)、[Chapter 1](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch01.html#chapter-01)、[Chapter 4](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch04.html#chapter-04) の全文閲覧可能）
 
-# Reviews
-- [Don’t trust your data: reviewing Bioinformatics Data Skills | The Molecular Ecologist] (http://www.molecularecologist.com/2015/04/dont-trust-your-data-reviewing-bioinformatics-data-skills/) | Posted on 8 April, 2015 by Rob Denton
-- [Reading the early release of "Bioinformatics Data Skills"Musings from a PhD candidate] (http://davetang.org/muse/2014/04/03/bioinformatics-data-skills/) | Posted on April 3, 2014
-- []()
+# News & Reviews
+- [Bioinformatics Data Skills - Twitter Search](https://twitter.com/search?q=Bioinformatics%20Data%20Skills&src=typd)
+- [Twitter competition: win a signed copy of Bioinformatics Data Skills by Vince Buffalo — ACGT](http://www.acgt.me/blog/2015/9/13/twitter-competition-win-a-signed-copy-of-bioinformatics-data-skills-by-vince-buffalo) | September 13, 2015
 - [101 questions with a bioinformatician #30: Vince Buffalo — ACGT](http://www.acgt.me/blog/2015/8/4/101-questions-with-a-bioinformatician-30-vince-buffalo) | August 04, 2015
 - [bds:index [SoWiki]](http://so.med.u-tokai.ac.jp/wiki/doku.php?id=bds:index) | 最終更新: 2015/06/25 04:04 by so
-- [Asking for opinions about Bioinformatics Data Skills book](https://www.biostars.org/p/153594/) | 4 weeks ago 
+- [Asking for opinions about Bioinformatics Data Skills book](https://www.biostars.org/p/153594/) | weeks ago 
 - [O'Reilly's early release of "Bioinformatics Data Skills" is 50% off until Feb 18th, use code WKERES : bioinformatics](https://www.reddit.com/r/bioinformatics/comments/2vsplz/oreillys_early_release_of_bioinformatics_data/) | submitted 6 months ago by rdr0b11
+- []()
+- [Don’t trust your data: reviewing Bioinformatics Data Skills | The Molecular Ecologist](http://www.molecularecologist.com/2015/04/dont-trust-your-data-reviewing-bioinformatics-data-skills/) | Posted on 8 April, 2015 by Rob Denton
+- [Reading the early release of "Bioinformatics Data Skills"Musings from a PhD candidate](http://davetang.org/muse/2014/04/03/bioinformatics-data-skills/) | Posted on April 3, 2014
 
 # Table of Contents
 - [Preface](#preface)
@@ -235,10 +235,10 @@ READMEファイルはプロジェクトのメインのディレクトリに格�
 > `mkdir -p zmays-snps/{data/seqs,scripts,analysis}`
 
 - Brace expansion ブレース展開
- - [Bash Reference Manual: Brace Expansion](http://www.gnu.org/software/bash/manual/html_node/Brace-Expansion.html)
- - [Brace expansion [Bash Hackers Wiki]](http://wiki.bash-hackers.org/syntax/expansion/brace)
- - [Bash - Brace Expansionが便利 - Qiita](http://qiita.com/__nagamee/items/bec89945f70f5dffe9c5)
- - [bash - コマンド (プログラム) の説明 - Linux コマンド集 一覧表](http://kazmax.zpp.jp/cmd/b/bash.1.html) | ブレース展開
+  - [Bash Reference Manual: Brace Expansion](http://www.gnu.org/software/bash/manual/html_node/Brace-Expansion.html)
+  - [Brace expansion [Bash Hackers Wiki]](http://wiki.bash-hackers.org/syntax/expansion/brace)
+  - [Bash - Brace Expansionが便利 - Qiita](http://qiita.com/__nagamee/items/bec89945f70f5dffe9c5)
+  - [bash - コマンド (プログラム) の説明 - Linux コマンド集 一覧表](http://kazmax.zpp.jp/cmd/b/bash.1.html) | ブレース展開
 
 3つのサンプル（zmaysA, zmaysB, zmaysC）毎にペア（R1, R2）の空データファイルを作成する:  
 
@@ -790,8 +790,8 @@ masterブランチに戻り、adapters.faファイルを追加し、この変更
 
 ##### [`wget`](https://ja.wikipedia.org/wiki/GNU_Wget)
 - [Linuxコマンド集 - 【 wget 】 ファイルをダウンロードする：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060228/230995/)
-- [ダウンロードコマンドwgetのオプション一覧(linux)] (http://blog.layer8.sh/ja/2012/03/31/wget_command/)
-- [wget - UNIX/Linuxコマンド - IT専科] (http://www.itsenka.com/contents/development/unix-linux/wget.html)
+- [ダウンロードコマンドwgetのオプション一覧(linux)](http://blog.layer8.sh/ja/2012/03/31/wget_command/)
+- [wget - UNIX/Linuxコマンド - IT専科](http://www.itsenka.com/contents/development/unix-linux/wget.html)
 
 
 HTTP or FTP の認証は `wget`の`--user=`と`--ask-password`オプションを用いる。
@@ -813,9 +813,9 @@ Table 6-1. wgetのオプション
 
 ### Rsync and Secure Copy (scp)
 - [Rsync](https://ja.wikipedia.org/wiki/Rsync)
- - [Command Technica：はじめてrsyncを使う方が知っておきたい6つのルール (1/2) - ITmedia エンタープライズ] (http://www.itmedia.co.jp/enterprise/articles/0804/21/news013.html)
- - [Linuxコマンド【 rsync 】高速なファイル同期（バックアップ） - Linux入門 - Webkaru] (http://webkaru.net/linux/rsync-command/)
- - [rsync でディレクトリの同期（バックアップ） - maruko2 Note.] (http://www.maruko2.com/mw/rsync_でディレクトリの同期（バックアップ）)
+ - [Command Technica：はじめてrsyncを使う方が知っておきたい6つのルール (1/2) - ITmedia エンタープライズ](http://www.itmedia.co.jp/enterprise/articles/0804/21/news013.html)
+ - [Linuxコマンド【 rsync 】高速なファイル同期（バックアップ） - Linux入門 - Webkaru](http://webkaru.net/linux/rsync-command/)
+ - [rsync でディレクトリの同期（バックアップ） - maruko2 Note.](http://www.maruko2.com/mw/rsync_でディレクトリの同期（バックアップ）)
 
 `-avz`オプションで、`-a`は`wrsync`のアーカイブモード（`-rlptgoD`と同じ）、`-z`はデータを圧縮、`-v`は経過を表示。SSHでリモートホストに繋ぐので、`-e ssh`を用いる。ディレクトリをコピーするコマンドは以下の通り:  
 
@@ -844,9 +844,9 @@ SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プ�
 
 ### Looking at Differences Between Data データの違いを見る
 - [`diff`](https://ja.wikipedia.org/wiki/Diff)
- - [UNIXの部屋 コマンド検索:diff (*BSD/Linux)] (http://x68000.q-e-d.net/~68user/unix/pickup?diff)
- - [diff - コマンド (プログラム) の説明 - Linux コマンド集 一覧表] (http://kazmax.zpp.jp/cmd/d/diff.1.html)
- - [Linuxコマンド【 diff 】2つのファイルの差分を出力 - Linux入門 - Webkaru] (http://webkaru.net/linux/command-diff/)
+ - [UNIXの部屋 コマンド検索:diff (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?diff)
+ - [diff - コマンド (プログラム) の説明 - Linux コマンド集 一覧表](http://kazmax.zpp.jp/cmd/d/diff.1.html)
+ - [Linuxコマンド【 diff 】2つのファイルの差分を出力 - Linux入門 - Webkaru](http://webkaru.net/linux/command-diff/)
 
 *gene-1.bed*と*gene-2.bed*ファイルの差分を出力:  
 
@@ -1169,7 +1169,7 @@ FASTQ/FASTAエントリ数をカウント:
 ### Advanced Shell Tricks
 #### Subshells
 参考:  
-- [UNIXの部屋 コマンド検索:サブシェル (*BSD/Linux)] (http://x68000.q-e-d.net/~68user/unix/pickup?%A5%B5%A5%D6%A5%B7%A5%A7%A5%EB)
+- [UNIXの部屋 コマンド検索:サブシェル (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?%A5%B5%A5%D6%A5%B7%A5%A7%A5%EB)
 
 例:  
 
