@@ -1587,7 +1587,6 @@ Figure 8-12.
 
 
 
-`?browser()`、`?debug()`、`?traceback()`、`?recover()`も参照されたい。
 
 ##### More list apply functions: sapply() and mapply()
 
@@ -1607,10 +1606,23 @@ Figure 8-12.
   - [25. データ型とデータ構造](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/25.html)
 
 #### Working with the Split-Apply-Combine Pattern
+["The Split-Apply-Combine Strategy for Data Analysis"](http://www.jstatsoft.org/v40/i01/paper)  
+
+Example 8-4 と Figure 8-9  
+
+- [R.4.05. データフレーム型 | R Financial & Marketing Library](http://itbc-world.com/home/rfm/rの機能/データフレーム型/)
 
 
 
-> #### Understanding do.call()
+
+
+
+
+- [リストTips大全 - RjpWiki](http://www.okada.jp.org/RWiki/?リストTips大全) | do.call
+- [do.callは気持ち悪いのでReduceを積極的に使いたい - My Life as a Mock Quant](http://d.hatena.ne.jp/teramonagi/20110214/1297688917)
+
+> #### Understanding do.call()  
+
 
 #### Exploring Dataframes with dplyr
 
