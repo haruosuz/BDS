@@ -29,6 +29,8 @@ Last Update: 2015-09-17
 - [Don’t trust your data: reviewing Bioinformatics Data Skills | The Molecular Ecologist](http://www.molecularecologist.com/2015/04/dont-trust-your-data-reviewing-bioinformatics-data-skills/) | Posted on 8 April, 2015 by Rob Denton
 - [Reading the early release of "Bioinformatics Data Skills"Musings from a PhD candidate](http://davetang.org/muse/2014/04/03/bioinformatics-data-skills/) | Posted on April 3, 2014
 
+----------
+
 # Table of Contents
 - [Preface](#preface)
 - I. Ideology: Data Skills for Robust and Reproducible Bioinformatics
@@ -49,7 +51,8 @@ Last Update: 2015-09-17
  - [13. Out-of-Memory Approaches: Tabix and SQLite](#chapter-13-out-of-memory-approaches-tabix-and-sqlite)
  - [14. Conclusion](#chapter-14-conclusion)
 
-# Notes
+----------
+
 ## Preface
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/preface01.html#preface)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-00-preface)
@@ -69,13 +72,13 @@ Last Update: 2015-09-17
 
 ### Assumptions This Book Makes
 前提知識は以下の通り。  
-You know a scripting language スクリプト言語（[Python](https://ja.wikipedia.org/wiki/Python)や[R言語](https://ja.wikipedia.org/wiki/R言語)  
-You know how to use a text editor テキストエディタ（[Emacs](https://ja.wikipedia.org/wiki/Emacs)やVim  
-You have basic Unix command-line skills 基本的なUnixコマンド（`cd, ls, pwd, mv, rm, rmdir, mkdir`  
-You have a basic understanding of biology 生物学の基礎（DNA、RNA、タンパク質、遺伝子、セントラルドグマ  
-You have a basic understanding of regular expressions [正規表現](https://ja.wikipedia.org/wiki/正規表現)  
-You know how to get help and read documentation ヘルプやマニュアルの参照
-You can manage your computer system (or have a system administrator) システム管理  
+- You know a scripting language スクリプト言語（[Python](https://ja.wikipedia.org/wiki/Python)や[R言語](https://ja.wikipedia.org/wiki/R言語)  
+- You know how to use a text editor テキストエディタ（[Emacs](https://ja.wikipedia.org/wiki/Emacs)やVim）
+- You have basic Unix command-line skills 基本的なUnixコマンド（`cd, ls, pwd, mv, rm, rmdir, mkdir`）  
+- You have a basic understanding of biology 生物学の基礎（DNA、RNA、タンパク質、遺伝子、セントラルドグマ）  
+- You have a basic understanding of regular expressions [正規表現](https://ja.wikipedia.org/wiki/正規表現)  
+- You know how to get help and read documentation ヘルプやマニュアルの参照  
+- You can manage your computer system (or have a system administrator) システム管理  
 
 ### Supplementary Material on GitHub
 [GitHubリポジトリ](https://github.com/vsbuffalo/bds-files)の補足資料を取得する:  
@@ -944,7 +947,7 @@ BED（3列）とGTFファイル
 
 
 ショートカットの（inspectの）`i`コマンドを実行:  
-	i Mus_musculus.GRCm38.75_chr1.bed
+
 
 `grep`の標準出力を`head`に渡す:  
 
@@ -1228,7 +1231,7 @@ Table 8-1. Common mathematic functions
 #### Vectors, Vectorization, and Indexing
 ベクトル  
   
-- [13. ベクトル要素へのアクセス | R-Source | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)
+- [13. ベクトル要素へのアクセス | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)
 
 
 
@@ -1252,13 +1255,13 @@ Example 8-1. Indexing vectors with logical vectors
 
 Table 8-2. R’s comparison and logical operators | Rの比較演算子と論理演算子  
 
-- [28. 演算子 | R-Source | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/28.html)
+- [28. 演算子 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/28.html)
 
 ##### Vector types
 
-- [09. データの型 | R-Source | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/09.html)
-- [18. NULL，NA，NaN，Infの操作 | R-Source | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/18.html)
-- [25. データ型とデータ構造 | R-Source | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/25.html)
+- [09. データの型 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/09.html)
+- [18. NULL，NA，NaN，Infの操作 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/18.html)
+- [25. データ型とデータ構造 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/25.html)
 
 Table 8-3. R’s vector types | Rのベクトル型
 
@@ -1384,10 +1387,12 @@ Figure 8-1. ggplot2の散布図：ヒト20番染色体の位置毎の塩基多�
 Example 8-2は、`aes()`を`ggplot()`に含み、Figure 8-1と全く同じ散布図を作成する:  
 
 
+
 Example 8-3は、セントロメア領域か否か（列`cent`のTRUE/FALSE）で色分けして、Figure 8-2を作図:  
 
 
 （同じ位置にプロットが重なっている）overplottingを回避するために、透明度（alpha）を調整して、Figure 8-3を作図:
+
 
 
 `geom_density()`を用いて、多様度の密度を見る（Figure 8-4）:  
@@ -1409,7 +1414,7 @@ Example 8-3は、セントロメア領域か否か（列`cent`のTRUE/FALSE）�
 `help(stat_smooth)`、`geom_smooth(se=FALSE)`
 
 散布図と平滑曲線を用いて、シークエンシング深度に及ぼすGC含量の影響を見る（Figure 8-7）:  
-	ggplot(d, aes(x=percent.GC, y=depth)) + geom_point() + geom_smooth()
+
 
 #### Binning Data with cut() and Bar Plots with ggplot2
 
@@ -1427,6 +1432,7 @@ Rでは、`cut()`関数でデータを離散化する（Example 8-4は、GC含�
 
 
 `ggplot2`の`geom_bar()`
+
 
 
 Figure 8-8.  
@@ -1453,6 +1459,7 @@ Rの[`%in%`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/match.html)
 列`repClass`は因子（factor）であることを確認:  
 
 
+
 複数のリピートのクラス（DNA、LTR、LINE、SINE、Simple_repeat）の行を選択するために、`common_repclass`ベクトルを作成し、`%in%`を用いる:  
 
 
@@ -1465,14 +1472,16 @@ Rの[`%in%`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/match.html)
 第1のデータセット（[motif_recombrates.txt](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-08-r/motif_recombrates.txt)）は、各モチーフの40kb内の全ウィンドウについて、組換え確率（recombination rate）推定値を含む。第2のデータセット（[motif_repeats.txt](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-08-r/motif_repeats.txt)）は、各モチーフが出現するリピートを含む。2つのデータセットをマージして、特定のリピートに及ぼす各モチーフの組換えの局所的な効果を見る。
 
 > ### Creating These Example Datasets  
+
 > 本データを発生させたコードは[*motif-example/*](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r/motif-example)ディレクトリを参照されたい。
 
 
 `rpts`データフレームの列名を`mtfs`にマージする。2つの列（`chr`と`motif_start`）を1つの文字列にマージするために、`paste()`関数を用いる:  
 
-列`pos`は、2つのデータセット間の共通の鍵として機能する。  
+
+列`pos`は、2つのデータセット間の共通の鍵として機能する。  
 マージする前に、`mtfs`のモチーフと`rpts`の対応するエントリの個数を確認する:  
-	table(mtfs$pos %in% rpts$pos)
+
 
 マージする前に、`match()`を用いて、`mtfs$pos`と`rpts$pos`のインデックス・ベクトル（`i`）を作成する:  
 
@@ -1495,6 +1504,7 @@ Figure 8-10. 配列モチーフとの距離と組換え確率
 `ggplot2`の`facet_wrap()`を用いて、これらのモチーフを分割する（Figure 8-11）:  
 
 
+
 - [ggplotのfacet_grid(), facet_wrap()の使い方 | Memo on the Web](http://motw.mods.jp/R/ggplot_facet.html)
 - [ggplot2で複数グラフ表示 - 盆栽日記](http://d.hatena.ne.jp/dichika/20110116/1295183973)
 - [facet_wrap - 浅井拓也　研究室用ページ](http://qh73xe.jimdo.com/プロット/パッケージggplot/facet-wrap/)
@@ -1506,7 +1516,7 @@ Figure 8-12は
 Figure 8-12. 
 
 `facet_grid()`と`facet_wrap()`の何れも引数`scales`を指定できる。例えば（Figure 8-13）:  
-	p <- ggplot(mtfs, aes(x=dist, y=recom)) + geom_point(size=1, color="grey")
+
 
 #### More R Data Structures: Lists
 
