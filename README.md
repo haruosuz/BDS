@@ -81,8 +81,8 @@ Last Update: 2015-09-17
 
 ### Supplementary Material on GitHub
 [GitHubリポジトリ](https://github.com/vsbuffalo/bds-files)の補足資料を取得する:  
-`wget -o wget.log https://github.com/vsbuffalo/bds-files/archive/master.zip`
-`git clone https://github.com/vsbuffalo/bds-files`
+`wget -o wget.log https://github.com/vsbuffalo/bds-files/archive/master.zip`  
+`git clone https://github.com/vsbuffalo/bds-files`  
 
 本書や補足資料に問題を発見した場合、[GitHubで新規issueを作成](https://github.com/vsbuffalo/bds-files/issues)されたい。　
 
@@ -148,8 +148,6 @@ Google has [public style guides for many languages](https://github.com/google/st
 
 #### Make Assertions and Be Loud, in Code and in Your Methods
 前提条件のチェックに[表明（assertion）](https://ja.wikipedia.org/wiki/表明)を使用する。Pythonの`assert()`やRの`stopifnot()`
-
-- [35. デバッグについて | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/35.html)
 
 #### Test Code, or Better Yet, Let Code Test Code
 [単体テスト(unit testing)](https://ja.wikipedia.org/wiki/単体テスト)  
@@ -798,9 +796,9 @@ masterブランチに戻り、adapters.faファイルを追加し、この変更
 
 ### Retrieving Bioinformatics Data
 #### Downloading Data with wget and curl
-'wget`と`curl`は、データをウェブからダウンロードするコマンドラインのプログラム。パッケージ管理システム（Homebrewや`apt-get`）でインストールする必要があるかも。
+`wget`と`curl`は、データをウェブからダウンロードするコマンドラインのプログラム。パッケージ管理システム（Homebrewや`apt-get`）でインストールできる。
 
-##### [`wget`](https://ja.wikipedia.org/wiki/GNU_Wget)
+##### [wget](https://ja.wikipedia.org/wiki/GNU_Wget)
 - [Linuxコマンド集 - 【 wget 】 ファイルをダウンロードする：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060228/230995/)
 - [ダウンロードコマンドwgetのオプション一覧(linux)](http://blog.layer8.sh/ja/2012/03/31/wget_command/)
 - [wget - UNIX/Linuxコマンド - IT専科](http://www.itsenka.com/contents/development/unix-linux/wget.html)
@@ -1580,19 +1578,42 @@ Figure 8-12.
 
 ##### Digression: Debugging R Code
 
-
-
-
- - [デバッグ | Rのbrowser,debug,traceback関数の使い方](http://stat.biopapyrus.net/dev/debug.html)
- - [35. デバッグについて](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/35.html)
+- [デバッグ | Rのbrowser,debug,traceback関数の使い方](http://stat.biopapyrus.net/dev/debug.html)
+- [35. デバッグについて | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/35.html)
 
 関数`browser()`
 
+	foo(1)
+
+`n`で次の行を確認、`c`でコードの実行を継続、`Q`で終了
+
+`options(error=recover)`も有用  
+
+
+
+
+`?browser()`、`?debug()`、`?traceback()`、`?recover()`も参照されたい。
+
 ##### More list apply functions: sapply() and mapply()
 
-> ##### Other Apply Functions for Other R Data Structures
+
+- [14. ベクトル計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/14.html)
+
+
+> ##### Other Apply Functions for Other R Data Structures  
+> 配列と行列　`apply()`と`sweep()`  
+- [オブジェクト型 | Rのリスト、データフレーム、行列、配列など](http://stat.biopapyrus.net/r/objecttype.html)
+- [R言語プログラミング： データ型・操作 - hamadakoichi blog](http://d.hatena.ne.jp/hamadakoichi/20100118/1263832446)
+- [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
+  - [19. 行列の作成](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/19.html)
+  - [20. 行列計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/20.html)
+  - [21. 行列の操作](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/21.html)
+  - [22. 配列](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/22.html)
+  - [25. データ型とデータ構造](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/25.html)
 
 #### Working with the Split-Apply-Combine Pattern
+
+
 
 > #### Understanding do.call()
 
