@@ -1600,8 +1600,7 @@ Figure 8-12.
 - [14. ベクトル計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/14.html)
 
 
-> ##### Other Apply Functions for Other R Data Structures  
-> 配列と行列　`apply()`と`sweep()`  
+> ##### Other Apply Functions for Other R Data Structures   
 配列と行列　`apply()`と`sweep()`
 - [オブジェクト型 | Rのリスト、データフレーム、行列、配列など](http://stat.biopapyrus.net/r/objecttype.html)
 - [R言語プログラミング： データ型・操作 - hamadakoichi blog](http://d.hatena.ne.jp/hamadakoichi/20100118/1263832446)
@@ -2046,6 +2045,9 @@ SELECT文を用いて、テーブルの全ての列から全ての行を取得�
 
 > ### Working with the SQLite Command-Line Tool
 > Control-u で、入力をクリアする。
+
+> ### Working with the SQLite Command-Line Tool  
+Control-u で、入力をクリアする。
 
 sqlite3のコマンドラインツールは、（対話的なSQLiteのシェル代わりに）直接コマンドラインから問い合わせ可能。例えば、`gwascat`テーブル内の全てのデータを取得する:  
 
