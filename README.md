@@ -129,8 +129,8 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 ["garbage in, garbage out"](http://ejje.weblio.jp/content/Garbage+in,+garbage+out.)「ゴミを入れればゴミが出てくる」  
 
 バイオインフォマティクスの黄金律:  
-> #### NEVER EVER TRUST YOUR TOOLS (OR DATA)
-> ツールやデータを絶対に信用しない。  
+> #### NEVER EVER TRUST YOUR TOOLS (OR DATA)  
+ツールやデータを絶対に信用しない。  
 
 ### Adopting Robust and Reproducible Practices Will Make Your Life Easier, Too
 ### Recommendations for Robust Research
@@ -209,7 +209,7 @@ Google has [public style guides for many languages](https://github.com/google/st
 - *analysis/*ディレクトリに解析結果を格納する。
 
 > ### What’s in a Name?  
-> ファイル名には、英数字や_や-を使い、スペース（空白）を入れない。拡張子を付ける。（例 *osativa-genes_2015-07-07.fasta*）  
+ファイル名には、英数字や_や-を使い、スペース（空白）を入れない。拡張子を付ける。（例 *osativa-genes_2015-07-07.fasta*）  
 
 - [UNIXコマンド辞典>>絶対パスと相対パス](http://codezine.jp/unixdic/w/絶対パスと相対パス)
 
@@ -238,11 +238,9 @@ READMEファイルはプロジェクトのメインのディレクトリに格�
 一貫性のあるファイル名  
 
 > ### Shell Expansion Tips シェルの展開  
-> `cd ~`でホームディレクトリに移動。ワイルドカードのアスタリスク（*）は全ての文字列にマッチする。  
-> Brace expansionの例:  
-> `echo dog-{gone,bowl,bark}`  
-> `zmays-snps/`プロジェクト・ディレクトリを作成:  
-> `mkdir -p zmays-snps/{data/seqs,scripts,analysis}`
+`cd ~`でホームディレクトリに移動。ワイルドカードのアスタリスク（*）は全ての文字列にマッチする。  
+Brace expansionの例:  
+`zmays-snps/`プロジェクト・ディレクトリを作成:  
 
 - Brace expansion ブレース展開
   - [Bash Reference Manual: Brace Expansion](http://www.gnu.org/software/bash/manual/html_node/Brace-Expansion.html)
@@ -257,7 +255,7 @@ READMEファイルはプロジェクトのメインのディレクトリに格�
 
 
 > ### Wildcards and "Argument list too long"  
-> 解決方法は"Using find and xargs"を参照されたい  
+解決方法は"Using find and xargs"を参照されたい  
 
 ワイルドカードは限定する。例えば、`zmaysB*`の代わりに、`zmaysB*fastq`または`zmaysB_R?.fastq`を用いる（`?`は任意の1文字）。
 
@@ -278,9 +276,9 @@ Table 2-1. Unixのワイルドカード
 - [UNIX/基礎知識/ワイルドカード、メタキャラクタ - 会津大学UNIXウィキ](http://technique.sonots.com/?UNIX%2F基礎知識%2Fワイルドカード、メタキャラクタ)
 
 > ### Leading Zeros and Sorting  
-> ファイル名の先頭に0を付ける（例えば、*file-21.txt*よりもむしろ*file-0021.txt*とする）と、`ls`で辞書順にファイルがソートされる。  
-> `touch gene-{1..14}.txt`  
-> `printf "gene-%03d.txt " {1..14} | xargs touch`  
+ファイル名の先頭に0を付ける（例えば、*file-21.txt*よりもむしろ*file-0021.txt*とする）と、`ls`で辞書順にファイルがソートされる。  
+`touch gene-{1..14}.txt`  
+`printf "gene-%03d.txt " {1..14} | xargs touch`  
 
 ### Markdown for Project Notebooks
 プレーンテキスト形式で書かれたプロジェクト・ノートは、コマンドラインやネットワーク経由で読み込み・検索・編集できる。  
@@ -314,8 +312,8 @@ Unixシェル
 [UNIX哲学](https://ja.wikipedia.org/wiki/UNIX哲学)  
 
 > ### The Many Unix Shells  
-> `echo $SHELL` (`echo $0`) で現在のシェルを確認  
-> `chsh`でログインシェルを変更  
+`echo $SHELL` (`echo $0`) で現在のシェルを確認  
+`chsh`でログインシェルを変更  
 
 [ストリーム](https://ja.wikipedia.org/wiki/標準ストリーム)、
 [リダイレクト](https://ja.wikipedia.org/wiki/リダイレクト_(CLI))、
@@ -367,7 +365,6 @@ Unixシェル
 記号`2>`は上書き、`2>>`は追記。
 
 > ### File Descriptors  
-
 - [ファイル記述子](https://ja.wikipedia.org/wiki/ファイル記述子)
 - [ファイルディスクリプタとは｜file descriptor｜ファイルディスクリプター - 意味/解説/説明/定義 ： IT用語辞典](http://e-words.jp/w/ファイルディスクリプタ.html)
 - [ファイルディスクリプタについて（1）　～ファイルディスクリプタの概要：CodeZine（コードジン）](http://codezine.jp/article/detail/4836)
@@ -377,7 +374,7 @@ Unixシェル
 - [デバイスファイル](https://ja.wikipedia.org/wiki/デバイスファイル)
 
 > ### Using tail -f to Monitor Redirected Standard Error  
-> `tail -f`でリダイレクトされた標準エラー出力を監視する。Control-Cで動作中のプロセスを停止。  
+`tail -f`でリダイレクトされた標準エラー出力を監視する。Control-Cで動作中のプロセスを停止。  
 
 #### Using Standard Input Redirection
 標準入力リダイレクト:  
@@ -440,8 +437,8 @@ In this section, we’ll learn the basics of manipulating processes: running and
 
 
 > ### Background Processes and Hangup Signals  
-> [ハングアップ・シグナル](https://ja.wikipedia.org/wiki/シグナル_(ソフトウェア))（SIGHUP）  
-> バックグラウンドのプロセスがSIGHUPを受け付けないようにするには、`nohup`を使うか、Tmux内で走らせる。Chapter 4で詳細に述べる。
+[ハングアップ・シグナル](https://ja.wikipedia.org/wiki/シグナル_(ソフトウェア))（SIGHUP）  
+バックグラウンドのプロセスがSIGHUPを受け付けないようにするには、`nohup`を使うか、Tmux内で走らせる。Chapter 4で詳細に述べる。
 
 Control-z キーで中断させたジョブを
 [`bg`](http://codezine.jp/unixdic/w/bg)コマンドを用いてバックグラウンド（background）で再開:  
@@ -459,7 +456,7 @@ Control-z キーで中断させたジョブを
 #### Exit Status: How to Programmatically Tell Whether Your Command Worked
 [終了ステータス](https://ja.wikipedia.org/wiki/終了ステータス)（exit status）慣習的に正常終了時はゼロ、異常終了時はゼロ以外を返すのが一般的である
 
-> ### Warning Exit Statuses
+> ### Warning Exit Statuses  
 - [終了ステータス - UNIX & Linux コマンド・シェルスクリプト リファレンス](http://shellscript.sunone.me/exit_status.html)
 
 終了ステータスの値は、シェルの特殊変数`$?`に設定される。
@@ -487,7 +484,7 @@ Control-z キーで中断させたジョブを
 
 
 > ### Storing Your Unix Tricks  
-> `add alias`を用いて*~/.bashrc*（Mac OS Xでは*~/.profile*）ファイルに追加する。例えば、常に同じディレクトリ構造のプロジェクト・ディレクトリを作成するならば、以下の一行を追加する:  
+`add alias`を用いて*~/.bashrc*（Mac OS Xでは*~/.profile*）ファイルに追加する。例えば、常に同じディレクトリ構造のプロジェクト・ディレクトリを作成する:  
 
 ## Chapter 4. Working with Remote Machines
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch04.html#chapter-04)
@@ -505,10 +502,8 @@ IPアドレスを用いてマシンに繋げるには `ssh 192.169.237.42`
 ssh -v (-v for verbose) using -vv or -vvv; see man ssh for more details.
 
 > ### Storing Your Frequent SSH Hosts  
-> *~/.ssh/config*ファイルを作る:  
-
-
-> リモートホストのデフォルトと同じなら`Port`と`User`を指定する必要は無い。`ssh -p 50453 cdarwin@192.169.237.42`とタイプする代わりに、エイリアス`ssh bio_serv`を用いて*192.168.236.42*にSSH接続できる。
+*~/.ssh/config*ファイルを作る:  
+リモートホストのデフォルトと同じなら`Port`と`User`を指定する必要は無い。`ssh -p 50453 cdarwin@192.169.237.42`とタイプする代わりに、エイリアス`ssh bio_serv`を用いて*192.168.236.42*にSSH接続できる。
 
 `hostname`コマンドは、ホスト名を表示する。  
 `whoami`コマンドは、ユーザー名を表示する。  
@@ -2043,10 +2038,7 @@ SQLiteでは、列は型を持たないが、データ値は型を持つ。デ�
 SELECT文を用いて、テーブルの全ての列から全ての行を取得する:  
 
 
-> ### Working with the SQLite Command-Line Tool
-> Control-u で、入力をクリアする。
-
-> ### Working with the SQLite Command-Line Tool  
+> #### Working with the SQLite Command-Line Tool  
 Control-u で、入力をクリアする。
 
 sqlite3のコマンドラインツールは、（対話的なSQLiteのシェル代わりに）直接コマンドラインから問い合わせ可能。例えば、`gwascat`テーブル内の全てのデータを取得する:  
