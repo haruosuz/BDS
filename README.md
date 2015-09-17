@@ -5,13 +5,8 @@ Last Update: 2015-09-17
 
 ----------
 
-"Bioinformatics Data Skills by Vince Buffalo (O’Reilly). Copyright 2015 Vince Buffalo, 978-1-449-36737-4."
-
+"Bioinformatics Data Skills by Vince Buffalo (O’Reilly). Copyright 2015 Vince Buffalo, 978-1-449-36737-4."  
 ![](http://ecx.images-amazon.com/images/I/51gYdVvOoQL._SX379_BO1,204,203,200_.jpg)
-
-# Bioinformatics Data Skills: Reproducible and Robust Research With Open Source Tools
-バイオインフォマティクス・データスキル：オープンソースのツールによる再現可能で頑強な研究  
-- [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files)
 
 # Print & Ebook
 - [Amazon.co.jp](http://www.amazon.co.jp/dp/1449367372) | [Amazon.com](http://www.amazon.com/dp/1449367372)
@@ -30,6 +25,10 @@ Last Update: 2015-09-17
 - [Reading the early release of "Bioinformatics Data Skills"Musings from a PhD candidate](http://davetang.org/muse/2014/04/03/bioinformatics-data-skills/) | Posted on April 3, 2014
 
 ----------
+
+# Bioinformatics Data Skills: Reproducible and Robust Research With Open Source Tools
+バイオインフォマティクス・データスキル：オープンソースのツールによる再現可能で頑強な研究  
+- [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files)
 
 # Table of Contents
 - [Preface](#preface)
@@ -82,13 +81,17 @@ Last Update: 2015-09-17
 
 ### Supplementary Material on GitHub
 [GitHubリポジトリ](https://github.com/vsbuffalo/bds-files)の補足資料を取得する:  
+`wget -o wget.log https://github.com/vsbuffalo/bds-files/archive/master.zip`
 `git clone https://github.com/vsbuffalo/bds-files`
 
 本書や補足資料に問題を発見した場合、[GitHubで新規issueを作成](https://github.com/vsbuffalo/bds-files/issues)されたい。　
 
 ### Computing Resources and Setup
 筆者は、ラップトップ（15インチのMacBook Pro、メモリは16GB）で本書を執筆した。例題は、8GBのメモリを搭載するマシンで実行すべき。  
-例題は、Unix系のOS（Mac OS XやLinux）で動作する。[パッケージ管理システム](https://ja.wikipedia.org/wiki/パッケージ管理システム)（Ubuntu/Debianの`apt-get`や、Mac OS Xの[Homebrew](http://brew.sh)（[homebrew-science](https://github.com/Homebrew/homebrew-science)）を使用すべき。
+例題は、Unix系のOS（Mac OS XやLinux）で動作する。[パッケージ管理システム](https://ja.wikipedia.org/wiki/パッケージ管理システム)（Ubuntu/Debianの`apt-get`や、Mac OS Xの[Homebrew](http://brew.sh/index_ja.html)（[homebrew-science](https://github.com/Homebrew/homebrew-science)）を使用すべき。
+
+- [作業環境を整えるMacOSXのパッケージマネージャ「Homebrew」のインストール方法と使い方 | 株式会社LIG](http://liginc.co.jp/web/tool/mac-iphone/151069)
+- [MacにHomebrewをインストールする - Qiita](http://qiita.com/_daisuke/items/d3b2477d15ed2611a058)
 
 ### Organization of This Book
 本書は3部構成：第I部はイデオロギーに関する1章、第II部は基礎編、第III部は実践編。
@@ -475,9 +478,9 @@ Control-z キーで中断させたジョブを
 
 
 ### Command Substitution
-コマンド置換  
-
-- [bash Tips - コマンド置換と算術式展開、パラメータ展開 - Qiita](http://qiita.com/mashumashu/items/bbc3a79bc779fe8c4f99) | コマンド置換 - \`command\`ではなく$(command)を使う。なぜか？ネストできるから
+コマンド置換 - \`command\`ではなく$(command)を使う。[ネスト](https://ja.wikipedia.org/wiki/ネスティング)できるから。
+ 
+- [bash Tips - コマンド置換と算術式展開、パラメータ展開 - Qiita](http://qiita.com/mashumashu/items/bbc3a79bc779fe8c4f99)
 
 `date +%F`コマンドを用いて日付ディレクトリを作成する:  
 
