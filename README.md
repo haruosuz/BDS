@@ -1562,7 +1562,7 @@ Figure 8-12.
 
 
 `meanRemoveNAVerbose()`関数の定義:  
-	meanRemoveNAVerbose <- function(x, warn=TRUE) {
+
 
 
 > ##### Function Scope  
@@ -1578,7 +1578,7 @@ Figure 8-12.
 
 関数`browser()`
 
-	foo(1)
+
 
 `n`で次の行を確認、`c`でコードの実行を継続、`Q`で終了
 
