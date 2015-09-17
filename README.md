@@ -1602,6 +1602,7 @@ Figure 8-12.
 
 > ##### Other Apply Functions for Other R Data Structures  
 > 配列と行列　`apply()`と`sweep()`  
+配列と行列　`apply()`と`sweep()`
 - [オブジェクト型 | Rのリスト、データフレーム、行列、配列など](http://stat.biopapyrus.net/r/objecttype.html)
 - [R言語プログラミング： データ型・操作 - hamadakoichi blog](http://d.hatena.ne.jp/hamadakoichi/20100118/1263832446)
 - [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
