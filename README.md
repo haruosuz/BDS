@@ -8,7 +8,7 @@ Last Update: 2015-09-17
 ![](http://ecx.images-amazon.com/images/I/51gYdVvOoQL._SX379_BO1,204,203,200_.jpg)
 
 # Bioinformatics Data Skills: Reproducible and Robust Research With Open Source Tools
-バイオインフォマティクス・データスキル：オープンソースのツールによる再現可能で頑強な研究
+バイオインフォマティクス・データスキル：オープンソースのツールによる再現可能で頑強な研究  
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files)
 
 # Print & Ebook
