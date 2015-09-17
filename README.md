@@ -1,9 +1,9 @@
-"Bioinformatics Data Skills by Vince Buffalo (O’Reilly). Copyright 2015 Vince Buffalo, 978-1-449-36737-4."
-
 ----------
 Haruo Suzuki <haruo@g-language.org>  
 Last Update: 2015-09-17  
 ----------
+
+"Bioinformatics Data Skills by Vince Buffalo (O’Reilly). Copyright 2015 Vince Buffalo, 978-1-449-36737-4."
 
 ![](http://ecx.images-amazon.com/images/I/51gYdVvOoQL._SX379_BO1,204,203,200_.jpg)
 
@@ -116,6 +116,7 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 ### Reproducible Research
 再現可能な研究  
 データ、コード、ソフトウェアのバージョンとダウンロードした日時を記録する。
+
 ### Robust Research and the Golden Rule of Bioinformatics
 ["garbage in, garbage out"](http://ejje.weblio.jp/content/Garbage+in,+garbage+out.)「ゴミを入れればゴミが出てくる」  
 
@@ -211,6 +212,7 @@ Google has [public style guides for many languages](https://github.com/google/st
 ### Project Documentation
 プロジェクトの記録  
 
+例えば、以下の項目を記録する。  
 - 方法とワークフロー。全コマンドラインをコピー＆ペースト。デフォルト値も
 - データの入手元（ウェブサイトのURL等）
 - データをダウンロードした日付
