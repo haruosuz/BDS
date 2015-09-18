@@ -148,7 +148,7 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 統計学者で遺伝学者のR. A.フィッシャー曰く: [「実験が終わった後に統計学者に相談することは、しばしば単に検死を頼むようなものになる。統計学者は、何のせいで実験が死んだのかについて言うことができるかもしれない。」](http://id.fnshr.info/2014/12/17/stats-done-wrong-13/)
 
 #### Write Code for Humans, Write Data for Computers
-Google has [public style guides for many languages](https://github.com/google/styleguide),
+[Style guides for Google-originated open-source projects](https://github.com/google/styleguide)
 
 #### Let Your Computer Do the Work For You
 
@@ -271,13 +271,7 @@ Brace expansionの例:
 
 ワイルドカードは存在するファイルを展開するのに対して、brace expansion（例 `snps_{10..13}.txt`）はファイルやディレクトリが存在するか否かに関係なく展開する。
 
-Table 2-1. Unixのワイルドカード
-
-|ワイルドカード|マッチする文字|
-|:----------:|:----------:|
-|*|0文字以上の任意の文字列（隠しファイルは無視）|
-|?|任意の1文字（隠しファイルは無視）|
-|[A-Z]|AとZの間の1文字（[0-9]は0と9の間の1文字）|
+Table 2-1. Unixのワイルドカード  
 
 - [UNIXのワイルドカード](http://www.rsch.tuis.ac.jp/~ohmi/literacy/2002/wildcard.html)
 - [UNIX/基礎知識/ワイルドカード、メタキャラクタ - 会津大学UNIXウィキ](http://technique.sonots.com/?UNIX%2F基礎知識%2Fワイルドカード、メタキャラクタ)
@@ -423,8 +417,7 @@ Figure 3-2.
 
 
 ### Managing and Interacting with Processes
-
-In this section, we’ll learn the basics of manipulating processes: running and managing processes in the background, killing errant processes, and checking process exit status.
+プロセス操作の基本：バックグラウンドでプロセスを実行・管理、プロセスを強制終了、プロセスの終了ステータスを確認
 
 - [9. プロセス操作コマンド](http://freebsd.sing.ne.jp/unix/09.html)
 - [Linux_コマンドリファレンス_10 プロセスとジョブの管理](http://www.x-net.nu/technical/linux/command/t_linux_com10.html)
@@ -682,7 +675,7 @@ Figure 5-3. git push (a); git clone (b)
 Figure 5-4. git push (a); git pull (b)  
 
 #### Creating a Shared Central Repository with GitHub
-[the Create a New Repository page](https://github.com/new)
+[the Create a New Repository page](https://github.com/new)  
 zmays-snps
 
 #### Authenticating with Git Remotes
@@ -853,6 +846,9 @@ SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プ�
 
 
 `md5sum`（OS Xでは`md5`）プログラムはMD5ハッシュ値を計算する。
+
+- [MacでMD5, SHA1を確認する。](http://qiita.com/norioc/items/8f57744da8a8dd5fbc6c)
+- [Linuxコマンド【 md5sum 】MD5チェックサムを計算・チェック - Linux入門 - Webkaru](http://webkaru.net/linux/md5sum-command/)
 
 ### Looking at Differences Between Data データの違いを見る
 - [`diff`](https://ja.wikipedia.org/wiki/Diff)
@@ -1632,12 +1628,31 @@ Example 8-4 と Figure 8-9
 
 
 #### Exploring Dataframes with dplyr
+`dplyr`は非常に高速。
+`dplyr`でデータフレームを操作する関数は、`select(), filter(), arrange(), mutate(), summarize()`
 
-dplyr
+- [dplyrでデータ処理](http://www.pu-hiroshima.ac.jp/~ttetsuji/R/%5B64%5Ddplyr.html)
 - [dplyrを使いこなす！基礎編 - Qiita](http://qiita.com/matsuou1/items/e995da273e3108e2338e)
 - [大規模データの高速処理 ーdata.table、dplyrー](http://kohske.github.io/ESTRELA/201410/index.html)
 - [plyr — データ分割-関数適用-再結合を効率的に — Watallica metallicus](http://meme.biology.tohoku.ac.jp/students/iwasaki/rstats/plyr.html)
-- [dplyrでデータ処理](http://www.pu-hiroshima.ac.jp/~ttetsuji/R/%5B64%5Ddplyr.html)
+
+`d`データフレームを`tbl_df`オブジェクトに`tbl_df()`関数で変換する:  
+
+
+`select`は、`d[, c("start", "end", "Pi", "Recombination", "depth")]`に対応:  
+
+
+`filter()`は、`d[d$Pi > 16 & d$percent.GC > 80, ]`に対応:  
+
+
+`arrange()は、`d[order(d$percent.GC), ]`に対応:  
+
+
+`mutate()` function, we can add new columns to our dataframe: For example, we added a rescaled version of the Pi column as d$diversity—let’s drop d $diversity using select() and then recalculate it:  
+	d_df <- select(d_df, -diversity) # remove our earlier diversity column
+
+
+
 
 #### Working with Strings
 
