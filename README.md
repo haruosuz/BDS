@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki <haruo@g-language.org>  
-Last Update: 2015-09-17  
+Last Update: 2015-09-18  
 
 ----------
 
@@ -30,15 +30,15 @@ Last Update: 2015-09-17
 バイオインフォマティクス・データスキル：オープンソースのツールによる再現可能で頑強な研究  
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files)
 
+----------
+
 # Table of Contents
 - [Preface](#preface)
 
 I. Ideology: Data Skills for Robust and Reproducible Bioinformatics  
-
 - [1. How to Learn Bioinformatics](#chapter-1-how-to-learn-bioinformatics)  
   
 II. Prerequisites: Essential Skills for Getting Started with a Bioinformatics Project  
- 
 - [2. Setting Up and Managing a Bioinformatics Project](#chapter-2-setting-up-and-managing-a-bioinformatics-project)
 - [3. Remedial Unix Shell](#chapter-3-remedial-unix-shell)
 - [4. Working with Remote Machines](#chapter-4-working-with-remote-machines)
@@ -46,7 +46,6 @@ II. Prerequisites: Essential Skills for Getting Started with a Bioinformatics Pr
 - [6. Bioinformatics Data](#chapter-6-bioinformatics-data)
   
 III. Practice: Bioinformatics Data Skills  
-
 - [7. Unix Data Tools](#chapter-7-unix-data-tools)
 - [8. A Rapid Introduction to the R Language](#chapter-8-a-rapid-introduction-to-the-r-language)
 - [9. Working with Range Data](#chapter-9-working-with-range-data)
@@ -77,12 +76,12 @@ III. Practice: Bioinformatics Data Skills
 
 ### Assumptions This Book Makes
 前提知識は以下の通り。  
-- You know a scripting language スクリプト言語（[R言語](https://ja.wikipedia.org/wiki/R言語)、[Python](https://ja.wikipedia.org/wiki/Python)、Perl、Ruby）  
-- You know how to use a text editor テキストエディタ（[Emacs](https://ja.wikipedia.org/wiki/Emacs)や[nano](https://ja.wikipedia.org/wiki/Nano_(テキストエディタ))）  
-- You have basic Unix command-line skills 基本的なUnixコマンド（`cd, ls, pwd, mv, rm, rmdir, mkdir`）  
-- You have a basic understanding of biology 生物学の基礎（DNA、RNA、タンパク質、遺伝子、セントラルドグマ）  
+- You know a scripting language スクリプト言語（[R言語](https://ja.wikipedia.org/wiki/R言語)、[Python](https://ja.wikipedia.org/wiki/Python)、[Perl](https://ja.wikipedia.org/wiki/Perl)、[Ruby](https://ja.wikipedia.org/wiki/Ruby)
+- You know how to use a text editor テキストエディタ（[Emacs](https://ja.wikipedia.org/wiki/Emacs)、[nano](https://ja.wikipedia.org/wiki/Nano_(テキストエディタ))
+- You have basic Unix command-line skills 基本的なUnixコマンド（`cd, ls, pwd, mv, rm, rmdir, mkdir`
+- You have a basic understanding of biology 生物学の基礎（DNA、RNA、タンパク質、遺伝子、セントラルドグマ 
 - You have a basic understanding of regular expressions [正規表現](https://ja.wikipedia.org/wiki/正規表現)  
-- You know how to get help and read documentation ヘルプやマニュアルの参照（Unixの`man`やRの`help()`）  
+- You know how to get help and read documentation ヘルプやマニュアルの参照（Unixの`man`やRの`help()`
 - You can manage your computer system (or have a system administrator) システム管理  
 
 ### Supplementary Material on GitHub
@@ -101,9 +100,6 @@ III. Practice: Bioinformatics Data Skills
 
 ### Organization of This Book
 本書は3部構成：第I部はイデオロギーに関する1章、第II部は基礎編、第III部は実践編。
-
-### Code Conventions コード表記規則
-[...]は出力の省略を意味する。
 
 ----------
 
@@ -499,7 +495,7 @@ IPアドレスを用いてマシンに繋げるには `ssh 192.169.237.42`
 ポートとユーザー名を指定する:  
 
 
-ssh -v (-v for verbose) using -vv or -vvv; see man ssh for more details.
+ホストに接続できない場合、`ssh -v`（`-v`はverbose）で問題を発見する。`-vv`や`-vvv`でverbosityを向上できる。詳細は、`man ssh`を参照されたい。
 
 > ### Storing Your Frequent SSH Hosts  
 *~/.ssh/config*ファイルを作る:  
