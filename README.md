@@ -776,9 +776,13 @@ masterブランチに戻り、adapters.faファイルを追加し、この変更
 
 ### Continuing Your Git Education
 
-`git checkout` to restore files  
-`git stash` to stash your working changes  
-`git branch` to work with branches  
+`git checkout` 変更したファイルを戻す  
+`git stash` 修正をいったん退避する  
+`git branch` ブランチ操作  
+
+- [Gitでやらかした時に使える19個の奥義](http://qiita.com/muran001/items/dea2bbbaea1260098051)
+- [Git コマンドまとめ](http://qiita.com/merrill/items/375b20de0a5dbc35265d)
+- [git初心者への道 - お仕事で困らないレベルまでググっとします。](https://gist.github.com/yatemmma/6486028)
 
 ## Chapter 6. Bioinformatics Data
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch06.html#chapter-06)
@@ -1022,7 +1026,8 @@ Mus_musculus.GRCm38.75_chr1.gtfファイルのヘッダを除いてから、列�
 > Homebrew でインストール `brew install coreutils`  
 
 
-`-w`, which matches entire words (surrounded by whitespace). 
+- [grep の w オプション初めて知った - 理系学生日記](http://kiririmode.hatenablog.jp/entry/20091211/p1)
+- [grepコマンド（ファイル内の文字を検索する）](http://itdoc.hitachi.co.jp/manuals/3020/30203S3530/JPAS0250.HTM) | -w 指定文字列が単語として含まれている行を表示します。単語とは英数字およびアンダースコア（_）から構成される文字列のことです。また，単語の前後はスペースなどの単語構成文字列以外の文字や，行頭または行末で区切られている必要があります。
 
 
 3つのオプション `-B, -A, -C`
@@ -1040,7 +1045,7 @@ Mus_musculus.GRCm38.75_chr1.gtfファイルのヘッダを除いてから、列�
 `-o`オプションでマッチした部分だけを取り出す。
 
 
-Example 7-1. Cleaning a set of gene names with Unix data tools
+Example 7-1. 重複のない（ユニークな）ソートされた遺伝子名のリストを出力するUnixコマンド
 
 
 [Linuxコマンド集 - 【 grep 】 文字列を検索する：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230786/)
@@ -1113,7 +1118,9 @@ Unixコマンド（`grep, cut, sort, uniq`）を組み合わせて、表形式�
 > ### Gawk versus Awk  
 
 
-Table 7-2. Awk comparison and logical operations
+Table 7-2. Awkの比較・論理演算子
+
+- [AWK で使われる演算子](http://aoki2.si.gunma-u.ac.jp/Hanasi/Algo/letsawk/WhatIsOperator.html)
 
 
 `BEGIN`と`END`
@@ -1128,13 +1135,12 @@ Table 7-2. Awk comparison and logical operations
 Awkの連想配列 (associative array)は、Pythonの辞書、Perlのハッシュのように振る舞う。
 
 
-Table 7-3. Useful built-in Awk functions
+Table 7-3. Awkの組み込み関数
 
+- [The GNU Awk User's Guide - 組み込み関数](The GNU Awk User's Guide - 組み込み関数)
 
 Unixコマンド（`grep, cut, sort, and uniq -c`）を用いて、特定の遺伝子の特徴をカウントする:
 
-
-参考:  
 - [共通テーマ: 実例でわかる awk: 第 1 回](http://www.ibm.com/developerworks/jp/linux/library/l-awk1/)
 - [第17回ａｗｋの連想配列](http://homepage2.nifty.com/mozu/koza/awk_koza/awk_koza_17.html)
 
@@ -1254,7 +1260,7 @@ x[論理値ベクトル]は、TRUEの要素に対応した要素を取り出す�
 Example 8-1. Indexing vectors with logical vectors  
 
 
-Table 8-2. R’s comparison and logical operators | Rの比較演算子と論理演算子  
+Table 8-2. Rの比較演算子と論理演算子  
 
 - [28. 演算子 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/28.html)
 
