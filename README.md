@@ -1654,7 +1654,7 @@ Example 8-4 と Figure 8-9
 
 
 `mutate()`関数を用いて、データフレームに新しい列を追加できる。
-	d_df <- select(d_df, -diversity) # remove our earlier diversity column
+
 
 
 
