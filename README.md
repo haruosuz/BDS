@@ -750,8 +750,6 @@ README.mdを編集:
 この変更をreadme-changesブランチにコミットする。masterブランチに戻り、このコミットが存在しないことを確認する:  
 
 
-Back on the master branch, suppose we add the adapters.fa file, and commit this change:
-
 masterブランチに戻り、adapters.faファイルを追加し、この変更をコミットする:  
 
 
@@ -832,7 +830,8 @@ Table 6-1. wgetのオプション
 例えば、GTFファイルを192.168.237.42:/home/deborah/zea_mays/data/に転送する:  
 
 
-### Data Integrity [データ完全性](https://ja.wikipedia.org/wiki/データ完全性)
+### Data Integrity
+[データ完全性](https://ja.wikipedia.org/wiki/データ完全性)
 
 [チェックサム](https://ja.wikipedia.org/wiki/チェックサム)で転送データの整合性を検証。
 
@@ -850,7 +849,9 @@ SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プ�
 - [MacでMD5, SHA1を確認する。](http://qiita.com/norioc/items/8f57744da8a8dd5fbc6c)
 - [Linuxコマンド【 md5sum 】MD5チェックサムを計算・チェック - Linux入門 - Webkaru](http://webkaru.net/linux/md5sum-command/)
 
-### Looking at Differences Between Data データの違いを見る
+### Looking at Differences Between Data
+データの違いを見る
+
 - [`diff`](https://ja.wikipedia.org/wiki/Diff)
  - [UNIXの部屋 コマンド検索:diff (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?diff)
  - [diff - コマンド (プログラム) の説明 - Linux コマンド集 一覧表](http://kazmax.zpp.jp/cmd/d/diff.1.html)
@@ -859,7 +860,9 @@ SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プ�
 *gene-1.bed*と*gene-2.bed*ファイルの差分を出力:  
 
 
-### Compressing Data and Working with Compressed Data データの圧縮
+### Compressing Data and Working with Compressed Data
+データの圧縮
+
 ##### [*gzip*](https://ja.wikipedia.org/wiki/Gzip)
 - [UNIXの部屋 コマンド検索:gzip (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?gzip)
 - [Linuxコマンド集 - 【 gzip 】 ファイルを圧縮・展開する（拡張子.gz）：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230791/)
