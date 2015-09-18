@@ -32,23 +32,29 @@ Last Update: 2015-09-17
 
 # Table of Contents
 - [Preface](#preface)
-- I. Ideology: Data Skills for Robust and Reproducible Bioinformatics
-  - [1. How to Learn Bioinformatics](#chapter-1-how-to-learn-bioinformatics)
-- II. Prerequisites: Essential Skills for Getting Started with a Bioinformatics Project
-  - [2. Setting Up and Managing a Bioinformatics Project](#chapter-2-setting-up-and-managing-a-bioinformatics-project)
-  - [3. Remedial Unix Shell](#chapter-3-remedial-unix-shell)
-  - [4. Working with Remote Machines](#chapter-4-working-with-remote-machines)
-  - [5. Git for Scientists](#chapter-5-git-for-scientists)
-  - [6. Bioinformatics Data](#chapter-6-bioinformatics-data)
-- III. Practice: Bioinformatics Data Skills
-  - [7. Unix Data Tools](#chapter-7-unix-data-tools)
-  - [8. A Rapid Introduction to the R Language](#chapter-8-a-rapid-introduction-to-the-r-language)
-  - [9. Working with Range Data](#chapter-9-working-with-range-data)
-  - [10. Working with Sequence Data](#chapter-10-working-with-sequence-data)
-  - [11. Working with Alignment Data](#chapter-11-working-with-alignment-data)
-  - [12. Bioinformatics Shell Scripting, Writing Pipelines, and Parallelizing Tasks](#chapter-12-bioinformatics-shell-scripting-writing-pipelines-and-parallelizing-tasks)
-  - [13. Out-of-Memory Approaches: Tabix and SQLite](#chapter-13-out-of-memory-approaches-tabix-and-sqlite)
-  - [14. Conclusion](#chapter-14-conclusion)
+
+I. Ideology: Data Skills for Robust and Reproducible Bioinformatics  
+
+- [1. How to Learn Bioinformatics](#chapter-1-how-to-learn-bioinformatics)  
+  
+II. Prerequisites: Essential Skills for Getting Started with a Bioinformatics Project  
+ 
+- [2. Setting Up and Managing a Bioinformatics Project](#chapter-2-setting-up-and-managing-a-bioinformatics-project)
+- [3. Remedial Unix Shell](#chapter-3-remedial-unix-shell)
+- [4. Working with Remote Machines](#chapter-4-working-with-remote-machines)
+- [5. Git for Scientists](#chapter-5-git-for-scientists)
+- [6. Bioinformatics Data](#chapter-6-bioinformatics-data)
+  
+III. Practice: Bioinformatics Data Skills  
+
+- [7. Unix Data Tools](#chapter-7-unix-data-tools)
+- [8. A Rapid Introduction to the R Language](#chapter-8-a-rapid-introduction-to-the-r-language)
+- [9. Working with Range Data](#chapter-9-working-with-range-data)
+- [10. Working with Sequence Data](#chapter-10-working-with-sequence-data)
+- [11. Working with Alignment Data](#chapter-11-working-with-alignment-data)
+- [12. Bioinformatics Shell Scripting, Writing Pipelines, and Parallelizing Tasks](#chapter-12-bioinformatics-shell-scripting-writing-pipelines-and-parallelizing-tasks)
+- [13. Out-of-Memory Approaches: Tabix and SQLite](#chapter-13-out-of-memory-approaches-tabix-and-sqlite)
+- [14. Conclusion](#chapter-14-conclusion)
 
 ----------
 
@@ -57,26 +63,26 @@ Last Update: 2015-09-17
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-00-preface)
 
 ### The Approach of This Book
-本書は、バイオインフォマティクス・ソフトウェア（マッピング、アセンブル、変異解析など）の実行方法は扱わない。  
+本書は、ソフトウェアの実行方法は扱わない。  
 本書は、複雑で大規模なデータセットから意味を抽出し探索する技術を扱う。  
 本書を通して、頑強で再現可能な方法を強調する。  
 
 ### Why This Book Focuses on Sequencing Data
 バイオインフォマティクスは、幅広い学問分野であり、プロテオミクス、メタボロミクス、構造バイオインフォマティクス、比較ゲノム、機械学習、画像処理のような分野にまたがる。この本では主に配列データの扱いに焦点を当てる。配列データは豊富にあり、配列データ解析に必要なテキスト処理技術は、他のデータに適用できる。
 
-### Audience 読者
-生物学者と計算機科学者の両方
+### Audience
+生物学者と計算機科学者の両方を対象
 
 ### The Difficulty Level of Bioinformatics Data Skills
 
 ### Assumptions This Book Makes
 前提知識は以下の通り。  
-- You know a scripting language スクリプト言語（[Python](https://ja.wikipedia.org/wiki/Python)や[R言語](https://ja.wikipedia.org/wiki/R言語)）  
-- You know how to use a text editor テキストエディタ（[Emacs](https://ja.wikipedia.org/wiki/Emacs)や[nano](https://ja.wikipedia.org/wiki/Nano_(テキストエディタ))）
+- You know a scripting language スクリプト言語（[R言語](https://ja.wikipedia.org/wiki/R言語)、[Python](https://ja.wikipedia.org/wiki/Python)、Perl、Ruby）  
+- You know how to use a text editor テキストエディタ（[Emacs](https://ja.wikipedia.org/wiki/Emacs)や[nano](https://ja.wikipedia.org/wiki/Nano_(テキストエディタ))）  
 - You have basic Unix command-line skills 基本的なUnixコマンド（`cd, ls, pwd, mv, rm, rmdir, mkdir`）  
 - You have a basic understanding of biology 生物学の基礎（DNA、RNA、タンパク質、遺伝子、セントラルドグマ）  
 - You have a basic understanding of regular expressions [正規表現](https://ja.wikipedia.org/wiki/正規表現)  
-- You know how to get help and read documentation ヘルプやマニュアルの参照  
+- You know how to get help and read documentation ヘルプやマニュアルの参照（Unixの`man`やRの`help()`）  
 - You can manage your computer system (or have a system administrator) システム管理  
 
 ### Supplementary Material on GitHub
@@ -88,7 +94,7 @@ Last Update: 2015-09-17
 
 ### Computing Resources and Setup
 筆者は、ラップトップ（15インチのMacBook Pro、メモリは16GB）で本書を執筆した。例題は、8GBのメモリを搭載するマシンで実行すべき。  
-例題は、Unix系のOS（Mac OS XやLinux）で動作する。[パッケージ管理システム](https://ja.wikipedia.org/wiki/パッケージ管理システム)（Ubuntu/Debianの`apt-get`や、Mac OS Xの[Homebrew](http://brew.sh/index_ja.html)（[homebrew-science](https://github.com/Homebrew/homebrew-science)）を使用すべき。
+例題は、Unix系のOS（Mac OS XやLinux）で動作する。[パッケージ管理システム](https://ja.wikipedia.org/wiki/パッケージ管理システム)（Ubuntu/Debianの`apt-get`や、Mac OS Xの[Homebrew](http://brew.sh/index_ja.html)を使用すべき。（[homebrew-science](https://github.com/Homebrew/homebrew-science)）
 
 - [作業環境を整えるMacOSXのパッケージマネージャ「Homebrew」のインストール方法と使い方 | 株式会社LIG](http://liginc.co.jp/web/tool/mac-iphone/151069)
 - [MacにHomebrewをインストールする - Qiita](http://qiita.com/_daisuke/items/d3b2477d15ed2611a058)
@@ -129,12 +135,12 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 ["garbage in, garbage out"](http://ejje.weblio.jp/content/Garbage+in,+garbage+out.)「ゴミを入れればゴミが出てくる」  
 
 バイオインフォマティクスの黄金律:  
-> #### NEVER EVER TRUST YOUR TOOLS (OR DATA)  
+> ### NEVER EVER TRUST YOUR TOOLS (OR DATA)  
 ツールやデータを絶対に信用しない。  
 
 ### Adopting Robust and Reproducible Practices Will Make Your Life Easier, Too
 ### Recommendations for Robust Research
-頑健な研究のススメ  
+頑強な研究のススメ  
 
 #### Pay Attention to Experimental Design
 実験計画  
@@ -219,6 +225,7 @@ Google has [public style guides for many languages](https://github.com/google/st
 プロジェクトの記録  
 
 例えば、以下の項目を記録する。  
+
 - 方法とワークフロー。全コマンドラインをコピー＆ペースト。デフォルト値も
 - データの入手元（ウェブサイトのURL等）
 - データをダウンロードした日付
@@ -1672,7 +1679,7 @@ FASTA/FASTQエントリの計数
 @は、クオリティ値として行頭にくることもある。
 
 
-配列数を計数する頑健な方法は`bioawk`を用いる:  
+配列数を計数する頑強な方法は`bioawk`を用いる:  
 
 
 ### Nucleotide Codes
