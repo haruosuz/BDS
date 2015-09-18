@@ -2115,7 +2115,7 @@ WHERE句で特定の行を除外。例えば、strongest risk SNP = "rs429358"�
 大文字と小文字は区別される。比較の前にlower()関数で値を小文字に変換:  
 
 
-Table 13-2. Common operators used in WHERE statements
+Table 13-2. WHERE句で使用される演算子
 
 - [取得するデータの条件を設定(WHERE句) - SQLite入門 | 比較演算子を使った条件式](http://www.dbonline.jp/sqlite/select/index3.html#section2)
 
@@ -2168,7 +2168,7 @@ Table 13-3. SQLiteの関数
 
 
 
-Table 13-4. Common SQLite aggregate functions 集計関数  
+Table 13-4. SQLiteの集計関数  
 - [SQLite関数の使い方 - SQLite入門](http://www.dbonline.jp/sqlite/function/)
 
 `YYYY-MM-DD`。[xkcd: ISO 8601](http://xkcd.com/1179/)
