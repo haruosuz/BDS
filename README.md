@@ -1653,7 +1653,7 @@ Example 8-4 と Figure 8-9
 `arrange()は、`d[order(d$percent.GC), ]`に対応:  
 
 
-`mutate()` function, we can add new columns to our dataframe: For example, we added a rescaled version of the Pi column as d$diversity—let’s drop d $diversity using select() and then recalculate it:  
+`mutate()`関数を用いて、データフレームに新しい列を追加できる。
 	d_df <- select(d_df, -diversity) # remove our earlier diversity column
 
 
