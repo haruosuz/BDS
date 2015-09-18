@@ -1218,7 +1218,9 @@ FASTQ/FASTAエントリ数をカウント:
 ### R Language Basics
 #### Simple Calculations in R, Calling Functions, and Getting Help in R
 
-Table 8-1. Common mathematic functions
+Table 8-1. 数学関数
+
+- [03. 簡単な計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/03.html)
 
 > #### SIGNIFICANT DIGITS, PRINT(), AND OPTIONS IN R  
 
@@ -1256,8 +1258,9 @@ z[負整数ベクトル]は、対応する要素番号の要素を取り除く�
 比較演算子、例えば、==, !=, <, <=, >, >= （Table 8-2）を用いて、TRUEとFALSEの論理ベクトルを作成する。  
 
 
-x[論理値ベクトル]は、TRUEの要素に対応した要素を取り出す（Example 8-1）。  
-Example 8-1. Indexing vectors with logical vectors  
+- [13. ベクトル要素へのアクセス](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)
+
+x[論理値ベクトル]は、TRUEの要素に対応した要素を取り出す（Example 8-1）:  
 
 
 Table 8-2. Rの比較演算子と論理演算子  
@@ -1270,7 +1273,7 @@ Table 8-2. Rの比較演算子と論理演算子
 - [18. NULL，NA，NaN，Infの操作 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/18.html)
 - [25. データ型とデータ構造 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/25.html)
 
-Table 8-3. R’s vector types | Rのベクトル型
+Table 8-3. Rのベクトル型
 
 > #### R’S SPECIAL VALUES  
 > `(NA, NULL, Inf/-Inf, and NaN)`  
@@ -1615,7 +1618,7 @@ Figure 8-12.
   - [25. データ型とデータ構造](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/25.html)
 
 #### Working with the Split-Apply-Combine Pattern
-["The Split-Apply-Combine Strategy for Data Analysis"](http://www.jstatsoft.org/v40/i01/paper)  
+Hadley Wickhamの論文["The Split-Apply-Combine Strategy for Data Analysis"](http://www.jstatsoft.org/v40/i01/paper)  
 
 Example 8-4 と Figure 8-9  
 
@@ -1809,8 +1812,6 @@ Samtoolsの`faidx`サブコマンドを用いて、FASTAファイルのインデ
 
 
 
-Bash assigns the number of command-line arguments to the variable $# (this does not count the script name, $0, as an argument). This is useful for user-friendly messages (this uses a Bash if conditional, which we’ll cover in more depth in the next section):
-
 変数`$#`にはコマンドライン引数の個数を割り当てる（スクリプト名の$0は引数としてカウントしない）。
 
 
@@ -1836,15 +1837,16 @@ Bashでは、コマンドの終了ステータスが0は真/成功を表し、�
 `test`コマンドの実行例（`echo "$?"`で終了ステータスを出力）
 
 
-Table 12-1. String and integer comparison operators 文字列と整数の比較演算子
+Table 12-1. 文字列と整数の比較演算子
 
 
-Table 12-2. File and directory test expressions
+Table 12-2. ファイルとディレクトリのテスト式
+
+- [Linuxコマンド集 - 【 test 】 条件式の真偽を判定する：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230901/)
 
 `if test -f some_file.txt`を`if [ -f some_file.txt ] `で代用できる。`[]`前後に半角スペースが必要。  
 この構文では、`-a`（論理積AND）、`-o`（論理和OR）、`!`（否定）を使える。`test`では`&&`と`||`演算子は使えない。
 
-As an example, suppose we want to ensure our script has enough arguments and that the input file is readable:
 例として、スクリプトが十分な引数を持ち、入力ファイルが読み込み可能であることを確認する:  
 
 
@@ -1898,14 +1900,9 @@ Unixプログラム`basename`は、ファイル名からパスや拡張子を削
 
 #### Finding Files with find
 
-Again, using the zmays-snps/ toy directory we created in “Organizing Data to Automate File Processing Tasks” on page 26:
 
 
-
-
-
-
-Example 12-1. Find through filename matching
+Example 12-1. ファイル名のマッチングにより検索
 
 
 #### find’s Expressions
@@ -1917,28 +1914,27 @@ Example 12-1. Find through filename matching
 
 
 
-Table 12-3. Common find expressions and operators
+Table 12-3. findの判別式と演算子
+
+- [Linuxコマンド集 - 【 find 】 ファイルやディレクトリを検索する：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230777/)
 
 否定:
 
 
-(we are still in the zmays/data directory):
+（我々はzmays/dataディレクトリにいます）:  
 
 
-
-参考:  
-- [Linuxコマンド集 - 【 find 】 ファイルやディレクトリを検索する：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230777/)
 
 #### find’s -exec: Running Commands on find’s Results
 
 
 
-Deleting Files with find -exec:  
+> #### Deleting Files with find -exec:  
 `-delete`オプション
 
 #### xargs: A Unix Powertool
 [xargs](https://ja.wikipedia.org/wiki/Xargs)  
-参考:  
+
 - [Linuxコマンド集 - 【xargs】標準入力から生成したコマンドラインを実行する：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20140331/547143/)
 - [UNIXの部屋 コマンド検索:xargs (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?xargs)
 - [xargs コマンド | コマンドの使い方(Linux) | hydroculのメモ](https://hydrocul.github.io/wiki/commands/xargs.html) 一度にコマンドに渡す引数の最大数を制御するには [2014/01/05] {option-n}
@@ -1970,8 +1966,6 @@ Macの場合、HomebrewでGNU Coreutilsをインストール
 
 #### xargs and Parallelization
 
-t how many processes run simultaneously. xargs allows us to do this with the 
-
 オプション`-P <num>`で、<num>プロセスまで同時に実行する
 
 
@@ -1989,8 +1983,7 @@ t how many processes run simultaneously. xargs allows us to do this with the
 
 ### Make and Makefiles: Another Option for Pipelines
 [Make](https://ja.wikipedia.org/wiki/Make)
-
-参考:  
+ 
 - [Makeについて知っておくべき7つのこと | インフラ・ミドルウェア | POSTD](http://postd.cc/7-things-you-should-know-about-make/)
 
 宣言型プログラミング（英: Declarative programming）  
@@ -2025,7 +2018,6 @@ t how many processes run simultaneously. xargs allows us to do this with the
 インデックスファイルの拡張子は*.tbi*:  
 
 
-参考:  
 - [tabix(1) manual page](http://www.htslib.org/doc/tabix.html)
 - [How to use `tabix`.](https://gist.github.com/knmkr/5405249)
 - [NGS Surfer's Wiki | vcftoolsインストールログ](http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=vcftoolsインストールログ)
@@ -2065,7 +2057,6 @@ Table 13-1. Useful SQLite3 dot commands
 
 SQLiteでは、列は型を持たないが、データ値は型を持つ。データ値は5タイプの何れか: text、integer、real、NULL、BLOB（binary large object）
 
-参考:  
 - [SQLite | MacでSQLite3を操作する](http://ortk.main.jp/blog/?p=628)
 - [はじめてのSQLite（Mac版）](http://doruby.kbmj.com/oneafter999_on_rails/20100806/_SQLite_Mac_)
 - [[SQLite] 記憶クラス(データ型)とカラム型 - Life with IT](http://l-w-i.net/t/sqlite/data_001.txt)
@@ -2169,7 +2160,8 @@ Table 13-2. Common operators used in WHERE statements
 全てのNULL値をNAに置き換えるには、ifnull()関数を用いる:  
 
 
-Table 13-3. Common SQLite functions  
+Table 13-3. SQLiteの関数  
+
 - [SQLite関数の使い方 - SQLite入門](http://www.dbonline.jp/sqlite/function/)
 
 ##### SQLite Aggregate Functions
