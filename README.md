@@ -109,6 +109,7 @@ III. Practice: Bioinformatics Data Skills
 ----------
 
 ## Chapter 1. How to Learn Bioinformatics
+第1章. バイオインフォマティクスの学び方
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch01.html#chapter-01)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-01-ideology)
 
@@ -194,7 +195,7 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 ----------
 
 ## Chapter 2. Setting Up and Managing a Bioinformatics Project
-バイオインフォマティクス・プロジェクトの作成と管理  
+第2章. バイオインフォマティクス・プロジェクトの作成と管理  
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch02.html#chapter-02)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-02-bioinformatics-projects) 
 
@@ -301,7 +302,7 @@ Table 2-2. マークダウン構文
 
 
 ## Chapter 3. Remedial Unix Shell
-Unixシェル  
+第3章. Unixシェル補習  
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch03.html#chapter-03)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-03-remedial-unix) 
 
@@ -483,6 +484,7 @@ Control-z キーで中断させたジョブを
 `add alias`を用いて*~/.bashrc*（Mac OS Xでは*~/.profile*）ファイルに追加する。例えば、常に同じディレクトリ構造のプロジェクト・ディレクトリを作成する:  
 
 ## Chapter 4. Working with Remote Machines
+第4章. リモートマシンの操作
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch04.html#chapter-04)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-04-working-with-remote-machines)
 
@@ -574,6 +576,7 @@ Table 4-2. Tmuxの基本的コマンド
 Emacsで、文字通り Control-a を入力するには、Control-a a とする。
 
 ## Chapter 5. Git for Scientists
+第5章. 科学者のためのGit
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch05.html#chapter-05)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-05-git-for-scientists)
 
@@ -779,6 +782,7 @@ masterブランチに戻り、adapters.faファイルを追加し、この変更
 - [git初心者への道 - お仕事で困らないレベルまでググっとします。](https://gist.github.com/yatemmma/6486028)
 
 ## Chapter 6. Bioinformatics Data
+第6章. バイオインフォマティクス・データ
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch06.html#chapter-06)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-06-bioinformatics-data)
 
@@ -928,6 +932,7 @@ Markdownノート（README.md）の例:
 ----------
 
 ## Chapter 7. Unix Data Tools
+第7章. Unixのデータ・ツール
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch07.html#chapter-07)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-07-unix-data-tools)
 
@@ -1206,6 +1211,7 @@ FASTQ/FASTAエントリ数をカウント:
 ### The Unix Philosophy Revisited
 
 ## Chapter 8. A Rapid Introduction to the R Language
+第8章. R言語入門
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch08.html#chapter-08)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r)
 
@@ -1675,12 +1681,12 @@ Example 8-4 と Figure 8-9
 
 
 ## Chapter 9. Working with Range Data
-範囲データの操作  
+第9章. 範囲データの操作  
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch09.html#chapter-09)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-09-working-with-range-data)
 
 ## Chapter 10. Working with Sequence Data
-配列データの操作  
+第10章. 配列データの操作  
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch10.html#chapter-10)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-10-sequence)
 
@@ -1758,7 +1764,7 @@ Samtoolsの`faidx`サブコマンドを用いて、FASTAファイルのインデ
 - [samtoolsの使い方 - #LSQA](http://qa.lifesciencedb.jp/questions/458/samtoolsの使い方)
 
 ## Chapter 11. Working with Alignment Data
-アライメントデータの操作  
+第11章. アライメントデータの操作  
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch11.html#chapter-11)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-11-alignment)
 
@@ -1775,6 +1781,7 @@ Samtoolsの`faidx`サブコマンドを用いて、FASTAファイルのインデ
 #### Pileups with samtools pileup, Variant Calling, and Base Alignment Quality
 
 ## Chapter 12. Bioinformatics Shell Scripting, Writing Pipelines, and Parallelizing Tasks
+第12章. バイオインフォマティクスのシェルスクリプト、パイプライン、タスクの並列化
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch12.html#chapter-12)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-12-pipelines)
 
@@ -1996,6 +2003,7 @@ Macの場合、HomebrewでGNU Coreutilsをインストール
 
 
 ## Chapter 13. Out-of-Memory Approaches: Tabix and SQLite
+第13章. TabixとSQLite
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch13.html#chapter-13)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-13-out-of-memory)
 
