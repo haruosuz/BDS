@@ -212,11 +212,11 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 - *analysis/*ディレクトリに解析結果を格納する。
 
 > ### What’s in a Name?  
-ファイル名には、英数字や_や-を使い、スペース（空白）を入れない。拡張子を付ける。（例 *osativa-genes_2015-07-07.fasta*）  
+ファイル名には、英数字や_や-を使い、スペース（空白）を入れない。拡張子を付ける。（例. *osativa-genes_2015-07-07.fasta*）  
 
 - [UNIXコマンド辞典>>絶対パスと相対パス](http://codezine.jp/unixdic/w/絶対パスと相対パス)
 
-絶対パス（例 `/home/vinceb/projects/zmays-snps/data/stats/qual.txt`）ではなく相対パス（例 `../data/stats/qual.txt`）を使う。
+絶対パス（例. `/home/vinceb/projects/zmays-snps/data/stats/qual.txt`）ではなく相対パス（例. `../data/stats/qual.txt`）を使う。
 
 ### Project Documentation
 プロジェクトの記録  
@@ -226,8 +226,8 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 - 方法とワークフロー。全コマンドラインをコピー＆ペースト。デフォルト値も
 - データの入手元（ウェブサイトのURL等）
 - データをダウンロードした日付
-- データのバーション（例えば、[TAIR10](https://www.arabidopsis.org/download_files/Genes/TAIR10_genome_release/README_TAIR10.txt)、[WS231](https://www.wormbase.org/about/wormbase_release_WS231)）
-- データのダウンロード方法（例えば、[MySQL](https://ja.wikipedia.org/wiki/MySQL)、[UCSC Genome Browser](https://genome.ucsc.edu)を使用）
+- データのバーション（例. [TAIR10](https://www.arabidopsis.org/download_files/Genes/TAIR10_genome_release/README_TAIR10.txt)、[WS231](https://www.wormbase.org/about/wormbase_release_WS231)
+- データのダウンロード方法（例. [MySQL](https://ja.wikipedia.org/wiki/MySQL)、[UCSC Genome Browser](https://genome.ucsc.edu)
 - ソフトウェアのバーション（なければ、日付やURL）
 
 以上の情報を[プレーンテキスト](https://ja.wikipedia.org/wiki/プレーンテキスト)形式の[README](https://ja.wikipedia.org/wiki/リードミー)ファイルに保存する。プレーンテキストはコマンドラインから簡単に読み込み、検索、編集できる。  
@@ -266,7 +266,7 @@ Brace expansionの例:
 サンプルCを排除する:  
 
 
-ワイルドカードは存在するファイルを展開するのに対して、brace expansion（例 `snps_{10..13}.txt`）はファイルやディレクトリが存在するか否かに関係なく展開する。
+ワイルドカードは存在するファイルを展開するのに対して、brace expansion（例. `snps_{10..13}.txt`）はファイルやディレクトリが存在するか否かに関係なく展開する。
 
 Table 2-1. Unixのワイルドカード  
 
@@ -274,7 +274,7 @@ Table 2-1. Unixのワイルドカード
 - [UNIX/基礎知識/ワイルドカード、メタキャラクタ - 会津大学UNIXウィキ](http://technique.sonots.com/?UNIX%2F基礎知識%2Fワイルドカード、メタキャラクタ)
 
 > ### Leading Zeros and Sorting  
-ファイル名の先頭に0を付ける（例えば、*file-21.txt*よりもむしろ*file-0021.txt*とする）と、`ls`で辞書順にファイルがソートされる。  
+ファイル名の先頭に0を付ける（例. *file-21.txt*ではなく*file-0021.txt*にする）と、`ls`で辞書順にファイルがソートされる。  
 `touch gene-{1..14}.txt`  
 `printf "gene-%03d.txt " {1..14} | xargs touch`  
 
@@ -367,7 +367,7 @@ Table 2-2. マークダウン構文
 - [ファイルディスクリプタとは｜file descriptor｜ファイルディスクリプター - 意味/解説/説明/定義 ： IT用語辞典](http://e-words.jp/w/ファイルディスクリプタ.html)
 - [ファイルディスクリプタについて（1）　～ファイルディスクリプタの概要：CodeZine（コードジン）](http://codezine.jp/article/detail/4836)
 
-擬似デバイス（*pseudodevice*）の*/dev/null*は、あらゆる入力を受け付け、それを捨てる。
+擬似デバイス（*pseudodevice*）の */dev/null* は、あらゆる入力を受け付け、それを捨てる。
 
 - [デバイスファイル](https://ja.wikipedia.org/wiki/デバイスファイル)
 
@@ -378,7 +378,7 @@ Table 2-2. マークダウン構文
 標準入力リダイレクト:  
 
 
-標準入力リダイレクト演算子`<`よりもUnixパイプ（例えば、`cat inputfile | program > outputfile`）を使う方がより一般的。
+標準入力リダイレクト演算子`<`よりもUnixパイプ（例. `cat inputfile | program > outputfile`）を使う方がより一般的。
 
 ### The Almighty Unix Pipe: Speed and Beauty in One
 
@@ -545,7 +545,7 @@ terminal multiplexer：[Tmux](https://wiki.archlinuxjp.org/index.php/Tmux)と[GN
 TmuxをMac OS XにHomebrewでインストールする:  
 
 
-設定ファイル（[*.tmux.conf*](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-04-working-with-remote-machines/.tmux.conf)）をホームディレクトリに置く。シェルが設定を*~/.profile*や*~/.bashrc*から読み込むように、Tmuxは設定を*~/.tmux.conf*から読み込む。
+設定ファイル（[*.tmux.conf*](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-04-working-with-remote-machines/.tmux.conf)）をホームディレクトリに置く。シェルが設定を *~/.profile* や *~/.bashrc* から読み込むように、Tmuxは設定を *~/.tmux.conf* から読み込む。
 
 #### Creating, Detaching, and Attaching Tmux Sessions
 
@@ -636,7 +636,6 @@ Figure 5-1.
 
 
 > ### git log and Your Terminal Pager  
->  
 
 
 クローンしたseqtkリポジトリで`git log`
@@ -646,23 +645,21 @@ Figure 5-1.
 
 #### Telling Git What to Ignore: .gitignore
 
-無視させたいファイルを記載した .gitignore ファイルを作成
+無視させたいファイルを記載した *.gitignore* ファイルを作成:  
 
 
-.gitignore ファイルをステージし、コミット
+*.gitignore* ファイルをステージし、コミット:  
 
 
 バイオインフォマティクス・プロジェクトで無視させたいファイルの例:  
-- Large files 巨大なファイル
-- Intermediate files 中間ファイル (SAM or BAM)
-- Text editor temporary files テキストエディタ(Emacs や Vim)の一時ファイル(textfile.txt~ や #textfile.txt#)
-- Temporary code files Pythonのoverlap.pyc.
+- 巨大なファイル
+- 中間ファイル（SAMやBAMファイル）
+- テキストエディタ（EmacsやVim）の一時ファイル（例. *textfile.txt~* や *#textfile.txt#*）。*.gitignore* ではワイルドカード（`*~`や`\#*\#`）が使える。
+- 一時コードファイル（Pythonの*overlap.pyc*）
 
-`~/.gitignore_global`にグローバルな`.gitignore`ファイルを作成
+Mac OS Xで作成される隠しファイル *.DS_Store*
 
-
-設定する
-
+グローバルな*.gitignore*ファイルを*~/.gitignore_global*に作成し、これを使用するようにGitを設定する:  
 
 #### Undoing a Stage: git reset
 
@@ -848,7 +845,7 @@ SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プ�
 
 
 
-`md5sum`（OS Xでは`md5`）プログラムはMD5ハッシュ値を計算する。
+`md5sum`（Mac OS Xでは`md5`）プログラムはMD5ハッシュ値を計算する。
 
 - [MacでMD5, SHA1を確認する。](http://qiita.com/norioc/items/8f57744da8a8dd5fbc6c)
 - [Linuxコマンド【 md5sum 】MD5チェックサムを計算・チェック - Linux入門 - Webkaru](http://webkaru.net/linux/md5sum-command/)
@@ -887,13 +884,13 @@ SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プ�
 
 
 #### Working with Gzipped Compressed Files
-圧縮ファイルを直接操作できるコマンドは、`zgrep`、`zcat`（OS Xでは`gzcat`）、`zdiff`、`zless`など。
+圧縮ファイルを直接操作できるコマンドは、`zgrep`、`zcat`（Mac OS Xでは`gzcat`）、`zdiff`、`zless`など。
 
 
 ### Case Study: Reproducibly Downloading Data
 
 [Genome Reference Consortium](http://www.ncbi.nlm.nih.gov/projects/genome/assembly/grc/)  
-GRCm38マウス参照ゲノムを`wget`でダウンロードする。（所要時間 26m 34s）
+GRCm38マウス参照ゲノムを`wget`でダウンロードする。（所要時間 27分）
 http://www.ensembl.org の[Mouse](http://www.ensembl.org/Mus_musculus/Info/Index)をクリックし、[Download DNA sequence](ftp://ftp.ensembl.org/pub/release-74/fasta/mus_musculus/dna/)をクリックしてFTPサイトを開く。
 
 
@@ -1021,7 +1018,7 @@ Mus_musculus.GRCm38.75_chr1.gtfファイルのヘッダを除いてから、列�
 
 #### The All-Powerful Grep
 
-`grep`は速い。Figure 7-2は`grep, sed, awk, Python`の実行時間を比較。
+Maizeゲノムで文字列"AGATGCATG"を検索した実行時間を、`grep`、`sed`、`awk`、`Python`スクリプトで比較したところ、`grep`が最速（Figure 7-2）。
 
 
 
@@ -1143,7 +1140,7 @@ Table 7-3. Awkの組み込み関数
 
 - [The GNU Awk User's Guide - 組み込み関数](The GNU Awk User's Guide - 組み込み関数)
 
-Unixコマンド（`grep, cut, sort, and uniq -c`）を用いて、特定の遺伝子の特徴をカウントする:
+Unixコマンド（`grep, cut, sort, uniq -c`）を用いて、特定の遺伝子の特徴をカウントする:
 
 - [共通テーマ: 実例でわかる awk: 第 1 回](http://www.ibm.com/developerworks/jp/linux/library/l-awk1/)
 - [第17回ａｗｋの連想配列](http://homepage2.nifty.com/mozu/koza/awk_koza/awk_koza_17.html)
@@ -1188,7 +1185,7 @@ FASTQ/FASTAエントリ数をカウント:
 
 ### Advanced Shell Tricks
 #### Subshells
-参考:  
+
 - [UNIXの部屋 コマンド検索:サブシェル (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?%A5%B5%A5%D6%A5%B7%A5%A7%A5%EB)
 
 例:  
@@ -1260,7 +1257,7 @@ z[負整数ベクトル]は、対応する要素番号の要素を取り除く�
 
 
 
-比較演算子、例えば、==, !=, <, <=, >, >= （Table 8-2）を用いて、TRUEとFALSEの論理ベクトルを作成する。  
+比較演算子（Table 8-2 例. ==, !=, <, <=, >, >=）を用いて、TRUEとFALSEの論理ベクトルを作成する。例:  
 
 
 - [13. ベクトル要素へのアクセス](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)
@@ -1323,10 +1320,12 @@ Rに読み込む前に、コマンドラインからファイルを検査する
 > Rの関数は直接gzip圧縮されたファイルを読み込むこともできる。
 
 
-デフォルトでは、Rのread.delim()とread.csv()関数は、文字列を文字列(character)ではなく因子(factor)に強制変換する。これを無効にするには
-`stringsAsFactors=FALSE` (or use `asis`; see `help(read.table)`
+デフォルトでは、Rのread.delim()とread.csv()関数は、文字列を文字列(character)ではなく因子(factor)に強制変換する。これを無効にする引数`stringsAsFactors=FALSE`（または`as.is`を使う。詳細は`help(read.table)`を参照されたい）
 
 Table 8-4. read.csv() と read.delim() の引数
+
+- [40. ファイルからデータを読み込む](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/40.html)
+- [5. データの読み込み - 統計ソフトRの使い方](https://sites.google.com/site/webtextofr/data)
 
 > #### GETTING DATA INTO SHAPE  
 > Table 8-5. 組織毎の遺伝子発現の計数表（wideフォーマット）
