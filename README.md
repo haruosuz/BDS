@@ -67,7 +67,7 @@ III. Practice: Bioinformatics Data Skills
 本書を通して、頑強で再現可能な方法を強調する。  
 
 ### Why This Book Focuses on Sequencing Data
-バイオインフォマティクスは、幅広い学問分野であり、プロテオミクス、メタボロミクス、構造バイオインフォマティクス、比較ゲノム、機械学習、画像処理のような分野にまたがる。この本では主に配列データの扱いに焦点を当てる。配列データは豊富にあり、配列データ解析に必要なテキスト処理技術は、他のデータに適用できる。
+この本では主に配列データの扱いに焦点を当てる。配列データは豊富にあり、配列データ解析に必要なテキスト処理技術は、他のデータに適用できる。
 
 ### Audience
 生物学者と計算機科学者の両方を対象
@@ -460,6 +460,7 @@ Control-z キーで中断させたジョブを
 
 
 終了ステータスを判定してコマンドを実行する。  
+
 `&&`は、コマンドが成功した場合のみ次のコマンドを実行する:  
 
 
@@ -481,7 +482,7 @@ Control-z キーで中断させたジョブを
 
 
 > ### Storing Your Unix Tricks  
-`add alias`を用いて*~/.bashrc*（Mac OS Xでは*~/.profile*）ファイルに追加する。例えば、常に同じディレクトリ構造のプロジェクト・ディレクトリを作成する:  
+`add alias`を用いて *~/.bashrc*（Mac OS Xでは *~/.profile*）ファイルに追加する。例えば、常に同じディレクトリ構造のプロジェクト・ディレクトリを作成する:  
 
 ## Chapter 4. Working with Remote Machines
 第4章. リモートマシンの操作
@@ -497,7 +498,10 @@ IPアドレスを用いてマシンに繋げるには `ssh 192.169.237.42`
 ポートとユーザー名を指定する:  
 
 
-ホストに接続できない場合、`ssh -v`（`-v`はverbose）で問題を発見する。`-vv`や`-vvv`でverbosityを向上できる。詳細は、`man ssh`を参照されたい。
+ホストに接続できない場合、`ssh -v`でデバッグする。verboseの`-v`は`-vv`や`-vvv`でより冗長に。詳細は、`man ssh`。
+
+- [管理者必見！ ネットワーク・コマンド集 - sshコマンド：ITpro](管理者必見！ ネットワーク・コマンド集 - sshコマンド：ITpro)｜-v	デバッグ・モードを有効にする。このオプションは最大三つまで重ねて指定できる。重ねていけば，より詳細な情報が出力される。
+- [入門OpenSSH / 第7章 うまくいかない時は](http://www.unixuser.org/~euske/doc/openssh/book/chap7.html)｜ssh をデバッグモードで実行する
 
 > ### Storing Your Frequent SSH Hosts  
 *~/.ssh/config*ファイルを作る:  
@@ -1018,7 +1022,7 @@ Mus_musculus.GRCm38.75_chr1.gtfファイルのヘッダを除いてから、列�
 
 #### The All-Powerful Grep
 
-Maizeゲノムで文字列"AGATGCATG"を検索した実行時間を、`grep`、`sed`、`awk`、`Python`スクリプトで比較したところ、`grep`が最速（Figure 7-2）。
+トウモロコシ・ゲノムで文字列"AGATGCATG"を検索した実行時間を、4手法（`grep`、`sed`、`awk`、`Python`スクリプト）間で比較した結果、`grep`が最速（Figure 7-2）。
 
 
 
@@ -1082,12 +1086,11 @@ Example 7-1. 重複のない（ユニークな）ソートされた遺伝子名�
 
 
 
-
-参考:  
 - [UNIXコマンド辞典>>sort](http://codezine.jp/unixdic/w/sort)
 - [UNIXコマンド - sort (Linux/FreeBSD/Solaris)](http://www.k-tanaka.net/unix/sort.php)
 
 #### Finding Unique Values in [Uniq](https://ja.wikipedia.org/wiki/Uniq)
+- [UNIXコマンド - uniq (Linux/FreeBSD/Solaris)](http://www.k-tanaka.net/unix/uniq.php)
 
 
 `-i`オプションで、大文字と小文字の区別をしない。  
@@ -1100,11 +1103,7 @@ Unixコマンド（`grep, cut, sort, uniq`）を組み合わせて、表形式�
 `-d`オプションで、連続する行のみを表示
 
 
-参考:  
-- [UNIXコマンド - uniq (Linux/FreeBSD/Solaris)](http://www.k-tanaka.net/unix/uniq.php)
-
 #### [Join](https://en.wikipedia.org/wiki/Join_(Unix))
-参考:  
 - [NGS Surfer's Wiki | UNIX:join](https://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=UNIX%3Ajoin)
 
 
@@ -1185,7 +1184,6 @@ FASTQ/FASTAエントリ数をカウント:
 
 ### Advanced Shell Tricks
 #### Subshells
-
 - [UNIXの部屋 コマンド検索:サブシェル (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?%A5%B5%A5%D6%A5%B7%A5%A7%A5%EB)
 
 例:  
@@ -1270,7 +1268,6 @@ Table 8-2. Rの比較演算子と論理演算子
 - [28. 演算子 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/28.html)
 
 ##### Vector types
-
 - [09. データの型 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/09.html)
 - [18. NULL，NA，NaN，Infの操作 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/18.html)
 - [25. データ型とデータ構造 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/25.html)
@@ -1335,7 +1332,6 @@ Table 8-4. read.csv() と read.delim() の引数
 
 
 #### Exploring and Transforming Dataframes
-参考:  
 - [21. 行列の操作 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/21.html) | 関数 dim() ，nrow() ，ncol()
 - [39. データフレーム事始 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/39.html)
 
@@ -1370,7 +1366,6 @@ data.frame型では、ドル・マーク($)で変数を指定できる。
 
 
 #### Exploring Data Visually with ggplot2 I: Scatterplots and Densities
-
 - [Rのグラフィック作成パッケージ“ggplot2”について｜Colorless Green Ideas](http://id.fnshr.info/2011/10/22/ggplot2/)
 - [ggplot2 | R のグラフをより美しく](http://stat.biopapyrus.net/ggplot/)
 - [ggplotの使い方 | Memo on the Web](http://motw.mods.jp/R/ggplot_tutorial.html)
@@ -1378,7 +1373,6 @@ data.frame型では、ドル・マーク($)で変数を指定できる。
 - [ggplot2 の自分用メモ集を作ろう - Triad sou.](http://d.hatena.ne.jp/triadsou/20100528/1275042816)
 - [R でグラフ作成 ggplot2 入門](http://www.cwk.zaq.ne.jp/fkhud708/files/R-ggplot2.pdf)
 - [Tutorial of ggplot2 by Hadley Wickham at ISM | Siguniang's Blog](https://siguniang.wordpress.com/2010/11/25/tutorial-of-ggplot2-by-hadley-wickham-at-ism/)
-
 
 `ggplot2`パッケージ、base graphics、`lattice`パッケージ  
 
@@ -1473,7 +1467,6 @@ Rの[`%in%`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/match.html)
 列`repClass`は因子（factor）であることを確認:  
 
 
-
 複数のリピートのクラス（DNA、LTR、LINE、SINE、Simple_repeat）の行を選択するために、`common_repclass`ベクトルを作成し、`%in%`を用いる:  
 
 
@@ -1532,7 +1525,6 @@ Figure 8-12.
 
 
 #### More R Data Structures: Lists
-
 - [23. リスト](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/23.html)
 - [リスト | Rのリストはハッシュやマップのように利用できる](http://stat.biopapyrus.net/vector/list.html)
 - [リストにオブジェクトをしまう](http://takenaka-akio.org/doc/r_auto/list.html)
@@ -1552,7 +1544,6 @@ Figure 8-12.
 > #### Peeking into R’s Structures with str()  
 
 #### Writing and Applying Functions to Lists with lapply() and sapply()
-
 - [24. apply() ファミリー](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/24.html)
 - [applyファミリー | apply,sapply,lapplyの使い方とその例](http://stat.biopapyrus.net/r/apply.html)
 - [apply系関数の使い方](http://takenaka-akio.org/doc/r_auto/chapter_07_apply.html)
@@ -1665,8 +1656,6 @@ Example 8-4 と Figure 8-9
 
 
 
-
-
 #### Working with Strings
 
 ### Developing Workflows with R Scripts
@@ -1676,8 +1665,6 @@ Example 8-4 と Figure 8-9
 #### Exporting Data
  
 ### Further R Directions and Resources
-
-
 
 ## Chapter 9. Working with Range Data
 第9章. 範囲データの操作  
@@ -1737,7 +1724,6 @@ FASTQファイル untreated1_chr4.fq をトリムする:
 
 
 このRスクリプトは2つのプロット（Figures 10-1と10-2）を作成する。
-
 
 ### A FASTA/FASTQ Parsing Example: Counting Nucleotides
 
@@ -1888,8 +1874,6 @@ Unixプログラム`basename`は、ファイル名からパスや拡張子を削
 
 
 
-
-参考:  
 - [＠IT：ファイル名からディレクトリや拡張子を取り除くには](http://www.atmarkit.co.jp/flinux/rensai/linuxtips/437delfileext.html)
 
 
@@ -2044,7 +2028,7 @@ Macの場合、HomebrewでGNU Coreutilsをインストール
 relational database management system (RDBMS) [関係データベース管理システム](http://e-words.jp/w/RDBMS.html)の[*SQLite*](https://ja.wikipedia.org/wiki/SQLite)。  
 
 #### When to Use Relational Databases in Bioinformatics
-[application programming interfaces (API)](https://ja.wikipedia.org/wiki/アプリケーションプログラミングインタフェース)
+[アプリケーションプログラミングインタフェース](https://ja.wikipedia.org/wiki/アプリケーションプログラミングインタフェース)（API）
 
 #### Installing SQLite
 Homebrew（`brew install sqlite`）でMac OS Xにインストール、または`apt-get install sqlite3`でUbuntuマシンにインストール。
@@ -2053,12 +2037,12 @@ Homebrew（`brew install sqlite`）でMac OS Xにインストール、または`
 SQLiteのコマンドラインツール`sqlite3`を用いて、データベース*gwascat.db*ファイルに接続すると、対話的（インタラクティブ）なSQLiteプロンプトが出る:  
 
 
-- [SQLite - ドットコマンド](http://www18.atpages.jp/iyork/stored/sqlite/help.html)
-
 ドット・コマンドは.で始まる（空白で始めることはできない）。
 
 
-Table 13-1. Useful SQLite3 dot commands
+- [SQLite - ドットコマンド](http://www18.atpages.jp/iyork/stored/sqlite/help.html)
+
+Table 13-1. SQLite3のドットコマンド
 
 
 SQLiteでは、列は型を持たないが、データ値は型を持つ。データ値は5タイプの何れか: text、integer、real、NULL、BLOB（binary large object）
