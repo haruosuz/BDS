@@ -92,8 +92,8 @@ III. Practice: Bioinformatics Data Skills
 本書や補足資料に問題を発見した場合、[GitHubで新規issueを作成](https://github.com/vsbuffalo/bds-files/issues)されたい。　
 
 ### Computing Resources and Setup
-筆者は、ラップトップ（15インチのMacBook Pro、メモリは16GB）で本書を執筆した。例題は、8GBのメモリを搭載するマシンで実行すべき。  
-例題は、Unix系のOS（Mac OS XやLinux）で動作する。[パッケージ管理システム](https://ja.wikipedia.org/wiki/パッケージ管理システム)（Ubuntu/Debianの`apt-get`や、Mac OS Xの[Homebrew](http://brew.sh/index_ja.html)を使用すべき。（[homebrew-science](https://github.com/Homebrew/homebrew-science)）
+例題は、Unix系のOS（Mac OS XやLinux）で動作する。
+[パッケージ管理システム](https://ja.wikipedia.org/wiki/パッケージ管理システム)（Ubuntu/Debianの`apt-get`やMac OS Xの[Homebrew](http://brew.sh/index_ja.html)）を使用する。
 
 - [作業環境を整えるMacOSXのパッケージマネージャ「Homebrew」のインストール方法と使い方 | 株式会社LIG](http://liginc.co.jp/web/tool/mac-iphone/151069)
 - [MacにHomebrewをインストールする - Qiita](http://qiita.com/_daisuke/items/d3b2477d15ed2611a058)
@@ -142,8 +142,6 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 #### Pay Attention to Experimental Design
 実験計画  
 
-統計学者で遺伝学者のR. A.フィッシャー曰く: [「実験が終わった後に統計学者に相談することは、しばしば単に検死を頼むようなものになる。統計学者は、何のせいで実験が死んだのかについて言うことができるかもしれない。」](http://id.fnshr.info/2014/12/17/stats-done-wrong-13/)
-
 #### Write Code for Humans, Write Data for Computers
 [Style guides for Google-originated open-source projects](https://github.com/google/styleguide)
 
@@ -159,6 +157,7 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 
 #### Use Existing Libraries Whenever Possible
 なるべく既存のライブラリを使う  
+
 歴史が長く、閲覧者が多いので、バグが少ない。
 
 #### Treat Data as Read-Only
@@ -895,7 +894,8 @@ SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プ�
 
 [Genome Reference Consortium](http://www.ncbi.nlm.nih.gov/projects/genome/assembly/grc/)  
 GRCm38マウス参照ゲノムを`wget`でダウンロードする。（所要時間 27分）
-http://www.ensembl.org の[Mouse](http://www.ensembl.org/Mus_musculus/Info/Index)をクリックし、[Download DNA sequence](ftp://ftp.ensembl.org/pub/release-74/fasta/mus_musculus/dna/)をクリックしてFTPサイトを開く。
+http://www.ensembl.org の [Mouse](http://www.ensembl.org/Mus_musculus/Info/Index) をクリックし、
+[Download DNA sequence](ftp://ftp.ensembl.org/pub/release-74/fasta/mus_musculus/dna/) をクリックしてFTPサイトを開く。
 
 
 `zgrep`コマンドを用いて正規表現"^>"で圧縮ファイルのFASTAヘッダを確認:  
