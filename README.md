@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki <haruo@g-language.org>  
-Last Update: 2015-09-18  
+Last Update: 2015-09-21  
 
 ----------
 
@@ -76,13 +76,13 @@ III. Practice: Bioinformatics Data Skills
 
 ### Assumptions This Book Makes
 前提知識は以下の通り。  
-- You know a scripting language スクリプト言語（[R言語](https://ja.wikipedia.org/wiki/R言語)、[Python](https://ja.wikipedia.org/wiki/Python)、[Perl](https://ja.wikipedia.org/wiki/Perl)、[Ruby](https://ja.wikipedia.org/wiki/Ruby)
-- You know how to use a text editor テキストエディタ（[Emacs](https://ja.wikipedia.org/wiki/Emacs)、[nano](https://ja.wikipedia.org/wiki/Nano_(テキストエディタ))
-- You have basic Unix command-line skills 基本的なUnixコマンド（`cd, ls, pwd, mv, rm, rmdir, mkdir`
-- You have a basic understanding of biology 生物学の基礎（DNA、RNA、タンパク質、遺伝子、セントラルドグマ 
-- You have a basic understanding of regular expressions [正規表現](https://ja.wikipedia.org/wiki/正規表現)  
-- You know how to get help and read documentation ヘルプやマニュアルの参照（Unixの`man`やRの`help()`
-- You can manage your computer system (or have a system administrator) システム管理  
+- スクリプト言語（例. [R言語](https://ja.wikipedia.org/wiki/R言語)、[Python](https://ja.wikipedia.org/wiki/Python)、[Perl](https://ja.wikipedia.org/wiki/Perl)、[Ruby](https://ja.wikipedia.org/wiki/Ruby)
+- テキストエディタ（例. [Emacs](https://ja.wikipedia.org/wiki/Emacs)、[nano](https://ja.wikipedia.org/wiki/Nano_(テキストエディタ))
+- 基本的なUnixコマンド（例. `cd, ls, pwd, mv, rm, rmdir, mkdir`
+- 生物学の基礎（DNA、RNA、タンパク質、遺伝子、セントラルドグマ 
+- [正規表現](https://ja.wikipedia.org/wiki/正規表現)  
+- ヘルプやマニュアルの参照（Unixの`man`やRの`help()`
+- システム管理  
 
 ### Supplementary Material on GitHub
 [GitHubリポジトリ](https://github.com/vsbuffalo/bds-files)の補足資料を取得する:  
@@ -282,10 +282,10 @@ Table 2-1. Unixのワイルドカード
 プレーンテキスト形式で書かれたプロジェクト・ノートは、コマンドラインやネットワーク経由で読み込み・検索・編集できる。  
 
 - [Markdown](https://ja.wikipedia.org/wiki/Markdown)（マークダウン）  
- - [MarkdownでMarkdownの書き方を書いてみた](http://qiita.com/oreo/items/82183bfbaac69971917f)
- - [Markdownで行こう！](https://gist.github.com/wate/7072365)
- - [README.mdファイル。マークダウン記法まとめ | codechord](http://codechord.com/2012/01/readme-markdown/)
- - [ディレクターが知っておいて欲しい10個のMarkdown-マークダウン記法 - PHPサンプル実験室](http://php-fan.org/markdown.html)
+  - [MarkdownでMarkdownの書き方を書いてみた](http://qiita.com/oreo/items/82183bfbaac69971917f)
+  - [Markdownで行こう！](https://gist.github.com/wate/7072365)
+  - [README.mdファイル。マークダウン記法まとめ | codechord](http://codechord.com/2012/01/readme-markdown/)
+  - [ディレクターが知っておいて欲しい10個のMarkdown-マークダウン記法 - PHPサンプル実験室](http://php-fan.org/markdown.html)
 
 #### Markdown Formatting Basics
 John Gruberのホームページ（[Daring Fireball: Markdown Syntax Documentation](http://daringfireball.net/projects/markdown/syntax)）  
