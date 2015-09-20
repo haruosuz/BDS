@@ -1777,7 +1777,7 @@ Samtoolsの`faidx`サブコマンドを用いて、FASTAファイルのインデ
 - [シェルスクリプトマナー - きつねたぬきだし](http://kitsunetanukidashi.hatenablog.com/entry/2014/07/12/231833)
 - [Linux - bashの*スクリプトにセットする推奨オプション](http://qiita.com/kiida/items/3beb1bf718cdc2f0798a)
 
-*template.sh*ファイルに書かれたBashスクリプトのヘッダは、短縮して`set -euo pipefail`と書ける。
+[*template.sh*](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-12-pipelines/template.sh)ファイルに書かれたBashスクリプトのヘッダは、短縮して`set -euo pipefail`と書ける。
 
 
 - 1行目：[*shebang*](https://ja.wikipedia.org/wiki/シバン_(Unix))
@@ -1850,7 +1850,6 @@ Table 12-2. ファイルとディレクトリのテスト式
 
 #### Processing Files with Bash Using for Loops and Globbing
 for文とglobでファイル処理
-
 
 - [bash 配列まとめ - Qiita](http://qiita.com/b4b4r07/items/e56a8e3471fb45df2f59)
 
