@@ -76,12 +76,12 @@ III. Practice: Bioinformatics Data Skills
 
 ### Assumptions This Book Makes
 前提知識は以下の通り。  
-- スクリプト言語（例. [R言語](https://ja.wikipedia.org/wiki/R言語)、[Python](https://ja.wikipedia.org/wiki/Python)、[Perl](https://ja.wikipedia.org/wiki/Perl)、[Ruby](https://ja.wikipedia.org/wiki/Ruby)
-- テキストエディタ（例. [Emacs](https://ja.wikipedia.org/wiki/Emacs)、[nano](https://ja.wikipedia.org/wiki/Nano_(テキストエディタ))
-- 基本的なUnixコマンド（例. `cd, ls, pwd, mv, rm, rmdir, mkdir`
-- 生物学の基礎（DNA、RNA、タンパク質、遺伝子、セントラルドグマ 
+- スクリプト言語（例. [R言語](https://ja.wikipedia.org/wiki/R言語)、[Python](https://ja.wikipedia.org/wiki/Python)、[Perl](https://ja.wikipedia.org/wiki/Perl)、[Ruby](https://ja.wikipedia.org/wiki/Ruby)）
+- テキストエディタ（例. [Emacs](https://ja.wikipedia.org/wiki/Emacs)、[nano](https://ja.wikipedia.org/wiki/Nano_(テキストエディタ))）
+- 基本的なUnixコマンド（例. [`cd, ls, pwd, mv, rm, rmdir, mkdir`](http://dogandrun.hatenablog.jp/entry/2013/11/30/181606)）
+- 生物学の基礎（DNA、RNA、タンパク質、遺伝子、[セントラルドグマ](https://ja.wikipedia.org/wiki/セントラルドグマ)）  
 - [正規表現](https://ja.wikipedia.org/wiki/正規表現)  
-- ヘルプやマニュアルの参照（Unixの`man`やRの`help()`
+- ヘルプやマニュアルの参照。Unixの[`man`](https://ja.wikipedia.org/wiki/Manページ)や[Rの`help()`](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
 - システム管理  
 
 ### Supplementary Material on GitHub
@@ -161,7 +161,7 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 歴史が長く、閲覧者が多いので、バグが少ない。
 
 #### Treat Data as Read-Only
-データを書き換えない  
+データを読み取り専用として扱う。プログラムを用いて、データを読み取り、新しい別の結果ファイルを作成する。元のファイルを変更すると、再試行・再現不可能。
 
 #### Spend Time Developing Frequently Used Scripts into Tools
 #### Let Data Prove That It’s High Quality
@@ -177,9 +177,11 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 全て記録する  
 
 [プレーンテキスト](https://ja.wikipedia.org/wiki/プレーンテキスト)形式の[README](https://ja.wikipedia.org/wiki/リードミー)ファイルに解析の各ステップを記録する。  
+- Rの[knitr](http://yihui.name/knitr/)  
+- [iPython Notebooks](http://ipython.org/notebook.html)  
 
 #### Make Figures and Statistics the Results of Scripts
-図表を出力するスクリプトを書く  
+図表を出力するスクリプトを書く   
 
 #### Use Code as Documentation
 コードをドキュメントにする  
@@ -199,23 +201,25 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-02-bioinformatics-projects) 
 
 ### Project Directories and Directory Structures
-ディレクトリ構造  
+プロジェクト・ディレクトリの構造  
 
 - [計算生物学のプロジェクトの管理法入門 (Noble 2009)](http://5hun.github.io/quickguide_ja/)
- 
-例えば、プロジェクト名を'zmays-snps'としてディレクトリを作成する:  
+
+全てのファイルを（明確に名前を付けた）1つのディレクトリに格納する。
+
+例えば、トウモロコシ（学名*Zea mays*）の[SNP](https://ja.wikipedia.org/wiki/一塩基多型)検出プロジェクトのディレクトリを作成する:  
 
 
-- *data/*ディレクトリに生データを格納する。
+- *data/*ディレクトリにデータを格納する。
 - *scripts/*ディレクトリにプログラムを格納する。
 - *analysis/*ディレクトリに解析結果を格納する。
 
 > ### What’s in a Name?  
 ファイル名には、英数字や_や-を使い、スペース（空白）を入れない。拡張子を付ける。（例. *osativa-genes_2015-07-07.fasta*）  
 
-- [UNIXコマンド辞典>>絶対パスと相対パス](http://codezine.jp/unixdic/w/絶対パスと相対パス)
-
 絶対パス（例. `/home/vinceb/projects/zmays-snps/data/stats/qual.txt`）ではなく相対パス（例. `../data/stats/qual.txt`）を使う。
+
+- [UNIXコマンド辞典>>絶対パスと相対パス](http://codezine.jp/unixdic/w/絶対パスと相対パス)
 
 ### Project Documentation
 プロジェクトの記録  
@@ -887,7 +891,7 @@ SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プ�
 
 
 #### Working with Gzipped Compressed Files
-圧縮ファイルを直接操作できるコマンドは、`zgrep`、`zcat`（Mac OS Xでは`gzcat`）、`zdiff`、`zless`など。
+圧縮ファイルを直接操作できるコマンドは、`zgrep`、`zcat`（Mac OS Xでは`gzcat`）、`zdiff`、`zless`
 
 
 ### Case Study: Reproducibly Downloading Data
@@ -1660,11 +1664,91 @@ Example 8-4 と Figure 8-9
 
 ### Developing Workflows with R Scripts
 #### Control Flow: if, for, and while
+
+
 #### Working with R Scripts
+Rスクリプトを用いた作業
+
+> #### Reproducibility with Knitr and Rmarkdown  
+> `Rmarkdown`:  
+
+
+
+- [第2回　レポートづくりを加速せよ　～R Markdown環境の導入＆チュートリアル～：R Markdownで楽々レポートづくり｜gihyo.jp … 技術評論社](http://gihyo.jp/admin/serial/01/r-markdown/0002)
+
+関数`source()`を用いて、Rスクリプト（*my_analysis.R*）を実行する:  
+
+
+あるいは、コマンドラインからバッチモードでスクリプトを実行する:  
+
+
+> #### Reproducibility and sessionInfo()  
+
+コマンドライン引数を出力するRスクリプト:  
+
+
+を実行する:  
+
+
 #### Workflows for Loading and Combining Multiple Files
+
+ディレクトリにおける複数のタブ区切りファイルをロードし、組み合わせる方法
+
+[hotspots/*(https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r/hotspots)ディレクトリ:  
+
+
+Rの関数`list.files()`で正規表現を用いて、全ての染色体の*.bed*ファイルをロードする:  
+
+
+
+`list.files()`でファイル群をリストし、`lapply()`関数で各ファイルをロードする:  
+
+
+ファイル名（フルパスなしに）を用いて、各リストの要素に名前を付ける:  
+
+
+`do.call()`と`rbind`を用いて、このデータをマージする:  
+
+
+我々の`loadFile`関数を変更して、データに適用する:  
+
+
+
+`basename()`関数でファイルパスからファイル名を取得:  
+
+
+染色体ファイル毎にホットスポットの数と平均長を求める関数を作成して、実行する:  
+
+
+
+このデータを1つのデータフレームにマージする:  
+
+
+`lapply()`を`mclapply()`で置き換えることにより、データ処理を並列化できる。
+
 #### Exporting Data
- 
+
+データフレーム`mtfs`を hot‐spot_motifs.txt という名前のタブ区切りファイルに書く:  
+
+
+gzip圧縮をかけて出力する:  
+
+
+- [R で gzip 圧縮をかけて CSV に出力する方法](http://qiita.com/yu-iskw/items/acca0deaf09e75984d07)
+
+[serialization](https://ja.wikipedia.org/wiki/シリアライズ)  
+Rオブジェクトを保存・復元する関数は`save()`と`load()`  
+
+
+`save`, `save.image()`, `savehistory()`
+
+- [45. ファイルへのデータ出力](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/45.html)
+- [特定のオブジェクトのディスクファイルへの記録。save(), load() 関数](http://www.okadajp.org/RWiki/?R出力の記録#i9ff89a5)
+- [私とRと統計学](http://markovchainmontecarlo.hatenablog.com)
+
 ### Further R Directions and Resources
+
+- [rOpenSci - Open Tools for Open Science](https://ropensci.org)
 
 ## Chapter 9. Working with Range Data
 第9章. 範囲データの操作  
