@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki <haruo@g-language.org>  
-Last Update: 2015-09-21  
+Last Update: 2015-09-26  
 
 ----------
 
@@ -77,7 +77,7 @@ III. Practice: Bioinformatics Data Skills
 ### Assumptions This Book Makes
 前提知識は以下の通り。  
 - スクリプト言語（例. [R言語](https://ja.wikipedia.org/wiki/R言語)、[Python](https://ja.wikipedia.org/wiki/Python)、[Perl](https://ja.wikipedia.org/wiki/Perl)、[Ruby](https://ja.wikipedia.org/wiki/Ruby)）
-- テキストエディタ（例. [Emacs](https://ja.wikipedia.org/wiki/Emacs)、Vim、[nano](https://ja.wikipedia.org/wiki/Nano_(テキストエディタ))）
+- テキストエディタ（例. [Emacs](https://ja.wikipedia.org/wiki/Emacs)、[Vim](https://ja.wikipedia.org/wiki/Vim)、[nano](https://ja.wikipedia.org/wiki/Nano_(テキストエディタ))）
 - 基本的なUnixコマンド（例. [`cd, ls, pwd, mv, rm, rmdir, mkdir`](http://dogandrun.hatenablog.jp/entry/2013/11/30/181606)）
 - 生物学の基礎（DNA、RNA、タンパク質、遺伝子、[セントラルドグマ](https://ja.wikipedia.org/wiki/セントラルドグマ)）  
 - [正規表現](https://ja.wikipedia.org/wiki/正規表現)  
