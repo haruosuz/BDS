@@ -77,7 +77,7 @@ III. Practice: Bioinformatics Data Skills
 ### Assumptions This Book Makes
 前提知識は以下の通り。  
 - スクリプト言語（例. [R言語](https://ja.wikipedia.org/wiki/R言語)、[Python](https://ja.wikipedia.org/wiki/Python)、[Perl](https://ja.wikipedia.org/wiki/Perl)、[Ruby](https://ja.wikipedia.org/wiki/Ruby)）
-- テキストエディタ（例. [Emacs](https://ja.wikipedia.org/wiki/Emacs)、[nano](https://ja.wikipedia.org/wiki/Nano_(テキストエディタ))）
+- テキストエディタ（例. [Emacs](https://ja.wikipedia.org/wiki/Emacs)、Vim、[nano](https://ja.wikipedia.org/wiki/Nano_(テキストエディタ))）
 - 基本的なUnixコマンド（例. [`cd, ls, pwd, mv, rm, rmdir, mkdir`](http://dogandrun.hatenablog.jp/entry/2013/11/30/181606)）
 - 生物学の基礎（DNA、RNA、タンパク質、遺伝子、[セントラルドグマ](https://ja.wikipedia.org/wiki/セントラルドグマ)）  
 - [正規表現](https://ja.wikipedia.org/wiki/正規表現)  
@@ -152,7 +152,7 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 
 #### Test Code, or Better Yet, Let Code Test Code
 [単体テスト(unit testing)](https://ja.wikipedia.org/wiki/単体テスト)  
-例えば、`add()`関数を（呼び出して入力から期待される出力が得られるか）テストする`test_add()`関数をPythonで書く:  
+例えば、`add()`関数をテストする`test_add()`関数をPythonで書く:  
 
 
 #### Use Existing Libraries Whenever Possible
@@ -161,7 +161,7 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 歴史が長く、閲覧者が多いので、バグが少ない。
 
 #### Treat Data as Read-Only
-データを読み取り専用として扱う。プログラムを用いて、データを読み取り、新しい別の結果ファイルを作成する。元のファイルを変更すると、再試行・再現不可能。
+データを読み取り専用として扱う。プログラムを用いて、データを読み取り、新しい別の結果ファイルを作成する。元のファイルを変更してしまうと、再試行・再現不可能。
 
 #### Spend Time Developing Frequently Used Scripts into Tools
 #### Let Data Prove That It’s High Quality
@@ -207,7 +207,7 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 
 全てのファイルを（明確に名前を付けた）1つのディレクトリに格納する。
 
-例えば、トウモロコシ（学名*Zea mays*）の[SNP](https://ja.wikipedia.org/wiki/一塩基多型)検出プロジェクトのディレクトリを作成する:  
+例えば、トウモロコシ（学名*Zea mays*）の[SNP](https://ja.wikipedia.org/wiki/一塩基多型)検出プロジェクトのディレクトリ（zmays-snps/）を作成する:  
 
 
 - *data/*ディレクトリにデータを格納する。
@@ -215,7 +215,7 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 - *analysis/*ディレクトリに解析結果を格納する。
 
 > ### What’s in a Name?  
-ファイル名には、英数字や_や-を使い、スペース（空白）を入れない。拡張子を付ける。（例. *osativa-genes_2015-07-07.fasta*）  
+ファイル名には、英数字や_や-を使い、スペース（空白）を入れない。拡張子を付ける。（例. *ecoli-genes_2015-07-07.fasta*）  
 
 絶対パス（例. `/home/vinceb/projects/zmays-snps/data/stats/qual.txt`）ではなく相対パス（例. `../data/stats/qual.txt`）を使う。
 
@@ -224,7 +224,7 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 ### Project Documentation
 プロジェクトの記録  
 
-例えば、以下の項目を記録する。  
+記録する情報の例は以下の通り。  
 
 - 方法とワークフロー。全コマンドラインをコピー＆ペースト。デフォルト値も
 - データの入手元（ウェブサイトのURL等）
@@ -247,7 +247,7 @@ READMEファイルはプロジェクトのメインのディレクトリに格�
 > ### Shell Expansion Tips シェルの展開  
 `cd ~`でホームディレクトリに移動。ワイルドカードのアスタリスク（*）は全ての文字列にマッチする。  
 Brace expansionの例:  
-`zmays-snps/`プロジェクト・ディレクトリを作成:  
+*zmays-snps/*プロジェクト・ディレクトリを作成:  
 
 - Brace expansion ブレース展開
   - [Bash Reference Manual: Brace Expansion](http://www.gnu.org/software/bash/manual/html_node/Brace-Expansion.html)
@@ -370,7 +370,7 @@ Table 2-2. マークダウン構文
 - [ファイルディスクリプタとは｜file descriptor｜ファイルディスクリプター - 意味/解説/説明/定義 ： IT用語辞典](http://e-words.jp/w/ファイルディスクリプタ.html)
 - [ファイルディスクリプタについて（1）　～ファイルディスクリプタの概要：CodeZine（コードジン）](http://codezine.jp/article/detail/4836)
 
-擬似デバイス（*pseudodevice*）の */dev/null* は、あらゆる入力を受け付け、それを捨てる。
+擬似デバイス（*pseudodevice*）の */dev/null* は、あらゆる入力を受け付けて捨てる。
 
 - [デバイスファイル](https://ja.wikipedia.org/wiki/デバイスファイル)
 
@@ -381,7 +381,7 @@ Table 2-2. マークダウン構文
 標準入力リダイレクト:  
 
 
-標準入力リダイレクト演算子`<`よりもUnixパイプ（例. `cat inputfile | program > outputfile`）を使う方がより一般的。
+標準入力リダイレクト演算子`<`よりもUnixパイプ（例. `cat inputfile | program > outputfile`）を使う方が一般的。
 
 ### The Almighty Unix Pipe: Speed and Beauty in One
 
@@ -1036,7 +1036,7 @@ Mus_musculus.GRCm38.75_chr1.gtfファイルのヘッダを除いてから、列�
 
 
 - [grep の w オプション初めて知った - 理系学生日記](http://kiririmode.hatenablog.jp/entry/20091211/p1)
-- [grepコマンド（ファイル内の文字を検索する）](http://itdoc.hitachi.co.jp/manuals/3020/30203S3530/JPAS0250.HTM) | -w 指定文字列が単語として含まれている行を表示します。単語とは英数字およびアンダースコア（_）から構成される文字列のことです。また，単語の前後はスペースなどの単語構成文字列以外の文字や，行頭または行末で区切られている必要があります。
+- [grepコマンド（ファイル内の文字を検索する）](http://itdoc.hitachi.co.jp/manuals/3020/30203S3530/JPAS0250.HTM) | -w 指定文字列が単語として含まれている行を表示します。
 
 
 3つのオプション `-B, -A, -C`
@@ -1640,11 +1640,11 @@ Example 8-4 と Figure 8-9
 `dplyr`でデータフレームを操作する関数は、`select(), filter(), arrange(), mutate(), summarize()`
 
 - [dplyrでデータ処理](http://www.pu-hiroshima.ac.jp/~ttetsuji/R/%5B64%5Ddplyr.html)
-- [dplyrを使いこなす！基礎編 - Qiita](http://qiita.com/matsuou1/items/e995da273e3108e2338e)
+- [dplyrを使いこなす！基礎編](http://qiita.com/matsuou1/items/e995da273e3108e2338e)
 - [大規模データの高速処理 ーdata.table、dplyrー](http://kohske.github.io/ESTRELA/201410/index.html)
 - [plyr — データ分割-関数適用-再結合を効率的に — Watallica metallicus](http://meme.biology.tohoku.ac.jp/students/iwasaki/rstats/plyr.html)
 
-`d`データフレームを`tbl_df`オブジェクトに`tbl_df()`関数で変換する:  
+`tbl_df()`関数を用いて、`d`データフレームを`tbl_df`オブジェクトに変換する:  
 
 
 `select`は、`d[, c("start", "end", "Pi", "Recombination", "depth")]`に対応:  
@@ -1659,12 +1659,23 @@ Example 8-4 と Figure 8-9
 `mutate()`関数を用いて、データフレームに新しい列を追加できる。
 
 
+パイプ（`help('%>%')`）を用いて、複数の処理を連結する:  
+
+
+`mtfs`データフレームを用いる
+
+
+
+`summarize()`関数を用いて要約を作成する:  
+
+
+新たに作成した要約の列`max_recom`でソートする:  
+	mtfs_df %>%
 
 #### Working with Strings
 
 ### Developing Workflows with R Scripts
 #### Control Flow: if, for, and while
-
 
 #### Working with R Scripts
 Rスクリプトを用いた作業
@@ -1694,7 +1705,7 @@ Rスクリプトを用いた作業
 
 ディレクトリにおける複数のタブ区切りファイルをロードし、組み合わせる方法
 
-[hotspots/*(https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r/hotspots)ディレクトリ:  
+[hotspots/](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r/hotspots)ディレクトリ:  
 
 
 Rの関数`list.files()`で正規表現を用いて、全ての染色体の*.bed*ファイルをロードする:  
@@ -1704,7 +1715,7 @@ Rの関数`list.files()`で正規表現を用いて、全ての染色体の*.bed
 `list.files()`でファイル群をリストし、`lapply()`関数で各ファイルをロードする:  
 
 
-ファイル名（フルパスなしに）を用いて、各リストの要素に名前を付ける:  
+ファイル名（フルパスなし）を用いて、各リストの要素に名前を付ける:  
 
 
 `do.call()`と`rbind`を用いて、このデータをマージする:  
