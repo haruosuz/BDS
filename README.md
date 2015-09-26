@@ -62,12 +62,12 @@ III. Practice: Bioinformatics Data Skills
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-00-preface)
 
 ### The Approach of This Book
-本書は、ソフトウェアの実行方法は扱わない。  
+本書は、バイオインフォマティクス・ソフトウェア（マッピング、アセンブル、変異解析など）の実行方法は扱わない。  
 本書は、複雑で大規模なデータセットから意味を抽出し探索する技術を扱う。  
 本書を通して、頑強で再現可能な方法を強調する。  
 
 ### Why This Book Focuses on Sequencing Data
-この本では主に配列データの扱いに焦点を当てる。配列データは豊富にあり、配列データ解析に必要なテキスト処理技術は、他のデータに適用できる。
+本書は、主に配列データの扱いに焦点を当てる。配列データは豊富にあり、配列データ解析に必要なテキスト処理技術は、他のデータに適用できる。
 
 ### Audience
 生物学者と計算機科学者の両方を対象
@@ -161,7 +161,8 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 歴史が長く、閲覧者が多いので、バグが少ない。
 
 #### Treat Data as Read-Only
-データを読み取り専用として扱う。プログラムを用いて、データを読み取り、新しい別の結果ファイルを作成する。元のファイルを変更してしまうと、再試行・再現不可能。
+データを読み取り専用として扱う  
+Excelを用いて、セルの値を変更し、結果を保存するのは良くない。プログラムが、データを読み取り、新しい別の結果ファイルを作成するのが良い。元のファイルを変更してしまうと、再試行・再現不可能。
 
 #### Spend Time Developing Frequently Used Scripts into Tools
 #### Let Data Prove That It’s High Quality
@@ -780,6 +781,8 @@ masterブランチに戻り、adapters.faファイルを追加し、この変更
 `git checkout` 変更したファイルを戻す  
 `git stash` 修正をいったん退避する  
 `git branch` ブランチ操作  
+
+Scott ChaconとBen Straubの[Pro Git book](http://git-scm.com/book/en/v2)
 
 - [Gitでやらかした時に使える19個の奥義](http://qiita.com/muran001/items/dea2bbbaea1260098051)
 - [Git コマンドまとめ](http://qiita.com/merrill/items/375b20de0a5dbc35265d)
