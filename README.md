@@ -140,7 +140,7 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 頑強な研究のススメ  
 
 #### Pay Attention to Experimental Design
-実験計画  
+[実験計画](https://ja.wikipedia.org/wiki/実験計画法)
 
 #### Write Code for Humans, Write Data for Computers
 [Style guides for Google-originated open-source projects](https://github.com/google/styleguide)
@@ -1214,10 +1214,22 @@ FASTQ/FASTAエントリ数をカウント:
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch08.html#chapter-08)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r)
 
+- [R: The R Project for Statistical Computing](https://www.r-project.org)
+- [RjpWiki - RjpWiki](http://www.okada.jp.org/RWiki/)
+- [続・わしの頁](http://www.cwk.zaq.ne.jp/fkhud708/index2.html)
+- [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
+- [R による統計処理](http://aoki2.si.gunma-u.ac.jp/R/)
+
 ### Getting Started with R and RStudio
 
 > #### THE COMPREHENSIVE R ARCHIVE NETWORK (CRAN)  
 > install.packages("ggplot2")  
+
+[R言語](https://cran.r-project.org)と[RStudio](https://www.rstudio.com)[統合開発環境](https://ja.wikipedia.org/wiki/統合開発環境)（IDE）をインストールする。
+
+- [Rで学ぶプログラミングの基礎の基礎 (1) R と RStudioのセットアップ](http://www.cwk.zaq.ne.jp/fkhud708/files/R-prg-intro/R-prg-intro_01.pdf)
+- [Rstudio事始め](http://www.slideshare.net/TakashiYamane1/rstudio)
+- [RStudio - 浅井拓也　研究室用ページ](http://qh73xe.jimdo.com/rの基本/rの便利な関連ソフト/rstudio/)
 
 ### R Language Basics
 #### Simple Calculations in R, Calling Functions, and Getting Help in R
@@ -1262,7 +1274,7 @@ z[負整数ベクトル]は、対応する要素番号の要素を取り除く�
 比較演算子（Table 8-2 例. ==, !=, <, <=, >, >=）を用いて、TRUEとFALSEの論理ベクトルを作成する。例:  
 
 
-- [13. ベクトル要素へのアクセス](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)
+- [13. ベクトル要素へのアクセス | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)
 
 x[論理値ベクトル]は、TRUEの要素に対応した要素を取り出す（Example 8-1）:  
 
@@ -1325,7 +1337,7 @@ Rに読み込む前に、コマンドラインからファイルを検査する
 
 Table 8-4. read.csv() と read.delim() の引数
 
-- [40. ファイルからデータを読み込む](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/40.html)
+- [40. ファイルからデータを読み込む | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/40.html)
 - [5. データの読み込み - 統計ソフトRの使い方](https://sites.google.com/site/webtextofr/data)
 
 > #### GETTING DATA INTO SHAPE  
@@ -1502,7 +1514,7 @@ Rの[`%in%`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/match.html)
 
 
 
-- [43. データの結合（マージ）と整列（ソート）](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/43.html)
+- [43. データの結合（マージ）と整列（ソート） | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/43.html)
 
 
 #### Using ggplot2 Facets
@@ -1529,7 +1541,7 @@ Figure 8-12.
 
 
 #### More R Data Structures: Lists
-- [23. リスト](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/23.html)
+- [23. リスト | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/23.html)
 - [リスト | Rのリストはハッシュやマップのように利用できる](http://stat.biopapyrus.net/vector/list.html)
 - [リストにオブジェクトをしまう](http://takenaka-akio.org/doc/r_auto/list.html)
 
@@ -1548,7 +1560,7 @@ Figure 8-12.
 > #### Peeking into R’s Structures with str()  
 
 #### Writing and Applying Functions to Lists with lapply() and sapply()
-- [24. apply() ファミリー](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/24.html)
+- [24. apply() ファミリー | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/24.html)
 - [applyファミリー | apply,sapply,lapplyの使い方とその例](http://stat.biopapyrus.net/r/apply.html)
 - [apply系関数の使い方](http://takenaka-akio.org/doc/r_auto/chapter_07_apply.html)
 
@@ -1564,7 +1576,7 @@ Figure 8-12.
 ##### Writing functions
 
 
-- [31. 関数の定義](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/31.html)
+- [31. 関数の定義 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/31.html)
 - [関数の作り方 | functionによりRの関数を定義する方法](http://stat.biopapyrus.net/r/user-function.html)
 - [Rの関数定義の基本 - RjpWiki](http://www.okadajp.org/RWiki/?Rの関数定義の基本)
 - [[連載]フリーソフトによるデータ解析・マイニング　第4回 Rでの関数オブジェクト](http://www1.doshisha.ac.jp/~mjin/R/04.html)
@@ -1579,7 +1591,7 @@ Figure 8-12.
 > ##### Function Scope  
 > [スコープ](https://ja.wikipedia.org/wiki/スコープ)  
 
-- [32. ローカル変数と永続代入<<-](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/32.html)
+- [32. ローカル変数と永続代入<<- | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/32.html)
 - [変数スコープ | R,レキシカルスコープ](http://stat.biopapyrus.net/dev/scope.html)
 
 ##### Digression: Debugging R Code
@@ -1602,19 +1614,19 @@ Figure 8-12.
 ##### More list apply functions: sapply() and mapply()
 
 
-- [14. ベクトル計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/14.html)
+- [14. ベクトル計算 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/14.html)
 
 
 > ##### Other Apply Functions for Other R Data Structures   
 配列と行列　`apply()`と`sweep()`
 - [オブジェクト型 | Rのリスト、データフレーム、行列、配列など](http://stat.biopapyrus.net/r/objecttype.html)
 - [R言語プログラミング： データ型・操作 - hamadakoichi blog](http://d.hatena.ne.jp/hamadakoichi/20100118/1263832446)
-- [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
-  - [19. 行列の作成](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/19.html)
-  - [20. 行列計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/20.html)
-  - [21. 行列の操作](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/21.html)
-  - [22. 配列](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/22.html)
-  - [25. データ型とデータ構造](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/25.html)
+- [R-Tips | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
+  - [19. 行列の作成 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/19.html)
+  - [20. 行列計算 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/20.html)
+  - [21. 行列の操作 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/21.html)
+  - [22. 配列 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/22.html)
+  - [25. データ型とデータ構造 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/25.html)
 
 #### Working with the Split-Apply-Combine Pattern
 Hadley Wickhamの論文["The Split-Apply-Combine Strategy for Data Analysis"](http://www.jstatsoft.org/v40/i01/paper)  
@@ -1753,11 +1765,13 @@ Rオブジェクトを保存・復元する関数は`save()`と`load()`
 
 `save`, `save.image()`, `savehistory()`
 
-- [45. ファイルへのデータ出力](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/45.html)
+- [45. ファイルへのデータ出力 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/45.html)
 - [特定のオブジェクトのディスクファイルへの記録。save(), load() 関数](http://www.okadajp.org/RWiki/?R出力の記録#i9ff89a5)
 - [私とRと統計学](http://markovchainmontecarlo.hatenablog.com)
 
 ### Further R Directions and Resources
+
+- [Advanced R by Hadley Wickham](http://adv-r.had.co.nz)
 
 - [rOpenSci - Open Tools for Open Science](https://ropensci.org)
 
