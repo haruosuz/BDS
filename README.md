@@ -61,6 +61,9 @@ III. Practice: Bioinformatics Data Skills
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/preface01.html#preface)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-00-preface)
 
+頑強で再現可能な方法で科学的な疑問に答える。バイオインフォマティクス・データの操作・探索に不可欠なツールの利用法（データスキル）を学ぶ。  
+データスキルは、試練を経たオープンソースのツールを利用するので、同じツールとスキルを用いて、次世代のデータに適応できる。
+
 ### The Approach of This Book
 本書は、バイオインフォマティクス・ソフトウェア（マッピング、アセンブル、変異解析など）の実行方法は扱わない。  
 本書は、複雑で大規模なデータセットから意味を抽出し探索する技術を扱う。  
@@ -220,7 +223,7 @@ Excelを用いて、セルの値を変更し、結果を保存するのは良く
 
 絶対パス（例. `/home/vinceb/projects/zmays-snps/data/stats/qual.txt`）ではなく相対パス（例. `../data/stats/qual.txt`）を使う。
 
-- [UNIXコマンド辞典>>絶対パスと相対パス](http://codezine.jp/unixdic/w/絶対パスと相対パス)
+- [絶対パスと相対パス](http://codezine.jp/unixdic/w/絶対パスと相対パス)
 
 ### Project Documentation
 プロジェクトの記録  
@@ -236,7 +239,7 @@ Excelを用いて、セルの値を変更し、結果を保存するのは良く
 
 以上の情報を[プレーンテキスト](https://ja.wikipedia.org/wiki/プレーンテキスト)形式の[README](https://ja.wikipedia.org/wiki/リードミー)ファイルに保存する。プレーンテキストはコマンドラインから簡単に読み込み、検索、編集できる。  
 
-READMEファイルはプロジェクトのメインのディレクトリに格納する。例えば、`data/README`ファイルに、`data/`ディレクトリのデータファイルの説明（いつ・どこから・どのようにダウンロードしたのか）を記載する。touchコマンドでサイズが0の空ファイルを作成する:    
+READMEファイルはプロジェクトのメインのディレクトリに格納する。例えば、`data/README`ファイルに、`data/`ディレクトリのデータファイルの説明（いつ・どこから・どのようにダウンロードしたのか）を記載する。[`touch`](https://ja.wikipedia.org/wiki/Touch_(UNIX))コマンドでサイズが0の空ファイルを作成する:   
 
 
 ### Use Directories to Divide Up Your Project into Subprojects
@@ -327,7 +330,7 @@ Table 2-2. マークダウン構文
 - [UNIXコマンド辞典](http://codezine.jp/unixdic/)
 - [UNIX講習会#2 パイプ・リダイレクト・プロセス置換 - Qiita](http://qiita.com/informationsea/items/a9092d40d20e059f0482)
 - [UNIX/基礎知識/リダイレクト、パイプ - 会津大学UNIXウィキ](http://technique.sonots.com/?UNIX%2F基礎知識%2Fリダイレクト、パイプ)
-- [UNIXコマンド辞典>>リダイレクション](http://codezine.jp/unixdic/w/リダイレクション)
+- [リダイレクション](http://codezine.jp/unixdic/w/リダイレクション)
 - [NIXコマンド辞典>>パイプ](http://codezine.jp/unixdic/w/パイプ)
 - [UNIXの部屋 コマンド検索:リダイレクト (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?%A5%EA%A5%C0%A5%A4%A5%EC%A5%AF%A5%C8)
 - [UNIXの部屋 コマンド検索:シェル記号類まとめ (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?%A5%B7%A5%A7%A5%EB%B5%AD%B9%E6%CE%E0%A4%DE%A4%C8%A4%E1)　`> >> 2>&1 < << $$ >& & && ( ) | || <<- <& >| <>`
@@ -397,7 +400,7 @@ Figure 3-2.
 正規表現はクオーテーションで囲む。`grep -v > tb1.fasta`はファイルを上書きしてしまう。
 
 - [UNIXの部屋 コマンド検索:grep (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?grep)
-- [UNIXコマンド辞典>>grep](http://codezine.jp/unixdic/w/grep)
+- [grep](http://codezine.jp/unixdic/w/grep)
 - [Linuxコマンド集 - 【 grep 】 文字列を検索する：ITpro](Linuxコマンド集 - 【 grep 】 文字列を検索する：ITpro)
 - [grep - UNIX/Linuxコマンド - IT専科](http://www.itsenka.com/contents/development/unix-linux/grep.html)
 
@@ -410,7 +413,7 @@ Figure 3-2.
 ##### Even More Redirection: A tee in Your Pipe
 
 - [tee (UNIX)](https://ja.wikipedia.org/wiki/Tee_(UNIX))
-- [UNIXコマンド辞典>>tee](http://codezine.jp/unixdic/w/tee)
+- [tee](http://codezine.jp/unixdic/w/tee)
 - [UNIXの部屋 コマンド検索:tee (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?tee)
 - [Linuxコマンド集 - 【 tee 】 標準入力を標準出力とファイルに出力する：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230898/)
 
@@ -452,7 +455,7 @@ Control-z キーで中断させたジョブを
 [`ps`](http://codezine.jp/unixdic/w/ps)、
 [`kill`](http://codezine.jp/unixdic/w/kill)コマンド
 
-- [UNIXコマンド辞典>>kill](http://codezine.jp/unixdic/w/kill)
+- [kill](http://codezine.jp/unixdic/w/kill)
 
 #### Exit Status: How to Programmatically Tell Whether Your Command Worked
 [終了ステータス](https://ja.wikipedia.org/wiki/終了ステータス)（exit status）慣習的に正常終了時はゼロ、異常終了時はゼロ以外を返すのが一般的である
@@ -531,7 +534,7 @@ IPアドレスを用いてマシンに繋げるには `ssh 192.169.237.42`
 *ハングアップ*シグナル（`SIGHUP`）  
 `nohup`とTmux  
 
-- [UNIXコマンド辞典>>nohup](http://codezine.jp/unixdic/w/nohup)　ハングアップに反応しないようにしてコマンドを実行する
+- [nohup](http://codezine.jp/unixdic/w/nohup)　ハングアップに反応しないようにしてコマンドを実行する
 - [Linuxコマンド集 - 【 nohup 】 ログアウトした後もコマンドを実行し続ける：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230850/)
 - [プロセス管理 — nohup, disown, kill — Watallica metallicus](http://meme.biology.tohoku.ac.jp/students/iwasaki/dev/nohup.html)
 - [tmux — 仮想端末でリモート仕事を安全に — Watallica metallicus](http://meme.biology.tohoku.ac.jp/students/iwasaki/dev/tmux.html)
@@ -901,8 +904,7 @@ SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プ�
 
 [Genome Reference Consortium](http://www.ncbi.nlm.nih.gov/projects/genome/assembly/grc/)  
 GRCm38マウス参照ゲノムを`wget`でダウンロードする。（所要時間 27分）
-http://www.ensembl.org の [Mouse](http://www.ensembl.org/Mus_musculus/Info/Index) をクリックし、
-[Download DNA sequence](ftp://ftp.ensembl.org/pub/release-74/fasta/mus_musculus/dna/) をクリックしてFTPサイトを開く。
+http://www.ensembl.org の [Mouse](http://www.ensembl.org/Mus_musculus/Info/Index) の [Download DNA sequence](ftp://ftp.ensembl.org/pub/release-74/fasta/mus_musculus/dna/) をクリックしてFTPサイトを開く。
 
 
 `zgrep`コマンドを用いて正規表現"^>"で圧縮ファイルのFASTAヘッダを確認:  
@@ -1093,7 +1095,7 @@ Example 7-1. 重複のない（ユニークな）ソートされた遺伝子名�
 
 
 
-- [UNIXコマンド辞典>>sort](http://codezine.jp/unixdic/w/sort)
+- [sort](http://codezine.jp/unixdic/w/sort)
 - [UNIXコマンド - sort (Linux/FreeBSD/Solaris)](http://www.k-tanaka.net/unix/sort.php)
 
 #### Finding Unique Values in [Uniq](https://ja.wikipedia.org/wiki/Uniq)
@@ -1259,7 +1261,7 @@ Table 8-1. 数学関数
 #### Vectors, Vectorization, and Indexing
 ベクトル  
   
-- [13. ベクトル要素へのアクセス | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)
+- [13. ベクトル要素へのアクセス | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)
 
 
 
@@ -1277,19 +1279,19 @@ z[負整数ベクトル]は、対応する要素番号の要素を取り除く�
 比較演算子（Table 8-2 例. ==, !=, <, <=, >, >=）を用いて、TRUEとFALSEの論理ベクトルを作成する。例:  
 
 
-- [13. ベクトル要素へのアクセス | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)
+- [13. ベクトル要素へのアクセス | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)
 
 x[論理値ベクトル]は、TRUEの要素に対応した要素を取り出す（Example 8-1）:  
 
 
 Table 8-2. Rの比較演算子と論理演算子  
 
-- [28. 演算子 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/28.html)
+- [28. 演算子 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/28.html)
 
 ##### Vector types
-- [09. データの型 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/09.html)
-- [18. NULL，NA，NaN，Infの操作 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/18.html)
-- [25. データ型とデータ構造 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/25.html)
+- [09. データの型 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/09.html)
+- [18. NULL，NA，NaN，Infの操作 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/18.html)
+- [25. データ型とデータ構造 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/25.html)
 
 Table 8-3. Rのベクトル型
 
@@ -1340,7 +1342,7 @@ Rに読み込む前に、コマンドラインからファイルを検査する
 
 Table 8-4. read.csv() と read.delim() の引数
 
-- [40. ファイルからデータを読み込む | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/40.html)
+- [40. ファイルからデータを読み込む | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/40.html)
 - [5. データの読み込み - 統計ソフトRの使い方](https://sites.google.com/site/webtextofr/data)
 
 > #### GETTING DATA INTO SHAPE  
@@ -1351,8 +1353,8 @@ Table 8-4. read.csv() と read.delim() の引数
 
 
 #### Exploring and Transforming Dataframes
-- [21. 行列の操作 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/21.html) | 関数 dim() ，nrow() ，ncol()
-- [39. データフレーム事始 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/39.html)
+- [21. 行列の操作 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/21.html) | 関数 dim() ，nrow() ，ncol()
+- [39. データフレーム事始 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/39.html)
 
 
 
@@ -1414,12 +1416,10 @@ Figure 8-1. ggplot2の散布図：ヒト20番染色体の位置毎の塩基多�
 Example 8-2は、`aes()`を`ggplot()`に含み、Figure 8-1と全く同じ散布図を作成する:  
 
 
-
 Example 8-3は、セントロメア領域か否か（列`cent`のTRUE/FALSE）で色分けして、Figure 8-2を作図:  
 
 
 （同じ位置にプロットが重なっている）overplottingを回避するために、透明度（alpha）を調整して、Figure 8-3を作図:
-
 
 
 `geom_density()`を用いて、多様度の密度を見る（Figure 8-4）:  
@@ -1517,7 +1517,7 @@ Rの[`%in%`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/match.html)
 
 
 
-- [43. データの結合（マージ）と整列（ソート） | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/43.html)
+- [43. データの結合（マージ）と整列（ソート） | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/43.html)
 
 
 #### Using ggplot2 Facets
@@ -1544,7 +1544,7 @@ Figure 8-12.
 
 
 #### More R Data Structures: Lists
-- [23. リスト | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/23.html)
+- [23. リスト | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/23.html)
 - [リスト | Rのリストはハッシュやマップのように利用できる](http://stat.biopapyrus.net/vector/list.html)
 - [リストにオブジェクトをしまう](http://takenaka-akio.org/doc/r_auto/list.html)
 
@@ -1563,7 +1563,7 @@ Figure 8-12.
 > #### Peeking into R’s Structures with str()  
 
 #### Writing and Applying Functions to Lists with lapply() and sapply()
-- [24. apply() ファミリー | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/24.html)
+- [24. apply() ファミリー | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/24.html)
 - [applyファミリー | apply,sapply,lapplyの使い方とその例](http://stat.biopapyrus.net/r/apply.html)
 - [apply系関数の使い方](http://takenaka-akio.org/doc/r_auto/chapter_07_apply.html)
 
@@ -1579,7 +1579,7 @@ Figure 8-12.
 ##### Writing functions
 
 
-- [31. 関数の定義 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/31.html)
+- [31. 関数の定義 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/31.html)
 - [関数の作り方 | functionによりRの関数を定義する方法](http://stat.biopapyrus.net/r/user-function.html)
 - [Rの関数定義の基本 - RjpWiki](http://www.okadajp.org/RWiki/?Rの関数定義の基本)
 - [[連載]フリーソフトによるデータ解析・マイニング　第4回 Rでの関数オブジェクト](http://www1.doshisha.ac.jp/~mjin/R/04.html)
@@ -1594,13 +1594,13 @@ Figure 8-12.
 > ##### Function Scope  
 > [スコープ](https://ja.wikipedia.org/wiki/スコープ)  
 
-- [32. ローカル変数と永続代入<<- | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/32.html)
+- [32. ローカル変数と永続代入<<- | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/32.html)
 - [変数スコープ | R,レキシカルスコープ](http://stat.biopapyrus.net/dev/scope.html)
 
 ##### Digression: Debugging R Code
 
 - [デバッグ | Rのbrowser,debug,traceback関数の使い方](http://stat.biopapyrus.net/dev/debug.html)
-- [35. デバッグについて | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/35.html)
+- [35. デバッグについて | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/35.html)
 
 関数`browser()`
 
@@ -1617,19 +1617,18 @@ Figure 8-12.
 ##### More list apply functions: sapply() and mapply()
 
 
-- [14. ベクトル計算 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/14.html)
+- [14. ベクトル計算 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/14.html)
 
 
 > ##### Other Apply Functions for Other R Data Structures   
 配列と行列　`apply()`と`sweep()`
 - [オブジェクト型 | Rのリスト、データフレーム、行列、配列など](http://stat.biopapyrus.net/r/objecttype.html)
 - [R言語プログラミング： データ型・操作 - hamadakoichi blog](http://d.hatena.ne.jp/hamadakoichi/20100118/1263832446)
-- [R-Tips | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
-  - [19. 行列の作成 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/19.html)
-  - [20. 行列計算 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/20.html)
-  - [21. 行列の操作 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/21.html)
-  - [22. 配列 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/22.html)
-  - [25. データ型とデータ構造 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/25.html)
+- [19. 行列の作成 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/19.html)
+- [20. 行列計算 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/20.html)
+- [21. 行列の操作 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/21.html)
+- [22. 配列 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/22.html)
+- [25. データ型とデータ構造 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/25.html)
 
 #### Working with the Split-Apply-Combine Pattern
 Hadley Wickhamの論文["The Split-Apply-Combine Strategy for Data Analysis"](http://www.jstatsoft.org/v40/i01/paper)  
@@ -1702,10 +1701,10 @@ Rスクリプトを用いた作業
 
 - [第2回　レポートづくりを加速せよ　～R Markdown環境の導入＆チュートリアル～：R Markdownで楽々レポートづくり｜gihyo.jp … 技術評論社](http://gihyo.jp/admin/serial/01/r-markdown/0002)
 
-関数`source()`を用いて、Rスクリプト（*my_analysis.R*）を実行する:  
+関数`source()`を用いて、Rスクリプトを実行する:  
 
 
-あるいは、コマンドラインからバッチモードでスクリプトを実行する:  
+あるいは、コマンドラインからバッチモードでRスクリプトを実行する:  
 
 
 > #### Reproducibility and sessionInfo()  
@@ -1768,7 +1767,7 @@ Rオブジェクトを保存・復元する関数は`save()`と`load()`
 
 `save`, `save.image()`, `savehistory()`
 
-- [45. ファイルへのデータ出力 | R-Source](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/45.html)
+- [45. ファイルへのデータ出力 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/45.html)
 - [特定のオブジェクトのディスクファイルへの記録。save(), load() 関数](http://www.okadajp.org/RWiki/?R出力の記録#i9ff89a5)
 - [私とRと統計学](http://markovchainmontecarlo.hatenablog.com)
 
