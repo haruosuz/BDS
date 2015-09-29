@@ -67,7 +67,7 @@ III. Practice: Bioinformatics Data Skills
 ### The Approach of This Book
 本書は、バイオインフォマティクス・ソフトウェア（マッピング、アセンブル、変異解析など）の実行方法は扱わない。  
 本書は、複雑で大規模なデータセットから意味を抽出し探索する技術を扱う。  
-本書を通して、頑強で再現可能な方法を強調する。  
+本書を通して、頑強で（robust）再現可能な（reproducible）方法を強調する。「頑強」とは、出力されないエラー、交絡因子、ソフトウェアのバグ、ノイズの多いデータに対する耐性を意味する。「再現可能」とは、他人が作業を繰り返して同じ結果に到達できることを意味する。そのためには、作業を記録し、全ての材料（方法、コード、データを）を利用可能にしなければならない。Chapter 2で詳しく述べる。
 
 ### Why This Book Focuses on Sequencing Data
 本書は、主に配列データの扱いに焦点を当てる。配列データは豊富にあり、配列データ解析に必要なテキスト処理技術は、他のデータに適用できる。
@@ -903,8 +903,8 @@ SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プ�
 ### Case Study: Reproducibly Downloading Data
 
 [Genome Reference Consortium](http://www.ncbi.nlm.nih.gov/projects/genome/assembly/grc/)  
-GRCm38マウス参照ゲノムを`wget`でダウンロードする。（所要時間 27分）
-http://www.ensembl.org の [Mouse](http://www.ensembl.org/Mus_musculus/Info/Index) の [Download DNA sequence](ftp://ftp.ensembl.org/pub/release-74/fasta/mus_musculus/dna/) をクリックしてFTPサイトを開く。
+GRCm38マウス参照ゲノムを`wget`でダウンロードする。
+http://www.ensembl.org の [Mouse](http://www.ensembl.org/Mus_musculus/Info/Index) の [Download DNA sequence] をクリックしてFTPサイトを開く。
 
 
 `zgrep`コマンドを用いて正規表現"^>"で圧縮ファイルのFASTAヘッダを確認:  
