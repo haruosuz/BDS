@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki <haruo@g-language.org>  
-Last Update: 2015-09-26  
+Last Update: 2015-10-01  
 
 ----------
 
@@ -10,19 +10,17 @@ Last Update: 2015-09-26
 
 # Print & Ebook
 - [Amazon.co.jp](http://www.amazon.co.jp/dp/1449367372) | [Amazon.com](http://www.amazon.com/dp/1449367372)
-- [O'Reilly Media](http://shop.oreilly.com/product/0636920030157.do) | [Free Sampler](http://cdn.oreillystatic.com/oreilly/booksamplers/9781449367374_sampler.pdf)（Chapter 1の全文閲覧可能）
-- [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/)（[Preface](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/preface01.html#preface)、[Chapter 1](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch01.html#chapter-01)、[Chapter 4](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch04.html#chapter-04) の全文閲覧可能）
+- [O'Reilly Media](http://shop.oreilly.com/product/0636920030157.do) | [Free Sampler](http://cdn.oreillystatic.com/oreilly/booksamplers/9781449367374_sampler.pdf)（Chapter 1の全文公開）
+- [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/)（[Preface](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/preface01.html#preface)、[Chapter 1](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch01.html#chapter-01)、[Chapter 4](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch04.html#chapter-04) の全文公開）
 
 # News & Reviews
 - [Bioinformatics Data Skills - Twitter Search](https://twitter.com/search?q=Bioinformatics%20Data%20Skills&src=typd)
-- [Twitter competition: win a signed copy of Bioinformatics Data Skills by Vince Buffalo — ACGT](http://www.acgt.me/blog/2015/9/13/twitter-competition-win-a-signed-copy-of-bioinformatics-data-skills-by-vince-buffalo) | September 13, 2015
-- [101 questions with a bioinformatician #30: Vince Buffalo — ACGT](http://www.acgt.me/blog/2015/8/4/101-questions-with-a-bioinformatician-30-vince-buffalo) | August 04, 2015
-- [bds:index [SoWiki]](http://so.med.u-tokai.ac.jp/wiki/doku.php?id=bds:index) | 最終更新: 2015/06/25 04:04 by so
-- [Asking for opinions about Bioinformatics Data Skills book](https://www.biostars.org/p/153594/) | weeks ago 
-- [O'Reilly's early release of "Bioinformatics Data Skills" is 50% off until Feb 18th, use code WKERES : bioinformatics](https://www.reddit.com/r/bioinformatics/comments/2vsplz/oreillys_early_release_of_bioinformatics_data/) | submitted 6 months ago by rdr0b11
-- []()
-- [Don’t trust your data: reviewing Bioinformatics Data Skills | The Molecular Ecologist](http://www.molecularecologist.com/2015/04/dont-trust-your-data-reviewing-bioinformatics-data-skills/) | Posted on 8 April, 2015 by Rob Denton
-- [Reading the early release of "Bioinformatics Data Skills"Musings from a PhD candidate](http://davetang.org/muse/2014/04/03/bioinformatics-data-skills/) | Posted on April 3, 2014
+- 2015-08-04 [101 questions with a bioinformatician #30: Vince Buffalo — ACGT](http://www.acgt.me/blog/2015/8/4/101-questions-with-a-bioinformatician-30-vince-buffalo)
+- 2015-06-25 [bds:index [SoWiki]](http://so.med.u-tokai.ac.jp/wiki/doku.php?id=bds:index)
+- 7 weeks ago [Asking for opinions about Bioinformatics Data Skills book](https://www.biostars.org/p/153594/)
+- 2015-02-13 [O'Reilly's early release of "Bioinformatics Data Skills" is 50% off until Feb 18th, use code WKERES : bioinformatics](https://www.reddit.com/r/bioinformatics/comments/2vsplz/oreillys_early_release_of_bioinformatics_data/)
+- 2015-04-08 (Rob Denton) [Don’t trust your data: reviewing Bioinformatics Data Skills | The Molecular Ecologist](http://www.molecularecologist.com/2015/04/dont-trust-your-data-reviewing-bioinformatics-data-skills/)
+- 2014-04-03 [Reading the early release of "Bioinformatics Data Skills"Musings from a PhD candidate](http://davetang.org/muse/2014/04/03/bioinformatics-data-skills/)
 
 ----------
 
@@ -58,6 +56,7 @@ III. Practice: Bioinformatics Data Skills
 ----------
 
 ## Preface
+
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/preface01.html#preface)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-00-preface)
 
@@ -82,13 +81,21 @@ III. Practice: Bioinformatics Data Skills
 
 - スクリプト言語（例. [R言語](https://ja.wikipedia.org/wiki/R言語)、[Python](https://ja.wikipedia.org/wiki/Python)、[Perl](https://ja.wikipedia.org/wiki/Perl)、[Ruby](https://ja.wikipedia.org/wiki/Ruby)）
 - テキストエディタ（例. [Emacs](https://ja.wikipedia.org/wiki/Emacs)、[Vim](https://ja.wikipedia.org/wiki/Vim)、[nano](https://ja.wikipedia.org/wiki/Nano_(テキストエディタ))）
-- 基本的なUnixコマンド（例. [`cd, ls, pwd, mv, rm, rmdir, mkdir`](http://dogandrun.hatenablog.jp/entry/2013/11/30/181606)）
+- 基本的なUnixコマンドライン（例. [`cd, ls, pwd, mv, rm, rmdir, mkdir`](http://dogandrun.hatenablog.jp/entry/2013/11/30/181606)）
 - 生物学の基礎（DNA、RNA、タンパク質、遺伝子、[セントラルドグマ](https://ja.wikipedia.org/wiki/セントラルドグマ)）  
 - [正規表現](https://ja.wikipedia.org/wiki/正規表現)  
 - ヘルプやマニュアルの参照。Unixの[`man`](https://ja.wikipedia.org/wiki/Manページ)やRの[`help()`](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
 - システム管理  
 
 学習サイト
+
+- [とほほのUNIX入門](http://www.tohoho-web.com/wwwunix.htm)
+- [UNIXコマンド辞典](http://codezine.jp/unixdic/)
+- [UNIXの部屋](http://x68000.q-e-d.net/~68user/unix/)
+- [UNIX - 会津大学UNIXウィキ](http://technique.sonots.com/?UNIX)
+- [Linuxコマンド集：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060223/230520/?TOC=25)
+- [Linuxコマンド集 - Linux入門 - Webkaru](http://webkaru.net/linux/cat/command/)
+- []()
 
 - [ドットインストール - 3分動画でマスターする初心者向けプログラミング学習サイト](http://dotinstall.com)
 - [UNIXコマンド入門 (一般ユーザー編) (全16回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_unix)
@@ -99,16 +106,11 @@ III. Practice: Bioinformatics Data Skills
 - [Perl入門 (全19回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_perl)
 - [正規表現入門 (全14回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_regexp)
 - [sed入門 (全10回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_sed)
-- []()
 - [Markdown記法入門 (全8回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_markdown)
-- [tmux入門 (全10回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_tmux)
-- [git入門 (全22回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_git)
-- [SQLite入門 (全18回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_sqlite)
 
 ### Supplementary Material on GitHub
 [GitHubリポジトリ](https://github.com/vsbuffalo/bds-files)の補足資料を取得する:  
-`wget -o wget.log https://github.com/vsbuffalo/bds-files/archive/master.zip`  
-`git clone https://github.com/vsbuffalo/bds-files`  
+
 
 本書や補足資料に問題を発見した場合、[GitHubで新規issueを作成](https://github.com/vsbuffalo/bds-files/issues)されたい。　
 
@@ -131,6 +133,7 @@ III. Practice: Bioinformatics Data Skills
 
 ## Chapter 1. How to Learn Bioinformatics
 第1章. バイオインフォマティクスの学び方
+
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch01.html#chapter-01)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-01-ideology)
 
@@ -181,7 +184,6 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 
 #### Use Existing Libraries Whenever Possible
 なるべく既存のライブラリを使う  
-
 歴史が長く、閲覧者が多いので、バグが少ない。
 
 #### Treat Data as Read-Only
@@ -210,7 +212,7 @@ Excelを用いて、セルの値を変更し、結果を保存するのは良く
 図表を出力するスクリプトを書く   
 
 #### Use Code as Documentation
-コードを記録にする  
+ドキュメントとしてコードを使用する
 
 ### Continually Improving Your Bioinformatics Data Skills
 
@@ -222,7 +224,8 @@ Excelを用いて、セルの値を変更し、結果を保存するのは良く
 ----------
 
 ## Chapter 2. Setting Up and Managing a Bioinformatics Project
-第2章. バイオインフォマティクス・プロジェクトの作成と管理  
+第2章. バイオインフォマティクス・プロジェクトの作成と管理
+ 
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch02.html#chapter-02)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-02-bioinformatics-projects) 
 
@@ -231,7 +234,7 @@ Excelを用いて、セルの値を変更し、結果を保存するのは良く
 
 - [計算生物学のプロジェクトの管理法入門 (Noble 2009)](http://5hun.github.io/quickguide_ja/)
 
-1つのプロジェクト・ディレクトリに全ファイルを格納する。
+プロジェクトの全ファイルを1つのディレクトリに格納する。
 
 例えば、トウモロコシ（学名*Zea mays*）の[SNP](https://ja.wikipedia.org/wiki/一塩基多型)検出プロジェクトのディレクトリ（zmays-snps/）を作成する:  
 
@@ -279,15 +282,12 @@ Brace expansion ブレース展開の例:
 zmays-snps/プロジェクト・ディレクトリを作成:  
 
 
-- [Bash Reference Manual: Brace Expansion](http://www.gnu.org/software/bash/manual/html_node/Brace-Expansion.html)
-- [Brace expansion [Bash Hackers Wiki]](http://wiki.bash-hackers.org/syntax/expansion/brace)
 - [Bash - Brace Expansionが便利 - Qiita](http://qiita.com/__nagamee/items/bec89945f70f5dffe9c5)
-- [bash - コマンド (プログラム) の説明 - Linux コマンド集 一覧表](http://kazmax.zpp.jp/cmd/b/bash.1.html) | ブレース展開
 
 3つのサンプル（zmaysA, zmaysB, zmaysC）毎にペア（R1, R2）の空データファイルを作成する:  
 
 
-[ワイルドカード](http://ja.wikipedia.org/wiki/ワイルドカード_(情報処理))のアスタリスク（*）を用いて、サンプル名`zmaysB`を持つ全てのファイルを表示する:  
+[ワイルドカード](http://ja.wikipedia.org/wiki/ワイルドカード_(情報処理))のアスタリスク（\*）を用いて、サンプル名`zmaysB`を持つ全てのファイルを表示する:  
 
 
 > ### Wildcards and "Argument list too long"  
@@ -302,8 +302,7 @@ zmays-snps/プロジェクト・ディレクトリを作成:
 
 Table 2-1. Unixのワイルドカード  
 
-- [UNIXのワイルドカード](http://www.rsch.tuis.ac.jp/~ohmi/literacy/2002/wildcard.html)
-- [UNIX/基礎知識/ワイルドカード、メタキャラクタ - 会津大学UNIXウィキ](http://technique.sonots.com/?UNIX%2F基礎知識%2Fワイルドカード、メタキャラクタ)
+- [#12 ワイルドカードについて | UNIXコマンド入門 (一般ユーザー編) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_unix/5412)
 
 > ### Leading Zeros and Sorting  
 ファイル名の先頭に0を付ける（例. *file-21.txt*ではなく*file-0021.txt*にする）と、`ls`で辞書順にファイルがソートされる。  
@@ -312,12 +311,9 @@ Table 2-1. Unixのワイルドカード
 
 ### Markdown for Project Notebooks
 プレーンテキスト形式で書かれたプロジェクト・ノートは、コマンドラインやネットワーク経由で読み込み・検索・編集できる。  
+[Markdown](https://ja.wikipedia.org/wiki/Markdown)（マークダウン）
 
-- [Markdown](https://ja.wikipedia.org/wiki/Markdown)（マークダウン）  
-  - [MarkdownでMarkdownの書き方を書いてみた](http://qiita.com/oreo/items/82183bfbaac69971917f)
-  - [Markdownで行こう！](https://gist.github.com/wate/7072365)
-  - [README.mdファイル。マークダウン記法まとめ | codechord](http://codechord.com/2012/01/readme-markdown/)
-  - [ディレクターが知っておいて欲しい10個のMarkdown-マークダウン記法 - PHPサンプル実験室](http://php-fan.org/markdown.html)
+- [Markdown記法入門 (全8回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_markdown)
 
 #### Markdown Formatting Basics
 John Gruberのホームページ（[Daring Fireball: Markdown Syntax Documentation](http://daringfireball.net/projects/markdown/syntax)）  
@@ -334,7 +330,8 @@ Table 2-2. マークダウン構文
 
 
 ## Chapter 3. Remedial Unix Shell
-第3章. Unixシェル補習  
+第3章. Unixシェル補習
+
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch03.html#chapter-03)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-03-remedial-unix) 
 
@@ -350,15 +347,6 @@ Table 2-2. マークダウン構文
 [パイプ](https://ja.wikipedia.org/wiki/パイプ_(コンピュータ))、
 [プロセス](https://ja.wikipedia.org/wiki/プロセス)、
 コマンド置換（[command substitution](https://en.wikipedia.org/wiki/Command_substitution)）
-
-- [とほほのUNIX入門](http://www.tohoho-web.com/wwwunix.htm)
-- [UNIXコマンド辞典](http://codezine.jp/unixdic/)
-- [UNIX講習会#2 パイプ・リダイレクト・プロセス置換 - Qiita](http://qiita.com/informationsea/items/a9092d40d20e059f0482)
-- [UNIX/基礎知識/リダイレクト、パイプ - 会津大学UNIXウィキ](http://technique.sonots.com/?UNIX%2F基礎知識%2Fリダイレクト、パイプ)
-- [リダイレクション](http://codezine.jp/unixdic/w/リダイレクション)
-- [NIXコマンド辞典>>パイプ](http://codezine.jp/unixdic/w/パイプ)
-- [UNIXの部屋 コマンド検索:リダイレクト (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?%A5%EA%A5%C0%A5%A4%A5%EC%A5%AF%A5%C8)
-- [UNIXの部屋 コマンド検索:シェル記号類まとめ (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?%A5%B7%A5%A7%A5%EB%B5%AD%B9%E6%CE%E0%A4%DE%A4%C8%A4%E1)　`> >> 2>&1 < << $$ >& & && ( ) | || <<- <& >| <>`
 
 ### Working with Streams and Redirection
 ストリームとリダイレクション  
@@ -381,8 +369,9 @@ Table 2-2. マークダウン構文
 最新のファイル（*zea-proteins.fasta*）を確認:  
 `ls -lrt`は、更新日時の逆順にソートする（詳細は`man ls`を参照）。
 
-- [lsコマンドの結果をソート（昇順）する｜Linux Tips](http://www.linuxmaster.jp/linux_skill/2008/06/ls.html)
-- [lsコマンドで便利なオプションはlとaだけではない](http://blog.layer8.sh/ja/2013/02/18/ls-l-a/)
+- [ls](http://codezine.jp/unixdic/w/ls)
+- [#06 ディレクトリの中身をみよう | UNIXコマンド入門 (一般ユーザー編) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_unix/5406)
+- [#07 ディレクトリの詳細情報を読み解こう | UNIXコマンド入門 (一般ユーザー編) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_unix/5407)
 
 #### Redirecting Standard Error
 標準エラー出力をリダイレクト  
@@ -395,9 +384,9 @@ Table 2-2. マークダウン構文
 記号`2>`は上書き、`2>>`は追記。
 
 > ### File Descriptors  
+> `2>`  
+
 - [ファイル記述子](https://ja.wikipedia.org/wiki/ファイル記述子)
-- [ファイルディスクリプタとは｜file descriptor｜ファイルディスクリプター - 意味/解説/説明/定義 ： IT用語辞典](http://e-words.jp/w/ファイルディスクリプタ.html)
-- [ファイルディスクリプタについて（1）　～ファイルディスクリプタの概要：CodeZine（コードジン）](http://codezine.jp/article/detail/4836)
 
 擬似デバイス（*pseudodevice*）の */dev/null* は、あらゆる入力を受け付けて捨てる。
 
@@ -424,10 +413,7 @@ Figure 3-2.
 ハイライトされたYはpYrimidine塩基[CT]を示す（[Nucleic acid notation](https://en.wikipedia.org/wiki/Nucleic_acid_notation)）。
 正規表現はクオーテーションで囲む。`grep -v > tb1.fasta`はファイルを上書きしてしまう。
 
-- [UNIXの部屋 コマンド検索:grep (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?grep)
-- [grep](http://codezine.jp/unixdic/w/grep)
-- [Linuxコマンド集 - 【 grep 】 文字列を検索する：ITpro](Linuxコマンド集 - 【 grep 】 文字列を検索する：ITpro)
-- [grep - UNIX/Linuxコマンド - IT専科](http://www.itsenka.com/contents/development/unix-linux/grep.html)
+- [#14 grepを使ってみよう | UNIXコマンド入門 (一般ユーザー編) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_unix/5414)
 
 #### Combining Pipes and Redirection
 
@@ -436,11 +422,7 @@ Figure 3-2.
 
 
 ##### Even More Redirection: A tee in Your Pipe
-
-- [tee (UNIX)](https://ja.wikipedia.org/wiki/Tee_(UNIX))
-- [tee](http://codezine.jp/unixdic/w/tee)
-- [UNIXの部屋 コマンド検索:tee (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?tee)
-- [Linuxコマンド集 - 【 tee 】 標準入力を標準出力とファイルに出力する：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230898/)
+[tee (UNIX)](https://ja.wikipedia.org/wiki/Tee_(UNIX))
 
 
 ### Managing and Interacting with Processes
@@ -561,6 +543,8 @@ IPアドレスを用いてマシンに繋げるには `ssh 192.169.237.42`
 - [Linuxコマンド集 - 【 nohup 】 ログアウトした後もコマンドを実行し続ける：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230850/)
 - [プロセス管理 — nohup, disown, kill — Watallica metallicus](http://meme.biology.tohoku.ac.jp/students/iwasaki/dev/nohup.html)
 - [tmux — 仮想端末でリモート仕事を安全に — Watallica metallicus](http://meme.biology.tohoku.ac.jp/students/iwasaki/dev/tmux.html)
+- [tmuxに慣れてみる: tmuxとGNU screenの違いなど](http://rcmdnk.github.io/blog/2015/01/02/computer-tmux-screen/)
+- [tmux入門 (全10回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_tmux)
 
 #### nohup
 
@@ -569,8 +553,6 @@ IPアドレスを用いてマシンに繋げるには `ssh 192.169.237.42`
 
 ### Working with Remote Machines Through Tmux
 terminal multiplexer：[Tmux](https://wiki.archlinuxjp.org/index.php/Tmux)と[GNU Screen](https://ja.wikipedia.org/wiki/GNU_Screen)
-
-- [tmuxに慣れてみる: tmuxとGNU screenの違いなど](http://rcmdnk.github.io/blog/2015/01/02/computer-tmux-screen/)
 
 #### Installing and Configuring Tmux
 
@@ -611,8 +593,11 @@ Emacsで、文字通り Control-a を入力するには、Control-a a とする�
 
 ## Chapter 5. Git for Scientists
 第5章. 科学者のためのGit
+
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch05.html#chapter-05)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-05-git-for-scientists)
+
+- [git入門 (全22回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_git)
 
 ### Why Git Is Necessary in Bioinformatics Projects
 #### Git Allows You to Keep Snapshots of Your Project
@@ -889,10 +874,9 @@ SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プ�
 ### Looking at Differences Between Data
 データの違いを見る
 
-- [`diff`](https://ja.wikipedia.org/wiki/Diff)
- - [UNIXの部屋 コマンド検索:diff (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?diff)
- - [diff - コマンド (プログラム) の説明 - Linux コマンド集 一覧表](http://kazmax.zpp.jp/cmd/d/diff.1.html)
- - [Linuxコマンド【 diff 】2つのファイルの差分を出力 - Linux入門 - Webkaru](http://webkaru.net/linux/command-diff/)
+[`diff`](https://ja.wikipedia.org/wiki/Diff)
+
+- [Linuxコマンド【 diff 】2つのファイルの差分を出力 - Linux入門 - Webkaru](http://webkaru.net/linux/command-diff/)
 
 *gene-1.bed*と*gene-2.bed*ファイルの差分を出力:  
 
@@ -900,8 +884,8 @@ SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プ�
 ### Compressing Data and Working with Compressed Data
 データの圧縮
 
-##### [*gzip*](https://ja.wikipedia.org/wiki/Gzip)
-- [UNIXの部屋 コマンド検索:gzip (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?gzip)
+##### [gzip](https://ja.wikipedia.org/wiki/Gzip)
+
 - [Linuxコマンド集 - 【 gzip 】 ファイルを圧縮・展開する（拡張子.gz）：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230791/)
 
 `gzip`を用いて、`trimmer`（架空のプログラム）の出力を、ディスクに書き込む前に、圧縮する:  
@@ -992,7 +976,6 @@ BED（3列）とGTFファイル
 `grep`の標準出力を`head`に渡す:  
 
 
-
 - [シグナル (ソフトウェア)](https://ja.wikipedia.org/wiki/シグナル_(ソフトウェア) )
 シグナル`SIGPIPE`は、読み手のいないパイプへの書き込み  
 シグナル`SIGINT`は、割り込み端末から割り込みキー（通常 CTRL + C）を押下したときに発生  
@@ -1054,17 +1037,27 @@ Mus_musculus.GRCm38.75_chr1.gtfファイルのヘッダを除いてから、列�
 
 #### The All-Powerful Grep
 
+
+
+
+gれp
+gれp
+
+
+
 トウモロコシ・ゲノムで文字列"AGATGCATG"を検索した実行時間を、4手法（`grep`、`sed`、`awk`、`Python`スクリプト）間で比較した結果、`grep`が最速（Figure 7-2）。
 
 
 
 
 > ### GNU, BSD, and the Flavors of Grep  
-> Homebrew でインストール `brew install coreutils`  
+> Homebrew でインストール
 
 
-- [grep の w オプション初めて知った - 理系学生日記](http://kiririmode.hatenablog.jp/entry/20091211/p1)
-- [grepコマンド（ファイル内の文字を検索する）](http://itdoc.hitachi.co.jp/manuals/3020/30203S3530/JPAS0250.HTM) | -w 指定文字列が単語として含まれている行を表示します。
+`grep -v`でマッチしない行を返す。例えば、"Olfr1413"以外の"Olfr"を含む全遺伝子リストを得る:    
+
+
+`grep -w`で（空白で囲まれた）単語全体にマッチする:  
 
 
 3つのオプション `-B, -A, -C`
@@ -1239,14 +1232,13 @@ FASTQ/FASTAエントリ数をカウント:
 
 ## Chapter 8. A Rapid Introduction to the R Language
 第8章. R言語入門
+
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch08.html#chapter-08)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r)
 
-- [R: The R Project for Statistical Computing](https://www.r-project.org)
 - [RjpWiki - RjpWiki](http://www.okada.jp.org/RWiki/)
-- [続・わしの頁](http://www.cwk.zaq.ne.jp/fkhud708/index2.html)
 - [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
-- [R による統計処理](http://aoki2.si.gunma-u.ac.jp/R/)
+- [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
 
 ### Getting Started with R and RStudio
 
@@ -2121,6 +2113,7 @@ Macの場合、HomebrewでGNU Coreutilsをインストール
 
 ## Chapter 13. Out-of-Memory Approaches: Tabix and SQLite
 第13章. TabixとSQLite
+
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch13.html#chapter-13)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-13-out-of-memory)
 
@@ -2160,6 +2153,8 @@ Macの場合、HomebrewでGNU Coreutilsをインストール
 [*SQL* (Structured Query Language)](https://ja.wikipedia.org/wiki/SQL)。  
 
 relational database management system (RDBMS) [関係データベース管理システム](http://e-words.jp/w/RDBMS.html)の[*SQLite*](https://ja.wikipedia.org/wiki/SQLite)。  
+
+- [SQLite入門 (全18回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_sqlite)
 
 #### When to Use Relational Databases in Bioinformatics
 [アプリケーションプログラミングインタフェース](https://ja.wikipedia.org/wiki/アプリケーションプログラミングインタフェース)（API）
