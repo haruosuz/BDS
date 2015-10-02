@@ -75,13 +75,14 @@ III. Practice: Bioinformatics Data Skills
 生物学者と計算機科学者の両方を対象
 
 ### The Difficulty Level of Bioinformatics Data Skills
+ハードです。
 
 ### Assumptions This Book Makes
 前提知識は以下の通り。  
 
 - スクリプト言語（例. [R言語](https://ja.wikipedia.org/wiki/R言語)、[Python](https://ja.wikipedia.org/wiki/Python)、[Perl](https://ja.wikipedia.org/wiki/Perl)、[Ruby](https://ja.wikipedia.org/wiki/Ruby)）
 - テキストエディタ（例. [Emacs](https://ja.wikipedia.org/wiki/Emacs)、[Vim](https://ja.wikipedia.org/wiki/Vim)、[nano](https://ja.wikipedia.org/wiki/Nano_(テキストエディタ))）
-- 基本的なUnixコマンドライン（例. [`cd, ls, pwd, mv, rm, rmdir, mkdir`](http://dogandrun.hatenablog.jp/entry/2013/11/30/181606)）
+- 基本的なUnixコマンドライン技術。ターミナルとシェル、コマンド入力、コマンドライン・オプションと引数、上矢印（↑）キーで直前に入力したコマンドを再現。ディレクトリ・ファイル操作（[`cd, ls, pwd, mv, rm, rmdir, mkdir`](http://dogandrun.hatenablog.jp/entry/2013/11/30/181606)）。ファイルの所有権とアクセス権（パーミッション）の変更（`chown`, `chmod`）
 - 生物学の基礎（DNA、RNA、タンパク質、遺伝子、[セントラルドグマ](https://ja.wikipedia.org/wiki/セントラルドグマ)）  
 - [正規表現](https://ja.wikipedia.org/wiki/正規表現)  
 - ヘルプやマニュアルの参照。Unixの[`man`](https://ja.wikipedia.org/wiki/Manページ)やRの[`help()`](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
@@ -244,7 +245,7 @@ Excelを用いて、セルの値を変更し、結果を保存するのは良く
 - `analysis/`ディレクトリに解析結果を格納する。
 
 > ### What’s in a Name?  
-ファイル名には、英数字や_や-を使い、スペース（空白）を入れない。拡張子を付ける。（例. *ecoli_genes_2015-07-07.fasta*）  
+ファイル名には、英数字や_や-を使い、スペース（空白）を入れない。拡張子を付ける。（例. *human_genes_2015-07-07.fasta*）  
 
 絶対パス（例. `/home/vinceb/projects/zmays-snps/data/stats/qual.txt`）ではなく相対パス（例. `../data/stats/qual.txt`）を使う。
 
@@ -282,8 +283,6 @@ Brace expansion ブレース展開の例:
 zmays-snps/プロジェクト・ディレクトリを作成:  
 
 
-- [Bash - Brace Expansionが便利 - Qiita](http://qiita.com/__nagamee/items/bec89945f70f5dffe9c5)
-
 3つのサンプル（zmaysA, zmaysB, zmaysC）毎にペア（R1, R2）の空データファイルを作成する:  
 
 
@@ -291,9 +290,8 @@ zmays-snps/プロジェクト・ディレクトリを作成:
 
 
 > ### Wildcards and "Argument list too long"  
-解決方法は"Using find and xargs"を参照されたい  
 
-ワイルドカードは限定する。例えば、`zmaysB*`の代わりに、`zmaysB*fastq`または`zmaysB_R?.fastq`を用いる（`?`は任意の1文字）。
+ワイルドカードを可能な限り限定する。例えば、`zmaysB*`の代わりに、`zmaysB*fastq`または`zmaysB_R?.fastq`を用いる（`?`は任意の1文字）。
 
 サンプルCを排除する:  
 
