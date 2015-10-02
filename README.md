@@ -60,16 +60,15 @@ III. Practice: Bioinformatics Data Skills
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/preface01.html#preface)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-00-preface)
 
-頑強で再現可能な方法で科学的な疑問に答える。バイオインフォマティクス・データの操作・探索に不可欠なツールの利用法（データスキル）を学ぶ。  
-データスキルは、試練を経たオープンソースのツールを利用するので、同じツールとスキルを用いて、次世代のデータに適応できる。
+データスキルは、試練を経たオープンソースのツールを利用するので、同じスキルで次世代のデータにも適応できる。
 
 ### The Approach of This Book
-本書は、バイオインフォマティクス・ソフトウェア（マッピング、アセンブル、変異解析など）の実行方法は扱わない。  
+本書は、ソフトウェアの実行方法は扱わない。  
 本書は、複雑で大規模なデータセットから意味を抽出し探索する技術を扱う。  
-本書を通して、頑強で再現可能な方法を強調する。頑強（robust）とは、出力されないエラー、交絡因子、ソフトウェアのバグ、ノイズの多いデータに対する耐性を意味する。再現可能（reproducible）とは、他人が作業を繰り返して同じ結果に到達できることを意味する。そのために、作業を記録し、全ての材料（方法、コード、データ）を利用可能にする。Chapter 2で詳しく述べる。
+本書を通して、頑強（robust）で再現可能（reproducible）な方法を強調する。
 
 ### Why This Book Focuses on Sequencing Data
-本書は、主に配列データの扱いに焦点を当てる。配列データは豊富にあり、配列データ解析に必要なテキスト処理技術は、他のデータに適用できる。
+本書は、主に配列データの扱いに焦点を当てる。配列データは豊富にあり、配列データ解析に必要なテキスト処理技術は、他のデータにも適用できる。
 
 ### Audience
 生物学者と計算機科学者の両方を対象
@@ -82,13 +81,13 @@ III. Practice: Bioinformatics Data Skills
 
 - スクリプト言語（例. [R言語](https://ja.wikipedia.org/wiki/R言語)、[Python](https://ja.wikipedia.org/wiki/Python)、[Perl](https://ja.wikipedia.org/wiki/Perl)、[Ruby](https://ja.wikipedia.org/wiki/Ruby)）
 - テキストエディタ（例. [Emacs](https://ja.wikipedia.org/wiki/Emacs)、[Vim](https://ja.wikipedia.org/wiki/Vim)、[nano](https://ja.wikipedia.org/wiki/Nano_(テキストエディタ))）
-- 基本的なUnixコマンドライン技術。ターミナルとシェル、コマンド入力、コマンドライン・オプションと引数、上矢印（↑）キーで直前に入力したコマンドを再現。ディレクトリ・ファイル操作（[`cd, ls, pwd, mv, rm, rmdir, mkdir`](http://dogandrun.hatenablog.jp/entry/2013/11/30/181606)）。ファイルの所有権とアクセス権（パーミッション）の変更（`chown`, `chmod`）
+- 基本的なUnixコマンドライン技術。ディレクトリ・ファイル操作（[`cd, ls, pwd, mv, rm, rmdir, mkdir`](http://dogandrun.hatenablog.jp/entry/2013/11/30/181606)）。ファイルの所有権とアクセス権の変更（`chown, chmod`）
 - 生物学の基礎（DNA、RNA、タンパク質、遺伝子、[セントラルドグマ](https://ja.wikipedia.org/wiki/セントラルドグマ)）  
 - [正規表現](https://ja.wikipedia.org/wiki/正規表現)  
 - ヘルプやマニュアルの参照。Unixの[`man`](https://ja.wikipedia.org/wiki/Manページ)やRの[`help()`](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
 - システム管理  
 
-学習サイト
+オンライン教材
 
 - [とほほのUNIX入門](http://www.tohoho-web.com/wwwunix.htm)
 - [UNIXコマンド辞典](http://codezine.jp/unixdic/)
@@ -189,7 +188,7 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 
 #### Treat Data as Read-Only
 データを読み取り専用として扱う  
-Excelを用いて、セルの値を変更し、結果を保存するのは良くない。プログラムが、データを読み取り、新しい別の結果ファイルを作成するのが良い。元のファイルを変更してしまうと、再試行・再現できなくなる。
+Excelでセルの値を変更して保存するのはダメ。プログラムでデータを読み取り、新しい別の結果ファイルを作成する。元のファイルを変更してしまうと、再試行・再現できなくなる。
 
 #### Spend Time Developing Frequently Used Scripts into Tools
 
@@ -260,8 +259,8 @@ Excelを用いて、セルの値を変更し、結果を保存するのは良く
 - 方法とワークフロー。全コマンドラインをコピー＆ペースト。デフォルト値も
 - データの入手元（ウェブサイトのURL等）
 - データをダウンロードした日付
-- データのバーション（例. [TAIR10](https://www.arabidopsis.org/download_files/Genes/TAIR10_genome_release/README_TAIR10.txt)、[WS231](https://www.wormbase.org/about/wormbase_release_WS231)
-- データのダウンロード方法（例. [MySQL](https://ja.wikipedia.org/wiki/MySQL)、[UCSC Genome Browser](https://genome.ucsc.edu)
+- データのバーション（例. [TAIR10](https://www.arabidopsis.org/download_files/Genes/TAIR10_genome_release/README_TAIR10.txt)、[WS231](https://www.wormbase.org/about/wormbase_release_WS231)）
+- データのダウンロード方法（例. [MySQL](https://ja.wikipedia.org/wiki/MySQL)、[UCSC Genome Browser](https://genome.ucsc.edu)）
 - ソフトウェアのバーション（なければ、日付やURL）
 
 以上の情報を[プレーンテキスト](https://ja.wikipedia.org/wiki/プレーンテキスト)形式の[README](https://ja.wikipedia.org/wiki/リードミー)ファイルに保存する。プレーンテキストはコマンドラインから簡単に読み込み、検索、編集できる。  
