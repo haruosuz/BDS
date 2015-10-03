@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki <haruo@g-language.org>  
-Last Update: 2015-10-01  
+Last Update: 2015-10-03  
 
 ----------
 
@@ -9,9 +9,10 @@ Last Update: 2015-10-01
 ![](http://ecx.images-amazon.com/images/I/51gYdVvOoQL._SX379_BO1,204,203,200_.jpg)
 
 # Print & Ebook
-- [Amazon.co.jp](http://www.amazon.co.jp/dp/1449367372) | [Amazon.com](http://www.amazon.com/dp/1449367372)
 - [O'Reilly Media](http://shop.oreilly.com/product/0636920030157.do) | [Free Sampler](http://cdn.oreillystatic.com/oreilly/booksamplers/9781449367374_sampler.pdf)（Chapter 1の全文公開）
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/)（[Preface](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/preface01.html#preface)、[Chapter 1](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch01.html#chapter-01)、[Chapter 4](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch04.html#chapter-04) の全文公開）
+- [Amazon.co.jp](http://www.amazon.co.jp/dp/1449367372) | [Amazon.com](http://www.amazon.com/dp/1449367372)
+
 
 # News & Reviews
 - [Bioinformatics Data Skills - Twitter Search](https://twitter.com/search?q=Bioinformatics%20Data%20Skills&src=typd)
@@ -35,14 +36,14 @@ Last Update: 2015-10-01
 
 I. Ideology: Data Skills for Robust and Reproducible Bioinformatics  
 - [1. How to Learn Bioinformatics](#chapter-1-how-to-learn-bioinformatics)  
-  
+
 II. Prerequisites: Essential Skills for Getting Started with a Bioinformatics Project  
 - [2. Setting Up and Managing a Bioinformatics Project](#chapter-2-setting-up-and-managing-a-bioinformatics-project)
 - [3. Remedial Unix Shell](#chapter-3-remedial-unix-shell)
 - [4. Working with Remote Machines](#chapter-4-working-with-remote-machines)
 - [5. Git for Scientists](#chapter-5-git-for-scientists)
 - [6. Bioinformatics Data](#chapter-6-bioinformatics-data)
-  
+
 III. Practice: Bioinformatics Data Skills  
 - [7. Unix Data Tools](#chapter-7-unix-data-tools)
 - [8. A Rapid Introduction to the R Language](#chapter-8-a-rapid-introduction-to-the-r-language)
@@ -68,19 +69,19 @@ III. Practice: Bioinformatics Data Skills
 本書を通して、頑強（robust）で再現可能（reproducible）な方法を強調する。
 
 ### Why This Book Focuses on Sequencing Data
-本書は、主に配列データの扱いに焦点を当てる。配列データは豊富にあり、配列データ解析に必要なテキスト処理技術は、他のデータにも適用できる。
+本書は、主に配列データを扱う。配列データは豊富にあり、配列データ解析に必要なテキスト処理技術は、他のデータにも適用できる。
 
 ### Audience
 生物学者と計算機科学者の両方を対象
 
 ### The Difficulty Level of Bioinformatics Data Skills
-ハードです。
+ハード
 
 ### Assumptions This Book Makes
 前提知識は以下の通り。  
 
 - スクリプト言語（例. [R言語](https://ja.wikipedia.org/wiki/R言語)、[Python](https://ja.wikipedia.org/wiki/Python)、[Perl](https://ja.wikipedia.org/wiki/Perl)、[Ruby](https://ja.wikipedia.org/wiki/Ruby)）
-- テキストエディタ（例. [Emacs](https://ja.wikipedia.org/wiki/Emacs)、[Vim](https://ja.wikipedia.org/wiki/Vim)、[nano](https://ja.wikipedia.org/wiki/Nano_(テキストエディタ))）
+- テキストエディタ（例. [Emacs](https://ja.wikipedia.org/wiki/Emacs)、[Vim](https://ja.wikipedia.org/wiki/Vim)、[nano](https://ja.wikipedia.org/wiki/Nano_(テキストエディタ))、[Atom](https://atom.io) ）
 - 基本的なUnixコマンドライン技術。ディレクトリ・ファイル操作（[`cd, ls, pwd, mv, rm, rmdir, mkdir`](http://dogandrun.hatenablog.jp/entry/2013/11/30/181606)）。ファイルの所有権とアクセス権の変更（`chown, chmod`）
 - 生物学の基礎（DNA、RNA、タンパク質、遺伝子、[セントラルドグマ](https://ja.wikipedia.org/wiki/セントラルドグマ)）  
 - [正規表現](https://ja.wikipedia.org/wiki/正規表現)  
@@ -89,29 +90,18 @@ III. Practice: Bioinformatics Data Skills
 
 オンライン教材
 
+- [ドットインストール - 3分動画でマスターする初心者向けプログラミング学習サイト](http://dotinstall.com)
 - [とほほのUNIX入門](http://www.tohoho-web.com/wwwunix.htm)
 - [UNIXコマンド辞典](http://codezine.jp/unixdic/)
 - [UNIXの部屋](http://x68000.q-e-d.net/~68user/unix/)
 - [UNIX - 会津大学UNIXウィキ](http://technique.sonots.com/?UNIX)
 - [Linuxコマンド集：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060223/230520/?TOC=25)
 - [Linuxコマンド集 - Linux入門 - Webkaru](http://webkaru.net/linux/cat/command/)
-- []()
 
-- [ドットインストール - 3分動画でマスターする初心者向けプログラミング学習サイト](http://dotinstall.com)
-- [UNIXコマンド入門 (一般ユーザー編) (全16回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_unix)
-- [シェルスクリプト入門 (全18回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_shellscript)
-- [Emacs入門 (全9回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_emacs)
-- [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
-- [Python入門 (全24回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_python_v2)
-- [Perl入門 (全19回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_perl)
-- [正規表現入門 (全14回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_regexp)
-- [sed入門 (全10回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_sed)
-- [Markdown記法入門 (全8回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_markdown)
+- [biostatistics | バイオスタティスティクス | 生物統計学](http://stat.biopapyrus.net)
 
 ### Supplementary Material on GitHub
-[GitHubリポジトリ](https://github.com/vsbuffalo/bds-files)の補足資料を取得する:  
-
-
+[GitHubリポジトリ](https://github.com/vsbuffalo/bds-files)の補足資料を取得する。
 本書や補足資料に問題を発見した場合、[GitHubで新規issueを作成](https://github.com/vsbuffalo/bds-files/issues)されたい。　
 
 ### Computing Resources and Setup
@@ -159,7 +149,7 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 
 バイオインフォマティクスの黄金律:  
 
-> ### NEVER EVER TRUST YOUR TOOLS (OR DATA)  
+> ###### NEVER EVER TRUST YOUR TOOLS (OR DATA)  
 ツールやデータを絶対に信用しない。  
 
 ### Adopting Robust and Reproducible Practices Will Make Your Life Easier, Too
@@ -182,13 +172,15 @@ Figure 1-2. [Sequence Read Archive](http://www.ncbi.nlm.nih.gov/Traces/sra/)の�
 例えば、`add()`関数をテストする`test_add()`関数をPythonで書く:  
 
 
+
+
 #### Use Existing Libraries Whenever Possible
 なるべく既存のライブラリを使う  
 歴史が長く、閲覧者が多いので、バグが少ない。
 
 #### Treat Data as Read-Only
 データを読み取り専用として扱う  
-Excelでセルの値を変更して保存するのはダメ。プログラムでデータを読み取り、新しい別の結果ファイルを作成する。元のファイルを変更してしまうと、再試行・再現できなくなる。
+Excelでセルの値を変更して保存するのはダメ。プログラムが、データを読み取り、新しい別の結果ファイルを作成するのが良い。元のファイルを変更してしまうと、再試行・再現できなくなる。
 
 #### Spend Time Developing Frequently Used Scripts into Tools
 
@@ -225,9 +217,9 @@ Excelでセルの値を変更して保存するのはダメ。プログラムで
 
 ## Chapter 2. Setting Up and Managing a Bioinformatics Project
 第2章. バイオインフォマティクス・プロジェクトの作成と管理
- 
+
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch02.html#chapter-02)
-- [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-02-bioinformatics-projects) 
+- [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-02-bioinformatics-projects)
 
 ### Project Directories and Directory Structures
 プロジェクト・ディレクトリの構造  
@@ -243,7 +235,7 @@ Excelでセルの値を変更して保存するのはダメ。プログラムで
 - `scripts/`ディレクトリにプログラムを格納する。
 - `analysis/`ディレクトリに解析結果を格納する。
 
-> ### What’s in a Name?  
+> ###### What’s in a Name?  
 ファイル名には、英数字や_や-を使い、スペース（空白）を入れない。拡張子を付ける。（例. *human_genes_2015-07-07.fasta*）  
 
 絶対パス（例. `/home/vinceb/projects/zmays-snps/data/stats/qual.txt`）ではなく相対パス（例. `../data/stats/qual.txt`）を使う。
@@ -274,12 +266,12 @@ READMEファイルはプロジェクトの主ディレクトリに格納する�
 ### Organizing Data to Automate File Processing Tasks
 一貫性のあるファイル名  
 
-> ### Shell Expansion Tips シェルの展開  
+> ###### Shell Expansion Tips シェルの展開  
 `cd ~`でホームディレクトリに移動。ワイルドカードのアスタリスク（\*）は全ての文字列にマッチする。  
 Brace expansion ブレース展開の例:  
 
 
-zmays-snps/プロジェクト・ディレクトリを作成:  
+> zmays-snps/プロジェクト・ディレクトリを作成:  
 
 
 3つのサンプル（zmaysA, zmaysB, zmaysC）毎にペア（R1, R2）の空データファイルを作成する:  
@@ -288,7 +280,7 @@ zmays-snps/プロジェクト・ディレクトリを作成:
 [ワイルドカード](http://ja.wikipedia.org/wiki/ワイルドカード_(情報処理))のアスタリスク（\*）を用いて、サンプル名`zmaysB`を持つ全てのファイルを表示する:  
 
 
-> ### Wildcards and "Argument list too long"  
+> ###### Wildcards and "Argument list too long"  
 
 ワイルドカードを可能な限り限定する。例えば、`zmaysB*`の代わりに、`zmaysB*fastq`または`zmaysB_R?.fastq`を用いる（`?`は任意の1文字）。
 
@@ -297,11 +289,14 @@ zmays-snps/プロジェクト・ディレクトリを作成:
 
 ワイルドカードは存在するファイルを展開するのに対して、brace expansion（例. `snps_{10..13}.txt`）はファイルやディレクトリが存在するか否かに関係なく展開する。
 
-Table 2-1. Unixのワイルドカード  
+- [Bash - Brace Expansionが便利](http://qiita.com/__nagamee/items/bec89945f70f5dffe9c5)
+
+Table 2-1. Unixのワイルドカード
+
 
 - [#12 ワイルドカードについて | UNIXコマンド入門 (一般ユーザー編) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_unix/5412)
 
-> ### Leading Zeros and Sorting  
+> ###### Leading Zeros and Sorting  
 ファイル名の先頭に0を付ける（例. *file-21.txt*ではなく*file-0021.txt*にする）と、`ls`で辞書順にファイルがソートされる。  
 `touch gene-{1..14}.txt`  
 `printf "gene-%03d.txt " {1..14} | xargs touch`  
@@ -311,13 +306,19 @@ Table 2-1. Unixのワイルドカード
 [Markdown](https://ja.wikipedia.org/wiki/Markdown)（マークダウン）
 
 - [Markdown記法入門 (全8回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_markdown)
+- [MarkdownでMarkdownの書き方を書いてみた](http://qiita.com/oreo/items/82183bfbaac69971917f)
+- [README.mdファイル。マークダウン記法まとめ | codechord](http://codechord.com/2012/01/readme-markdown/)
+- [ディレクターが知っておいて欲しい10個のMarkdown-マークダウン記法 - PHPサンプル実験室](http://php-fan.org/markdown.html)
 
 #### Markdown Formatting Basics
 John Gruberのホームページ（[Daring Fireball: Markdown Syntax Documentation](http://daringfireball.net/projects/markdown/syntax)）  
 
-Figure 2-1. マークダウン・ノートブックのHTML表示  
+基本的なマークダウン文書の形式:  
 
-Table 2-2. マークダウン構文  
+Figure 2-1. MarkdownノートブックのHTML表示  
+
+Table 2-2. Markdown記法
+
 
 [MultiMarkdown](http://fletcherpenney.net/multimarkdown/)  
 [GitHub Flavored Markdown - User Documentation](https://help.github.com/articles/github-flavored-markdown/)  
@@ -326,16 +327,18 @@ Table 2-2. マークダウン構文
 [Pandocのインストール](http://pandoc.org/installing.html)  
 
 
+----------
+
 ## Chapter 3. Remedial Unix Shell
 第3章. Unixシェル補習
 
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch03.html#chapter-03)
-- [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-03-remedial-unix) 
+- [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-03-remedial-unix)
 
 ### Why Do We Use Unix in Bioinformatics? Modularity and the Unix Philosophy
 [UNIX哲学](https://ja.wikipedia.org/wiki/UNIX哲学)  
 
-> ### The Many Unix Shells  
+> ###### The Many Unix Shells  
 `echo $SHELL` (`echo $0`) で現在のシェルを確認  
 `chsh`でログインシェルを変更  
 
@@ -380,7 +383,7 @@ Table 2-2. マークダウン構文
 
 記号`2>`は上書き、`2>>`は追記。
 
-> ### File Descriptors  
+> ###### File Descriptors  
 > `2>`  
 
 - [ファイル記述子](https://ja.wikipedia.org/wiki/ファイル記述子)
@@ -389,7 +392,7 @@ Table 2-2. マークダウン構文
 
 - [デバイスファイル](https://ja.wikipedia.org/wiki/デバイスファイル)
 
-> ### Using tail -f to Monitor Redirected Standard Error  
+> ###### Using tail -f to Monitor Redirected Standard Error  
 `tail -f`でリダイレクトされた標準エラー出力を監視する。Control-Cで動作中のプロセスを停止。  
 
 #### Using Standard Input Redirection
@@ -442,7 +445,7 @@ Figure 3-2.
 [`fg`](http://codezine.jp/unixdic/w/fg)でバックグラウンド・プロセスをフォアグラウンド（foreground）へ戻す。`fg %ジョブ番号`で指定。バックグラウンド・プロセスが1つしかない場合には、`fg`と`fg %1`は同じ:  
 
 
-> ### Background Processes and Hangup Signals  
+> ###### Background Processes and Hangup Signals  
 [ハングアップ・シグナル](https://ja.wikipedia.org/wiki/シグナル_(ソフトウェア))（SIGHUP）  
 バックグラウンドのプロセスがSIGHUPを受け付けないようにするには、`nohup`を使うか、Tmux内で走らせる。Chapter 4で詳細に述べる。
 
@@ -462,7 +465,7 @@ Control-z キーで中断させたジョブを
 #### Exit Status: How to Programmatically Tell Whether Your Command Worked
 [終了ステータス](https://ja.wikipedia.org/wiki/終了ステータス)（exit status）慣習的に正常終了時はゼロ、異常終了時はゼロ以外を返すのが一般的である
 
-> ### Warning Exit Statuses  
+> ###### Warning Exit Statuses  
 - [終了ステータス - UNIX & Linux コマンド・シェルスクリプト リファレンス](http://shellscript.sunone.me/exit_status.html)
 
 終了ステータスの値は、シェルの特殊変数`$?`に設定される。
@@ -481,7 +484,7 @@ Control-z キーで中断させたジョブを
 
 ### Command Substitution
 コマンド置換 - \`command\`ではなく$(command)を使う。[ネスト](https://ja.wikipedia.org/wiki/ネスティング)できるから。
- 
+
 - [bash Tips - コマンド置換と算術式展開、パラメータ展開 - Qiita](http://qiita.com/mashumashu/items/bbc3a79bc779fe8c4f99)
 
 `date +%F`コマンドを用いて日付ディレクトリを作成する:  
@@ -490,8 +493,10 @@ Control-z キーで中断させたジョブを
 このフォーマットのディレクトリは年代順にソートされる:  
 
 
-> ### Storing Your Unix Tricks  
+> ###### Storing Your Unix Tricks  
 `add alias`を用いて *~/.bashrc*（Mac OS Xでは *~/.profile*）ファイルに追加する。例えば、常に同じディレクトリ構造のプロジェクト・ディレクトリを作成する:  
+
+----------
 
 ## Chapter 4. Working with Remote Machines
 第4章. リモートマシンの操作
@@ -512,8 +517,14 @@ IPアドレスを用いてマシンに繋げるには `ssh 192.169.237.42`
 - [管理者必見！ ネットワーク・コマンド集 - sshコマンド：ITpro](管理者必見！ ネットワーク・コマンド集 - sshコマンド：ITpro)｜-v	デバッグ・モードを有効にする。このオプションは最大三つまで重ねて指定できる。重ねていけば，より詳細な情報が出力される。
 - [入門OpenSSH / 第7章 うまくいかない時は](http://www.unixuser.org/~euske/doc/openssh/book/chap7.html)｜ssh をデバッグモードで実行する
 
-> ### Storing Your Frequent SSH Hosts  
+> ###### Storing Your Frequent SSH Hosts  
 *~/.ssh/config*ファイルを作る:  
+
+    Host bio_serv
+         HostName 192.168.237.42
+         User cdarwin
+         Port 50453
+
 リモートホストのデフォルトと同じなら`Port`と`User`を指定する必要は無い。`ssh -p 50453 cdarwin@192.169.237.42`とタイプする代わりに、エイリアス`ssh bio_serv`を用いて*192.168.236.42*にSSH接続できる。
 
 `hostname`コマンドは、ホスト名を表示する。  
@@ -527,7 +538,7 @@ IPアドレスを用いてマシンに繋げるには `ssh 192.169.237.42`
 `ssh-keygen`コマンドを用いて、秘密鍵（*~/.ssh/id_rsa*）と公開鍵（*~/.ssh/id_rsa.pub*）を生成する。
 
 
-リモートホストにログインして、*~/.ssh/authorized_keys*に公開鍵ファイル（*id_rsa.pub*）の内容を追加する。`ssh-copy-id`コマンドを用いて自動登録も可能。 
+リモートホストにログインして、*~/.ssh/authorized_keys*に公開鍵ファイル（*id_rsa.pub*）の内容を追加する。`ssh-copy-id`コマンドを用いて自動登録も可能。
 
 - [ssh-agentの使い方 - Qiita](http://qiita.com/isaoshimizu/items/84ac5a0b1d42b9d355cf)
 
@@ -588,6 +599,8 @@ Table 4-2. Tmuxの基本的コマンド
 
 Emacsで、文字通り Control-a を入力するには、Control-a a とする。
 
+----------
+
 ## Chapter 5. Git for Scientists
 第5章. 科学者のためのGit
 
@@ -622,7 +635,7 @@ Gitのインストールは、Mac OS XでHomebrew (`brew install git`)を、Linu
 
 #### Staging Files in Git: git add and git status Part II
 
-Figure 5-1. 
+Figure 5-1.
 
 
 
@@ -632,12 +645,12 @@ Figure 5-1.
 テキストエディタを変更
 
 
-> ### Some Advice on Commit Messages  
+> ###### Some Advice on Commit Messages  
 >  
 
 `git commit -a -m "your commit message"`
 
-#### Seeing File Differences: git diff 
+#### Seeing File Differences: git diff
 
 例えば、README.mdファイルに一行追加して、`git diff`を実行:
 
@@ -651,7 +664,7 @@ Figure 5-1.
 #### Seeing Your Commit History: git log
 
 
-> ### git log and Your Terminal Pager  
+> ###### git log and Your Terminal Pager  
 
 
 クローンしたseqtkリポジトリで`git log`
@@ -676,6 +689,7 @@ Figure 5-1.
 Mac OS Xで作成される隠しファイル *.DS_Store*
 
 グローバルな*.gitignore*ファイルを*~/.gitignore_global*に作成し、これを使用するようにGitを設定する:  
+
 
 #### Undoing a Stage: git reset
 
@@ -743,7 +757,7 @@ Figure 5-5
 #### More git diff: Comparing Commits and Files
 
 
-> #### SPECIFYING REVISIONS RELATIVE TO HEAD  
+> ###### SPECIFYING REVISIONS RELATIVE TO HEAD  
 
 #### Undoing and Editing Commits: git commit --amend
 
@@ -759,6 +773,7 @@ Figure 5-5
 
 
 README.mdを編集:  
+
 
 
 
@@ -784,6 +799,7 @@ masterブランチに戻り、adapters.faファイルを追加し、この変更
 
 
 
+
 ### Continuing Your Git Education
 
 `git checkout` 変更したファイルを戻す  
@@ -795,6 +811,8 @@ Scott ChaconとBen Straubの[Pro Git book](http://git-scm.com/book/en/v2)
 - [Gitでやらかした時に使える19個の奥義](http://qiita.com/muran001/items/dea2bbbaea1260098051)
 - [Git コマンドまとめ](http://qiita.com/merrill/items/375b20de0a5dbc35265d)
 - [git初心者への道 - お仕事で困らないレベルまでググっとします。](https://gist.github.com/yatemmma/6486028)
+
+----------
 
 ## Chapter 6. Bioinformatics Data
 第6章. バイオインフォマティクス・データ
@@ -999,12 +1017,12 @@ Table 7-1. lessの操作方法
 `ls -l`でファイルのサイズを確認:
 
 
-> ### Data Formats and Assumptions
+> ###### Data Formats and Assumptions
 > 空白（スペース、タブ、改行）を除くには、`grep`を使う:  
 > `grep -c "[^ \\n\\t]" some_data.bed`
 
 `awk`でファイルの列（フィールド）数を表示:
-  
+
 
 Mus_musculus.GRCm38.75_chr1.gtfファイルのヘッダを除いてから、列（フィールド）数を`awk`で表示:
 
@@ -1034,20 +1052,12 @@ Mus_musculus.GRCm38.75_chr1.gtfファイルのヘッダを除いてから、列�
 
 #### The All-Powerful Grep
 
-
-
-
-gれp
-gれp
-
-
-
 トウモロコシ・ゲノムで文字列"AGATGCATG"を検索した実行時間を、4手法（`grep`、`sed`、`awk`、`Python`スクリプト）間で比較した結果、`grep`が最速（Figure 7-2）。
 
 
 
 
-> ### GNU, BSD, and the Flavors of Grep  
+> ###### GNU, BSD, and the Flavors of Grep  
 > Homebrew でインストール
 
 
@@ -1087,12 +1097,12 @@ Example 7-1. 重複のない（ユニークな）ソートされた遺伝子名�
 #### Sorting Plain-Text Data with [Sort](https://ja.wikipedia.org/wiki/Sort_(UNIX))
 
 
-> ### Using Different Delimiters with sort  
+> ###### Using Different Delimiters with sort  
 > `sort`の`-t`オプションでフィールドの区切り文字を指定。例えば、-t","  
 
 
 
-> ### Sorting Stability  
+> ###### Sorting Stability  
 > `sort`の`-s`オプション
 
 すでにソートされているかチェックする:
@@ -1129,7 +1139,7 @@ Unixコマンド（`grep, cut, sort, uniq`）を組み合わせて、表形式�
 - [NGS Surfer's Wiki | UNIX:join](https://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=UNIX%3Ajoin)
 
 
-`chr3`が無い場合: 
+`chr3`が無い場合:
 
 
 `-a`オプション
@@ -1137,7 +1147,7 @@ Unixコマンド（`grep, cut, sort, uniq`）を組み合わせて、表形式�
 
 #### Text Processing with [Awk](https://ja.wikipedia.org/wiki/AWK)
 
-> ### Gawk versus Awk  
+> ###### Gawk versus Awk  
 
 
 Table 7-2. Awkの比較・論理演算子
@@ -1148,7 +1158,7 @@ Table 7-2. Awkの比較・論理演算子
 `BEGIN`と`END`
 
 
-> ### Setting Field, Output Field, and Record Separators  
+> ###### Setting Field, Output Field, and Record Separators  
 
 
 ファイル変換
@@ -1173,13 +1183,13 @@ Mac OS Xの Homebrew でインストール:
 
 
 
-FASTQをFASTAファイルに変換: 
+FASTQをFASTAファイルに変換:
 
 
 FASTQ/FASTAエントリ数をカウント:
 
 
-相補鎖: 
+相補鎖:
 
 
 
@@ -1189,7 +1199,7 @@ FASTQ/FASTAエントリ数をカウント:
 
 #### Stream Editing with Sed
 
-> ### GNU Sed versus BSD Sed  
+> ###### GNU Sed versus BSD Sed  
 
 簡単な例:
 
@@ -1227,6 +1237,8 @@ FASTQ/FASTAエントリ数をカウント:
 
 ### The Unix Philosophy Revisited
 
+----------
+
 ## Chapter 8. A Rapid Introduction to the R Language
 第8章. R言語入門
 
@@ -1239,7 +1251,7 @@ FASTQ/FASTAエントリ数をカウント:
 
 ### Getting Started with R and RStudio
 
-> #### THE COMPREHENSIVE R ARCHIVE NETWORK (CRAN)  
+> ###### THE COMPREHENSIVE R ARCHIVE NETWORK (CRAN)  
 > install.packages("ggplot2")  
 
 [R言語](https://cran.r-project.org)と[RStudio](https://www.rstudio.com)[統合開発環境](https://ja.wikipedia.org/wiki/統合開発環境)（IDE）をインストールする。
@@ -1255,29 +1267,29 @@ Table 8-1. 数学関数
 
 - [03. 簡単な計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/03.html)
 
-> #### SIGNIFICANT DIGITS, PRINT(), AND OPTIONS IN R  
+> ###### SIGNIFICANT DIGITS, PRINT(), AND OPTIONS IN R  
 
 
 `round()`関数
 
 
-> #### GETTING HELP IN R  
+> ###### GETTING HELP IN R  
 
 
 #### Variables and Assignment
 変数の代入  
 
-> ### RStudio Assignment Operator Shortcut
+> ###### RStudio Assignment Operator Shortcut
 
 
 #### Vectors, Vectorization, and Indexing
 ベクトル  
-  
+
 - [13. ベクトル要素へのアクセス | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)
 
 
 
-> ### Out-of-Range Indexing  
+> ###### Out-of-Range Indexing  
 > `z[c(2, 1, 10)]`  
 
 z[負整数ベクトル]は、対応する要素番号の要素を取り除く。
@@ -1307,12 +1319,12 @@ Table 8-2. Rの比較演算子と論理演算子
 
 Table 8-3. Rのベクトル型
 
-> #### R’S SPECIAL VALUES  
+> ###### R’S SPECIAL VALUES  
 > `(NA, NULL, Inf/-Inf, and NaN)`  
 
 ベクトルの要素は全て同じ型  
 
-> ### Type Coercion in R  
+> ###### Type Coercion in R  
 
 Rの型の強制変換規則
 
@@ -1342,7 +1354,7 @@ Rには3種類のオブジェクト指向システム（S3, S4, R5のクラス�
 Rに読み込む前に、コマンドラインからファイルを検査する
 
 
-> #### LARGE GENOMICS DATA INTO R: COLCLASSES, COMPRESSION, AND MORE  
+> ###### LARGE GENOMICS DATA INTO R: COLCLASSES, COMPRESSION, AND MORE  
 > `colClasses` vector to `"NULL"`  
 > `nrow` in `read.delim()`  
 > `data.table`パッケージの`fread()`関数を使う。  
@@ -1357,7 +1369,7 @@ Table 8-4. read.csv() と read.delim() の引数
 - [40. ファイルからデータを読み込む | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/40.html)
 - [5. データの読み込み - 統計ソフトRの使い方](https://sites.google.com/site/webtextofr/data)
 
-> #### GETTING DATA INTO SHAPE  
+> ###### GETTING DATA INTO SHAPE  
 > Table 8-5. 組織毎の遺伝子発現の計数表（wideフォーマット）
 > Table 8-6. 組織毎の遺伝子発現の計数表（longフォーマット）
 
@@ -1372,20 +1384,20 @@ Table 8-4. read.csv() と read.delim() の引数
 
 
 
-> ### Creating Dataframes from Scratch  
+> ###### Creating Dataframes from Scratch  
 
 
 data.frame型では、ドル・マーク($)で変数を指定できる。
 
 
 
-> ### Fragile Code and Accessing Rows and Columns in Dataframes  
+> ###### Fragile Code and Accessing Rows and Columns in Dataframes  
 
 
-20番染色体のセントロメアの位置は、25,800,000 から 29,700,000 である。セントロメア領域にあるかどうか（TRUE/FALSE）を示す列を、データフレーム（d）に追加する: 
+20番染色体のセントロメアの位置は、25,800,000 から 29,700,000 である。セントロメア領域にあるかどうか（TRUE/FALSE）を示す列を、データフレーム（d）に追加する:
 
 
-塩基多様度の列`Pi`の大きさを変更した新しい列`diversity`を作成する: 
+塩基多様度の列`Pi`の大きさを変更した新しい列`diversity`を作成する:
 
 
 #### Exploring Data Through Slicing and Dicing: Subsetting Dataframes
@@ -1421,7 +1433,7 @@ Figure 8-1. ggplot2の散布図：ヒト20番染色体の位置毎の塩基多�
 
 例えば、`geom_point(), geom_line(), geom_bar(), geom_density(), geom_boxplot()`など。`aes()`関数
 
-> ### Axis Labels, Plot Titles, and Scales  
+> ###### Axis Labels, Plot Titles, and Scales  
 > `xlab(), ylab(), ggtitle()`関数  
 > `scale_x_continuous(limits=c(start, end))`、関数`scale_x_log10()`と`scale_y_log10()`  
 
@@ -1483,7 +1495,7 @@ Figure 8-8.
 Figure 8-9. GC含量でグループ分けされたシークエンシング深度（depth）の密度プロット
 
 
-> ### Finding the Right Bin Width  
+> ###### Finding the Right Bin Width  
 > `ggplot(d) + geom_bar(aes(x=Pi), binwidth=1) + scale_x_continuous(limits=c(0.01, 80))`  
 > binwidthの値を 0.05, 0.5, 1, 5, 10 に変化させる。
 
@@ -1509,7 +1521,7 @@ Rの[`%in%`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/match.html)
 
 第1のデータセット（[motif_recombrates.txt](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-08-r/motif_recombrates.txt)）は、各モチーフの40kb内の全ウィンドウについて、組換え確率（recombination rate）推定値を含む。第2のデータセット（[motif_repeats.txt](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-08-r/motif_repeats.txt)）は、各モチーフが出現するリピートを含む。2つのデータセットをマージして、特定のリピートに及ぼす各モチーフの組換えの局所的な効果を見る。
 
-> ### Creating These Example Datasets  
+> ###### Creating These Example Datasets  
 
 > 本データを発生させたコードは[*motif-example/*](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r/motif-example)ディレクトリを参照されたい。
 
@@ -1532,6 +1544,7 @@ Rの[`%in%`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/match.html)
 - [43. データの結合（マージ）と整列（ソート） | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/43.html)
 
 
+
 #### Using ggplot2 Facets
 
 
@@ -1550,7 +1563,7 @@ Figure 8-10. 配列モチーフとの距離と組換え確率
 Figure 8-12は
 
 
-Figure 8-12. 
+Figure 8-12.
 
 `facet_grid()`と`facet_wrap()`の何れも引数`scales`を指定できる。例えば（Figure 8-13）:  
 
@@ -1572,7 +1585,7 @@ Figure 8-12.
 
 
 
-> #### Peeking into R’s Structures with str()  
+> ###### Peeking into R’s Structures with str()  
 
 #### Writing and Applying Functions to Lists with lapply() and sapply()
 - [24. apply() ファミリー | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/24.html)
@@ -1583,7 +1596,7 @@ Figure 8-12.
 
 
 
-> ##### lapply() in Parallel  
+> ###### lapply() in Parallel  
 
 引数を渡す:  
 
@@ -1603,7 +1616,7 @@ Figure 8-12.
 
 
 
-> ##### Function Scope  
+> ###### Function Scope  
 > [スコープ](https://ja.wikipedia.org/wiki/スコープ)  
 
 - [32. ローカル変数と永続代入<<- | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/32.html)
@@ -1632,7 +1645,7 @@ Figure 8-12.
 - [14. ベクトル計算 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/14.html)
 
 
-> ##### Other Apply Functions for Other R Data Structures   
+> ###### Other Apply Functions for Other R Data Structures   
 配列と行列　`apply()`と`sweep()`
 - [オブジェクト型 | Rのリスト、データフレーム、行列、配列など](http://stat.biopapyrus.net/r/objecttype.html)
 - [R言語プログラミング： データ型・操作 - hamadakoichi blog](http://d.hatena.ne.jp/hamadakoichi/20100118/1263832446)
@@ -1658,7 +1671,7 @@ Example 8-4 と Figure 8-9
 - [リストTips大全 - RjpWiki](http://www.okada.jp.org/RWiki/?リストTips大全) | do.call
 - [do.callは気持ち悪いのでReduceを積極的に使いたい - My Life as a Mock Quant](http://d.hatena.ne.jp/teramonagi/20110214/1297688917)
 
-> #### Understanding do.call()  
+> ###### Understanding do.call()  
 
 
 #### Exploring Dataframes with dplyr
@@ -1707,7 +1720,7 @@ Example 8-4 と Figure 8-9
 #### Working with R Scripts
 Rスクリプトを用いた作業
 
-> #### Reproducibility with Knitr and Rmarkdown  
+> ###### Reproducibility with Knitr and Rmarkdown  
 > `Rmarkdown`:  
 
 
@@ -1720,7 +1733,7 @@ Rスクリプトを用いた作業
 あるいは、コマンドラインからバッチモードでRスクリプトを実行する:  
 
 
-> #### Reproducibility and sessionInfo()  
+> ###### Reproducibility and sessionInfo()  
 
 コマンドライン引数を出力するRスクリプト:  
 
@@ -1790,10 +1803,14 @@ Rオブジェクトを保存・復元する関数は`save()`と`load()`
 
 - [rOpenSci - Open Tools for Open Science](https://ropensci.org)
 
+----------
+
 ## Chapter 9. Working with Range Data
 第9章. 範囲データの操作  
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch09.html#chapter-09)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-09-working-with-range-data)
+
+----------
 
 ## Chapter 10. Working with Sequence Data
 第10章. 配列データの操作  
@@ -1823,7 +1840,7 @@ FASTA/FASTQエントリの計数
 
 ### Nucleotide Codes
 核酸コード  
- 
+
 - [Nucleotide Base Codes | DDBJ](http://www.ddbj.nig.ac.jp/sub/ref1-j.html)
 
 Table 10-1. IUPAC nucleotide codes
@@ -1845,6 +1862,13 @@ FASTQファイル untreated1_chr4.fq をトリムする:
 
 
 これらの結果をRで比較する。`qrqc`を用いて位置毎のクオリティの分布を収集し、`ggplot2`を用いて可視化する。`lapply`で自動化する。
+
+
+
+
+
+
+
 
 
 このRスクリプトは2つのプロット（Figures 10-1と10-2）を作成する。
@@ -1872,6 +1896,8 @@ Samtoolsの`faidx`サブコマンドを用いて、FASTAファイルのインデ
 - [NGS Surfer's Wiki | SAMtools](http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=samtools)
 - [samtoolsの使い方 - #LSQA](http://qa.lifesciencedb.jp/questions/458/samtoolsの使い方)
 
+----------
+
 ## Chapter 11. Working with Alignment Data
 第11章. アライメントデータの操作  
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch11.html#chapter-11)
@@ -1889,10 +1915,14 @@ Samtoolsの`faidx`サブコマンドを用いて、FASTAファイルのインデ
 ### Visualizing Alignments with samtools tview and the Integrated Genomics Viewer
 #### Pileups with samtools pileup, Variant Calling, and Base Alignment Quality
 
+----------
+
 ## Chapter 12. Bioinformatics Shell Scripting, Writing Pipelines, and Parallelizing Tasks
 第12章. バイオインフォマティクスのシェルスクリプト、パイプライン、タスクの並列化
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch12.html#chapter-12)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-12-pipelines)
+
+- [シェルスクリプト入門 (全18回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_shellscript)
 
 ### Basic Bash Scripting
 #### Writing and Running Robust Bash Scripts
@@ -1901,7 +1931,7 @@ Samtoolsの`faidx`サブコマンドを用いて、FASTAファイルのインデ
 - [シェルスクリプトマナー - きつねたぬきだし](http://kitsunetanukidashi.hatenablog.com/entry/2014/07/12/231833)
 - [Linux - bashの*スクリプトにセットする推奨オプション](http://qiita.com/kiida/items/3beb1bf718cdc2f0798a)
 
-[*template.sh*](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-12-pipelines/template.sh)ファイルに書かれたBashスクリプトのヘッダは、短縮して`set -euo pipefail`と書ける。
+[template.sh](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-12-pipelines/template.sh)ファイルに書かれたBashスクリプトのヘッダは、短縮して`set -euo pipefail`と書ける。
 
 
 - 1行目：[*shebang*](https://ja.wikipedia.org/wiki/シバン_(Unix))
@@ -1927,6 +1957,7 @@ Samtoolsの`faidx`サブコマンドを用いて、FASTAファイルのインデ
 
 
 
+
 変数`$#`にはコマンドライン引数の個数を割り当てる（スクリプト名の$0は引数としてカウントしない）。
 
 
@@ -1935,7 +1966,7 @@ Samtoolsの`faidx`サブコマンドを用いて、FASTAファイルのインデ
 
 Pythonの`argparse`モジュールは、Unixツール`getopt`よりも簡単に使える。
 
-> ### Reproducibility and Environmental Variables  
+> ###### Reproducibility and Environmental Variables  
 
 #### Conditionals in a Bash Script: if Statements
 bashの条件文: if文
@@ -1946,7 +1977,9 @@ Bashでは、コマンドの終了ステータスが0は真/成功を表し、�
 `if`文で`&&`（論理積AND）や`||`（論理和OR）演算子を用いる:  
 
 
+
 `!`で終了ステータスを否定する:  
+
 
 
 `test`コマンドの実行例（`echo "$?"`で終了ステータスを出力）
@@ -1984,7 +2017,7 @@ bash 配列、要素、添字
 コマンド置換 (command substitution)
 
 
-> ### The Internal Field Separator, Word Splitting, and Filenames
+> ###### The Internal Field Separator, Word Splitting, and Filenames
 `sample_files=($(cut -f 3 samples.txt))`
 [Internal Field Separator (IFS)](https://en.wikipedia.org/wiki/Internal_field_separator)の値を調べる:  `printf %q "$IFS"`
 
@@ -1997,10 +2030,12 @@ Unixプログラム`basename`は、ファイル名からパスや拡張子を削
 
 
 
+
 - [＠IT：ファイル名からディレクトリや拡張子を取り除くには](http://www.atmarkit.co.jp/flinux/rensai/linuxtips/437delfileext.html)
 
 
 最後に、ループで簡単に:
+
 
 
 ### Automating File-Processing with find and xargs
@@ -2041,7 +2076,7 @@ Table 12-3. findの判別式と演算子
 
 
 
-> #### Deleting Files with find -exec:  
+> ###### Deleting Files with find -exec:  
 `-delete`オプション
 
 #### xargs: A Unix Powertool
@@ -2081,7 +2116,7 @@ Macの場合、HomebrewでGNU Coreutilsをインストール
 オプション`-P <num>`で、<num>プロセスまで同時に実行する
 
 
-> ### xargs, Pipes, and Redirects  
+> ###### xargs, Pipes, and Redirects  
 
 
 
@@ -2095,7 +2130,7 @@ Macの場合、HomebrewでGNU Coreutilsをインストール
 
 ### Make and Makefiles: Another Option for Pipelines
 [Make](https://ja.wikipedia.org/wiki/Make)
- 
+
 - [Makeについて知っておくべき7つのこと | インフラ・ミドルウェア | POSTD](http://postd.cc/7-things-you-should-know-about-make/)
 
 宣言型プログラミング（英: Declarative programming）  
@@ -2107,6 +2142,8 @@ Macの場合、HomebrewでGNU Coreutilsをインストール
 
 
 
+
+----------
 
 ## Chapter 13. Out-of-Memory Approaches: Tabix and SQLite
 第13章. TabixとSQLite
@@ -2178,14 +2215,14 @@ SQLiteでは、列は型を持たないが、データ値は型を持つ。デ�
 - [[SQLite] 記憶クラス(データ型)とカラム型 - Life with IT](http://l-w-i.net/t/sqlite/data_001.txt)
 - [SQLite入門](http://www.dbonline.jp/sqlite/)
 
-> ### Orderly Columns  
+> ###### Orderly Columns  
 
 #### Querying Out Data: The Almighty SELECT Command
 
 SELECT文を用いて、テーブルの全ての列から全ての行を取得する:  
 
 
-> #### Working with the SQLite Command-Line Tool  
+> ###### Working with the SQLite Command-Line Tool  
 Control-u で、入力をクリアする。
 
 sqlite3のコマンドラインツールは、（対話的なSQLiteのシェル代わりに）直接コマンドラインから問い合わせ可能。例えば、`gwascat`テーブル内の全てのデータを取得する:  
@@ -2307,18 +2344,20 @@ Table 13-4. SQLiteの集計関数
 ###### Inner joins
 ###### Left outer joins
 
-> ### Other Types of Outer Joins
+> ###### Other Types of Outer Joins
 
 ##### Writing to Databases
 - []()
 
-##### 
+#####
 - []()
 
-##### 
+#####
 - []()
 
-#### 
+####
+
+----------
 
 ## Chapter 14. Conclusion
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch14.html#chapter-conclusion)
@@ -2332,6 +2371,3 @@ Table 13-4. SQLiteの集計関数
 
 ## Index
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ix01.html#idp43264544)
-
-
-
