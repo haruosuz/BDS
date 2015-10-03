@@ -13,9 +13,9 @@ Last Update: 2015-10-03
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/)（[Preface](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/preface01.html#preface)、[Chapter 1](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch01.html#chapter-01)、[Chapter 4](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch04.html#chapter-04) の全文公開）
 - [Amazon.co.jp](http://www.amazon.co.jp/dp/1449367372) | [Amazon.com](http://www.amazon.com/dp/1449367372)
 
-
 # News & Reviews
 - [Bioinformatics Data Skills - Twitter Search](https://twitter.com/search?q=Bioinformatics%20Data%20Skills&src=typd)
+- 2015-09-13 [Twitter competition: win a signed copy of Bioinformatics Data Skills by Vince Buffalo — ACGT](http://www.acgt.me/blog/2015/9/13/twitter-competition-win-a-signed-copy-of-bioinformatics-data-skills-by-vince-buffalo) | [#ACGT hashtag on Twitter](https://twitter.com/hashtag/ACGT?src=hash)
 - 2015-08-04 [101 questions with a bioinformatician #30: Vince Buffalo — ACGT](http://www.acgt.me/blog/2015/8/4/101-questions-with-a-bioinformatician-30-vince-buffalo)
 - 2015-06-25 [bds:index [SoWiki]](http://so.med.u-tokai.ac.jp/wiki/doku.php?id=bds:index)
 - 7 weeks ago [Asking for opinions about Bioinformatics Data Skills book](https://www.biostars.org/p/153594/)
