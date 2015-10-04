@@ -330,12 +330,11 @@ Table 2-2. Markdown記法
 ヘッダー（見出し）、リスト、コードの書き方は単純。
 
 見出しの大きさ（レベル1～6）は、#の個数で表す:  
-# 見出し レベル1## 見出し レベル2### 見出し レベル3リストは、行頭にダッシュ（-）、アスタリスク（*）、プラス（+）か、番号ピリオド（1.）:  
-- Francis Crick- James D. Watson- Rosalind Franklin
+	# 見出し レベル1	## 見出し レベル2	### 見出し レベル3リストは、行頭にダッシュ（-）、アスタリスク（*）、プラス（+）か、番号ピリオド（1.）:  
+	- Francis Crick	- James D. Watson	- Rosalind Franklin
 
 コードは、行頭に半角スペースを4つか、タブを1つ:  
 
-I ran the following command:    $ find seqs/ -name "*.fastq"
 
 [MultiMarkdown](http://fletcherpenney.net/multimarkdown/)  
 [GitHub Flavored Markdown - User Documentation](https://help.github.com/articles/github-flavored-markdown/)  
