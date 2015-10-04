@@ -99,6 +99,13 @@ III. Practice: Bioinformatics Data Skills
 - [Linuxコマンド集 - Linux入門 - Webkaru](http://webkaru.net/linux/cat/command/)
 
 - [biostatistics | バイオスタティスティクス | 生物統計学](http://stat.biopapyrus.net)
+- [バイオインフォマティクス入門 Tips | Bash](http://bio-info.biz/tips.html)
+- [バイオインフォマティクスの基礎 | UNIX よく使うコマンド集](http://crusade1096.web.fc2.com/unix.html)
+- [NGS Surfer's Wiki](http://cell-innovation.nig.ac.jp/wiki/tiki-index.php)
+- [(Rで)塩基配列解析](http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html)
+- [斉藤輪太郎さんの資料](http://chianti.ucsd.edu/~rsaito/ENTRY1/WEB_RS3_info/Access_Record/Rec/access_rec_WEB_RS3_2.html)
+  - [初心者用UNIX講座](http://chianti.ucsd.edu/~rsaito/ENTRY1/WEB_RS3/PDF/JPN/Texts/UNIX1.pdf)
+  - [初心者用シェルスクリプト講座](http://chianti.ucsd.edu/~rsaito/ENTRY1/WEB_RS3/PDF/JPN/Texts/SHELL2.pdf)
 
 ### Supplementary Material on GitHub
 [GitHubリポジトリ](https://github.com/vsbuffalo/bds-files)の補足資料を取得する。
@@ -319,6 +326,16 @@ Figure 2-1. MarkdownノートブックのHTML表示
 
 Table 2-2. Markdown記法
 
+
+ヘッダー（見出し）、リスト、コードの書き方は単純。
+
+見出しの大きさ（レベル1～6）は、#の個数で表す:  
+# 見出し レベル1## 見出し レベル2### 見出し レベル3リストは、行頭にダッシュ（-）、アスタリスク（*）、プラス（+）か、番号ピリオド（1.）:  
+- Francis Crick- James D. Watson- Rosalind Franklin
+
+コードは、行頭に半角スペースを4つか、タブを1つ:  
+
+I ran the following command:    $ find seqs/ -name "*.fastq"
 
 [MultiMarkdown](http://fletcherpenney.net/multimarkdown/)  
 [GitHub Flavored Markdown - User Documentation](https://help.github.com/articles/github-flavored-markdown/)  
