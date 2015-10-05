@@ -6,7 +6,7 @@ Last Update: 2015-10-03
 ----------
 
 "Bioinformatics Data Skills by Vince Buffalo (O’Reilly). Copyright 2015 Vince Buffalo, 978-1-449-36737-4."  
-![](http://ecx.images-amazon.com/images/I/51gYdVvOoQL._SX379_BO1,204,203,200_.jpg)
+![](http://akamaicovers.oreilly.com/images/0636920030157/cat.gif)
 
 # Print & Ebook
 - [O'Reilly Media](http://shop.oreilly.com/product/0636920030157.do) | [Free Sampler](http://cdn.oreillystatic.com/oreilly/booksamplers/9781449367374_sampler.pdf)（Chapter 1の全文公開）
@@ -91,21 +91,11 @@ III. Practice: Bioinformatics Data Skills
 オンライン教材
 
 - [ドットインストール - 3分動画でマスターする初心者向けプログラミング学習サイト](http://dotinstall.com)
-- [とほほのUNIX入門](http://www.tohoho-web.com/wwwunix.htm)
 - [UNIXコマンド辞典](http://codezine.jp/unixdic/)
 - [UNIXの部屋](http://x68000.q-e-d.net/~68user/unix/)
 - [UNIX - 会津大学UNIXウィキ](http://technique.sonots.com/?UNIX)
 - [Linuxコマンド集：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060223/230520/?TOC=25)
 - [Linuxコマンド集 - Linux入門 - Webkaru](http://webkaru.net/linux/cat/command/)
-
-- [biostatistics | バイオスタティスティクス | 生物統計学](http://stat.biopapyrus.net)
-- [バイオインフォマティクス入門 Tips | Bash](http://bio-info.biz/tips.html)
-- [バイオインフォマティクスの基礎 | UNIX よく使うコマンド集](http://crusade1096.web.fc2.com/unix.html)
-- [NGS Surfer's Wiki](http://cell-innovation.nig.ac.jp/wiki/tiki-index.php)
-- [(Rで)塩基配列解析](http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html)
-- [斉藤輪太郎さんの資料](http://chianti.ucsd.edu/~rsaito/ENTRY1/WEB_RS3_info/Access_Record/Rec/access_rec_WEB_RS3_2.html)
-  - [初心者用UNIX講座](http://chianti.ucsd.edu/~rsaito/ENTRY1/WEB_RS3/PDF/JPN/Texts/UNIX1.pdf)
-  - [初心者用シェルスクリプト講座](http://chianti.ucsd.edu/~rsaito/ENTRY1/WEB_RS3/PDF/JPN/Texts/SHELL2.pdf)
 
 ### Supplementary Material on GitHub
 [GitHubリポジトリ](https://github.com/vsbuffalo/bds-files)の補足資料を取得する。
@@ -243,9 +233,12 @@ Excelでセルの値を変更して保存するのはダメ。プログラムが
 - `analysis/`ディレクトリに解析結果を格納する。
 
 > ###### What’s in a Name?  
-ファイル名には、英数字や_や-を使い、スペース（空白）を入れない。拡張子を付ける。（例. *human_genes_2015-07-07.fasta*）  
+ファイル（ディレクトリ）名には、
+[スペース](https://ja.wikipedia.org/wiki/スペース)（空白）を使わない、
+英数字か[アンダースコア](https://ja.wikipedia.org/wiki/アンダースコア)か[ダッシュ](https://ja.wikipedia.org/wiki/ダッシュ_(記号))（ A-z a-z 0-9 _ - ）を使う。
+拡張子を付ける。（例. *human_genes_2015-07-07.fasta*）  
 
-絶対パス（例. `/home/vinceb/projects/zmays-snps/data/stats/qual.txt`）ではなく相対パス（例. `../data/stats/qual.txt`）を使う。
+プロジェクト内のプログラムが、他のファイルを参照する場合には、絶対パス（例. `/home/vinceb/projects/zmays-snps/data/stats/qual.txt`）ではなく、相対パス（例. `../data/stats/qual.txt`）を使う。
 
 - [絶対パスと相対パス](http://codezine.jp/unixdic/w/絶対パスと相対パス)
 - [#05 ディレクトリを移動する (2) | UNIXコマンド入門 (一般ユーザー編) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_unix/5405)
@@ -262,26 +255,25 @@ Excelでセルの値を変更して保存するのはダメ。プログラムが
 - データのダウンロード方法（例. [MySQL](https://ja.wikipedia.org/wiki/MySQL)、[UCSC Genome Browser](https://genome.ucsc.edu)）
 - ソフトウェアのバーション（なければ、日付やURL）
 
-以上の情報を[プレーンテキスト](https://ja.wikipedia.org/wiki/プレーンテキスト)形式の[README](https://ja.wikipedia.org/wiki/リードミー)ファイルに保存する。プレーンテキストはコマンドラインから簡単に読み込み、検索、編集できる。  
+以上の情報を[プレーンテキスト](https://ja.wikipedia.org/wiki/プレーンテキスト)形式の[README](https://ja.wikipedia.org/wiki/リードミー)ファイルに保存する。プレーンテキストはコマンドラインから簡単に読込・検索・編集できる。  
 
-READMEファイルはプロジェクトの主ディレクトリに格納する。例えば、`data/README`ファイルに、`data/`ディレクトリのデータファイルの説明（いつ・どこから・どのようにダウンロードしたのか）を記載する。[`touch`](https://ja.wikipedia.org/wiki/Touch_(UNIX))コマンドでサイズが0の空ファイルを作成する:   
+READMEファイルはプロジェクトの主ディレクトリに格納する。
+
+例えば、`data/README`ファイルに、`data/`ディレクトリのデータファイルの説明（いつ・どこから・どのようにダウンロードしたのか）を記載する。[`touch`](https://ja.wikipedia.org/wiki/Touch_(UNIX))コマンドでサイズが0の空ファイルを作成する:   
 
 
 ### Use Directories to Divide Up Your Project into Subprojects
-ディレクトリを使用してプロジェクトをサブプロジェクトに分割  
+プロジェクトをサブプロジェクトに分割するディレクトリを作成
 
 ### Organizing Data to Automate File Processing Tasks
-一貫性のあるファイル名  
+ファイル処理を自動化するために、データをサブディレクトリに整理し、明確で一貫性のあるファイル名を付ける。  
 
 > ###### Shell Expansion Tips シェルの展開  
 `cd ~`でホームディレクトリに移動。ワイルドカードのアスタリスク（\*）は全ての文字列にマッチする。  
 Brace expansion ブレース展開の例:  
-
-
 > zmays-snps/プロジェクト・ディレクトリを作成:  
 
-
-3つのサンプル（zmaysA, zmaysB, zmaysC）毎にペア（R1, R2）の空データファイルを作成する:  
+3つのサンプル（`zmaysA, zmaysB, zmaysC`）毎にペア（`R1, R2`）の空データファイルを作成する:  
 
 
 [ワイルドカード](http://ja.wikipedia.org/wiki/ワイルドカード_(情報処理))のアスタリスク（\*）を用いて、サンプル名`zmaysB`を持つ全てのファイルを表示する:  
@@ -291,17 +283,19 @@ Brace expansion ブレース展開の例:
 
 ワイルドカードを可能な限り限定する。例えば、`zmaysB*`の代わりに、`zmaysB*fastq`または`zmaysB_R?.fastq`を用いる（`?`は任意の1文字）。
 
-サンプルCを排除する:  
+文字列`[AB]`や文字の範囲`[A-B]`にマッチするワイルドカードを用いて、サンプルCを排除する:  
 
 
 ワイルドカードは存在するファイルを展開するのに対して、brace expansion（例. `snps_{10..13}.txt`）はファイルやディレクトリが存在するか否かに関係なく展開する。
 
+
+
 - [Bash - Brace Expansionが便利](http://qiita.com/__nagamee/items/bec89945f70f5dffe9c5)
+
+- [#12 ワイルドカードについて | UNIXコマンド入門 (一般ユーザー編) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_unix/5412)
 
 Table 2-1. Unixのワイルドカード
 
-
-- [#12 ワイルドカードについて | UNIXコマンド入門 (一般ユーザー編) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_unix/5412)
 
 > ###### Leading Zeros and Sorting  
 ファイル名の先頭に0を付ける（例. *file-21.txt*ではなく*file-0021.txt*にする）と、`ls`で辞書順にファイルがソートされる。  
@@ -309,7 +303,8 @@ Table 2-1. Unixのワイルドカード
 `printf "gene-%03d.txt " {1..14} | xargs touch`  
 
 ### Markdown for Project Notebooks
-プレーンテキスト形式で書かれたプロジェクト・ノートは、コマンドラインやネットワーク経由で読み込み・検索・編集できる。  
+プレーンテキスト形式で書かれたプロジェクト・ノートは、コマンドラインやネットワーク経由で読込・検索・編集できる。
+
 [Markdown](https://ja.wikipedia.org/wiki/Markdown)（マークダウン）
 
 - [Markdown記法入門 (全8回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_markdown)
@@ -322,23 +317,34 @@ John Gruberのホームページ（[Daring Fireball: Markdown Syntax Documentati
 
 基本的なマークダウン文書の形式:  
 
-Figure 2-1. MarkdownノートブックのHTML表示  
-
+	## Sequencing Files
+	All raw FASTQ sequences are in `data/seqs/`:
+	    $ find data/seqs -name "*.fastq"	    data/seqs/zmaysA_R1.fastq	    data/seqs/zmaysA_R2.fastq	    data/seqs/zmaysB_R1.fastq	    data/seqs/zmaysB_R2.fastq	    data/seqs/zmaysC_R1.fastq	    data/seqs/zmaysC_R2.fastq
+	## Quality Control Steps	After the sequencing data was received, our first stage of analysis	was to ensure the sequences were high quality. We ran each of the	three lines' two paired-end FASTQ files through a quality diagnostic	and control pipeline. Our planned pipeline is:
+	 1. Create base quality diagnostic graphs.	 2. Check reads for adapter sequences.	 3. Trim adapter sequences.	 4. Trim poor quality bases.
+	Recommended trimming programs:
+	 - Trimmomatic	 - ScytheFigure 2-1. MarkdownノートブックのHTML表示  
 
 Table 2-2. Markdown記法
 
 
-ヘッダー（見出し）、リスト、コードの書き方は単純。
+見出し（Header）、リスト、コードの書き方
 
-見出しの大きさ（レベル1～6）は、#の個数で表す:  
+見出しのレベル（1～6）は、#の個数で表す:  
 
 
 リストは、行頭にダッシュ（-）、アスタリスク（*）、プラス（+）か、番号ピリオド（1.）:  
 
 
-コードは、行頭に半角スペースを4つか、タブを1つ:  
+コードは、行頭に「半角スペースを4つ」か「タブを1つ」を追加:  
 
 
+
+リストの項目内にコードを配置する場合、「半角スペースを8つ」か「タブを2つ」にする。
+
+	        find seqs/ -name "*.fastq"
+	2. And finally, VCF files with:
+	        find vcf/ -name "*.vcf"
 
 [MultiMarkdown](http://fletcherpenney.net/multimarkdown/)  
 [GitHub Flavored Markdown - User Documentation](https://help.github.com/articles/github-flavored-markdown/)  
