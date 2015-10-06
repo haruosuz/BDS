@@ -225,7 +225,7 @@ Excelでセルの値を変更して保存するのはダメ。プログラムが
 
 プロジェクトの全ファイルを1つのディレクトリに格納する。
 
-例えば、トウモロコシ（学名*Zea mays*）の[SNP](https://ja.wikipedia.org/wiki/一塩基多型)検出プロジェクトのディレクトリ（zmays-snps/）を作成する:  
+例えば、トウモロコシ（学名*Zea mays*）の[SNP](https://ja.wikipedia.org/wiki/一塩基多型)検出プロジェクトのディレクトリ（`zmays-snps/`）を作成する:  
 
 
 - `data/`ディレクトリにデータを格納する。
@@ -272,8 +272,8 @@ READMEファイルはプロジェクトの主ディレクトリに格納する�
 `cd ~`でホームディレクトリに移動。ワイルドカードのアスタリスク（\*）は全ての文字列にマッチする。  
 Brace expansion ブレース展開の例:  
 > zmays-snps/プロジェクト・ディレクトリを作成:  
-
-3つのサンプル（`zmaysA, zmaysB, zmaysC`）毎にペア（`R1, R2`）の空データファイルを作成する:  
+ 
+3つの`zmays`サンプル（`A, B, C`）毎にペア（`R1, R2`）の空データファイルを作成する:  
 
 
 [ワイルドカード](http://ja.wikipedia.org/wiki/ワイルドカード_(情報処理))のアスタリスク（\*）を用いて、サンプル名`zmaysB`を持つ全てのファイルを表示する:  
@@ -317,13 +317,16 @@ John Gruberのホームページ（[Daring Fireball: Markdown Syntax Documentati
 
 基本的なマークダウン文書の形式:  
 
-	## Sequencing Files
-	All raw FASTQ sequences are in `data/seqs/`:
-	    $ find data/seqs -name "*.fastq"	    data/seqs/zmaysA_R1.fastq	    data/seqs/zmaysA_R2.fastq	    data/seqs/zmaysB_R1.fastq	    data/seqs/zmaysB_R2.fastq	    data/seqs/zmaysC_R1.fastq	    data/seqs/zmaysC_R2.fastq
-	## Quality Control Steps	After the sequencing data was received, our first stage of analysis	was to ensure the sequences were high quality. We ran each of the	three lines' two paired-end FASTQ files through a quality diagnostic	and control pipeline. Our planned pipeline is:
-	 1. Create base quality diagnostic graphs.	 2. Check reads for adapter sequences.	 3. Trim adapter sequences.	 4. Trim poor quality bases.
-	Recommended trimming programs:
-	 - Trimmomatic	 - ScytheFigure 2-1. MarkdownノートブックのHTML表示  
+
+
+
+
+
+
+
+
+
+Figure 2-1. MarkdownノートブックのHTML表示  
 
 Table 2-2. Markdown記法
 
@@ -342,9 +345,9 @@ Table 2-2. Markdown記法
 
 リストの項目内にコードを配置する場合、「半角スペースを8つ」か「タブを2つ」にする。
 
-	        find seqs/ -name "*.fastq"
-	2. And finally, VCF files with:
-	        find vcf/ -name "*.vcf"
+
+
+
 
 [MultiMarkdown](http://fletcherpenney.net/multimarkdown/)  
 [GitHub Flavored Markdown - User Documentation](https://help.github.com/articles/github-flavored-markdown/)  
@@ -1718,7 +1721,7 @@ Example 8-4 と Figure 8-9
 `filter()`は、`d[d$Pi > 16 & d$percent.GC > 80, ]`に対応:  
 
 
-`arrange()は、`d[order(d$percent.GC), ]`に対応:  
+`arrange()`は、`d[order(d$percent.GC), ]`に対応:  
 
 
 `mutate()`関数を用いて、データフレームに新しい列を追加できる。
