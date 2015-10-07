@@ -405,7 +405,7 @@ Figure 3-1.
 > [ファイル記述子](https://ja.wikipedia.org/wiki/ファイル記述子)
 > `2>`  
 
-擬似デバイス（*pseudodevice*）(https://ja.wikipedia.org/wiki/%e3%83%87%e3%83%90%e3%82%a4%e3%82%b9%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab#.E6.93.AC.E4.BC.BC.E3.83.87.E3.83.90.E3.82.A4.E3.82.B9)の */dev/null* は、あらゆる入力を受け付けて捨てる。
+擬似デバイス（*pseudodevice*）(https://ja.wikipedia.org/wiki/デバイスファイル)の */dev/null* は、あらゆる入力を受け付けて捨てる。
 
 > ###### Using tail -f to Monitor Redirected Standard Error  
 `tail -f`でリダイレクトされた標準エラー出力を監視する。Control-Cで動作中のプロセスを停止。  
@@ -473,7 +473,7 @@ Control-z キーで中断させたジョブを
 [GitHub上の本章の*README*](https://github.com/vsbuffalo/bds-files/tree/master/chapter-03-remedial-unix)を参照されたい。
 
 #### Exit Status: How to Programmatically Tell Whether Your Command Worked
-[終了ステータス](https://ja.wikipedia.org/wiki/%e7%b5%82%e4%ba%86%e3%82%b9%e3%83%86%e3%83%bc%e3%82%bf%e3%82%b9#Unix.E7.B3.BB)（exit status）　慣習的に正常終了時はゼロ、異常終了時はゼロ以外を返すのが一般的である
+[終了ステータス](https://ja.wikipedia.org/wiki/終了ステータス)（exit status）　慣習的に正常終了時はゼロ、異常終了時はゼロ以外を返すのが一般的である
 
 > ###### Warning Exit Statuses  
 
