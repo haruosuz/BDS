@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki <haruo@g-language.org>  
-Last Update: 2015-10-03  
+Last Update: 2015-10-07  
 
 ----------
 
@@ -81,21 +81,12 @@ III. Practice: Bioinformatics Data Skills
 前提知識は以下の通り。  
 
 - スクリプト言語（例. [R言語](https://ja.wikipedia.org/wiki/R言語)、[Python](https://ja.wikipedia.org/wiki/Python)、[Perl](https://ja.wikipedia.org/wiki/Perl)、[Ruby](https://ja.wikipedia.org/wiki/Ruby)）
-- テキストエディタ（例. [Emacs](https://ja.wikipedia.org/wiki/Emacs)、[Vim](https://ja.wikipedia.org/wiki/Vim)、[nano](https://ja.wikipedia.org/wiki/Nano_(テキストエディタ))、[Atom](https://atom.io) ）
+- テキストエディタ（例. [Emacs](https://ja.wikipedia.org/wiki/Emacs)、[Vim](https://ja.wikipedia.org/wiki/Vim)、[Atom](https://atom.io) ）
 - 基本的なUnixコマンドライン技術。ディレクトリ・ファイル操作（[`cd, ls, pwd, mv, rm, rmdir, mkdir`](http://dogandrun.hatenablog.jp/entry/2013/11/30/181606)）。ファイルの所有権とアクセス権の変更（`chown, chmod`）
 - 生物学の基礎（DNA、RNA、タンパク質、遺伝子、[セントラルドグマ](https://ja.wikipedia.org/wiki/セントラルドグマ)）  
 - [正規表現](https://ja.wikipedia.org/wiki/正規表現)  
 - ヘルプやマニュアルの参照。Unixの[`man`](https://ja.wikipedia.org/wiki/Manページ)やRの[`help()`](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
 - システム管理  
-
-オンライン教材
-
-- [ドットインストール - 3分動画でマスターする初心者向けプログラミング学習サイト](http://dotinstall.com)
-- [UNIXコマンド辞典](http://codezine.jp/unixdic/)
-- [UNIXの部屋](http://x68000.q-e-d.net/~68user/unix/)
-- [UNIX - 会津大学UNIXウィキ](http://technique.sonots.com/?UNIX)
-- [Linuxコマンド集：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060223/230520/?TOC=25)
-- [Linuxコマンド集 - Linux入門 - Webkaru](http://webkaru.net/linux/cat/command/)
 
 ### Supplementary Material on GitHub
 [GitHubリポジトリ](https://github.com/vsbuffalo/bds-files)の補足資料を取得する。
@@ -235,7 +226,7 @@ Excelでセルの値を変更して保存するのはダメ。プログラムが
 > ###### What’s in a Name?  
 ファイル（ディレクトリ）名には、
 [スペース](https://ja.wikipedia.org/wiki/スペース)（空白）を使わない、
-英数字か[アンダースコア](https://ja.wikipedia.org/wiki/アンダースコア)か[ダッシュ](https://ja.wikipedia.org/wiki/ダッシュ_(記号))（ A-z a-z 0-9 _ - ）を使う。
+英数字かアンダースコアかダッシュ（ A-z a-z 0-9 _ - ）を使う。
 拡張子を付ける。（例. *human_genes_2015-07-07.fasta*）  
 
 プロジェクト内のプログラムが、他のファイルを参照する場合には、絶対パス（例. `/home/vinceb/projects/zmays-snps/data/stats/qual.txt`）ではなく、相対パス（例. `../data/stats/qual.txt`）を使う。
@@ -255,33 +246,37 @@ Excelでセルの値を変更して保存するのはダメ。プログラムが
 - データのダウンロード方法（例. [MySQL](https://ja.wikipedia.org/wiki/MySQL)、[UCSC Genome Browser](https://genome.ucsc.edu)）
 - ソフトウェアのバーション（なければ、日付やURL）
 
-以上の情報を[プレーンテキスト](https://ja.wikipedia.org/wiki/プレーンテキスト)形式の[README](https://ja.wikipedia.org/wiki/リードミー)ファイルに保存する。プレーンテキストはコマンドラインから簡単に読込・検索・編集できる。  
+以上の情報を[プレーンテキスト](https://ja.wikipedia.org/wiki/プレーンテキスト)形式の[README](https://ja.wikipedia.org/wiki/リードミー)ファイルに記録する。プレーンテキストはコマンドラインから簡単に読込・検索・編集できる。  
 
-READMEファイルはプロジェクトの主ディレクトリに格納する。
+`README`ファイルはプロジェクトの主ディレクトリに格納する。
 
-例えば、`data/README`ファイルに、`data/`ディレクトリのデータファイルの説明（いつ・どこから・どのようにダウンロードしたのか）を記載する。[`touch`](https://ja.wikipedia.org/wiki/Touch_(UNIX))コマンドでサイズが0の空ファイルを作成する:   
+`data/README`ファイルに、`data/`ディレクトリのデータファイルの説明（いつ・どこから・どのようにダウンロードしたのか）を記載する。[`touch`](https://ja.wikipedia.org/wiki/Touch_%28UNIX%29)コマンドでサイズが0の空ファイルを作成する:   
 
 
 ### Use Directories to Divide Up Your Project into Subprojects
 プロジェクトをサブプロジェクトに分割するディレクトリを作成
 
 ### Organizing Data to Automate File Processing Tasks
-ファイル処理を自動化するために、データをサブディレクトリに整理し、明確で一貫性のあるファイル名を付ける。  
+ファイル処理を自動化するために、データをサブディレクトリに編成し、明確で一貫性のあるファイル名を付ける。  
 
 > ###### Shell Expansion Tips シェルの展開  
 `cd ~`でホームディレクトリに移動。ワイルドカードのアスタリスク（\*）は全ての文字列にマッチする。  
 Brace expansion ブレース展開の例:  
 > zmays-snps/プロジェクト・ディレクトリを作成:  
- 
-3つの`zmays`サンプル（`A, B, C`）毎にペア（`R1, R2`）の空データファイルを作成する:  
+
+- [Bash - Brace Expansionが便利](http://qiita.com/__nagamee/items/bec89945f70f5dffe9c5)
+
+- [#12 ワイルドカードについて | UNIXコマンド入門 (一般ユーザー編) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_unix/5412)
+
+3つのサンプル（`zmaysA, zmaysB, zmaysC`）毎にペア（`R1, R2`）の空データファイルを作成する:  
 
 
-[ワイルドカード](http://ja.wikipedia.org/wiki/ワイルドカード_(情報処理))のアスタリスク（\*）を用いて、サンプル名`zmaysB`を持つ全てのファイルを表示する:  
+[ワイルドカード](http://ja.wikipedia.org/wiki/ワイルドカード_%28情報処理%29)のアスタリスク（\*）を用いて、サンプル名`zmaysB`を持つ全てのファイルを表示する:  
 
 
 > ###### Wildcards and "Argument list too long"  
 
-ワイルドカードを可能な限り限定する。例えば、`zmaysB*`の代わりに、`zmaysB*fastq`または`zmaysB_R?.fastq`を用いる（`?`は任意の1文字）。
+偶然の一致を避けるために、ワイルドカードを可能な限り限定する。例えば、`zmaysB*`の代わりに、`zmaysB*fastq`または`zmaysB_R?.fastq`を用いる（`?`は任意の1文字）。
 
 文字列`[AB]`や文字の範囲`[A-B]`にマッチするワイルドカードを用いて、サンプルCを排除する:  
 
@@ -289,10 +284,6 @@ Brace expansion ブレース展開の例:
 ワイルドカードは存在するファイルを展開するのに対して、brace expansion（例. `snps_{10..13}.txt`）はファイルやディレクトリが存在するか否かに関係なく展開する。
 
 
-
-- [Bash - Brace Expansionが便利](http://qiita.com/__nagamee/items/bec89945f70f5dffe9c5)
-
-- [#12 ワイルドカードについて | UNIXコマンド入門 (一般ユーザー編) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_unix/5412)
 
 Table 2-1. Unixのワイルドカード
 
@@ -359,7 +350,7 @@ Table 2-2. Markdown記法
 ----------
 
 ## Chapter 3. Remedial Unix Shell
-第3章. Unixシェル補習
+第3章. Unixシェル
 
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch03.html#chapter-03)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-03-remedial-unix)
@@ -371,41 +362,39 @@ Table 2-2. Markdown記法
 `echo $SHELL` (`echo $0`) で現在のシェルを確認  
 `chsh`でログインシェルを変更  
 
-[ストリーム](https://ja.wikipedia.org/wiki/標準ストリーム)、
-[リダイレクト](https://ja.wikipedia.org/wiki/リダイレクト_(CLI))、
-[パイプ](https://ja.wikipedia.org/wiki/パイプ_(コンピュータ))、
-[プロセス](https://ja.wikipedia.org/wiki/プロセス)、
-コマンド置換（[command substitution](https://en.wikipedia.org/wiki/Command_substitution)）
-
 ### Working with Streams and Redirection
-ストリームとリダイレクション  
-[標準ストリーム](https://ja.wikipedia.org/wiki/標準ストリーム)  
+[標準ストリーム](https://ja.wikipedia.org/wiki/標準ストリーム)、
+[リダイレクト](https://ja.wikipedia.org/wiki/リダイレクト_%28CLI%29)
 
 - [標準入力、標準出力、標準エラー出力、パイプとは ?](http://www.creatology.jp/unix/outin.html)
 
 #### Redirecting Standard Out to a File
 標準出力をファイルにリダイレクト  
 
-`cat`コマンドで*tb1-protein.fasta*ファイルを標準出力:  
+
+[`cat`](https://ja.wikipedia.org/wiki/Cat_%28UNIX%29)コマンドで *tb1-protein.fasta* ファイルを標準出力:  
 
 
 複数のファイルを標準出力:  
 
 
-記号`>`（上書き）や`>>`（追記）で標準出力をファイルに[リダイレクト](https://ja.wikipedia.org/wiki/リダイレクト_(CLI)):  
+記号`>`（上書き）や`>>`（追記）で標準出力をファイルにリダイレクト:  
 
 
-最新のファイル（*zea-proteins.fasta*）を確認:  
+Figure 3-1. 
+
+最新のファイル（*zea-proteins.fasta*）を確認する:  
 `ls -lrt`は、更新日時の逆順にソートする（詳細は`man ls`を参照）。
 
 - [ls](http://codezine.jp/unixdic/w/ls)
-- [#06 ディレクトリの中身をみよう | UNIXコマンド入門 (一般ユーザー編) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_unix/5406)
-- [#07 ディレクトリの詳細情報を読み解こう | UNIXコマンド入門 (一般ユーザー編) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_unix/5407)
+- [lsコマンドの結果をソート（昇順）する｜Linux Tips](http://www.linuxmaster.jp/linux_skill/2008/06/ls.html)
+- [lsコマンドで便利なオプションはlとaだけではない](http://blog.layer8.sh/ja/2013/02/18/ls-l-a/)
 
 #### Redirecting Standard Error
 標準エラー出力をリダイレクト  
 
 `ls -l tb1.fasta leafy1.fasta`を実行すると、存在するファイル（*tb1.fasta*）は標準出力に、存在しないファイル（*leafy1.fasta*）は標準エラー出力に送られる:  
+
 
 記号`>`と`2>`を用いて、標準出力と標準エラー出力を別のファイルにリダイレクト:  
 
@@ -413,34 +402,28 @@ Table 2-2. Markdown記法
 記号`2>`は上書き、`2>>`は追記。
 
 > ###### File Descriptors  
+> [ファイル記述子](https://ja.wikipedia.org/wiki/ファイル記述子)
 > `2>`  
 
-- [ファイル記述子](https://ja.wikipedia.org/wiki/ファイル記述子)
-
-擬似デバイス（*pseudodevice*）の */dev/null* は、あらゆる入力を受け付けて捨てる。
-
-- [デバイスファイル](https://ja.wikipedia.org/wiki/デバイスファイル)
+擬似デバイス（*pseudodevice*）(https://ja.wikipedia.org/wiki/%e3%83%87%e3%83%90%e3%82%a4%e3%82%b9%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab#.E6.93.AC.E4.BC.BC.E3.83.87.E3.83.90.E3.82.A4.E3.82.B9)の */dev/null* は、あらゆる入力を受け付けて捨てる。
 
 > ###### Using tail -f to Monitor Redirected Standard Error  
 `tail -f`でリダイレクトされた標準エラー出力を監視する。Control-Cで動作中のプロセスを停止。  
 
 #### Using Standard Input Redirection
-標準入力リダイレクト:  
+標準入力リダイレクト演算子`<`よりも、Unixパイプ（例. `cat inputfile | program > outputfile`）を使う方が一般的。
 
-
-標準入力リダイレクト演算子`<`よりもUnixパイプ（例. `cat inputfile | program > outputfile`）を使う方が一般的。
 
 ### The Almighty Unix Pipe: Speed and Beauty in One
-
 Figure 3-2.
 
 #### Pipes in Action: Creating Simple Programs with Grep and Pipes
-
-パイプとgrepコマンドを用いて、FASTAファイルに含まれるATGC以外の文字を探す:  
+[パイプ](https://ja.wikipedia.org/wiki/パイプ_%28コンピュータ%29)
+と[`grep`](https://ja.wikipedia.org/wiki/Grep)を用いて、FASTAファイルに含まれるATGC以外の文字を探す:  
 
 
 ハイライトされたYはpYrimidine塩基[CT]を示す（[Nucleic acid notation](https://en.wikipedia.org/wiki/Nucleic_acid_notation)）。
-正規表現はクオーテーションで囲む。`grep -v > tb1.fasta`はファイルを上書きしてしまう。
+正規表現はクオーテーションで囲む（例. `">"`）。`grep -v > tb1.fasta`はファイルを上書きしてしまう！
 
 - [#14 grepを使ってみよう | UNIXコマンド入門 (一般ユーザー編) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_unix/5414)
 
@@ -451,11 +434,11 @@ Figure 3-2.
 
 
 ##### Even More Redirection: A tee in Your Pipe
-[tee (UNIX)](https://ja.wikipedia.org/wiki/Tee_(UNIX))
+[`tee`](https://ja.wikipedia.org/wiki/Tee_%28UNIX%29)
 
 
 ### Managing and Interacting with Processes
-プロセス操作の基本：バックグラウンドでプロセスを実行・管理、プロセスを強制終了、プロセスの終了ステータスを確認
+[プロセス](https://ja.wikipedia.org/wiki/プロセス)操作の基本：バックグラウンドでプロセスを実行・管理、プロセスを強制終了、プロセスの終了ステータスを確認
 
 - [9. プロセス操作コマンド](http://freebsd.sing.ne.jp/unix/09.html)
 - [Linux_コマンドリファレンス_10 プロセスとジョブの管理](http://www.x-net.nu/technical/linux/command/t_linux_com10.html)
@@ -464,7 +447,7 @@ Figure 3-2.
 - [Linuxコマンド集 - 【 & 】 コマンドをバックグラウンドで実行する：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060224/230589/)
 - [バックグラウンドプロセス(ジョブ)の管理 - satake7’s memo](http://d.hatena.ne.jp/satake7/20080606/p1)
 
-コマンドの末尾にアンパサンド（&）を追加して、プログラムをバックグラウンドで実行する:  
+コマンドの末尾にアンパサンド（`&`）を追加して、プログラムをバックグラウンドで実行する:  
 
 
 [1]はジョブ番号、26577は[プロセスID（PID）](https://ja.wikipedia.org/wiki/プロセス識別子)。
@@ -475,27 +458,24 @@ Figure 3-2.
 
 
 > ###### Background Processes and Hangup Signals  
-[ハングアップ・シグナル](https://ja.wikipedia.org/wiki/シグナル_(ソフトウェア))（SIGHUP）  
-バックグラウンドのプロセスがSIGHUPを受け付けないようにするには、`nohup`を使うか、Tmux内で走らせる。Chapter 4で詳細に述べる。
+バックグラウンドのプロセスが[ハングアップ・シグナル](https://ja.wikipedia.org/wiki/シグナル_%28ソフトウェア%29)（SIGHUP） を受け付けないようにするには、`nohup`を使うか、Tmux内で走らせる。Chapter 4で詳細に述べる。  
 
 Control-z キーで中断させたジョブを
 [`bg`](http://codezine.jp/unixdic/w/bg)コマンドを用いてバックグラウンド（background）で再開:  
 
 
-バックグラウンドで再開させるジョブを`bg %ジョブ番号`で指定。
+複数の実行中のプロセスがある場合、バックグラウンドで再開させるジョブを`bg %ジョブ番号`で指定する。
 
 #### Killing Processes
 [`top`](http://codezine.jp/unixdic/w/top)、
 [`ps`](http://codezine.jp/unixdic/w/ps)、
-[`kill`](http://codezine.jp/unixdic/w/kill)コマンド
-
-- [kill](http://codezine.jp/unixdic/w/kill)
+[`kill`](http://codezine.jp/unixdic/w/kill)コマンド。
+[GitHub上の本章の*README*](https://github.com/vsbuffalo/bds-files/tree/master/chapter-03-remedial-unix)を参照されたい。
 
 #### Exit Status: How to Programmatically Tell Whether Your Command Worked
-[終了ステータス](https://ja.wikipedia.org/wiki/終了ステータス)（exit status）慣習的に正常終了時はゼロ、異常終了時はゼロ以外を返すのが一般的である
+[終了ステータス](https://ja.wikipedia.org/wiki/%e7%b5%82%e4%ba%86%e3%82%b9%e3%83%86%e3%83%bc%e3%82%bf%e3%82%b9#Unix.E7.B3.BB)（exit status）　慣習的に正常終了時はゼロ、異常終了時はゼロ以外を返すのが一般的である
 
 > ###### Warning Exit Statuses  
-- [終了ステータス - UNIX & Linux コマンド・シェルスクリプト リファレンス](http://shellscript.sunone.me/exit_status.html)
 
 終了ステータスの値は、シェルの特殊変数`$?`に設定される。
 
@@ -508,13 +488,17 @@ Control-z キーで中断させたジョブを
 `||`は、コマンドが失敗した場合のみ次のコマンドを実行する:  
 
 
-`&&`と`||`をテストするのに、正常終了（[`true`](https://ja.wikipedia.org/wiki/True_(UNIX))）または異常終了（[`false`](https://ja.wikipedia.org/wiki/False_(UNIX))）を返すUnixコマンドを用いる:
+- [終了ステータス - UNIX & Linux コマンド・シェルスクリプト リファレンス](http://shellscript.sunone.me/exit_status.html)
+- [シェルの小ネタ： 終了ステータス - 玉虫色に染まれ！](http://d.hatena.ne.jp/over80/20100512/shell)
+
+`&&`と`||`をテストするのに、正常終了[`true`](https://ja.wikipedia.org/wiki/True_%28UNIX%29)または異常終了[`false`](https://ja.wikipedia.org/wiki/False_%28UNIX%29)を返すUnixコマンドを用いる:
 
 
 ### Command Substitution
-コマンド置換 - \`command\`ではなく$(command)を使う。[ネスト](https://ja.wikipedia.org/wiki/ネスティング)できるから。
-
 - [bash Tips - コマンド置換と算術式展開、パラメータ展開 - Qiita](http://qiita.com/mashumashu/items/bbc3a79bc779fe8c4f99)
+
+コマンド置換 - \`command\`ではなく$(command)を使う。なぜか？[ネスト](https://ja.wikipedia.org/wiki/ネスティング)できるから。
+	grep -c '^>' zea-proteins.fasta	echo "There are $(grep -c '^>' zea-proteins.fasta) entries in my FASTA file."
 
 `date +%F`コマンドを用いて日付ディレクトリを作成する:  
 
@@ -1039,8 +1023,7 @@ Table 7-1. lessの操作方法
 `less`でデバッグ。
 
 #### Plain-Text Data Summary Information with wc, ls, and awk
-
-[wc](https://ja.wikipedia.org/wiki/Wc_(UNIX))で行数、単語数、文字数を表示:
+[wc](https://ja.wikipedia.org/wiki/Wc_%28UNIX%29)で行数、単語数、文字数を表示:
 
 
 `ls -l`でファイルのサイズを確認:
@@ -1123,7 +1106,8 @@ Example 7-1. 重複のない（ユニークな）ソートされた遺伝子名�
 
 - [Linuxコマンド集 - 【hexdump】16進数や8進数で出力する：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20140224/538591/)
 
-#### Sorting Plain-Text Data with [Sort](https://ja.wikipedia.org/wiki/Sort_(UNIX))
+#### Sorting Plain-Text Data with Sort
+[Sort](https://ja.wikipedia.org/wiki/Sort_%28UNIX%29)
 
 
 > ###### Using Different Delimiters with sort  
@@ -1164,7 +1148,8 @@ Unixコマンド（`grep, cut, sort, uniq`）を組み合わせて、表形式�
 `-d`オプションで、連続する行のみを表示
 
 
-#### [Join](https://en.wikipedia.org/wiki/Join_(Unix))
+#### Join
+[Join](https://en.wikipedia.org/wiki/Join_%28Unix%29)
 - [NGS Surfer's Wiki | UNIX:join](https://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=UNIX%3Ajoin)
 
 
@@ -2111,11 +2096,11 @@ Table 12-3. findの判別式と演算子
 #### xargs: A Unix Powertool
 [xargs](https://ja.wikipedia.org/wiki/Xargs)  
 
+
+
 - [Linuxコマンド集 - 【xargs】標準入力から生成したコマンドラインを実行する：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20140331/547143/)
 - [UNIXの部屋 コマンド検索:xargs (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?xargs)
 - [xargs コマンド | コマンドの使い方(Linux) | hydroculのメモ](https://hydrocul.github.io/wiki/commands/xargs.html) 一度にコマンドに渡す引数の最大数を制御するには [2014/01/05] {option-n}
-
-
 
 ### Playing It Safe with find and xargs
 
@@ -2400,3 +2385,18 @@ Table 13-4. SQLiteの集計関数
 
 ## Index
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ix01.html#idp43264544)
+
+----------
+
+# オンライン教材
+
+- [ドットインストール - 3分動画でマスターする初心者向けプログラミング学習サイト](http://dotinstall.com)
+- [UNIXコマンド辞典](http://codezine.jp/unixdic/)
+- [UNIXの部屋](http://x68000.q-e-d.net/~68user/unix/)
+- [UNIX - 会津大学UNIXウィキ](http://technique.sonots.com/?UNIX)
+- [Linuxコマンド集：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060223/230520/?TOC=25)
+- [Linuxコマンド集 - Linux入門 - Webkaru](http://webkaru.net/linux/cat/command/)
+
+----------
+
+
