@@ -358,6 +358,8 @@ Table 2-2. Markdown記法
 ### Why Do We Use Unix in Bioinformatics? Modularity and the Unix Philosophy
 [UNIX哲学](https://ja.wikipedia.org/wiki/UNIX哲学)  
 
+- [UNIXという考え方 - Strategic Choice](http://d.hatena.ne.jp/asakichy/20101029/1288312323)
+
 > ###### The Many Unix Shells  
 `echo $SHELL` (`echo $0`) で現在のシェルを確認  
 `chsh`でログインシェルを変更  
@@ -1727,9 +1729,62 @@ Example 8-4 と Figure 8-9
 
 
 #### Working with Strings
+Rの文字列処理機能
+
+- [文字列 | Rを利用して文字列のマッチング,結合,分割,置換を行う関数](http://stat.biopapyrus.net/r/string.html)
+- [Rの文字列処理関数 - RjpWiki](http://www.okadajp.org/RWiki/?Rの文字列処理関数)
+
+`nchar()`で文字ベクトルの各要素の文字数を取得する:  
+
+
+`grep()`か`regexpr()`で文字ベクトル中のパターンを検索する。関数`grep(pattern, x)`は、`pattern`にマッチするベクトル`x`の全要素の位置を返す:  
+	re_sites <- c("CTGCAG", "CGATCG", "CAGCTG", "CCCACA")
+
+
+`match()`と同様、`grep()`で一貫性のない染色体名のベクトルから6番染色体のエントリを抽出する:  	chrs <- c("chrom6", "chr2", "chr6", "chr4", "chr1", "chr16", " chrom8")
+
+Rの正規表現については `help(regex)`
+
+- [R における正規表現 - RjpWiki](http://www.okadajp.org/RWiki/?R%20における正規表現)
+
+> ###### The Double Backslash
+
+`grep()`と異なり、`regexpr(pattern, x)`は、ベクトル`x`の各要素で`pattern`にマッチした位置を返し、マッチしない場合には-1を返す:  
+
+
+返り値 5 は該当文字列の第5文字目以降にマッチしたことを示す。属性（attributes）"match.length"の値 2 は2文字分マッチしたことを示す。
+
+`substr(x, start, stop) `は文字列`x`の`start`と`stop`の間の文字を返す。	pos <- regexpr("\\d+", chrs, perl=TRUE)
+
+`sub(pattern, replacement, x)`は文字ベクトル`x`の各要素で最初に出現した`pattern`を`replacement`で置換する:  
+
+
+いくつかの簡単な例:  
+
+
+> ###### Friendly Functions for Loud Code  	stopifnot(), stop() warning(), message()  
+
+
+`paste()`関数:  
+
+paste("chr", c(1:22, "X", "Y"), sep="")
+
+> ###### Extracting Multiple Values from a String  `sub()`と`strsplit()`を組み合わせる:  	region <- "chr10:158395-172881"
+
+関数`strsplit(x, split)`:  
+	leafy <- "gene=LEAFY;locus=2159208;gene_model=AT5G61850.1"
+
 
 ### Developing Workflows with R Scripts
 #### Control Flow: if, for, and while
+ループを避け、`apply`関数`lapply(), sapply(), mapply()`を使う。
+`for`と`while`ループ、`break`、`next`
+
+> ###### Iterating over Vectors  
+> [1:length(x) の代わりに seq_along(x) を使うと良いってごみ箱が言ってた - My Life as a Mock Quant](http://d.hatena.ne.jp/teramonagi/20140819/1408448705)  
+
+`ifelse`関数:  
+
 
 #### Working with R Scripts
 Rスクリプトを用いた作業
