@@ -1780,7 +1780,9 @@ Rの正規表現については `help(regex)`
 ### Developing Workflows with R Scripts
 #### Control Flow: if, for, and while
 ループを避け、`apply`関数`lapply(), sapply(), mapply()`を使う。
-`for`と`while`ループ、`break`、`next`
+
+- [29. 条件分岐](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/29.html)
+- [30. 繰り返し文](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/30.html)
 
 > ###### Iterating over Vectors  
 > [1:length(x) の代わりに seq_along(x) を使うと良いってごみ箱が言ってた - My Life as a Mock Quant](http://d.hatena.ne.jp/teramonagi/20140819/1408448705)  
@@ -1957,7 +1959,7 @@ FASTA/FASTQのパースには既存のライブラリを使うのがベスト。
 Samtoolsの`faidx`サブコマンドを用いて、FASTAファイルのインデックスを作成する:  
 
 
-インデックス・ファイル（Mus_musculus.GRCm38.75.dna.chromosome.8.fa.fai）が作成されます。
+インデックス・ファイル（Mus_musculus.GRCm38.75.dna.chromosome.8.fa.fai）が作成される。
 
 特定の領域の部分配列にアクセスするには、`samtools faidx <in.fa> <region>`を実行する。ここで、`<in.fa>`は（インデックスを作成した）FASTAファイル、`<region>`は`chromosome:start-end`の形式。例えば:  
 
