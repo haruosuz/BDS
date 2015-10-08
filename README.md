@@ -500,7 +500,7 @@ Control-z キーで中断させたジョブを
 - [bash Tips - コマンド置換と算術式展開、パラメータ展開 - Qiita](http://qiita.com/mashumashu/items/bbc3a79bc779fe8c4f99)
 
 コマンド置換 - \`command\`ではなく$(command)を使う。なぜか？[ネスト](https://ja.wikipedia.org/wiki/ネスティング)できるから。
-	grep -c '^>' zea-proteins.fasta	echo "There are $(grep -c '^>' zea-proteins.fasta) entries in my FASTA file."
+
 
 `date +%F`コマンドを用いて日付ディレクトリを作成する:  
 
@@ -1738,10 +1738,11 @@ Rの文字列処理機能
 
 
 `grep()`か`regexpr()`で文字ベクトル中のパターンを検索する。関数`grep(pattern, x)`は、`pattern`にマッチするベクトル`x`の全要素の位置を返す:  
-	re_sites <- c("CTGCAG", "CGATCG", "CAGCTG", "CCCACA")
 
 
-`match()`と同様、`grep()`で一貫性のない染色体名のベクトルから6番染色体のエントリを抽出する:  	chrs <- c("chrom6", "chr2", "chr6", "chr4", "chr1", "chr16", " chrom8")
+
+`match()`と同様、`grep()`で一貫性のない染色体名のベクトルから6番染色体のエントリを抽出する:  
+
 
 Rの正規表現については `help(regex)`
 
@@ -1754,7 +1755,8 @@ Rの正規表現については `help(regex)`
 
 返り値 5 は該当文字列の第5文字目以降にマッチしたことを示す。属性（attributes）"match.length"の値 2 は2文字分マッチしたことを示す。
 
-`substr(x, start, stop) `は文字列`x`の`start`と`stop`の間の文字を返す。	pos <- regexpr("\\d+", chrs, perl=TRUE)
+`substr(x, start, stop) `は文字列`x`の`start`と`stop`の間の文字を返す。
+
 
 `sub(pattern, replacement, x)`は文字ベクトル`x`の各要素で最初に出現した`pattern`を`replacement`で置換する:  
 
@@ -1762,17 +1764,17 @@ Rの正規表現については `help(regex)`
 いくつかの簡単な例:  
 
 
-> ###### Friendly Functions for Loud Code  	stopifnot(), stop() warning(), message()  
+> ###### Friendly Functions for Loud Code  
 
 
 `paste()`関数:  
 
-paste("chr", c(1:22, "X", "Y"), sep="")
 
-> ###### Extracting Multiple Values from a String  `sub()`と`strsplit()`を組み合わせる:  	region <- "chr10:158395-172881"
+> ###### Extracting Multiple Values from a String  
+`sub()`と`strsplit()`を組み合わせる:  
 
 関数`strsplit(x, split)`:  
-	leafy <- "gene=LEAFY;locus=2159208;gene_model=AT5G61850.1"
+
 
 
 ### Developing Workflows with R Scripts
