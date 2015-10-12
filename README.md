@@ -1,7 +1,7 @@
 ----------
 
-Haruo Suzuki <haruo@g-language.org>  
-Last Update: 2015-10-07  
+Haruo Suzuki (haruo[at]g-language[dot]org)   
+Last Update: 2015-10-09  
 
 ----------
 
@@ -355,50 +355,51 @@ Table 2-2. Markdown記法
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch03.html#chapter-03)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-03-remedial-unix)
 
+
+- [シェルの概念と機能](http://www.cc.kyoto-su.ac.jp/~hirai/text/shell.html)
+
+本章では、[ストリーム](https://ja.wikipedia.org/wiki/標準ストリーム)、[リダイレクト](https://ja.wikipedia.org/wiki/リダイレクト_%28CLI%29)、[パイプ](https://ja.wikipedia.org/wiki/パイプ_%28コンピュータ%29)、[プロセス](https://ja.wikipedia.org/wiki/プロセス)、コマンド置換（[command substitution](https://en.wikipedia.org/wiki/Command_substitution)）を扱う。
+
 ### Why Do We Use Unix in Bioinformatics? Modularity and the Unix Philosophy
 [UNIX哲学](https://ja.wikipedia.org/wiki/UNIX哲学)  
 
 - [UNIXという考え方 - Strategic Choice](http://d.hatena.ne.jp/asakichy/20101029/1288312323)
 
 > ###### The Many Unix Shells  
+`bash`を使う。  
 `echo $SHELL` (`echo $0`) で現在のシェルを確認  
 `chsh`でログインシェルを変更  
 
 ### Working with Streams and Redirection
-[標準ストリーム](https://ja.wikipedia.org/wiki/標準ストリーム)、
-[リダイレクト](https://ja.wikipedia.org/wiki/リダイレクト_%28CLI%29)
+[ストリーム](https://ja.wikipedia.org/wiki/標準ストリーム)と[リダイレクト](https://ja.wikipedia.org/wiki/リダイレクト_%28CLI%29)
 
 - [標準入力、標準出力、標準エラー出力、パイプとは ?](http://www.creatology.jp/unix/outin.html)
 
 #### Redirecting Standard Out to a File
 標準出力をファイルにリダイレクト  
 
-
-[`cat`](https://ja.wikipedia.org/wiki/Cat_%28UNIX%29)コマンドで *tb1-protein.fasta* ファイルを標準出力:  
-
-
-複数のファイルを標準出力:  
+[`cat`](https://ja.wikipedia.org/wiki/Cat_%28UNIX%29)コマンドで *tb1-protein.fasta* ファイルを標準出力する:  
 
 
-記号`>`（上書き）や`>>`（追記）で標準出力をファイルにリダイレクト:  
+複数のファイルを標準出力する:  
+
+
+記号`>`（上書き）や`>>`（追記）で標準出力をファイルにリダイレクトする:  
 
 
 Figure 3-1. 
 
-最新のファイル（*zea-proteins.fasta*）を確認する:  
+作成されたファイル（*zea-proteins.fasta*）を確認する:  
 `ls -lrt`は、更新日時の逆順にソートする（詳細は`man ls`を参照）。
 
-- [ls](http://codezine.jp/unixdic/w/ls)
 - [lsコマンドの結果をソート（昇順）する｜Linux Tips](http://www.linuxmaster.jp/linux_skill/2008/06/ls.html)
 - [lsコマンドで便利なオプションはlとaだけではない](http://blog.layer8.sh/ja/2013/02/18/ls-l-a/)
 
 #### Redirecting Standard Error
 標準エラー出力をリダイレクト  
 
-`ls -l tb1.fasta leafy1.fasta`を実行すると、存在するファイル（*tb1.fasta*）は標準出力に、存在しないファイル（*leafy1.fasta*）は標準エラー出力に送られる:  
-
-
-記号`>`と`2>`を用いて、標準出力と標準エラー出力を別のファイルにリダイレクト:  
+`ls -l tb1.fasta leafy1.fasta`を実行すると、存在するファイル（*tb1.fasta*）は標準出力に、存在しないファイル（*leafy1.fasta*）は標準エラー出力に送られる。
+記号`>`と`2>`を用いて、標準出力（standard output）と標準エラー出力（standard error）を別のファイルにリダイレクトする:  
 
 
 記号`2>`は上書き、`2>>`は追記。
@@ -407,7 +408,7 @@ Figure 3-1.
 > [ファイル記述子](https://ja.wikipedia.org/wiki/ファイル記述子)
 > `2>`  
 
-擬似デバイス（*pseudodevice*）(https://ja.wikipedia.org/wiki/デバイスファイル)の */dev/null* は、あらゆる入力を受け付けて捨てる。
+[擬似デバイス](https://ja.wikipedia.org/wiki/デバイスファイル)（*pseudodevice*）の */dev/null* は、あらゆる入力を受け付けて捨てる。
 
 > ###### Using tail -f to Monitor Redirected Standard Error  
 `tail -f`でリダイレクトされた標準エラー出力を監視する。Control-Cで動作中のプロセスを停止。  
@@ -420,12 +421,11 @@ Figure 3-1.
 Figure 3-2.
 
 #### Pipes in Action: Creating Simple Programs with Grep and Pipes
-[パイプ](https://ja.wikipedia.org/wiki/パイプ_%28コンピュータ%29)
-と[`grep`](https://ja.wikipedia.org/wiki/Grep)を用いて、FASTAファイルに含まれるATGC以外の文字を探す:  
+[パイプ](https://ja.wikipedia.org/wiki/パイプ_%28コンピュータ%29)と[`grep`](https://ja.wikipedia.org/wiki/Grep)を用いて、FASTAファイルに含まれるATGC以外の文字を探す:  
 
 
 ハイライトされたYはpYrimidine塩基[CT]を示す（[Nucleic acid notation](https://en.wikipedia.org/wiki/Nucleic_acid_notation)）。
-正規表現はクオーテーションで囲む（例. `">"`）。`grep -v > tb1.fasta`はファイルを上書きしてしまう！
+正規表現はクオーテーションで囲む（例. `">"`）。`grep -v > tb1.fasta`とした場合、シェルは`>`をリダイレクト演算子と解釈し、ファイルを上書きしてしまう！
 
 - [#14 grepを使ってみよう | UNIXコマンド入門 (一般ユーザー編) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_unix/5414)
 
@@ -497,7 +497,7 @@ Control-z キーで中断させたジョブを
 
 
 ### Command Substitution
-- [bash Tips - コマンド置換と算術式展開、パラメータ展開 - Qiita](http://qiita.com/mashumashu/items/bbc3a79bc779fe8c4f99)
+- [bash Tips - コマンド置換と算術式展開、パラメータ展開](http://qiita.com/mashumashu/items/bbc3a79bc779fe8c4f99)
 
 コマンド置換 - \`command\`ではなく$(command)を使う。なぜか？[ネスト](https://ja.wikipedia.org/wiki/ネスティング)できるから。
 
@@ -510,6 +510,7 @@ Control-z キーで中断させたジョブを
 
 > ###### Storing Your Unix Tricks  
 `add alias`を用いて *~/.bashrc*（Mac OS Xでは *~/.profile*）ファイルに追加する。例えば、常に同じディレクトリ構造のプロジェクト・ディレクトリを作成する:  
+
 
 ----------
 
@@ -843,10 +844,12 @@ Scott ChaconとBen Straubの[Pro Git book](http://git-scm.com/book/en/v2)
 #### Downloading Data with wget and curl
 `wget`と`curl`は、データをウェブからダウンロードするコマンドラインのプログラム。パッケージ管理システム（Homebrewや`apt-get`）でインストールできる。
 
-##### [wget](https://ja.wikipedia.org/wiki/GNU_Wget)
+##### wget
 - [Linuxコマンド集 - 【 wget 】 ファイルをダウンロードする：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060228/230995/)
 - [ダウンロードコマンドwgetのオプション一覧(linux)](http://blog.layer8.sh/ja/2012/03/31/wget_command/)
 - [wget - UNIX/Linuxコマンド - IT専科](http://www.itsenka.com/contents/development/unix-linux/wget.html)
+
+[wget](https://ja.wikipedia.org/wiki/GNU_Wget)を用いて、GRCh37ヒト22番染色体（hg19）をダウンロードする:  
 
 
 HTTP or FTP の認証は `wget`の`--user=`と`--ask-password`オプションを用いる。
@@ -894,8 +897,6 @@ Table 6-1. wgetのオプション
 SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プログラムに任意の文字列を渡す：
 
 
-
-
 `md5sum`（Mac OS Xでは`md5`）プログラムはMD5ハッシュ値を計算する。
 
 - [MacでMD5, SHA1を確認する。](http://qiita.com/norioc/items/8f57744da8a8dd5fbc6c)
@@ -904,11 +905,7 @@ SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プ�
 ### Looking at Differences Between Data
 データの違いを見る
 
-[`diff`](https://ja.wikipedia.org/wiki/Diff)
-
-- [Linuxコマンド【 diff 】2つのファイルの差分を出力 - Linux入門 - Webkaru](http://webkaru.net/linux/command-diff/)
-
-*gene-1.bed*と*gene-2.bed*ファイルの差分を出力:  
+[`diff`](https://ja.wikipedia.org/wiki/Diff)コマンドで*gene-1.bed*と*gene-2.bed*ファイルの差分を出力する:  
 
 
 ### Compressing Data and Working with Compressed Data
@@ -1779,13 +1776,13 @@ Rの正規表現については `help(regex)`
 
 ### Developing Workflows with R Scripts
 #### Control Flow: if, for, and while
-ループを避け、`apply`関数`lapply(), sapply(), mapply()`を使う。
 
 - [29. 条件分岐](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/29.html)
 - [30. 繰り返し文](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/30.html)
 
 > ###### Iterating over Vectors  
 > [1:length(x) の代わりに seq_along(x) を使うと良いってごみ箱が言ってた - My Life as a Mock Quant](http://d.hatena.ne.jp/teramonagi/20140819/1408448705)  
+
 
 `ifelse`関数:  
 
@@ -1913,10 +1910,11 @@ FASTA/FASTQエントリの計数
 
 ### Nucleotide Codes
 核酸コード  
+A、T、C、Gは、ヌクレオチドのアデニン、チミン、シトシン、グアニンを表す。
+
+Table 10-1. [Nucleotide base codes (IUPAC)](http://www.ddbj.nig.ac.jp/FT/full_index.html#7.4.1)
 
 - [Nucleotide Base Codes | DDBJ](http://www.ddbj.nig.ac.jp/sub/ref1-j.html)
-
-Table 10-1. IUPAC nucleotide codes
 
 ### Base Qualities
 ASCII 文字 (`man ascii`)  
@@ -1977,8 +1975,33 @@ Samtoolsの`faidx`サブコマンドを用いて、FASTAファイルのインデ
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-11-alignment)
 
 ### Getting to Know Alignment Formats: SAM and BAM
+
 #### The SAM Header
+- [SAMフォーマット | マッピング結果を記載するファイル形式](http://bi.biopapyrus.net/transcriptome/sam.html)
+
+> ###### Read Groups  
+> メタデータ  
+
+`samtools`
+
+- [SAMtools - Wikipedia](https://ja.wikipedia.org/wiki/SAMtools)
+- [NGS Surfer's Wiki | SAMtools](https://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=samtools)
+
+`samtools view -H`でSAM/BAMヘッダ全体を見る :  
+
+
+
+引数なしの`samtools view`は、ヘッダなしでアラインメント全体を返す:  
+
+
 #### The SAM Alignment Section
+
+SAMファイルのアラインメント部分は11フィールド以上から成る。
+
+
+
+
+
 #### Bitwise Flags
 #### CIGAR Strings
 #### Mapping Qualities
