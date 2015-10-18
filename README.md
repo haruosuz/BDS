@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)   
-Last Update: 2015-10-09  
+Last Update: 2015-10-18  
 
 ----------
 
@@ -306,18 +306,7 @@ Table 2-1. Unixのワイルドカード
 #### Markdown Formatting Basics
 John Gruberのホームページ（[Daring Fireball: Markdown Syntax Documentation](http://daringfireball.net/projects/markdown/syntax)）  
 
-基本的なマークダウン文書の形式:  
-
-
-
-
-
-
-
-
-
-
-Figure 2-1. MarkdownノートブックのHTML表示  
+Figure 2-1. [Markdownノート](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-02-bioinformatics-projects/notebook.md)の[HTML表示](https://github.com/vsbuffalo/bds-files/blob/master/chapter-02-bioinformatics-projects/notebook.md)  
 
 Table 2-2. Markdown記法
 
@@ -355,10 +344,9 @@ Table 2-2. Markdown記法
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch03.html#chapter-03)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-03-remedial-unix)
 
+本章では、[ストリーム](https://ja.wikipedia.org/wiki/標準ストリーム)、[リダイレクト](https://ja.wikipedia.org/wiki/リダイレクト_%28CLI%29)、[パイプ](https://ja.wikipedia.org/wiki/パイプ_%28コンピュータ%29)、[プロセス](https://ja.wikipedia.org/wiki/プロセス)、コマンド置換（[command substitution](https://en.wikipedia.org/wiki/Command_substitution)）を扱う。
 
 - [シェルの概念と機能](http://www.cc.kyoto-su.ac.jp/~hirai/text/shell.html)
-
-本章では、[ストリーム](https://ja.wikipedia.org/wiki/標準ストリーム)、[リダイレクト](https://ja.wikipedia.org/wiki/リダイレクト_%28CLI%29)、[パイプ](https://ja.wikipedia.org/wiki/パイプ_%28コンピュータ%29)、[プロセス](https://ja.wikipedia.org/wiki/プロセス)、コマンド置換（[command substitution](https://en.wikipedia.org/wiki/Command_substitution)）を扱う。
 
 ### Why Do We Use Unix in Bioinformatics? Modularity and the Unix Philosophy
 [UNIX哲学](https://ja.wikipedia.org/wiki/UNIX哲学)  
@@ -370,6 +358,7 @@ Table 2-2. Markdown記法
 `echo $SHELL` (`echo $0`) で現在のシェルを確認  
 `chsh`でログインシェルを変更  
 
+
 ### Working with Streams and Redirection
 [ストリーム](https://ja.wikipedia.org/wiki/標準ストリーム)と[リダイレクト](https://ja.wikipedia.org/wiki/リダイレクト_%28CLI%29)
 
@@ -377,6 +366,11 @@ Table 2-2. Markdown記法
 
 #### Redirecting Standard Out to a File
 標準出力をファイルにリダイレクト  
+
+タンパク質のアミノ酸配列データを記述した[FASTA](https://ja.wikipedia.org/wiki/FASTA)形式ファイル
+[*tb1-protein.fasta*](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-03-remedial-unix/tb1-protein.fasta)と
+[*tga1-protein.fasta*](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-03-remedial-unix/tga1-protein.fasta)を見る。
+
 
 [`cat`](https://ja.wikipedia.org/wiki/Cat_%28UNIX%29)コマンドで *tb1-protein.fasta* ファイルを標準出力する:  
 
@@ -389,8 +383,7 @@ Table 2-2. Markdown記法
 
 Figure 3-1. 
 
-作成されたファイル（*zea-proteins.fasta*）を確認する:  
-`ls -lrt`は、更新日時の逆順にソートする（詳細は`man ls`を参照）。
+`ls -lrt`で更新日時の逆順にソートする（詳細は`man ls`を参照）。
 
 - [lsコマンドの結果をソート（昇順）する｜Linux Tips](http://www.linuxmaster.jp/linux_skill/2008/06/ls.html)
 - [lsコマンドで便利なオプションはlとaだけではない](http://blog.layer8.sh/ja/2013/02/18/ls-l-a/)
@@ -398,7 +391,7 @@ Figure 3-1.
 #### Redirecting Standard Error
 標準エラー出力をリダイレクト  
 
-`ls -l tb1.fasta leafy1.fasta`を実行すると、存在するファイル（*tb1.fasta*）は標準出力に、存在しないファイル（*leafy1.fasta*）は標準エラー出力に送られる。
+`ls -l tb1.fasta leafy1.fasta`を実行すると、存在するファイル（*tb1.fasta*）は標準出力に、存在しないファイル（*leafy1.fasta*）は標準エラー出力に送られる。  
 記号`>`と`2>`を用いて、標準出力（standard output）と標準エラー出力（standard error）を別のファイルにリダイレクトする:  
 
 
@@ -474,12 +467,15 @@ Control-z キーで中断させたジョブを
 [`kill`](http://codezine.jp/unixdic/w/kill)コマンド。
 [GitHub上の本章の*README*](https://github.com/vsbuffalo/bds-files/tree/master/chapter-03-remedial-unix)を参照されたい。
 
+- [ps コマンド | コマンドの使い方(Linux) | hydroculのメモ](https://hydrocul.github.io/wiki/commands/ps.html)
+- [「ps aux」コマンドで表示される項目の意味を知りたい](http://www.itmedia.co.jp/help/tips/linux/l0158.html)
+
 #### Exit Status: How to Programmatically Tell Whether Your Command Worked
 [終了ステータス](https://ja.wikipedia.org/wiki/終了ステータス)（exit status）　慣習的に正常終了時はゼロ、異常終了時はゼロ以外を返すのが一般的である
 
 > ###### Warning Exit Statuses  
 
-終了ステータスの値は、シェルの特殊変数`$?`に設定される。
+終了ステータスの値は、シェルの特殊変数`$?`に設定される。  
 
 
 終了ステータスを判定してコマンドを実行する。  
@@ -496,6 +492,7 @@ Control-z キーで中断させたジョブを
 `&&`と`||`をテストするのに、正常終了[`true`](https://ja.wikipedia.org/wiki/True_%28UNIX%29)または異常終了[`false`](https://ja.wikipedia.org/wiki/False_%28UNIX%29)を返すUnixコマンドを用いる:
 
 
+
 ### Command Substitution
 - [bash Tips - コマンド置換と算術式展開、パラメータ展開](http://qiita.com/mashumashu/items/bbc3a79bc779fe8c4f99)
 
@@ -505,7 +502,7 @@ Control-z キーで中断させたジョブを
 `date +%F`コマンドを用いて日付ディレクトリを作成する:  
 
 
-このフォーマットのディレクトリは年代順にソートされる:  
+このディレクトリ名は年代順にソートされる:  
 
 
 > ###### Storing Your Unix Tricks  
@@ -849,29 +846,35 @@ Scott ChaconとBen Straubの[Pro Git book](http://git-scm.com/book/en/v2)
 - [ダウンロードコマンドwgetのオプション一覧(linux)](http://blog.layer8.sh/ja/2012/03/31/wget_command/)
 - [wget - UNIX/Linuxコマンド - IT専科](http://www.itsenka.com/contents/development/unix-linux/wget.html)
 
-[wget](https://ja.wikipedia.org/wiki/GNU_Wget)を用いて、GRCh37ヒト22番染色体（hg19）をダウンロードする:  
+[`wget`](https://ja.wikipedia.org/wiki/GNU_Wget)を用いて、GRCh37（hg19）ヒト22番染色体をダウンロードする:  
 
 
 HTTP or FTP の認証は `wget`の`--user=`と`--ask-password`オプションを用いる。
 
-`--recursive` や`-r`オプションで再帰的にデータをダウンロードする。`--level`や`-l`オプションでリンクの深さを指定する。
+`--recursive`（`-r`）オプションで再帰的にデータをダウンロードする。`--level`（`-l`）オプションでリンクの深さを指定する。
 
 
-`wget`の`--limit-rate` オプションを用いて、ダウンロード速度を制限できる。  
+`--no-parent`で指定したURLより上の階層（親ディレクトリ）を取得対象にしない。
+`--accept "*.gtf"`でダウンロードする拡張子やパターンを指定する。
+
+`--limit-rate`オプションでダウンロード速度を制限できる。  
 `man wget`でオプション一覧を見る。  
 
 Table 6-1. wgetのオプション
 
-##### [Curl](https://ja.wikipedia.org/wiki/CURL)
+##### Curl
 - [Linuxコマンド集 - 【curl】ファイルのダウンロードやアップロードを行う：ITpro](http://itpro.nikkeibp.co.jp/atcl/column/14/230520/080400003/)
 
+[`curl`](https://ja.wikipedia.org/wiki/CURL)は、デフォルトでは標準出力するので、`wget`と同じようにするには、リダイレクトする（または`-O <filename>`を使う）:  
 
-`curl`は`wget`よりも多くのプロトコル [SFTP (secure FTP) や SCP (secure copy) を含む] を用いてファイルを転送できる。  
-`-L/--location`オプション
+
+`curl`は`wget`よりも多くのプロトコル [SFTP (secure FTP) や SCP (secure copy) を含む] を用いてファイルを転送できる。
+`-L/--location`オプション。
+[RCurl](https://cran.r-project.org/web/packages/RCurl/index.html)と[pycurl](http://pycurl.sourceforge.net/doc/)はCurlの機能を提供する（[ラッパー](http://e-words.jp/w/ラッパー.html)）。
 
 ### Rsync and Secure Copy (scp)
 - [Rsync](https://ja.wikipedia.org/wiki/Rsync)
- - [Command Technica：はじめてrsyncを使う方が知っておきたい6つのルール (1/2) - ITmedia エンタープライズ](http://www.itmedia.co.jp/enterprise/articles/0804/21/news013.html)
+ - [Command Technica：はじめてrsyncを使う方が知っておきたい6つのルール (1/2)](http://www.itmedia.co.jp/enterprise/articles/0804/21/news013.html)
  - [Linuxコマンド【 rsync 】高速なファイル同期（バックアップ） - Linux入門 - Webkaru](http://webkaru.net/linux/rsync-command/)
  - [rsync でディレクトリの同期（バックアップ） - maruko2 Note.](http://www.maruko2.com/mw/rsync_でディレクトリの同期（バックアップ）)
 
@@ -891,10 +894,9 @@ Table 6-1. wgetのオプション
 [チェックサム](https://ja.wikipedia.org/wiki/チェックサム)で転送データの整合性を検証。
 
 #### SHA and MD5 Checksums
-
 [MD5](https://ja.wikipedia.org/wiki/MD5)と[SHA-1](https://ja.wikipedia.org/wiki/SHA-1)チェックサム
 
-SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プログラムに任意の文字列を渡す：
+SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プログラムに任意の文字列を渡す:  
 
 
 `md5sum`（Mac OS Xでは`md5`）プログラムはMD5ハッシュ値を計算する。
@@ -905,13 +907,19 @@ SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プ�
 ### Looking at Differences Between Data
 データの違いを見る
 
-[`diff`](https://ja.wikipedia.org/wiki/Diff)コマンドで*gene-1.bed*と*gene-2.bed*ファイルの差分を出力する:  
+[`diff`](https://ja.wikipedia.org/wiki/Diff)コマンドで
+[*gene-1.bed*](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-06-bioinformatics-data/gene-1.bed)と
+[*gene-2.bed*](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-06-bioinformatics-data/gene-2.bed)
+ファイルの差分を出力する:  
 
+
+- [アメリエフのブログ | BEDフォーマット完全解説](http://blog.amelieff.jp/?eid=195350)
 
 ### Compressing Data and Working with Compressed Data
 データの圧縮
 
-##### [gzip](https://ja.wikipedia.org/wiki/Gzip)
+#### gzip
+[gzip](https://ja.wikipedia.org/wiki/Gzip)
 
 - [Linuxコマンド集 - 【 gzip 】 ファイルを圧縮・展開する（拡張子.gz）：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230791/)
 
@@ -921,13 +929,13 @@ SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プ�
 `gzip`コマンドで圧縮:  
 
 
-`gunzip`コマンドで伸長:  
+`gunzip`コマンドで解凍:  
 
 
-`-c`オプションを用いて圧縮・伸長の結果を標準出力に書き出す:  
+`-c`オプションを用いて圧縮・解凍の結果を標準出力に書き出す:  
 
 
-伸長しないで圧縮ファイルに結合する:  
+解凍しないで圧縮ファイルに結合する:  
 
 
 #### Working with Gzipped Compressed Files
@@ -936,9 +944,9 @@ SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プ�
 
 ### Case Study: Reproducibly Downloading Data
 
-[Genome Reference Consortium](http://www.ncbi.nlm.nih.gov/projects/genome/assembly/grc/)  
-GRCm38マウス参照ゲノムを`wget`でダウンロードする。
-http://www.ensembl.org の [Mouse](http://www.ensembl.org/Mus_musculus/Info/Index) の [Download DNA sequence] をクリックしてFTPサイトを開く。
+[Ensemblのウェブサイト](http://www.ensembl.org)の [Mouse](http://www.ensembl.org/Mus_musculus/Info/Index) の [Download DNA sequence] をクリックしてFTPサイトを開く。
+[Genome Reference Consortium](http://www.ncbi.nlm.nih.gov/projects/genome/assembly/grc/) 
+GRCm38マウス参照ゲノムを`wget`でダウンロードする:  
 
 
 `zgrep`コマンドを用いて正規表現"^>"で圧縮ファイルのFASTAヘッダを確認:  
@@ -963,11 +971,6 @@ Markdownノート（README.md）の例:
 
 
 
-- GTF (General Transfer Format)
- - [GFF/GTF File Format](http://www.ensembl.org/info/website/upload/gff.html)
- - [GTFファイル | GTFフォーマットは遺伝子のアノンテーション情報が記載され,awkを利用して内容抽出](http://bi.biopapyrus.net/transcriptome/gtf.html)
- - [NGS Surfer's Wiki | GTFファイルの細かな違い](http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=GTFファイルの細かな違い)
-
 ----------
 
 # Part III. Practice: Bioinformatics Data Skills
@@ -981,127 +984,148 @@ Markdownノート（README.md）の例:
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-07-unix-data-tools)
 
 ### Unix Data Tools and the Unix One-Liner Approach: Lessons from Programming Pearls
+connecting tools together— creating programs from *Unix pipelines*. By connecting data tools together with pipes, we can construct programs that parse, manipulate, and summarize data. Unix pipe‐ lines can be developed in shell scripts or as “one-liners”
+
 ### When to Use the Unix Pipeline Approach and How to Use It Safely
 ### Inspecting and Manipulating Text Data with Unix Tools
-タブ区切り
-BED（3列）とGTFファイル
+タブ区切り  
+> ###### Tabular Plain-Text Data Formats
+
+本章では、BED（3列）とGTFフォーマットのファイルを用いる。
+
+- GTF (General Transfer Format)
+  - [GFF/GTF File Format](http://www.ensembl.org/info/website/upload/gff.html)
+  - [GTFファイル | GTFフォーマットは遺伝子のアノンテーション情報が記載され,awkを利用して内容抽出](http://bi.biopapyrus.net/transcriptome/gtf.html)
+  - [NGS Surfer's Wiki | GTFファイルの細かな違い](http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=GTFファイルの細かな違い)
 
 #### Inspecting Data with Head and Tail
 ファイルの最初と最後を見る  
 
 
+`tail`でファイルのヘッダを削除する:  
 
-ファイルの始まりと終わりを見る:  
+
+ファイルの始まりと終わりの両方を見る:  
 
 
 設定ファイル（*~/.bashrc*や*~/.profile*）にショートカットを作る:  
 
 
-ショートカットの（inspectの）`i`コマンドを実行:  
+ショートカットの`i`（inspect）コマンドを実行:  
 
 
-`grep`の標準出力を`head`に渡す:  
+パイプで`grep`の標準出力を`head`に渡す:  
 
 
 - [シグナル (ソフトウェア)](https://ja.wikipedia.org/wiki/シグナル_(ソフトウェア) )
 シグナル`SIGPIPE`は、読み手のいないパイプへの書き込み  
 シグナル`SIGINT`は、割り込み端末から割り込みキー（通常 CTRL + C）を押下したときに発生  
 
-#### [less](https://ja.wikipedia.org/wiki/Less)
-
+#### less
 - [UNIXの部屋 コマンド検索:less (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?less)
 - [Linuxコマンド集 - 【 less 】 テキスト・ファイルの内容を閲覧する：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230809/)
+- [less - １ページずつ表示 - 会津大学UNIXウィキ](http://technique.sonots.com/plus/?UNIX%2Fコマンド%2Fテキスト処理%2Fless)
+
+[less](https://ja.wikipedia.org/wiki/Less)で[*contaminated.fastq*](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-07-unix-data-tools/contaminated.fastq)ファイルを見る:  
 
 
-`less`を終了するには、*q*を押す。
+`less`を終了するには、*q*を押す。*h*でヘルプを表示する。
 
 Table 7-1. lessの操作方法
 
-`less`でテキスト検索。アダプター配列。`less`でcontaminated.fastqを開いて、*/*を押して、AGATCGGを入力。結果はFigure 7-1に。
 
-`less`でデバッグ。
+`less`は、テキスト検索（マッチした部分をハイライト）、パイプラインのデバッグや構築に利用できる。
+
+`less`でcontaminated.fastqを開いて、 / を押して、AGATCGGを入力。結果は
+Figure 7-1
 
 #### Plain-Text Data Summary Information with wc, ls, and awk
-[wc](https://ja.wikipedia.org/wiki/Wc_%28UNIX%29)で行数、単語数、文字数を表示:
+[wc](https://ja.wikipedia.org/wiki/Wc_%28UNIX%29)（word count）で行数、単語数、文字数を表示:  
 
 
-`ls -l`でファイルのサイズを確認:
+`ls -l`でファイルのサイズを確認:  
 
 
 > ###### Data Formats and Assumptions
 > 空白（スペース、タブ、改行）を除くには、`grep`を使う:  
-> `grep -c "[^ \\n\\t]" some_data.bed`
 
-`awk`でファイルの列（フィールド）数を表示:
-
-
-Mus_musculus.GRCm38.75_chr1.gtfファイルのヘッダを除いてから、列（フィールド）数を`awk`で表示:
+`awk`でファイルの列（フィールド）数を表示:  
 
 
-`grep`を用いて、"#"で始まる行を除く:
+Mus_musculus.GRCm38.75_chr1.gtfファイルのヘッダを除いてから、列（フィールド）数を`awk`で表示:  
+
+
+`grep`を用いて、"#"で始まる行を除く:  
 
 
 #### Working with Column Data with cut and Columns
 
-`cut`で2列目を抽出:  
+`cut`でタブ区切りファイルの2列目を抽出:  
 
 
-`grep`でメタデータ行を削除し、`cut`で1,4,5列（染色体、開始位置、終了位置）を抽出:
+`grep`でメタデータ行を削除し、`cut`で1,4,5列（染色体、開始位置、終了位置）を抽出:  
 
 
-`cut`でフィールドのデリミタを指定する。CSVファイルは:
+`cut -d`で区切り文字を指定する。[CSV](https://ja.wikipedia.org/wiki/Comma-Separated_Values)ファイル:  
 
 
 #### Formatting Tabular Data with column
+- [Linuxコマンド【 column 】入力を表形式に整形 - Linux入門 - Webkaru](http://webkaru.net/linux/column-command/)
+
+タブ区切りファイルの出力は（要素が何列目に属するのか）みにくい:  
 
 
-`column -t`で表示:
+`column -t`で整形:  
 
 
-`column`の`-s`オプションでデリミタを指定:
+`column -s`で区切り文字を指定:  
 
 
 #### The All-Powerful Grep
 
-トウモロコシ・ゲノムで文字列"AGATGCATG"を検索した実行時間を、4手法（`grep`、`sed`、`awk`、`Python`スクリプト）間で比較した結果、`grep`が最速（Figure 7-2）。
+Figure 7-2  
+トウモロコシ・ゲノムで文字列"AGATGCATG"を検索した実行時間を、4手法（`grep`、`sed`、`awk`、`Python`スクリプト）間で比較した結果、`grep`が最速。
+
+ヒト1番染色体の全タンパク質のEnsembl遺伝子識別子と遺伝子名が含まれている
+*Mus_musculus.GRCm38.75_chr1_genes.txt*ファイル内の遺伝子"Olfr418-ps1"を`grep`で見つける:  
 
 
 
 
 > ###### GNU, BSD, and the Flavors of Grep  
-> Homebrew でインストール
+GNU coreutilsをMac OS Xにインストール:  
 
-
-`grep -v`でマッチしない行を返す。例えば、"Olfr1413"以外の"Olfr"を含む全遺伝子リストを得る:    
+`grep -v`でマッチしない行を返す。"Olfr1413"以外の"Olfr"を含む遺伝子群を出力:    
 
 
 `grep -w`で（空白で囲まれた）単語全体にマッチする:  
 
 
-3つのオプション `-B, -A, -C`
+パターンにマッチした行の前（`-B`）、後（`-A`）、前後（`-C`）を出力するオプション:  
 
 
-正規表現 POSIX Basic Regular Expressions (BRE)
+`grep`は、正規表現 *POSIX Basic Regular Expressions* (BRE)をサポート。
+Ensembl遺伝子識別子"Olfr1413"と"Olfr1411"を見つける:  
 
 
-`-E`オプション。POSIX Extended Regular Expressions (ERE).
+`grep -E`オプションで、*POSIX Extended Regular Expressions* (ERE) を用いる。
+"Olfr218"または"Olfr1416"にマッチ:  
 
 
-`-c`オプション。パターンにマッチした行数を表示。
+`grep -c`オプションで、パターンにマッチした行数を表示:  
 
 
-`-o`オプションでマッチした部分だけを取り出す。
+`grep -o`オプションで、マッチした部分だけを抽出:  
 
 
-Example 7-1. 重複のない（ユニークな）ソートされた遺伝子名のリストを出力するUnixコマンド
+Example 7-1. ユニークな（重複のない）ソートされた遺伝子名のリストを出力
 
-
-[Linuxコマンド集 - 【 grep 】 文字列を検索する：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230786/)
 
 #### Decoding Plain-Text Data: hexdump
+[*ASCII*](https://ja.wikipedia.org/wiki/ASCII)。`man ascii`
 
-`man ascii`
 
+何かが正常に動作しない場合、ファイルの文字コードを疑い、`file, hexdump, grep`コマンドで確認する。
 
 - [Linuxコマンド集 - 【hexdump】16進数や8進数で出力する：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20140224/538591/)
 
@@ -1110,79 +1134,118 @@ Example 7-1. 重複のない（ユニークな）ソートされた遺伝子名�
 
 
 > ###### Using Different Delimiters with sort  
-> `sort`の`-t`オプションでフィールドの区切り文字を指定。例えば、-t","  
+> `sort -t`（例えば、CSVファイルは`-t","`）で列の区切り文字を指定する。   
+
+- [sortコマンド（テキストファイルをソートする）](http://itdoc.hitachi.co.jp/manuals/3020/30203S3530/JPAS0260.HTM)
+- [sortコマンドで複数キーによるソート - あらびき日記](http://d.hatena.ne.jp/a_bicky/20110724/1311497192)
+- [NGS Surfer's Wiki | UNIX:sort](http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=UNIX%3Asort)
+
+`sort`のオプション。`-k start,end`で、列を指定してソート。`-n`で、数値としてソート。
+1列目（染色体 chromosome）でソートし（`-k1,1`）、1列目が同じもの（例、"chr1"や"chr3"）は2列目で数値としてソートする（`-k2,2n`）:  
 
 
 
 > ###### Sorting Stability  
-> `sort`の`-s`オプション
+> `sort -s`  
 
-すでにソートされているかチェックする:
-
-
-逆順にソートする:
+`-c`オプションで、既にソートされているかチェックする:  
 
 
-一部のオプションは、GNU `sort`でのみ利用可能（Mac OS XのBSDではない）。例えば、`-V`
+`-r`オプションで逆順（降順）にソートする:  
 
 
-メモリ
+一部のオプションは、GNU `sort`でのみ利用可能（Mac OS XのBSD版ではない）。例えば、
+`-V`オプションは英数字を（文字列の中の数字を理解して）ソートする:  
 
 
-
-- [sort](http://codezine.jp/unixdic/w/sort)
-- [UNIXコマンド - sort (Linux/FreeBSD/Solaris)](http://www.k-tanaka.net/unix/sort.php)
-
-#### Finding Unique Values in [Uniq](https://ja.wikipedia.org/wiki/Uniq)
-- [UNIXコマンド - uniq (Linux/FreeBSD/Solaris)](http://www.k-tanaka.net/unix/uniq.php)
+*merge sort*でメモリを超えるファイルをソートできる:  
 
 
-`-i`オプションで、大文字と小文字の区別をしない。  
-`-c`オプションで、行数も合わせて表示
+`-S`オプションで、K（キロバイト）、M（メガバイト）、G（ギガバイト）、%（総メモリの割合）を指定する。
+
+`--parallel`オプションで、4つのコアを指定してソートする:  
 
 
-Unixコマンド（`grep, cut, sort, uniq`）を組み合わせて、表形式データの列を要約:
+#### Finding Unique Values in Uniq
+[`uniq`](https://ja.wikipedia.org/wiki/Uniq)は、連続する重複行を削除して出力する:  
 
 
-`-d`オプションで、連続する行のみを表示
+`-i`オプションで、大文字と小文字を区別しない。  
+`-c`オプションで、重複行の数も表示:  
+
+
+Unixコマンド（`grep, cut, sort, uniq`）を組み合わせて、表形式データの列を要約:  
+
+
+`-d`オプションで、重複行のみを表示:  
 
 
 #### Join
-[Join](https://en.wikipedia.org/wiki/Join_%28Unix%29)
+- [join - 共通フィールドをもつ２つのファイルを行単位で結合 - 会津大学UNIXウィキ](http://technique.sonots.com/?UNIX%2Fコマンド%2Fテキスト処理%2Fjoin)
 - [NGS Surfer's Wiki | UNIX:join](https://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=UNIX%3Ajoin)
 
-
-`chr3`が無い場合:
-
-
-`-a`オプション
+*example.bed*と*example_lengths.txt*ファイルを使う:  
 
 
-#### Text Processing with [Awk](https://ja.wikipedia.org/wiki/AWK)
+両方のファイルがソートされていない限り、`join`は期待通り動作しない:  
+
+
+基本的な構文は、`join -1 <file_1_field> -2 <file_2_field> <file_1> <file_2>`:  
+
+
+*example_lengths.txt*に`chr3`が無い場合:  
+
+
+`-a`オプションで、ペアにならない行も生成:  
+
+
+#### Text Processing with Awk
+[Awk](https://ja.wikipedia.org/wiki/AWK)  
 
 > ###### Gawk versus Awk  
+Mac OS XはBSD Awk。GNU Awk（Gawk）のマニュアルは`man gawk`  
+
+- [AWKプログラミングの真髄の1つ　フィールド（列）を操る基礎テクニック (1/2)：CodeZine（コードジン）](http://codezine.jp/article/detail/7852)
+
+Awkは、入力データをレコード（行）に分割し、各レコードをフィールドに分割する。レコード全体は変数`$0`に格納され、フィールドは`$1, $2, $3, ...`と分割される。
 
 
-Table 7-2. Awkの比較・論理演算子
+Awkは算術演算子（`+, -, *, /, %, ^`）をサポートしている。フィーチャーの長さ（終了位置 - 開始位置）が18を超える行だけを出力:  
+
 
 - [AWK で使われる演算子](http://aoki2.si.gunma-u.ac.jp/Hanasi/Algo/letsawk/WhatIsOperator.html)
+Table 7-2. Awkの比較・論理演算子
+
+論理演算子 `&&` (AND), `||` (OR), `!` (NOT) でパターンを繋ぐ。1番染色体上で長さ>10の行を出力:  
+
+
+2番染色体と3番染色体について、長さ（終了位置 - 開始位置）の列を追加する:  
 
 
 `BEGIN`と`END`
 
 
+`NR`（Number of Record）は現在の行番号
+
 > ###### Setting Field, Output Field, and Record Separators  
+`awk -F","`でCSVファイルの区切り文字を指定する。  
+
+`NR`を用いて、行の範囲を抽出:  
 
 
-ファイル変換
+GTFファイル（*Mus_musculus.GRCm38.75_chr1.gtf*）をBEDファイル（3列）に変換:  
 
 
-Awkの連想配列 (associative array)は、Pythonの辞書、Perlのハッシュのように振る舞う。
+Awkの連想配列（*associative array*）は、Pythonの辞書、Perlのハッシュのように振る舞う。
 
-
-Table 7-3. Awkの組み込み関数
 
 - [The GNU Awk User's Guide - 組み込み関数](The GNU Awk User's Guide - 組み込み関数)
+Table 7-3. Awkの組み込み関数
+
+
+
+
+
 
 Unixコマンド（`grep, cut, sort, uniq -c`）を用いて、特定の遺伝子の特徴をカウントする:
 
@@ -1258,6 +1321,7 @@ FASTQ/FASTAエントリ数をカウント:
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch08.html#chapter-08)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r)
 
+参考:  
 - [RjpWiki - RjpWiki](http://www.okada.jp.org/RWiki/)
 - [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
 - [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
