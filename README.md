@@ -173,7 +173,7 @@ Excelでセルの値を変更して保存するのはダメ。プログラムが
 #### Spend Time Developing Frequently Used Scripts into Tools
 
 #### Let Data Prove That It’s High Quality
-[探索的データ解析 (Exploratory Data Analysis; EDA)](http://www.msi.co.jp/splus/products/eda.html)を通してデータの質を証明する。Chapter 8でRを用いてEDAを学ぶ。
+[探索的データ解析 (Exploratory Data Analysis; EDA)](http://www.msi.co.jp/splus/products/eda.html)を通してデータの質を証明する。Chapter 8でR言語を用いてEDAを学ぶ。
 
 ### Recommendations for Reproducible Research
 再現可能な研究のススメ  
@@ -842,25 +842,19 @@ Scott ChaconとBen Straubの[Pro Git book](http://git-scm.com/book/en/v2)
 `wget`と`curl`は、データをウェブからダウンロードするコマンドラインのプログラム。パッケージ管理システム（Homebrewや`apt-get`）でインストールできる。
 
 ##### wget
-- [Linuxコマンド集 - 【 wget 】 ファイルをダウンロードする：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060228/230995/)
-- [ダウンロードコマンドwgetのオプション一覧(linux)](http://blog.layer8.sh/ja/2012/03/31/wget_command/)
-- [wget - UNIX/Linuxコマンド - IT専科](http://www.itsenka.com/contents/development/unix-linux/wget.html)
-
 [`wget`](https://ja.wikipedia.org/wiki/GNU_Wget)を用いて、GRCh37（hg19）ヒト22番染色体をダウンロードする:  
 
 
 HTTP or FTP の認証は `wget`の`--user=`と`--ask-password`オプションを用いる。
 
-`--recursive`（`-r`）オプションで再帰的にデータをダウンロードする。`--level`（`-l`）オプションでリンクの深さを指定する。
 
-
-`--no-parent`で指定したURLより上の階層（親ディレクトリ）を取得対象にしない。
-`--accept "*.gtf"`でダウンロードする拡張子やパターンを指定する。
-
-`--limit-rate`オプションでダウンロード速度を制限できる。  
 `man wget`でオプション一覧を見る。  
 
 Table 6-1. wgetのオプション
+
+
+- [ダウンロードコマンドwgetのオプション一覧(linux)](http://blog.layer8.sh/ja/2012/03/31/wget_command/)
+- [wget - UNIX/Linuxコマンド - IT専科](http://www.itsenka.com/contents/development/unix-linux/wget.html)
 
 ##### Curl
 - [Linuxコマンド集 - 【curl】ファイルのダウンロードやアップロードを行う：ITpro](http://itpro.nikkeibp.co.jp/atcl/column/14/230520/080400003/)
@@ -913,8 +907,6 @@ SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プ�
 ファイルの差分を出力する:  
 
 
-- [アメリエフのブログ | BEDフォーマット完全解説](http://blog.amelieff.jp/?eid=195350)
-
 ### Compressing Data and Working with Compressed Data
 データの圧縮
 
@@ -944,7 +936,7 @@ SHA-1チェックサム。`shasum`（一部のシステムでは`sha1sum`）プ�
 
 ### Case Study: Reproducibly Downloading Data
 
-[Ensemblのウェブサイト](http://www.ensembl.org)の [Mouse](http://www.ensembl.org/Mus_musculus/Info/Index) の [Download DNA sequence] をクリックしてFTPサイトを開く。
+[Ensemblのウェブサイト](http://www.ensembl.org)の [Mouse](http://www.ensembl.org/Mus_musculus/Info/Index) の "Download DNA sequence (FASTA)" <ftp://ftp.ensembl.org/pub/release-82/fasta/mus_musculus/dna/> を開く。
 [Genome Reference Consortium](http://www.ncbi.nlm.nih.gov/projects/genome/assembly/grc/) 
 GRCm38マウス参照ゲノムを`wget`でダウンロードする:  
 
@@ -984,22 +976,20 @@ Markdownノート（README.md）の例:
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-07-unix-data-tools)
 
 ### Unix Data Tools and the Unix One-Liner Approach: Lessons from Programming Pearls
-connecting tools together— creating programs from *Unix pipelines*. By connecting data tools together with pipes, we can construct programs that parse, manipulate, and summarize data. Unix pipe‐ lines can be developed in shell scripts or as “one-liners”
+Unixコマンドをパイプで繋ぐことにより、データをパースし操作し集計する1行プログラム（ワンライナー）を構築する。
 
 ### When to Use the Unix Pipeline Approach and How to Use It Safely
 ### Inspecting and Manipulating Text Data with Unix Tools
 タブ区切り  
 > ###### Tabular Plain-Text Data Formats
 
-本章では、BED（3列）とGTFフォーマットのファイルを用いる。
-
-- GTF (General Transfer Format)
-  - [GFF/GTF File Format](http://www.ensembl.org/info/website/upload/gff.html)
-  - [GTFファイル | GTFフォーマットは遺伝子のアノンテーション情報が記載され,awkを利用して内容抽出](http://bi.biopapyrus.net/transcriptome/gtf.html)
-  - [NGS Surfer's Wiki | GTFファイルの細かな違い](http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=GTFファイルの細かな違い)
+本章では、3列の[BED](http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=BED)形式と[GTF](http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=GTF)形式のファイルを用いる。
 
 #### Inspecting Data with Head and Tail
-ファイルの最初と最後を見る  
+[`head`](http://codezine.jp/unixdic/w/head)でファイルの先頭部分を表示する:  
+
+
+[`tail`](http://codezine.jp/unixdic/w/tail)でファイルの末尾部分を表示する:  
 
 
 `tail`でファイルのヘッダを削除する:  
@@ -1091,6 +1081,7 @@ Figure 7-2
 
 
 
+`grep --color=auto`オプションでマッチング部分を色付けする。
 
 > ###### GNU, BSD, and the Flavors of Grep  
 GNU coreutilsをMac OS Xにインストール:  
@@ -1170,7 +1161,7 @@ Example 7-1. ユニークな（重複のない）ソートされた遺伝子名�
 [`uniq`](https://ja.wikipedia.org/wiki/Uniq)は、連続する重複行を削除して出力する:  
 
 
-`-i`オプションで、大文字と小文字を区別しない。  
+`-i`オプションで、大文字と小文字の区別をつけない。  
 `-c`オプションで、重複行の数も表示:  
 
 
@@ -1213,8 +1204,8 @@ Awkは、入力データをレコード（行）に分割し、各レコード�
 Awkは算術演算子（`+, -, *, /, %, ^`）をサポートしている。フィーチャーの長さ（終了位置 - 開始位置）が18を超える行だけを出力:  
 
 
-- [AWK で使われる演算子](http://aoki2.si.gunma-u.ac.jp/Hanasi/Algo/letsawk/WhatIsOperator.html)
 Table 7-2. Awkの比較・論理演算子
+- [AWK で使われる演算子](http://aoki2.si.gunma-u.ac.jp/Hanasi/Algo/letsawk/WhatIsOperator.html)
 
 論理演算子 `&&` (AND), `||` (OR), `!` (NOT) でパターンを繋ぐ。1番染色体上で長さ>10の行を出力:  
 
@@ -1239,35 +1230,29 @@ GTFファイル（*Mus_musculus.GRCm38.75_chr1.gtf*）をBEDファイル（3列�
 Awkの連想配列（*associative array*）は、Pythonの辞書、Perlのハッシュのように振る舞う。
 
 
-- [The GNU Awk User's Guide - 組み込み関数](The GNU Awk User's Guide - 組み込み関数)
 Table 7-3. Awkの組み込み関数
+- [The GNU Awk User's Guide - 組み込み関数](The GNU Awk User's Guide - 組み込み関数)
 
+Unixコマンド（`grep, cut, sort, uniq -c`）を用いて、特定の遺伝子の特徴をカウントする:  
 
-
-
-
-
-Unixコマンド（`grep, cut, sort, uniq -c`）を用いて、特定の遺伝子の特徴をカウントする:
 
 - [共通テーマ: 実例でわかる awk: 第 1 回](http://www.ibm.com/developerworks/jp/linux/library/l-awk1/)
 - [第17回ａｗｋの連想配列](http://homepage2.nifty.com/mozu/koza/awk_koza/awk_koza_17.html)
 
 #### Bioawk: An Awk for Biological Formats
 
-Mac OS Xの Homebrew でインストール:
+Mac OS X の Homebrew でインストール:
 
 
 
 
-FASTQをFASTAファイルに変換:
+FASTQをFASTAファイルに変換:  
 
 
-FASTQ/FASTAエントリ数をカウント:
+FASTQ/FASTAエントリ数をカウント:  
 
 
-相補鎖:
-
-
+配列の相補鎖を求める:  
 
 
 オプション`-c hdr`
@@ -1277,39 +1262,45 @@ FASTQ/FASTAエントリ数をカウント:
 
 > ###### GNU Sed versus BSD Sed  
 
-簡単な例:
+*chroms.txt*ファイルの染色体名を変換（"chrom1" → "chr1"）:  
 
 
-例えば、"chr1:28427874-28425431" (染色体名:開始位置-終了位置) を3列で出力:
+`sed`の文字列置換の構文: `s/pattern/replacement/`  
+`g`フラグで全ての文字列を置換する: `s/pattern/replacement/g`  
+`i`フラグで大文字と小文字の区別をつけない: `s/pattern/ replacement/i`  
+
+"chr1:28427874-28425431" (染色体名:開始位置-終了位置) を3列で出力:  
 
 
 
-`head -n 10`と同様、ファイルの最初の10行を出力する:  
+（`head -n 10`と同様）ファイルの先頭10行を出力:  
 
 
-20〜50行まで出力する:  
+20〜50行まで出力:  
 
 
 ### Advanced Shell Tricks
 #### Subshells
 - [UNIXの部屋 コマンド検索:サブシェル (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?%A5%B5%A5%D6%A5%B7%A5%A7%A5%EB)
 
-例:  
+サブシェルの例:  
 
 
-メタデータのヘッダがあるGTFファイルをソートする:
+メタデータのヘッダがあるGTFファイルをソートする:  
 
 
-ストリームを（`gzip`で圧縮してから）ファイルにリダイレクトする:
+ストリームを（`gzip`で圧縮してから）ファイルにリダイレクトする:  
 
 
 #### Named Pipes and Process Substitution
-*named pipes* [名前付きパイプ](https://ja.wikipedia.org/wiki/名前付きパイプ)
+[名前付きパイプ](https://ja.wikipedia.org/wiki/名前付きパイプ)を`mkfifo`コマンドで作成:  
 
 
 
-*process substitution* プロセス置換
+プロセス置換
 
+
+Figure 7-3. プロセス置換
 
 ### The Unix Philosophy Revisited
 
