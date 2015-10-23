@@ -1331,6 +1331,9 @@ Figure 7-3. プロセス置換
 ### R Language Basics
 #### Simple Calculations in R, Calling Functions, and Getting Help in R
 
+
+
+
 Table 8-1. 数学関数
 
 - [03. 簡単な計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/03.html)
@@ -1347,31 +1350,47 @@ Table 8-1. 数学関数
 #### Variables and Assignment
 変数の代入  
 
+
 > ###### RStudio Assignment Operator Shortcut
 
 
 #### Vectors, Vectorization, and Indexing
 ベクトル  
 
-- [13. ベクトル要素へのアクセス | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)
+
+*recycle*
+
+
+
+Rの演算子（`+`、`*`）や数学関数（例 `sqrt()`、`round()、`log()`）はベクトルに対応:  
+
+
+*indexing*
+
+
+要素ラベル
+
+
+
 
 
 
 > ###### Out-of-Range Indexing  
-> `z[c(2, 1, 10)]`  
-
-z[負整数ベクトル]は、対応する要素番号の要素を取り除く。
 
 
+z[負整数ベクトル]は、対応する要素番号の要素を取り除く:  
 
 
 
+> ###### Negative Indexes and the Colon Operator
 
 
-比較演算子（Table 8-2 例. ==, !=, <, <=, >, >=）を用いて、TRUEとFALSEの論理ベクトルを作成する。例:  
 
 
-- [13. ベクトル要素へのアクセス | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)
+
+
+比較演算子（Table 8-2 例 `==, !=, <, <=, >, >=`）を用いて、論理ベクトル（`TRUE`と`FALSE`）を作成する:  
+
 
 x[論理値ベクトル]は、TRUEの要素に対応した要素を取り出す（Example 8-1）:  
 
@@ -1379,6 +1398,7 @@ x[論理値ベクトル]は、TRUEの要素に対応した要素を取り出す�
 Table 8-2. Rの比較演算子と論理演算子  
 
 - [28. 演算子 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/28.html)
+- [13. ベクトル要素へのアクセス | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)
 
 ##### Vector types
 - [09. データの型 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/09.html)
@@ -2073,9 +2093,10 @@ SAMファイルのアラインメント部分は11フィールド以上から成
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch12.html#chapter-12)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-12-pipelines)
 
+### Basic Bash Scripting
+
 - [シェルスクリプト入門 (全18回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_shellscript)
 
-### Basic Bash Scripting
 #### Writing and Running Robust Bash Scripts
 ##### A robust Bash header
 
