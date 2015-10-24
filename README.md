@@ -80,8 +80,8 @@ III. Practice: Bioinformatics Data Skills
 ### Assumptions This Book Makes
 前提知識は以下の通り。  
 
-- スクリプト言語（例. [R言語](https://ja.wikipedia.org/wiki/R言語)、[Python](https://ja.wikipedia.org/wiki/Python)、[Perl](https://ja.wikipedia.org/wiki/Perl)、[Ruby](https://ja.wikipedia.org/wiki/Ruby)）
-- テキストエディタ（例. [Emacs](https://ja.wikipedia.org/wiki/Emacs)、[Vim](https://ja.wikipedia.org/wiki/Vim)、[Atom](https://atom.io) ）
+- スクリプト言語（例 [R言語](https://ja.wikipedia.org/wiki/R言語)、[Python](https://ja.wikipedia.org/wiki/Python)、[Perl](https://ja.wikipedia.org/wiki/Perl)、[Ruby](https://ja.wikipedia.org/wiki/Ruby)）
+- テキストエディタ（例 [Emacs](https://ja.wikipedia.org/wiki/Emacs)、[Vim](https://ja.wikipedia.org/wiki/Vim)、）
 - 基本的なUnixコマンドライン技術。ディレクトリ・ファイル操作（[`cd, ls, pwd, mv, rm, rmdir, mkdir`](http://dogandrun.hatenablog.jp/entry/2013/11/30/181606)）。ファイルの所有権とアクセス権の変更（`chown, chmod`）
 - 生物学の基礎（DNA、RNA、タンパク質、遺伝子、[セントラルドグマ](https://ja.wikipedia.org/wiki/セントラルドグマ)）  
 - [正規表現](https://ja.wikipedia.org/wiki/正規表現)  
@@ -227,9 +227,9 @@ Excelでセルの値を変更して保存するのはダメ。プログラムが
 ファイル（ディレクトリ）名には、
 [スペース](https://ja.wikipedia.org/wiki/スペース)（空白）を使わない、
 英数字かアンダースコアかダッシュ（ A-z a-z 0-9 _ - ）を使う。
-拡張子を付ける。（例. *human_genes_2015-07-07.fasta*）  
+拡張子を付ける。（例 *osativa-genes.fasta*）  
 
-プロジェクト内のプログラムが、他のファイルを参照する場合には、絶対パス（例. `/home/vinceb/projects/zmays-snps/data/stats/qual.txt`）ではなく、相対パス（例. `../data/stats/qual.txt`）を使う。
+プロジェクト内のプログラムが、他のファイルを参照する場合には、絶対パス（例 `/home/vinceb/projects/zmays-snps/data/stats/qual.txt`）ではなく、相対パス（例 `../data/stats/qual.txt`）を使う。
 
 - [絶対パスと相対パス](http://codezine.jp/unixdic/w/絶対パスと相対パス)
 - [#05 ディレクトリを移動する (2) | UNIXコマンド入門 (一般ユーザー編) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_unix/5405)
@@ -242,8 +242,8 @@ Excelでセルの値を変更して保存するのはダメ。プログラムが
 - 方法とワークフロー。全コマンドラインをコピー＆ペースト。デフォルト値も
 - データの入手元（ウェブサイトのURL等）
 - データをダウンロードした日付
-- データのバーション（例. [TAIR10](https://www.arabidopsis.org/download_files/Genes/TAIR10_genome_release/README_TAIR10.txt)、[WS231](https://www.wormbase.org/about/wormbase_release_WS231)）
-- データのダウンロード方法（例. [MySQL](https://ja.wikipedia.org/wiki/MySQL)、[UCSC Genome Browser](https://genome.ucsc.edu)）
+- データのバーション（例 [TAIR10](https://www.arabidopsis.org/download_files/Genes/TAIR10_genome_release/README_TAIR10.txt)、[WS231](https://www.wormbase.org/about/wormbase_release_WS231)）
+- データのダウンロード方法（例 [MySQL](https://ja.wikipedia.org/wiki/MySQL)、[UCSC Genome Browser](https://genome.ucsc.edu)）
 - ソフトウェアのバーション（なければ、日付やURL）
 
 以上の情報を[プレーンテキスト](https://ja.wikipedia.org/wiki/プレーンテキスト)形式の[README](https://ja.wikipedia.org/wiki/リードミー)ファイルに記録する。プレーンテキストはコマンドラインから簡単に読込・検索・編集できる。  
@@ -281,7 +281,7 @@ Brace expansion ブレース展開の例:
 文字列`[AB]`や文字の範囲`[A-B]`にマッチするワイルドカードを用いて、サンプルCを排除する:  
 
 
-ワイルドカードは存在するファイルを展開するのに対して、brace expansion（例. `snps_{10..13}.txt`）はファイルやディレクトリが存在するか否かに関係なく展開する。
+ワイルドカードは存在するファイルを展開するのに対して、brace expansion（例 `snps_{10..13}.txt`）はファイルやディレクトリが存在するか否かに関係なく展開する。
 
 
 
@@ -289,7 +289,7 @@ Table 2-1. Unixのワイルドカード
 
 
 > ###### Leading Zeros and Sorting  
-ファイル名の先頭に0を付ける（例. *file-21.txt*ではなく*file-0021.txt*にする）と、`ls`で辞書順にファイルがソートされる。  
+ファイル名の先頭に0を付ける（例 *file-21.txt*ではなく*file-0021.txt*にする）と、`ls`で辞書順にファイルがソートされる。  
 `touch gene-{1..14}.txt`  
 `printf "gene-%03d.txt " {1..14} | xargs touch`  
 
@@ -407,7 +407,7 @@ Figure 3-1.
 `tail -f`でリダイレクトされた標準エラー出力を監視する。Control-Cで動作中のプロセスを停止。  
 
 #### Using Standard Input Redirection
-標準入力リダイレクト演算子`<`よりも、Unixパイプ（例. `cat inputfile | program > outputfile`）を使う方が一般的。
+標準入力リダイレクト演算子`<`よりも、Unixパイプ（例 `cat inputfile | program > outputfile`）を使う方が一般的。
 
 
 ### The Almighty Unix Pipe: Speed and Beauty in One
@@ -418,7 +418,7 @@ Figure 3-2.
 
 
 ハイライトされたYはpYrimidine塩基[CT]を示す（[Nucleic acid notation](https://en.wikipedia.org/wiki/Nucleic_acid_notation)）。
-正規表現はクオーテーションで囲む（例. `">"`）。`grep -v > tb1.fasta`とした場合、シェルは`>`をリダイレクト演算子と解釈し、ファイルを上書きしてしまう！
+正規表現はクオーテーションで囲む（例 `">"`）。`grep -v > tb1.fasta`とした場合、シェルは`>`をリダイレクト演算子と解釈し、ファイルを上書きしてしまう！
 
 - [#14 grepを使ってみよう | UNIXコマンド入門 (一般ユーザー編) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_unix/5414)
 
@@ -696,7 +696,7 @@ Figure 5-1.
 バイオインフォマティクス・プロジェクトで無視させたいファイルの例:  
 - 巨大なファイル
 - 中間ファイル（SAMやBAMファイル）
-- テキストエディタ（EmacsやVim）の一時ファイル（例. *textfile.txt~* や *#textfile.txt#*）。*.gitignore* ではワイルドカード（`*~`や`\#*\#`）が使える。
+- テキストエディタ（EmacsやVim）の一時ファイル（例 *textfile.txt~* や *#textfile.txt#*）。*.gitignore* ではワイルドカード（`*~`や`\#*\#`）が使える。
 - 一時コードファイル（Pythonの*overlap.pyc*）
 
 Mac OS Xで作成される隠しファイル *.DS_Store*
@@ -1458,15 +1458,12 @@ Table 8-4. read.csv() と read.delim() の引数
 - [5. データの読み込み - 統計ソフトRの使い方](https://sites.google.com/site/webtextofr/data)
 
 > ###### GETTING DATA INTO SHAPE  
-> Table 8-5. 組織毎の遺伝子発現の計数表（wideフォーマット）
-> Table 8-6. 組織毎の遺伝子発現の計数表（longフォーマット）
-
-`reshape2`パッケージはデータを変換する関数を提供する。`melt()`はwideデータをlongデータに変換し、`cast()`はlongデータをwideデータに変換する。  
-
+> Table 8-5. 組織毎の遺伝子発現の計数表（wide形式）  
+> Table 8-6. 組織毎の遺伝子発現の計数表（long形式）  
+> `reshape2`パッケージはデータを変換する関数を提供する。`melt()`はwideデータをlongデータに変換し、`cast()`はlongデータをwideデータに変換する。  
 
 #### Exploring and Transforming Dataframes
-- [21. 行列の操作 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/21.html) | 関数 dim() ，nrow() ，ncol()
-- [39. データフレーム事始 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/39.html)
+データフレーム
 
 
 
@@ -1584,7 +1581,6 @@ Figure 8-9. GC含量でグループ分けされたシークエンシング深度
 
 
 > ###### Finding the Right Bin Width  
-> `ggplot(d) + geom_bar(aes(x=Pi), binwidth=1) + scale_x_continuous(limits=c(0.01, 80))`  
 > binwidthの値を 0.05, 0.5, 1, 5, 10 に変化させる。
 
 #### Merging and Combining Data: Matching Vectors and Merging Dataframes
@@ -1604,14 +1600,13 @@ Rの[`%in%`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/match.html)
 上位5つの最も多いリピートのクラスを計算する:  
 
 
-- [文字列 | Rを利用して文字列のマッチング,結合,分割,置換を行う関数](http://stat.biopapyrus.net/r/string.html)
+[`%in%`]演算子は別の関数`match()`の簡易版
 
 
 第1のデータセット（[motif_recombrates.txt](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-08-r/motif_recombrates.txt)）は、各モチーフの40kb内の全ウィンドウについて、組換え確率（recombination rate）推定値を含む。第2のデータセット（[motif_repeats.txt](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-08-r/motif_repeats.txt)）は、各モチーフが出現するリピートを含む。2つのデータセットをマージして、特定のリピートに及ぼす各モチーフの組換えの局所的な効果を見る。
 
 > ###### Creating These Example Datasets  
-
-> 本データを発生させたコードは[*motif-example/*](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r/motif-example)ディレクトリを参照されたい。
+> データ生成コードは[*motif-example/*](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r/motif-example)
 
 
 `rpts`データフレームの列名を`mtfs`にマージする。2つの列（`chr`と`motif_start`）を1つの文字列にマージするために、`paste()`関数を用いる:  
@@ -1629,7 +1624,7 @@ Rの[`%in%`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/match.html)
 
 
 
-- [43. データの結合（マージ）と整列（ソート） | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/43.html)
+`merge()`でデータを結合（マージ）する:  
 
 
 
@@ -1643,23 +1638,18 @@ Figure 8-10. 配列モチーフとの距離と組換え確率
 `ggplot2`の`facet_wrap()`を用いて、これらのモチーフを分割する（Figure 8-11）:  
 
 
-- [ggplotのfacet_grid(), facet_wrap()の使い方 | Memo on the Web](http://motw.mods.jp/R/ggplot_facet.html)
-- [ggplot2で複数グラフ表示 - 盆栽日記](http://d.hatena.ne.jp/dichika/20110116/1295183973)
-- [facet_wrap - 浅井拓也　研究室用ページ](http://qh73xe.jimdo.com/プロット/パッケージggplot/facet-wrap/)
+Figure 8-11. 
+
+`ggplot2`の`facet_wrap()`と`facet_grid()`
 
 
-Figure 8-12は
+Figure 8-12
 
-
-Figure 8-12.
 
 `facet_grid()`と`facet_wrap()`の何れも引数`scales`を指定できる。例えば（Figure 8-13）:  
 
 
 #### More R Data Structures: Lists
-- [23. リスト | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/23.html)
-- [リスト | Rのリストはハッシュやマップのように利用できる](http://stat.biopapyrus.net/vector/list.html)
-- [リストにオブジェクトをしまう](http://takenaka-akio.org/doc/r_auto/list.html)
 
 データフレームはリスト; `is.list(mtfs)`
 
@@ -1676,9 +1666,6 @@ Figure 8-12.
 > ###### Peeking into R’s Structures with str()  
 
 #### Writing and Applying Functions to Lists with lapply() and sapply()
-- [24. apply() ファミリー | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/24.html)
-- [applyファミリー | apply,sapply,lapplyの使い方とその例](http://stat.biopapyrus.net/r/apply.html)
-- [apply系関数の使い方](http://takenaka-akio.org/doc/r_auto/chapter_07_apply.html)
 
 ##### Using lapply()
 
@@ -1707,14 +1694,9 @@ Figure 8-12.
 > ###### Function Scope  
 > [スコープ](https://ja.wikipedia.org/wiki/スコープ)  
 
-- [32. ローカル変数と永続代入<<- | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/32.html)
-- [変数スコープ | R,レキシカルスコープ](http://stat.biopapyrus.net/dev/scope.html)
 
 ##### Digression: Debugging R Code
-
-- [デバッグ | Rのbrowser,debug,traceback関数の使い方](http://stat.biopapyrus.net/dev/debug.html)
-- [35. デバッグについて | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/35.html)
-
+デバッグ  
 関数`browser()`
 
 
@@ -1730,36 +1712,24 @@ Figure 8-12.
 ##### More list apply functions: sapply() and mapply()
 
 
-- [14. ベクトル計算 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/14.html)
-
 
 > ###### Other Apply Functions for Other R Data Structures   
 配列と行列　`apply()`と`sweep()`
-- [オブジェクト型 | Rのリスト、データフレーム、行列、配列など](http://stat.biopapyrus.net/r/objecttype.html)
-- [R言語プログラミング： データ型・操作 - hamadakoichi blog](http://d.hatena.ne.jp/hamadakoichi/20100118/1263832446)
-- [19. 行列の作成 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/19.html)
-- [20. 行列計算 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/20.html)
-- [21. 行列の操作 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/21.html)
-- [22. 配列 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/22.html)
-- [25. データ型とデータ構造 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/25.html)
 
 #### Working with the Split-Apply-Combine Pattern
-Hadley Wickhamの論文["The Split-Apply-Combine Strategy for Data Analysis"](http://www.jstatsoft.org/v40/i01/paper)  
+データをグループ化し、グループ毎に関数を適用し、結果を組み合わせる（["The Split-Apply-Combine Strategy for Data Analysis"](http://www.jstatsoft.org/v40/i01/paper)）。最初にRの標準関数を用いて、次に`dplyr`パッケージを用いる。
 
-Example 8-4 と Figure 8-9  
-
-- [R.4.05. データフレーム型 | R Financial & Marketing Library](http://itbc-world.com/home/rfm/rの機能/データフレーム型/)
+split-apply-combineの簡単な例：GC含量でグループ化した3群の平均深度（Example 8-4, Figure 8-9）
 
 
 
 
 
 
-
-- [リストTips大全 - RjpWiki](http://www.okada.jp.org/RWiki/?リストTips大全) | do.call
-- [do.callは気持ち悪いのでReduceを積極的に使いたい - My Life as a Mock Quant](http://d.hatena.ne.jp/teramonagi/20110214/1297688917)
 
 > ###### Understanding do.call()  
+
+関数`tapply()`と`aggregate()`でグループ毎に要約する:  
 
 
 #### Exploring Dataframes with dplyr
