@@ -2063,59 +2063,78 @@ SAMファイルのアラインメント部分は11フィールド以上から成
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch12.html#chapter-12)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-12-pipelines)
 
+頑強で再現可能なパイプラインを構築する
+
 ### Basic Bash Scripting
-
 - [シェルスクリプト入門 (全18回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_shellscript)
-
 #### Writing and Running Robust Bash Scripts
 ##### A robust Bash header
+頑強なBashスクリプトのヘッダ（[*template.sh*](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-12-pipelines/template.sh)）:  
+
+
+- 1行目：[*shebang*](https://ja.wikipedia.org/wiki/シバン_%28Unix%29)は、スクリプトを実行するインタプリタを指定する。 
+- 2行目：`set -e`は、異常終了時（非ゼロ[終了ステータス](https://ja.wikipedia.org/wiki/終了ステータス)）スクリプトを終了させる。
+- 3行目：`set -u`は、変数の値が設定されていない場合にスクリプトを終了させる。`echo "rm $NOTSET/blah"`
+- 4行目：`set -o pipefail`は、パイプで繋いだコマンドの何れかが非ゼロ終了ステータスを返したら、スクリプトを終了させる。
+
+短縮して`set -euo pipefail`と書ける。
 
 - [シェルスクリプトマナー - きつねたぬきだし](http://kitsunetanukidashi.hatenablog.com/entry/2014/07/12/231833)
 - [Linux - bashの*スクリプトにセットする推奨オプション](http://qiita.com/kiida/items/3beb1bf718cdc2f0798a)
 
-[template.sh](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-12-pipelines/template.sh)ファイルに書かれたBashスクリプトのヘッダは、短縮して`set -euo pipefail`と書ける。
-
-
-- 1行目：[*shebang*](https://ja.wikipedia.org/wiki/シバン_(Unix))
-- 2行目：`set -e`は、nonzero exit status 異常終了時（非ゼロ終了ステータス）スクリプトを終了させる。
-- 3行目：`set -u`は、変数の値が設定されていない場合にスクリプトを終了させる。
-
-
-- 4行目：`set -o pipefail`
-
 ##### Running Bash scripts
-
-`bash script.sh` または `./script.sh`
+Bashスクリプトを実行する方法:  
+`bash`プログラムを用いる（例 `bash script.sh`）、または
+プログラムとしてスクリプトを実行する（`./script.sh`）。その前に、[`chmod`](https://ja.wikipedia.org/wiki/Chmod)コマンドでファイルの所有者（`u`）に実行権限（`+x`）を追加する。
 
 
 #### Variables and Command Arguments
+変数に値を割り当てる（`=`の前後にスペースを使用しない）:  
+	results_dir="results/"
 
-{}(大括弧)、""(ダブルクォーテーション)で変数名を囲む。
+変数の値にアクセスするためには、変数名の前にドル記号を付ける（例 `$results_dir`）:  
+
+
+大括弧`{}`で変数名を囲む:  
+
+
+ダブルクォーテーション`""`で変数を囲む:  
 
 
 ##### Command-line arguments コマンドライン引数
 
-変数`$0`はスクリプトの名前を格納する。
+変数`$0`はスクリプト名を格納する。
+
+
+
+このファイルを実行すると、指定された引数（`$0, $1, $2, $3`）を出力する:  
+
+
+変数`$#`にはコマンドライン引数の個数を割り当てる（スクリプト名の$0は引数としてカウントしない）:  
 
 
 
 
-変数`$#`にはコマンドライン引数の個数を割り当てる（スクリプト名の$0は引数としてカウントしない）。
-
-
-
+3未満の引数を指定して、このスクリプトを実行するとエラーになる（非ゼロ終了ステータス）:  
 
 
 Pythonの`argparse`モジュールは、Unixツール`getopt`よりも簡単に使える。
 
-> ###### Reproducibility and Environmental Variables  
+> ###### Reproducibility and Environmental Variables   
+> `export`コマンドで環境変数  
+
+例えば、`some_var=3`で変数を作成するスクリプトを実行しても、現在のシェルに`some_var`は作成されない。
 
 #### Conditionals in a Bash Script: if Statements
-bashの条件文: if文
+bashの条件文：if文
 
-Bashでは、コマンドの終了ステータスが0は真/成功を表し、それ以外は偽/失敗である。 `if`文の基本構文:  
+Bashでは、コマンドの[終了ステータス](https://ja.wikipedia.org/wiki/終了ステータス)が 真/成功 true/success (0) と 偽/失敗 false/failure (1) を与える。
+`if`文の基本構文:  
 
 
+例えば、特定の文字列がファイルに含まれる（`grep`で"pattern"に一致する）場合にのみコマンドを実行する:  
+
+	if grep "pattern" some_file.txt > /dev/null
 `if`文で`&&`（論理積AND）や`||`（論理和OR）演算子を用いる:  
 
 
@@ -2124,7 +2143,7 @@ Bashでは、コマンドの終了ステータスが0は真/成功を表し、�
 
 
 
-`test`コマンドの実行例（`echo "$?"`で終了ステータスを出力）
+`test`コマンドの実行例（`echo "$?"`で終了ステータスを出力）:  
 
 
 Table 12-1. 文字列と整数の比較演算子
@@ -2134,23 +2153,17 @@ Table 12-2. ファイルとディレクトリのテスト式
 
 - [Linuxコマンド集 - 【 test 】 条件式の真偽を判定する：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230901/)
 
-`if test -f some_file.txt`を`if [ -f some_file.txt ] `で代用できる。`[]`前後に半角スペースが必要。  
-この構文では、`-a`（論理積AND）、`-o`（論理和OR）、`!`（否定）を使える。`test`では`&&`と`||`演算子は使えない。
-
+`if test -f some_file.txt`を`if [ -f some_file.txt ] `で代用できる。角括弧`[ ]`の前後に半角スペースが必要。  
+この構文では、`-a`（論理積AND）、`-o`（論理和OR）、`!`（否定）を使える。`&&`と`||`演算子は`test`では使えない。
 例として、スクリプトが十分な引数を持ち、入力ファイルが読み込み可能であることを確認する:  
 
 
 
-[短絡評価](https://ja.wikipedia.org/wiki/短絡評価)（short-circuit evaluation）　演算子の第一引数を評価した段階で式全体の値が定まらない場合のみ第二引数を評価する方式を意味する。例えば、ANDの第一引数を評価した結果が false であれば、式全体は必ず false になるし、ORの第一引数が true であれば、式全体は必ず true になるので、第二引数を評価するまでもない。
+[短絡評価](https://ja.wikipedia.org/wiki/短絡評価)（short-circuit evaluation）
 
-- [if 文と test コマンド - UNIX & Linux コマンド・シェルスクリプト リファレンス](http://shellscript.sunone.me/if_and_test.html)
-- [シェルスクリプト入門 [演算・比較]](http://www.k4.dion.ne.jp/~mms/unix/shellscript/shell_calc.html)
-- [条件式](http://itdoc.hitachi.co.jp/manuals/3020/30203S3530/JPAS0134.HTM)
 
 #### Processing Files with Bash Using for Loops and Globbing
 for文とglobでファイル処理
-
-- [bash 配列まとめ - Qiita](http://qiita.com/b4b4r07/items/e56a8e3471fb45df2f59)
 
 
 bash 配列、要素、添字
