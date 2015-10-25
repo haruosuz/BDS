@@ -995,6 +995,7 @@ Unixコマンドをパイプで繋ぐことにより、データをパースし�
 `tail`でファイルのヘッダを削除する:  
 
 
+
 ファイルの始まりと終わりの両方を見る:  
 
 
@@ -2090,7 +2091,7 @@ Bashスクリプトを実行する方法:
 
 #### Variables and Command Arguments
 変数に値を割り当てる（`=`の前後にスペースを使用しない）:  
-	results_dir="results/"
+
 
 変数の値にアクセスするためには、変数名の前にドル記号を付ける（例 `$results_dir`）:  
 
@@ -2134,7 +2135,9 @@ Bashでは、コマンドの[終了ステータス](https://ja.wikipedia.org/wik
 
 例えば、特定の文字列がファイルに含まれる（`grep`で"pattern"に一致する）場合にのみコマンドを実行する:  
 
-	if grep "pattern" some_file.txt > /dev/null
+
+
+
 `if`文で`&&`（論理積AND）や`||`（論理和OR）演算子を用いる:  
 
 
