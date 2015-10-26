@@ -1031,7 +1031,7 @@ Table 7-1. lessの操作方法
 Figure 7-1
 
 #### Plain-Text Data Summary Information with wc, ls, and awk
-[wc](https://ja.wikipedia.org/wiki/Wc_%28UNIX%29)（word count）で行数、単語数、文字数を表示:  
+[`wc`](https://ja.wikipedia.org/wiki/Wc_%28UNIX%29)（word count）で行数、単語数、文字数を表示:  
 
 
 `ls -l`でファイルのサイズを確認:  
@@ -1122,7 +1122,7 @@ Example 7-1. ユニークな（重複のない）ソートされた遺伝子名�
 - [Linuxコマンド集 - 【hexdump】16進数や8進数で出力する：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20140224/538591/)
 
 #### Sorting Plain-Text Data with Sort
-[Sort](https://ja.wikipedia.org/wiki/Sort_%28UNIX%29)
+[Sort](https://ja.wikipedia.org/wiki/Sort_%28UNIX%29)で行を並べ替える。
 
 
 > ###### Using Different Delimiters with sort  
@@ -2067,12 +2067,13 @@ SAMファイルのアラインメント部分は11フィールド以上から成
 頑強で再現可能なパイプラインを構築する
 
 ### Basic Bash Scripting
+
 - [シェルスクリプト入門 (全18回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_shellscript)
+
 #### Writing and Running Robust Bash Scripts
 ##### A robust Bash header
-頑強なBashスクリプトのヘッダ（[*template.sh*](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-12-pipelines/template.sh)）:  
-
-
+[*template.sh*](https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-12-pipelines/template.sh) 
+頑強なBashスクリプトのヘッダ:  
 - 1行目：[*shebang*](https://ja.wikipedia.org/wiki/シバン_%28Unix%29)は、スクリプトを実行するインタプリタを指定する。 
 - 2行目：`set -e`は、異常終了時（非ゼロ[終了ステータス](https://ja.wikipedia.org/wiki/終了ステータス)）スクリプトを終了させる。
 - 3行目：`set -u`は、変数の値が設定されていない場合にスクリプトを終了させる。`echo "rm $NOTSET/blah"`
@@ -2085,9 +2086,10 @@ SAMファイルのアラインメント部分は11フィールド以上から成
 
 ##### Running Bash scripts
 Bashスクリプトを実行する方法:  
-`bash`プログラムを用いる（例 `bash script.sh`）、または
-プログラムとしてスクリプトを実行する（`./script.sh`）。その前に、[`chmod`](https://ja.wikipedia.org/wiki/Chmod)コマンドでファイルの所有者（`u`）に実行権限（`+x`）を追加する。
-
+1. `bash`プログラムを用いる: `bash script.sh`  
+または  
+2. プログラムとしてスクリプトを実行する: `./script.sh`  
+[`chmod`](https://ja.wikipedia.org/wiki/Chmod)コマンドでファイルの所有者（`u`）に実行権限（`+x`）を追加する: `chmod u+x script.sh`  
 
 #### Variables and Command Arguments
 変数に値を割り当てる（`=`の前後にスペースを使用しない）:  
@@ -2096,22 +2098,21 @@ Bashスクリプトを実行する方法:
 変数の値にアクセスするためには、変数名の前にドル記号を付ける（例 `$results_dir`）:  
 
 
-大括弧`{}`で変数名を囲む:  
+中括弧`{}`で変数名を囲む:  
 
 
 ダブルクォーテーション`""`で変数を囲む:  
 
 
-##### Command-line arguments コマンドライン引数
-
-変数`$0`はスクリプト名を格納する。
+##### Command-line arguments
+コマンドライン引数は、`$1, $2, $3, ...`に割り当てられる。変数`$0`はスクリプト名を格納する。
 
 
 
 このファイルを実行すると、指定された引数（`$0, $1, $2, $3`）を出力する:  
 
 
-変数`$#`にはコマンドライン引数の個数を割り当てる（スクリプト名の$0は引数としてカウントしない）:  
+変数`$#`にはコマンドライン引数の個数を割り当てる（スクリプト名の`$0`は引数としてカウントしない）:  
 
 
 
@@ -2204,53 +2205,56 @@ Unixプログラム`basename`は、ファイル名からパスや拡張子を削
 
 
 #### Finding Files with find
+`ls`とは異なり、`find`は再帰的に検索する。
 
 
+`find`でプロジェクト・ディレクトリの構造を見る:  
 
-Example 12-1. ファイル名のマッチングにより検索
+
+`find`の基本構文は、`find path expression`
+
+Example 12-1. ファイル名の一致で検索
 
 
 #### find’s Expressions
 
-`-type`オプション:
+（名前が一致するディレクトリではなく）FASTQファイルのみを返すようにしたいので、`-type`オプションで結果を制限する（`f`はファイル、`d`ディレクトリ、`l`はリンク）:  
 
 
-`f` for files, `d` for directories, and `l` for links.
+[findコマンドの論理演算子](http://blog.kjirou.net/p/503) 
 
+`-and`:  
+
+
+`-or`:  
 
 
 Table 12-3. findの判別式と演算子
 
-- [Linuxコマンド集 - 【 find 】 ファイルやディレクトリを検索する：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230777/)
-
-否定:
+`-not`か`!`で否定:  
 
 
-（我々はzmays/dataディレクトリにいます）:  
-
+`seqs/zmaysB_R1-temp.fastq`ファイルを作成:  
 
 
 #### find’s -exec: Running Commands on find’s Results
 
 
+`find`でマッチしたファイルを`-exec command ;`で処理する。`rm -i`でファイルの削除時に問い合わせを行う。
+
 
 > ###### Deleting Files with find -exec:  
-`-delete`オプション
+`-delete`オプション  
 
 #### xargs: A Unix Powertool
 [xargs](https://ja.wikipedia.org/wiki/Xargs)  
 
 
 
-- [Linuxコマンド集 - 【xargs】標準入力から生成したコマンドラインを実行する：ITpro](http://itpro.nikkeibp.co.jp/article/COLUMN/20140331/547143/)
-- [UNIXの部屋 コマンド検索:xargs (*BSD/Linux)](http://x68000.q-e-d.net/~68user/unix/pickup?xargs)
-- [xargs コマンド | コマンドの使い方(Linux) | hydroculのメモ](https://hydrocul.github.io/wiki/commands/xargs.html) 一度にコマンドに渡す引数の最大数を制御するには [2014/01/05] {option-n}
+> ###### Playing It Safe with find and xargs
+> ファイル名には、英数字かアンダースコアかダッシュを使い、スペースや他の特殊文字を使わない。
 
-### Playing It Safe with find and xargs
-
-スペースを含むファイル名
-
-`xargs`の`-n`オプションは、コマンドライン1つにつき使用する引数の個数を指定:  
+`xargs -n`で、コマンドライン1つにつき使用する引数の個数を指定:  
 
 
 `rm`を実行する前に、`find`が返すファイルを確認する:  
@@ -2260,18 +2264,16 @@ Table 12-3. findの判別式と演算子
 
 
 #### Using xargs with Replacement Strings to Apply Commands to Files
-
-あるプログラムは（`program --in file.txt --out-file out.txt`のように）オプションで引数を取る、別のプログラムは（`program arg1 arg2`のように）位置指定引数を取る。`xargs`の`-I{}`オプション
-
+あるプログラムはオプションで引数を取る（例 `program --in file.txt --out-file out.txt`）、別のプログラムは位置指定引数を取る（例 `program arg1 arg2`）。`xargs`の`-I{}`オプション
 
 
-### BSD and GNU xargs
 
-Macの場合、HomebrewでGNU Coreutilsをインストール
+> ###### BSD and GNU xargs
+> Mac OS Xでは、Homebrewを用いて、GNU Coreutilsをインストール
 
 #### xargs and Parallelization
 
-オプション`-P <num>`で、<num>プロセスまで同時に実行する
+`xargs`のオプション`-P <num>`で、<num>プロセスまで同時に実行する
 
 
 > ###### xargs, Pipes, and Redirects  
@@ -2279,7 +2281,7 @@ Macの場合、HomebrewでGNU Coreutilsをインストール
 
 
 
-> 上のスクリプトを実行する:  
+> このスクリプトを実行する:  
 > `find . -name "*.fastq" | xargs -n 1 -P 4 bash script.sh`  
 > ここで、`-n 1`はコマンドライン1つにつき最大1個の引数を使用することを意味し、`-P`オプションで同時に実行するプロセスの個数を指定できる（0ならできるだけ多くのプロセスを同時に実行しようとする）。
 
