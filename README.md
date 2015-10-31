@@ -2,19 +2,19 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)   
-Last Update: 2015-10-28  
+Last Update: 2015-10-31  
 
 ----------
 
 "Bioinformatics Data Skills by Vince Buffalo (O’Reilly). Copyright 2015 Vince Buffalo, 978-1-449-36737-4."  
 ![](http://akamaicovers.oreilly.com/images/0636920030157/cat.gif)
 
- Print & Ebook
+# Print & Ebook
 - [O'Reilly Media](http://shop.oreilly.com/product/0636920030157.do) | [Free Sampler](http://cdn.oreillystatic.com/oreilly/booksamplers/9781449367374_sampler.pdf)（Chapter 1の全文公開）
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/)（[Preface](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/preface01.html#preface)、[Chapter 1](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch01.html#chapter-01)、[Chapter 4](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch04.html#chapter-04) の全文公開）
 - [Amazon.co.jp](http://www.amazon.co.jp/dp/1449367372) | [Amazon.com](http://www.amazon.com/dp/1449367372)
 
- News & Reviews
+# News & Reviews
 - [Bioinformatics Data Skills - Twitter Search](https://twitter.com/search?q=Bioinformatics%20Data%20Skills&src=typd)
 - 2015-09-13 [Twitter competition: win a signed copy of Bioinformatics Data Skills by Vince Buffalo — ACGT](http://www.acgt.me/blog/2015/9/13/twitter-competition-win-a-signed-copy-of-bioinformatics-data-skills-by-vince-buffalo) | [#ACGT hashtag on Twitter](https://twitter.com/hashtag/ACGT?src=hash)
 - 2015-08-04 [101 questions with a bioinformatician #30: Vince Buffalo — ACGT](http://www.acgt.me/blog/2015/8/4/101-questions-with-a-bioinformatician-30-vince-buffalo)
@@ -26,13 +26,13 @@ Last Update: 2015-10-28
 
 ----------
 
- Bioinformatics Data Skills: Reproducible and Robust Research With Open Source Tools
+# Bioinformatics Data Skills: Reproducible and Robust Research With Open Source Tools
 バイオインフォマティクス・データスキル：オープンソースのツールによる再現可能で頑強な研究  
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files)
 
 ----------
 
- Table of Contents
+# Table of Contents
 - [Preface](#preface)
 
 I. Ideology: Data Skills for Robust and Reproducible Bioinformatics  
@@ -1321,6 +1321,9 @@ Figure 7-3. プロセス置換
 - [RjpWiki - RjpWiki](http://www.okada.jp.org/RWiki/)
 - [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
 - [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
+- [Welcome to a Little Book of R for Bioinformatics! — Bioinformatics 0.1 documentation](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)
+- [Recommend Your Favorite Introductory "R In Bioinformatics" Books And Resources](https://www.biostars.org/p/539/)
+
 
 ## Getting Started with R and RStudio
 
@@ -1335,8 +1338,11 @@ Figure 7-3. プロセス置換
 
 ## R Language Basics
 ### Simple Calculations in R, Calling Functions, and Getting Help in R
+簡単な計算
 
 
+
+関数
 
 
 Table 8-1. 数学関数
@@ -1352,6 +1358,9 @@ Table 8-1. 数学関数
 > ###### GETTING HELP IN R  
 
 
+
+
+
 ### Variables and Assignment
 変数の代入  
 
@@ -1362,9 +1371,11 @@ Table 8-1. 数学関数
 
 
 ### Vectors, Vectorization, and Indexing
-ベクトル、ベクトル化
+ベクトル
 
 
+
+*vectorization*
 
 
 
@@ -1372,7 +1383,7 @@ Table 8-1. 数学関数
 
 
 
-Rの演算子（`+`、`*`）や数学関数（例 `sqrt()`、`round()、`log()`）はベクトルに対応:  
+Rの演算子（`+, -, *, /`）や数学関数（例 `sqrt(), round(), log()`）はベクトルに対応:  
 
 
 *indexing*
@@ -1396,7 +1407,7 @@ z[負整数ベクトル]は、対応する要素番号の要素を取り除く:
 > ###### Negative Indexes and the Colon Operator
 
 
-reorder elements
+要素の並べ替え
 
 
 
@@ -1406,7 +1417,7 @@ reorder elements
 比較演算子（Table 8-2 例 `==, !=, <, <=, >, >=`）を用いて、論理ベクトル（`TRUE`と`FALSE`）を作成する:  
 
 
-x[論理値ベクトル]は、TRUEの要素に対応した要素を取り出す（Example 8-1）:  
+v[論理ベクトル]は、TRUEの要素に対応した要素を取り出す（Example 8-1）:  
 
 
 
@@ -1450,9 +1461,12 @@ Rには3種類のオブジェクト指向システム（S3, S4, R5のクラス�
 - [Rのオブジェクト指向について(R) - script of bioinformatics](https://sites.google.com/site/scriptofbioinformatics/r-tong-ji-guan-xi/rnoobujekuto-zhi-xiangnitsuite-r)
 
 ## Working with and Visualizing Data in R
-[*Dataset_S1.txt*](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r)には、集団遺伝学統計推定値が含まれている。例えば、塩基多様度（列`Pi`と`Theta`）、組換え（列`Recombination`）、ヒトとチンパンジーのゲノム配列の%identity（列`Divergence`）。他の列は、シークエンシング深度（列`depth`）、GC含量（列`percent.GC`）など。
+[Spencer et al. (2006) "The influence of recombination on human genetic diversity."](http://www.ncbi.nlm.nih.gov/pubmed/17044736)のデータ[*Dataset_S1.txt*](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r)には、集団遺伝学の統計値が含まれている。例えば、塩基多様度（列`Pi`と`Theta`）、組換え（列`Recombination`）、ヒトとチンパンジーのゲノム配列の差異（列`Divergence`）。他の列は、シークエンシング深度（列`depth`）やGC含量（列`percent.GC`）等が含まれている。
 
 ### Loading Data into R
+
+*working directory*
+
 
 Rに読み込む前に、コマンドラインからファイルを検査する:  
 
@@ -1464,8 +1478,10 @@ Rに読み込む前に、コマンドラインからファイルを検査する:
 > Rパッケージ`RSQLite`  
 > Rの関数は直接gzip圧縮されたファイルを読み込むこともできる。
 
-Rの関数`read.csv()`と`read.delim()でCSVとタブ区切りファイルを読む。
+`read.csv()`関数でCSVファイルを読み込む:  
 
+
+`read.delim()`関数でタブ区切りファイルを読み込む:  
 
 
 デフォルトでは、Rの関数`read.delim()`と`read.csv()`は、文字列を文字列(character)ではなく因子(factor)に強制変換する。これを無効にするには、引数`stringsAsFactors=FALSE`（または`as.is`）を使う。
@@ -1493,13 +1509,16 @@ Table 8-4. read.csv() と read.delim() の引数
 data.frame型では、ドル・マーク($)で変数を指定できる。
 
 
+`df[row, col]`で行と列を指定できる。
+
 
 > ###### Fragile Code and Accessing Rows and Columns in Dataframes  
 
 データフレームから単一の列を取り出す際、結果のベクトル化を防ぐには、引数に`drop=FALSE`を指定する:  
 
 
-20番染色体のセントロメアの位置は、25,800,000 から 29,700,000 である。セントロメア領域内か否か（`TRUE/FALSE`）を示す列`cent`を、データフレーム`d`に追加する:  
+20番染色体のセントロメアの位置は、25,800,000 から 29,700,000 である。セントロメア領域か否か（`TRUE/FALSE`）を示す列`cent`を、データフレーム`d`に追加する:  
+
 
 
 塩基多様度の列`Pi`の大きさを変更した新しい列`diversity`を作成する:
@@ -1573,7 +1592,6 @@ Example 8-3は、セントロメア領域か否か（列`cent`のTRUE/FALSE）�
 
 
 ### Binning Data with cut() and Bar Plots with ggplot2
-
 Binning（離散化）
 
 - [秩序と情報とブロッコリー: R言語のcut関数の使い方](http://data-hacker.blogspot.jp/2013/05/rcut.html)
@@ -1608,7 +1626,7 @@ Figure 8-9. GC含量でグループ分けされたシークエンシング深度
 Rの[`%in%`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/match.html)演算子
 
 
-[RepeatMasker](http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=RepeatMasker)で発見されたヒトX染色体上のリピート領域のデータ（chrX_rmsk.txt）を読み込む:  
+[RepeatMasker](http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=RepeatMasker)で発見されたヒトX染色体上のリピート領域のデータ（*chrX_rmsk.txt*）を読み込む:  
 
 
 列`repClass`は因子（factor）であることを確認:  
@@ -1629,7 +1647,8 @@ Rの[`%in%`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/match.html)
 > データ生成コードは[*motif-example/*](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r/motif-example)
 
 
-`rpts`データフレームの列名を`mtfs`にマージする。2つの列（`chr`と`motif_start`）を1つの文字列にマージするために、`paste()`関数を用いる:  
+`rpts`データフレームの列`name`を`mtfs`の列にマージすることが目的。
+`paste()`関数を用いて、2つの列（`chr`と`motif_start`）を1つの文字列に結合する:  
 
 
 列`pos`は、2つのデータセット間の共通の鍵として機能する。  
@@ -1684,6 +1703,7 @@ Figure 8-12
 
 
 > ###### Peeking into R’s Structures with str()  
+
 
 ### Writing and Applying Functions to Lists with lapply() and sapply()
 
@@ -1828,7 +1848,6 @@ Rの正規表現については `help(regex)`
 
 > ###### Friendly Functions for Loud Code  
 
-
 `paste()`関数:  
 
 
@@ -1869,6 +1888,7 @@ Rスクリプトを用いた作業
 
 
 > ###### Reproducibility and sessionInfo()  
+> Rのバージョンとパッケージを確認: `sessionInfo()`
 
 コマンドライン引数を出力するRスクリプト:  
 
