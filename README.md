@@ -2,7 +2,7 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)   
-Last Update: 2015-10-31  
+Last Update: 2015-11-09  
 
 ----------
 
@@ -1321,14 +1321,17 @@ Figure 7-3. プロセス置換
 - [RjpWiki - RjpWiki](http://www.okada.jp.org/RWiki/)
 - [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
 - [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
-- [Welcome to a Little Book of R for Bioinformatics! — Bioinformatics 0.1 documentation](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)
-- [Recommend Your Favorite Introductory "R In Bioinformatics" Books And Resources](https://www.biostars.org/p/539/)
 
+- [Recommend Your Favorite Introductory "R In Bioinformatics" Books And Resources](https://www.biostars.org/p/539/)
+- [Welcome to a Little Book of R for Bioinformatics! — Bioinformatics 0.1 documentation](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)
+- [Applied Statistics for Bioinformatics using R](https://cran.r-project.org/doc/contrib/Krijnen-IntroBioInfStatistics.pdf)
+- [Exploratory Analysis of Biological Data using R (2014) | Bioinformatics.ca](http://bioinformatics.ca/workshops/2014/exploratory-analysis-biological-data-using-r-2014)
 
 ## Getting Started with R and RStudio
 
 > ###### THE COMPREHENSIVE R ARCHIVE NETWORK (CRAN)  
-> install.packages("ggplot2")  
+> `ggplot2`パッケージをインストールする:  
+
 
 [R言語](https://cran.r-project.org)と[RStudio](https://www.rstudio.com)[統合開発環境](https://ja.wikipedia.org/wiki/統合開発環境)（IDE）をインストールする。
 
@@ -1414,14 +1417,14 @@ z[負整数ベクトル]は、対応する要素番号の要素を取り除く:
 
 
 
-比較演算子（Table 8-2 例 `==, !=, <, <=, >, >=`）を用いて、論理ベクトル（`TRUE`と`FALSE`）を作成する:  
+比較演算子（Table 8-2 例 `==, !=, <, <=, >, >=`）を用いて、論理ベクトル（`TRUE; FALSE`）を作成する:  
 
 
 v[論理ベクトル]は、TRUEの要素に対応した要素を取り出す（Example 8-1）:  
 
 
 
-`&` (AND), `|` (OR), `!` (NOT)
+論理演算子 `&` (AND), `|` (OR), `!` (NOT)
 
 
 Table 8-2. Rの比較演算子と論理演算子  
@@ -1430,7 +1433,7 @@ Table 8-2. Rの比較演算子と論理演算子
 - [13. ベクトル要素へのアクセス | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)
 
 #### Vector types
-Numeric, Integer, Character, Logical
+*Numeric (double), Integer, Character (strings), Logical*
 
 Table 8-3. Rのベクトル型
 
@@ -1448,6 +1451,10 @@ Rの型の強制変換規則
 #### Factors and classes in R
 因子とクラス
 
+関数`factor()`で、カテゴリーを要素としたベクトルを作成する:  
+
+
+関数`levels()`で、グループを確認:  
 
 
 
@@ -1461,14 +1468,14 @@ Rには3種類のオブジェクト指向システム（S3, S4, R5のクラス�
 - [Rのオブジェクト指向について(R) - script of bioinformatics](https://sites.google.com/site/scriptofbioinformatics/r-tong-ji-guan-xi/rnoobujekuto-zhi-xiangnitsuite-r)
 
 ## Working with and Visualizing Data in R
-[Spencer et al. (2006) "The influence of recombination on human genetic diversity."](http://www.ncbi.nlm.nih.gov/pubmed/17044736)のデータ[*Dataset_S1.txt*](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r)には、集団遺伝学の統計値が含まれている。例えば、塩基多様度（列`Pi`と`Theta`）、組換え（列`Recombination`）、ヒトとチンパンジーのゲノム配列の差異（列`Divergence`）。他の列は、シークエンシング深度（列`depth`）やGC含量（列`percent.GC`）等が含まれている。
+[Spencer et al. (2006) "The influence of recombination on human genetic diversity."](http://www.ncbi.nlm.nih.gov/pubmed/17044736)のデータ[*Dataset_S1.txt*](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r)は、集団遺伝学の統計値を含む。例えば、塩基多様度（列`Pi`と`Theta`）、組換え（列`Recombination`）、ヒトとチンパンジーのゲノム配列の差異（列`Divergence`）。他の列は、ウィンドウの開始位置と終了位置（列`start`と`end`）、シークエンシング深度（列`depth`）、GC含量（列`%GC`）など。
 
 ### Loading Data into R
 
-*working directory*
+[作業ディレクトリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/06.html)
 
 
-Rに読み込む前に、コマンドラインからファイルを検査する:  
+Rに読み込む前に、コマンドラインからファイルを見る:  
 
 
 > ###### LARGE GENOMICS DATA INTO R: COLCLASSES, COMPRESSION, AND MORE  
@@ -1497,7 +1504,8 @@ Table 8-4. read.csv() と read.delim() の引数
 > `reshape2`パッケージはデータを変換する関数を提供する。`melt()`はwideデータをlongデータに変換し、`cast()`はlongデータをwideデータに変換する。  
 
 ### Exploring and Transforming Dataframes
-データフレーム
+`read.csv()`関数はファイルを[データフレーム](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/39.html)として読み込む。  
+データフレームの各列はベクトル。  
 
 
 
@@ -1505,11 +1513,10 @@ Table 8-4. read.csv() と read.delim() の引数
 
 > ###### Creating Dataframes from Scratch  
 
+ドル・マーク($)で列を指定できる。
 
-data.frame型では、ドル・マーク($)で変数を指定できる。
 
-
-`df[row, col]`で行と列を指定できる。
+`d[row, col]`で行と列を指定できる。
 
 
 > ###### Fragile Code and Accessing Rows and Columns in Dataframes  
@@ -1547,7 +1554,7 @@ data.frame型では、ドル・マーク($)で変数を指定できる。
 
 [`ggplot2`のオンライン・ドキュメント](http://docs.ggplot2.org/current/)  
 
-Rの`library()`関数で`ggplot2`パッケージをロードする:  
+`library()`関数で`ggplot2`パッケージをロードする:  
 
 
 染色体の位置毎の塩基多様度の散布図（Figure 8-1）を作成する。まず、データフレーム`d`に列`position`（各ウィンドウの中間点）を追加する。次に、データフレーム`d`の列`position`と列`diversity`の散布図を`ggplot2`で作成する:  
@@ -1713,6 +1720,7 @@ Figure 8-12
 
 > ###### lapply() in Parallel  
 
+
 引数を渡す:  
 
 
@@ -1819,7 +1827,7 @@ Rの文字列処理機能
 `nchar()`で文字ベクトルの各要素の文字数を取得する:  
 
 
-`grep()`か`regexpr()`で文字ベクトル中のパターンを検索する。関数`grep(pattern, x)`は、`pattern`にマッチするベクトル`x`の全要素の位置を返す:  
+`grep()`か`regexpr()`で文字ベクトル中のパターンを検索する。関数`grep(pattern, x)`は、`pattern`にマッチするベクトル`x`の全要素の番号を返す:  
 
 
 
@@ -1832,7 +1840,7 @@ Rの正規表現については `help(regex)`
 
 > ###### The Double Backslash
 
-`grep()`と異なり、`regexpr(pattern, x)`は、ベクトル`x`の各要素で`pattern`にマッチした位置を返し、マッチしない場合には-1を返す:  
+`grep()`と異なり、`regexpr(pattern, text)`は、ベクトル`text`の各要素で`pattern`にマッチした位置を返し、マッチしない場合には-1を返す:  
 
 
 返り値 5 は該当文字列の第5文字目以降にマッチしたことを示す。属性（attributes）"match.length"の値 2 は2文字分マッチしたことを示す。
@@ -1848,21 +1856,21 @@ Rの正規表現については `help(regex)`
 
 > ###### Friendly Functions for Loud Code  
 
-`paste()`関数:  
+
+`paste()`関数は、文字列を結合する:  
 
 
 > ###### Extracting Multiple Values from a String  
 `sub()`と`strsplit()`を組み合わせる:  
 
-関数`strsplit(x, split)`:  
+`strsplit(x, split)`は、文字列`x`を`split`で分割する:  
 
 
 
 ## Developing Workflows with R Scripts
 ### Control Flow: if, for, and while
-
-- [29. 条件分岐](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/29.html)
-- [30. 繰り返し文](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/30.html)
+- [29. 条件分岐 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/29.html)
+- [30. 繰り返し文 | R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/30.html)
 
 > ###### Iterating over Vectors  
 > [1:length(x) の代わりに seq_along(x) を使うと良いってごみ箱が言ってた - My Life as a Mock Quant](http://d.hatena.ne.jp/teramonagi/20140819/1408448705)  
@@ -1874,21 +1882,13 @@ Rの正規表現については `help(regex)`
 ### Working with R Scripts
 Rスクリプトを用いた作業
 
-> ###### Reproducibility with Knitr and Rmarkdown  
-> `Rmarkdown`:  
-
-
-
-- [第2回　レポートづくりを加速せよ　～R Markdown環境の導入＆チュートリアル～：R Markdownで楽々レポートづくり｜gihyo.jp … 技術評論社](http://gihyo.jp/admin/serial/01/r-markdown/0002)
+スクリプトでは、作業ディレクトリを設定する`setwd()`を使用しない。（同じディレクトリ構造を持っていない）他のシステムへの移植性が無くなるので。同じ理由で、データを読み込む時には、絶対パス（例 `/Users/jlebowski/data/achievers.txt`）ではなく、相対パス（例 `data/achievers.txt`）を使う。また、ユーザー向けに（コメントや*READMEファイル*で）作業ディレクトリを指定するのが良い。
 
 関数`source()`を用いて、Rスクリプトを実行する:  
 
 
-あるいは、コマンドラインからバッチモードでRスクリプトを実行する:  
+コマンドラインからバッチモードでRスクリプトを実行する:  
 
-
-> ###### Reproducibility and sessionInfo()  
-> Rのバージョンとパッケージを確認: `sessionInfo()`
 
 コマンドライン引数を出力するRスクリプト:  
 
@@ -1896,18 +1896,28 @@ Rスクリプトを用いた作業
 を実行する:  
 
 
+> ###### Reproducibility with Knitr and Rmarkdown  
+> `Rmarkdown`:  
+
+
+
+- [第2回　レポートづくりを加速せよ　～R Markdown環境の導入＆チュートリアル～：R Markdownで楽々レポートづくり｜gihyo.jp … 技術評論社](http://gihyo.jp/admin/serial/01/r-markdown/0002)
+
+> ###### Reproducibility and sessionInfo()  
+> Rのバージョンとパッケージを確認: `sessionInfo()`
+
 ### Workflows for Loading and Combining Multiple Files
 
-ディレクトリにおける複数のタブ区切りファイルをロードし、組み合わせる方法
+複数のファイルを読み込み、統合する。
 
-[hotspots/](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r/hotspots)ディレクトリ:  
-
-
-Rの関数`list.files()`で正規表現を用いて、全ての染色体の*.bed*ファイルをロードする:  
+[*hotspots/*](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r/hotspots)ディレクトリ:  
 
 
+Rの関数`list.files()`を用いて、ファイル名を取得する:  
 
-`list.files()`でファイル群をリストし、`lapply()`関数で各ファイルをロードする:  
+
+
+`lapply()`関数で各ファイルを読み込む:  
 
 
 ファイル名（フルパスなし）を用いて、各リストの要素に名前を付ける:  
@@ -2126,12 +2136,11 @@ SAMファイルのアラインメント部分は11フィールド以上から成
 #### Running Bash scripts
 Bashスクリプトを実行する方法:  
 1. `bash`プログラムを用いる: `bash script.sh`  
-または  
-2. プログラムとしてスクリプトを実行する: `./script.sh`  
-[`chmod`](https://ja.wikipedia.org/wiki/Chmod)コマンドでファイルの所有者（`u`）に実行権限（`+x`）を追加する: `chmod u+x script.sh`  
+2. プログラムとしてスクリプトを呼び出す: `./script.sh`  
+[`chmod`](https://ja.wikipedia.org/wiki/Chmod)コマンドでファイルの所有者（`u`）に実行権限を追加する（`+x`）: `chmod u+x script.sh`  
 
 ### Variables and Command Arguments
-変数に値を割り当てる（`=`の前後にスペースを使用しない）:  
+変数に値を割り当てる（`=`の前後にスペースを入れない）:  
 
 
 変数の値にアクセスするためには、変数名の前にドル記号を付ける（例 `$results_dir`）:  
@@ -2148,7 +2157,7 @@ Bashスクリプトを実行する方法:
 
 
 
-このファイルを実行すると、指定された引数（`$0, $1, $2, $3`）を出力する:  
+このファイルを実行すると、割り当てられた引数（`$0, $1, $2, $3`）を出力する:  
 
 
 変数`$#`にはコマンドライン引数の個数を割り当てる（スクリプト名`$0`は引数としてカウントしない）:  
@@ -2170,6 +2179,7 @@ Pythonの`argparse`モジュールは、Unixツール`getopt`よりも簡単に�
 bashの条件文：if文
 
 Bashでは、コマンドの[終了ステータス](https://ja.wikipedia.org/wiki/終了ステータス)が 真/成功 true/success (0) と 偽/失敗 false/failure (1) を与える。
+
 `if`文の基本構文:  
 
 
@@ -2250,7 +2260,7 @@ Unixプログラム`basename`は、ファイル名からパスや拡張子を削
 `find`でプロジェクト・ディレクトリの構造を見る:  
 
 
-`find`の基本構文は、`find path expression`
+`find`の基本構文は、`find path expression`  
 
 Example 12-1. ファイル名の一致で検索
 
@@ -2262,15 +2272,15 @@ Example 12-1. ファイル名の一致で検索
 
 [findコマンドの論理演算子](http://blog.kjirou.net/p/503) 
 
-`-and`:  
+AND（`-and`）:  
 
 
-`-or`:  
+OR（`-or`）:  
 
 
 Table 12-3. findの判別式と演算子
 
-`-not`か`!`で否定:  
+NOT（`-not`または`!`）:  
 
 
 `seqs/zmaysB_R1-temp.fastq`ファイルを作成:  
