@@ -19,7 +19,7 @@ Last Update: 2015-11-09
 - 2015-09-13 [Twitter competition: win a signed copy of Bioinformatics Data Skills by Vince Buffalo — ACGT](http://www.acgt.me/blog/2015/9/13/twitter-competition-win-a-signed-copy-of-bioinformatics-data-skills-by-vince-buffalo) | [#ACGT hashtag on Twitter](https://twitter.com/hashtag/ACGT?src=hash)
 - 2015-08-04 [101 questions with a bioinformatician #30: Vince Buffalo — ACGT](http://www.acgt.me/blog/2015/8/4/101-questions-with-a-bioinformatician-30-vince-buffalo)
 - 2015-06-25 [bds:index [SoWiki]](http://so.med.u-tokai.ac.jp/wiki/doku.php?id=bds:index)
-- 7 weeks ago [Asking for opinions about Bioinformatics Data Skills book](https://www.biostars.org/p/153594/)
+- 3 months ago [Asking for opinions about Bioinformatics Data Skills book](https://www.biostars.org/p/153594/)
 - 2015-02-13 [O'Reilly's early release of "Bioinformatics Data Skills" is 50% off until Feb 18th, use code WKERES : bioinformatics](https://www.reddit.com/r/bioinformatics/comments/2vsplz/oreillys_early_release_of_bioinformatics_data/)
 - 2015-04-08 (Rob Denton) [Don’t trust your data: reviewing Bioinformatics Data Skills | The Molecular Ecologist](http://www.molecularecologist.com/2015/04/dont-trust-your-data-reviewing-bioinformatics-data-skills/)
 - 2014-04-03 [Reading the early release of "Bioinformatics Data Skills"Musings from a PhD candidate](http://davetang.org/muse/2014/04/03/bioinformatics-data-skills/)
@@ -81,7 +81,7 @@ III. Practice: Bioinformatics Data Skills
 ## Assumptions This Book Makes
 前提知識は以下の通り。  
 
-- スクリプト言語（例 [R言語](https://ja.wikipedia.org/wiki/R言語)、[Python](https://ja.wikipedia.org/wiki/Python)、[Perl](https://ja.wikipedia.org/wiki/Perl)、[Ruby](https://ja.wikipedia.org/wiki/Ruby)）
+- スクリプト言語（例 [R言語](https://ja.wikipedia.org/wiki/R言語)、[Python](https://ja.wikipedia.org/wiki/Python)、）
 - テキストエディタ（例 [Emacs](https://ja.wikipedia.org/wiki/Emacs)、[Vim](https://ja.wikipedia.org/wiki/Vim)、）
 - 基本的なUnixコマンドライン技術。ディレクトリ・ファイル操作（[`cd, ls, pwd, mv, rm, rmdir, mkdir`](http://dogandrun.hatenablog.jp/entry/2013/11/30/181606)）。ファイルの所有権とアクセス権の変更（`chown, chmod`）
 - 生物学の基礎（DNA、RNA、タンパク質、遺伝子、[セントラルドグマ](https://ja.wikipedia.org/wiki/セントラルドグマ)）  
@@ -91,7 +91,6 @@ III. Practice: Bioinformatics Data Skills
 
 ## Supplementary Material on GitHub
 [GitHubリポジトリ](https://github.com/vsbuffalo/bds-files)の補足資料を取得する。
-本書や補足資料に問題を発見した場合、[GitHubで新規issueを作成](https://github.com/vsbuffalo/bds-files/issues)されたい。　
 
 ## Computing Resources and Setup
 例題は、Unix系のOS（Mac OS XやLinux）で動作する。
@@ -105,7 +104,7 @@ III. Practice: Bioinformatics Data Skills
 
 ----------
 
- Part I. Ideology: Data Skills for Robust and Reproducible Bioinformatics
+# Part I. Ideology: Data Skills for Robust and Reproducible Bioinformatics  
 第I部. イデオロギー：頑強で再現可能なバイオインフォマティクスのためのデータスキル  
 
 ----------
@@ -199,7 +198,7 @@ Excelでセルの値を変更して保存するのはダメ。プログラムが
 
 ----------
 
- Part II. Prerequisites: Essential Skills for Getting Started with a Bioinformatics Project
+# Part II. Prerequisites: Essential Skills for Getting Started with a Bioinformatics Project  
 第II部. 前提条件：バイオインフォマティクス・プロジェクト入門のための必須スキル  
 
 ----------
@@ -221,7 +220,7 @@ Excelでセルの値を変更して保存するのはダメ。プログラムが
 
 
 - `data/`ディレクトリにデータを格納する。
-- `scripts/`ディレクトリにプログラムを格納する。
+- `scripts/`ディレクトリにスクリプトを格納する。
 - `analysis/`ディレクトリに解析結果を格納する。
 
 > ###### What’s in a Name?  
@@ -230,7 +229,7 @@ Excelでセルの値を変更して保存するのはダメ。プログラムが
 英数字かアンダースコアかダッシュ（ A-z a-z 0-9 _ - ）を使う。
 拡張子を付ける。（例 *osativa-genes.fasta*）  
 
-プロジェクト内のプログラムが、他のファイルを参照する場合には、絶対パス（例 `/home/vinceb/projects/zmays-snps/data/stats/qual.txt`）ではなく、相対パス（例 `../data/stats/qual.txt`）を使う。
+スクリプトがプロジェクト・ディレクトリ内の他のファイルを参照する場合には、絶対パス（例 `/home/vinceb/projects/zmays-snps/data/stats/qual.txt`）ではなく、相対パス（例 `../data/stats/qual.txt`）を使う。
 
 - [絶対パスと相対パス](http://codezine.jp/unixdic/w/絶対パスと相対パス)
 - [#05 ディレクトリを移動する (2) | UNIXコマンド入門 (一般ユーザー編) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_unix/5405)
@@ -966,7 +965,7 @@ Markdownノート（README.md）の例:
 
 ----------
 
- Part III. Practice: Bioinformatics Data Skills
+# Part III. Practice: Bioinformatics Data Skills  
 第III部. 実践：バイオインフォマティクス・データスキル  
 
 ----------
@@ -1317,15 +1316,12 @@ Figure 7-3. プロセス置換
 - [Safari Books Online](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch08.html#chapter-08)
 - [Supplementary Material on GitHub](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r)
 
+[探索的データ解析 Exploratory Data Analysis (EDA)](http://www.msi.co.jp/splus/products/eda.html)
+
 参考:  
 - [RjpWiki - RjpWiki](http://www.okada.jp.org/RWiki/)
 - [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
 - [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
-
-- [Recommend Your Favorite Introductory "R In Bioinformatics" Books And Resources](https://www.biostars.org/p/539/)
-- [Welcome to a Little Book of R for Bioinformatics! — Bioinformatics 0.1 documentation](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)
-- [Applied Statistics for Bioinformatics using R](https://cran.r-project.org/doc/contrib/Krijnen-IntroBioInfStatistics.pdf)
-- [Exploratory Analysis of Biological Data using R (2014) | Bioinformatics.ca](http://bioinformatics.ca/workshops/2014/exploratory-analysis-biological-data-using-r-2014)
 
 ## Getting Started with R and RStudio
 
@@ -1468,7 +1464,9 @@ Rには3種類のオブジェクト指向システム（S3, S4, R5のクラス�
 - [Rのオブジェクト指向について(R) - script of bioinformatics](https://sites.google.com/site/scriptofbioinformatics/r-tong-ji-guan-xi/rnoobujekuto-zhi-xiangnitsuite-r)
 
 ## Working with and Visualizing Data in R
-[Spencer et al. (2006) "The influence of recombination on human genetic diversity."](http://www.ncbi.nlm.nih.gov/pubmed/17044736)のデータ[*Dataset_S1.txt*](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r)は、集団遺伝学の統計値を含む。例えば、塩基多様度（列`Pi`と`Theta`）、組換え（列`Recombination`）、ヒトとチンパンジーのゲノム配列の差異（列`Divergence`）。他の列は、ウィンドウの開始位置と終了位置（列`start`と`end`）、シークエンシング深度（列`depth`）、GC含量（列`%GC`）など。
+[Spencer et al. (2006) "The influence of recombination on human genetic diversity."](http://www.ncbi.nlm.nih.gov/pubmed/17044736)のデータ[*Dataset_S1.txt*](https://github.com/vsbuffalo/bds-files/tree/master/chapter-08-r)は、集団遺伝学の統計値を含む。例えば、塩基多様度（列`Pi`と`Theta`）、組換え（列`Recombination`）、ヒトとチンパンジーのゲノム配列一致率（列`Divergence`）。他の列は、ウィンドウの開始位置と終了位置（列`start`と`end`）、シークエンシング深度（列`depth`）、GC含量（列`%GC`）など。
+
+- [DNA配列のNucleotide Polymorphism (theta)とNucleotide Diversity (pi) - ryamadaの遺伝学・遺伝統計学メモ](http://d.hatena.ne.jp/ryamada22/20050907/1126093129)
 
 ### Loading Data into R
 
@@ -1606,7 +1604,7 @@ Binning（離散化）
 - [R言語で数量データをカテゴリーデータに変換 - jnobuyukiのブログ](http://webbeginner.hatenablog.com/entry/2015/05/27/010805)
 - [Rでbinning - にちにちメモ](http://schngtm.hatenablog.com/entry/2014/12/03/003622)
 
-Rでは、`cut()`関数でデータを離散化する（Example 8-4は、GC含量）:  
+`cut()`関数でデータをbinに分割する（Example 8-4は、GC含量）:  
 
 
 
@@ -1984,36 +1982,45 @@ Rオブジェクトを保存・復元する関数は`save()`と`load()`
 
 ## The FASTA Format
 [FASTA](https://ja.wikipedia.org/wiki/FASTA)  
-[FASTA形式](http://quma.cdb.riken.jp/help/fastaHelp_j.html)の配列は行頭が(">") で始まるコメントの行があり、その次の行以降に配列が記述される。
+[FASTA形式](http://quma.cdb.riken.jp/help/fastaHelp_j.html)ファイルは、">"で始まるコメント行と、配列データが記述される。
 
 
-一般的な命名規則は、記述行をスペースで2つの部分（IDと説明）に分割する:  
+一般的な命名規則は、コメント行をスペースで2つの部分（IDと説明）に分割する:  
 
 
 ## The FASTQ Format
-- [FastQ形式](https://ja.wikipedia.org/wiki/Fastq)
-- [NGS Surfer's Wiki | FASTQ](http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=FASTQ)
+[Fastq](https://ja.wikipedia.org/wiki/Fastq)  
+[NGS Surfer's Wiki | FASTQ](http://cell-innovation.nig.ac.jp/wiki/tiki-index.php?page=FASTQ)  
 
-FASTA/FASTQエントリの計数
-
-
-@は、クオリティ値として行頭にくることもある。
+FASTQファイルは、以下のようなものである:  
 
 
-配列数を計数する頑強な方法は`bioawk`を用いる:  
+FASTQファイル内では、1本の配列は4行で記述される。  
+1行目：文字「@」で始まり、配列のID（オプションとして説明）を記述する。  
+2行目：塩基配列  
+3行目：文字「+」  
+4行目：クオリティ値 quality score（2行目の配列と同じ文字数でなければならない。ASCIIコードで表現される）
+
+> ###### The Ins and Outs of Counting FASTA/FASTQ Entries  
+> FASTA/FASTQエントリの計数  
+
+
+> @は、クオリティ値として行頭にくることもある。
+
+
+> 配列数を計数する頑強な方法は`bioawk`を用いる:  
 
 
 ## Nucleotide Codes
 核酸コード  
 A、T、C、Gは、ヌクレオチドのアデニン、チミン、シトシン、グアニンを表す。
 
-Table 10-1. [Nucleotide base codes (IUPAC)](http://www.ddbj.nig.ac.jp/FT/full_index.html#7.4.1)
-
-- [Nucleotide Base Codes | DDBJ](http://www.ddbj.nig.ac.jp/sub/ref1-j.html)
+Table 10-1. [Nucleotide base codes (IUPAC)](http://www.ddbj.nig.ac.jp/sub/ref1-j.html)
 
 ## Base Qualities
-ASCII 文字 (`man ascii`)  
-Pythonの関数`ord()`と`chr()`
+塩基のクオリティ値 quality scoreは、ASCIIコードで表現される。`man ascii`
+
+ASCIIコードを変換する関数（整数から1文字へ、1文字から整数へ）。Pythonの関数`ord()`と`chr()`。例えば、`chr(97)`は文字列 'a' を返し、`ord('a')`は整数 97 を返す。[2. 組み込み関数 — Python 2.7ja1 documentation](http://docs.python.jp/2/library/functions.html)
 
 ## Example: Inspecting and Trimming Low-Quality Bases
 
